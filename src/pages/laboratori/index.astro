@@ -1,6 +1,6 @@
 ---
-import Base from '../layouts/Base.astro';
-import {profile} from '../data/site';
+import Base from '../../layouts/Base.astro';
+import {profile} from '../../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,''); const to=(s='')=>root+'/'+s.replace(/^\//,'');
 const prompts=[
  {num:'01', title:'Distingir fets, interpretacions i opinions', desc:'Com podem examinar una notícia, identificar-ne les afirmacions i buscar evidències per contrastar-les?',question:'Què sabem? Com ho sabem?'},
