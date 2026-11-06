@@ -4,14 +4,14 @@ import { profile, researchProjects, otherInitiatives } from '../../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,''); const to=(s='')=>root+'/'+s.replace(/^\//,'');
 ---
 <Base title="Projectes i iniciatives" active="projects" description="Projectes de recerca, coordinació editorial i formació oberta de Jordi Castellví Mata.">
-  <section class="page-hero"><div class="container"><div class="eyebrow">Recerca · Edició · Transferència</div><h1 class="page-title">Projectes<span> i iniciatives.</span></h1><p class="lead">La meva activitat va més enllà dels articles científics. Aquí conviuen els projectes de recerca, les col·laboracions editorials i les propostes de formació i divulgació.</p></div></section>
+  <section class="page-hero"><div class="container"><div class="eyebrow">Recerca · Edició · Transferència</div><h1 class="page-title">Projectes<span> i iniciatives.</span></h1><p class="lead">Investigacions sobre cultura democràtica, ciutadania crítica i futurs, juntament amb iniciatives de formació i edició científica.</p></div></section>
   <section class="section research-section"><div class="container">
-    <div class="section-head"><div><div class="eyebrow">Investigació</div><h2 class="section-title">Projectes de recerca.</h2></div><p>Projectes finançats en què he participat com a investigador o col·laborador.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Investigació</div><h2 class="section-title">Projectes de recerca.</h2></div></div>
     <div class="research-list">{researchProjects.map(p=><article class="research-item"><div class="research-year"><strong>{p.period}</strong><span>{p.status}</span></div><div><span class="tag">{p.code}</span><h3>{p.title}</h3><p>{p.description}</p><small>{p.role}</small></div></article>)}</div>
     <div class="group-box"><div><span class="mini">Grup de recerca</span><h3>GREDICS</h3><p>Formo part del Grup de Recerca en Didàctica de les Ciències Socials de la Universitat Autònoma de Barcelona.</p></div><a class="btn" href={profile.gredics} target="_blank" rel="noopener noreferrer">Visitar GREDICS ↗</a></div>
   </div></section>
   <section class="section section-alt"><div class="container">
-    <div class="section-head"><div><div class="eyebrow">Més enllà dels projectes competitius</div><h2 class="section-title">Altres iniciatives.</h2></div><p>Edició científica, materials de formació i transferència de coneixement.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Edició científica i formació</div><h2 class="section-title">Altres iniciatives.</h2></div></div>
     <div class="initiative-list">{otherInitiatives.map(item=><article class="initiative-card"><span class="mini">{item.eyebrow}</span><h3>{item.title}</h3><p class="subtitle">{item.subtitle}</p><p>{item.description}</p><a class="text-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkText} ↗</a></article>)}</div>
   </div></section>
 </Base>
