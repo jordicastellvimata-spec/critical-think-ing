@@ -20,13 +20,214 @@ export const themes = [
   {number:'04', name:'Didàctica de les ciències socials', detail:'Comprendre problemes socials i imaginar futurs més justos.', english:'SOCIAL SCIENCES EDUCATION'},
 ];
 
+// Articles publicats en revistes que consten a Scopus o Web of Science al CV acadèmic.
+// Les etiquetes indiquen indexació de la revista, no necessàriament la incorporació de cada article a la base de dades.
 export const publications = [
-  {year:'2026', authors:'Castellví, J., Casadellà, M., Massip, M. i Santisteban, A.', title:'Secondary school students facing and confronting hate speech in digital media', venue:'Frontiers in Education', type:'Article de recerca', url:'https://doi.org/10.3389/feduc.2026.1802062'},
-  {year:'2025', authors:'Gallart, C. i Castellví, J.', title:'Teachers’ and students’ perceptions of learning decision-making and democratic participation in school', venue:'Critical Education', type:'Article de recerca', url:'https://doi.org/10.14288/ce.v16i4.187077'},
-  {year:'2024', authors:'Estellés, M., Oliveira, A. i Castellví, J.', title:'National curricula and citizenship education in populist times. The cases of Brazil and Spain', venue:'Compare: A Journal of Comparative and International Education', type:'Article de recerca', url:'https://doi.org/10.1080/03057925.2023.2170167'},
-  {year:'2022', authors:'Castellví, J., Escribano, C., Santos, R. i Marolla, J.', title:'Futures education: Curriculum and educational practices in Australia, Spain, and Chile', venue:'Comunicar', type:'Article de recerca', url:'https://doi.org/10.3916/C73-2022-04'},
-  {year:'2022', authors:'Castellví, J., Massip, M., González-Valencia, G. i Santisteban, A.', title:'Future teachers confronting extremism and hate speech', venue:'Humanities and Social Sciences Communications', type:'Article de recerca', url:'https://doi.org/10.1057/s41599-022-01222-4'},
-  {year:'2020', authors:'Castellví, J., Díez-Bedmar, M. C. i Santisteban, A.', title:'Pre-Service Teachers’ Critical Digital Literacy Skills and Attitudes to Address Social Problems', venue:'Social Sciences', type:'Article de recerca', url:'https://doi.org/10.3390/socsci9080134'},
+  {
+    "year": "2026",
+    "authors": "Chen, X., Santisteban-Fernández, A., González-Valencia, G. A. i Castellví Mata, J.",
+    "title": "Written rebuttals, selective practice: A Toulmin-based dialogic intervention with Chinese university students",
+    "venue": "Social Sciences",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3390/socsci15110764"
+  },
+  {
+    "year": "2026",
+    "authors": "Castellví, J., Casadellà, M., Massip Sabater, M. i Santisteban, A.",
+    "title": "Secondary school students facing and confronting hate speech in digital media",
+    "venue": "Frontiers in Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3389/feduc.2026.1802062"
+  },
+  {
+    "year": "2026",
+    "authors": "Andreu-Mediero, B., Castellví Mata, J. i Díez-Bedmar, M. del C.",
+    "title": "La didáctica de las ciencias sociales ante los discursos hegemónicos. Análisis en educación primaria obligatoria desde el marco DigCompEdu",
+    "venue": "Aula Abierta",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS"
+    ],
+    "url": "https://doi.org/10.17811/rifie.23745"
+  },
+  {
+    "year": "2025",
+    "authors": "Gallart, C. i Castellví, J.",
+    "title": "Teachers’ and students’ perceptions of learning decision-making and democratic participation in school: A case study in Catalonia",
+    "venue": "Critical Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.14288/ce.v16i4.187077"
+  },
+  {
+    "year": "2024",
+    "authors": "Estellés, M., Oliveira, A. i Castellví, J.",
+    "title": "National curricula and citizenship education in populist times. The cases of Brazil and Spain",
+    "venue": "Compare: A Journal of Comparative and International Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-SSCI"
+    ],
+    "url": "https://doi.org/10.1080/03057925.2023.2170167"
+  },
+  {
+    "year": "2024",
+    "authors": "Castellví, J.",
+    "title": "Epistemological obstacles to social studies education",
+    "venue": "Trends in Higher Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3390/higheredu3040062"
+  },
+  {
+    "year": "2023",
+    "authors": "Marolla-Gajardo, J. i Castellví, J.",
+    "title": "Transform hate speech in education from gender perspectives: Conceptions of Chilean teachers through a case study",
+    "venue": "Frontiers in Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3389/feduc.2023.1267690"
+  },
+  {
+    "year": "2022",
+    "authors": "Castellví, J., Massip, M., González-Valencia, G. i Santisteban, A.",
+    "title": "Future teachers confronting extremism and hate speech",
+    "venue": "Humanities and Social Sciences Communications",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-SSCI"
+    ],
+    "url": "https://doi.org/10.1057/s41599-022-01222-4"
+  },
+  {
+    "year": "2022",
+    "authors": "Castellví, J., Escribano, C., Santos, R. i Marolla, J.",
+    "title": "Futures education: Curriculum and educational practices in Australia, Spain, and Chile",
+    "venue": "Comunicar",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-SSCI"
+    ],
+    "url": "https://doi.org/10.3916/C73-2022-04"
+  },
+  {
+    "year": "2021",
+    "authors": "Marolla, J., Castellví, J. i Santos, R.",
+    "title": "Chilean Teacher Educators’ Conceptions on the Absence of Women and Their History in Teacher Training Programmes. A Collective Case Study",
+    "venue": "Social Sciences",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3390/socsci10030106"
+  },
+  {
+    "year": "2021",
+    "authors": "Castellví, J., Tosar, B. i Santisteban, A.",
+    "title": "Young people confronting the challenge of reading and interpreting a digital world",
+    "venue": "Bellaterra Journal of Teaching & Learning Language & Literature",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus"
+    ],
+    "url": "https://doi.org/10.5565/rev/jtl3.905"
+  },
+  {
+    "year": "2020",
+    "authors": "Santisteban, A., Díez-Bedmar, M. C. i Castellví, J.",
+    "title": "La alfabetización crítica digital del futuro profesorado en tiempos de Twitter",
+    "venue": "Culture & Education",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-SSCI"
+    ],
+    "url": "https://doi.org/10.1080/11356405.2020.1741875"
+  },
+  {
+    "year": "2020",
+    "authors": "Estellés, M. i Castellví, J.",
+    "title": "The Educational Implications of Populism, Emotions and Digital Hate Speech: A Dialogue with Scholars from Canada, Chile, Spain, the UK, and the US",
+    "venue": "Sustainability",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-SCIE"
+    ],
+    "url": "https://doi.org/10.3390/su12156034"
+  },
+  {
+    "year": "2020",
+    "authors": "Castellví, J., Díez-Bedmar, M. C. i Santisteban, A.",
+    "title": "Pre-Service Teachers’ Critical Digital Literacy Skills and Attitudes to Address Social Problems",
+    "venue": "Social Sciences",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS-ESCI"
+    ],
+    "url": "https://doi.org/10.3390/socsci9080134"
+  },
+  {
+    "year": "2020",
+    "authors": "Massip, M., Castellví, J. i Pagès, J.",
+    "title": "La historia de las personas: reflexiones desde la historiografía y de la didáctica de las ciencias sociales durante los últimos 25 años",
+    "venue": "Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia",
+    "type": "Article de recerca",
+    "indexing": [
+      "Scopus",
+      "WoS"
+    ],
+    "url": "https://doi.org/10.6018/pantarei.445831"
+  }
+];
+
+// Altres contribucions en revistes indexades, separades dels articles de recerca.
+export const otherIndexedContributions = [
+  {
+    "year": "2021",
+    "authors": "Castellví Mata, J.",
+    "title": "Read the world to write the future: An interview with professors E Wayne Ross and Xosé Manuel Souto, experts in critical social studies",
+    "venue": "Bellaterra Journal of Teaching & Learning Language & Literature",
+    "type": "Entrevista acadèmica",
+    "indexing": [
+      "Scopus"
+    ],
+    "url": "https://doi.org/10.5565/rev/jtl3.974"
+  },
+  {
+    "year": "2021",
+    "authors": "Castellví Mata, J.",
+    "title": "Editor's note: Read the world to write the future: Critical education to address contemporary issues",
+    "venue": "Bellaterra Journal of Teaching & Learning Language & Literature",
+    "type": "Nota editorial",
+    "indexing": [
+      "Scopus"
+    ],
+    "url": "https://doi.org/10.5565/rev/jtl3.982"
+  }
 ];
 
 export const researchProjects = [
