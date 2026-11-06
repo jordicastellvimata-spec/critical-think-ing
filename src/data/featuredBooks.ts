@@ -16,7 +16,7 @@ export const featuredBooks = [
     secondaryLabel: 'Amazon',
     isbn: '978-84-1070-176-2',
     coverVariant: 'conflict',
-    coverUrl: 'images/ensenar-el-conflicto-cover.svg',
+    coverUrl: 'images/ensenar-el-conflicto-cover.webp',
   },
   {
     year: '2023',
