@@ -57,7 +57,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   <section class="section projects-section" id="projectes">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Projectes i activitat científica</div><h2 class="section-title">Recerca.</h2></div>
+        <div><div class="eyebrow">Projectes i activitat científica</div><h2 class="section-title">Recerca…</h2></div>
         <p>Educació democràtica, ciutadania i pensament crític: projectes col·lectius que busquen comprendre la realitat i transformar l'educació.</p>
       </div>
       <div class="project-grid">
@@ -81,9 +81,14 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         {researchProjects.slice(1).map(p=><article class="research-mini"><div><span class="mini">{p.period} · {p.code}</span><h3>{p.title}</h3><p>{p.description}</p></div><span class="research-role">{p.role}</span></article>)}
       </div>
 
-      <div class="practice-section" id="transferencia">
+      <a class="research-to-practice" href="#transferencia">…que connecta amb la pràctica <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+  <section class="section practice-section practice-standalone" id="transferencia">
+    <div class="container">
         <div class="section-head">
-          <div><div class="eyebrow">Docència · Diàleg · Transferència</div><h2 class="section-title">...que connecta<br/>amb la pràctica.</h2></div>
+          <div><div class="eyebrow">Transferència i formació</div><h2 class="section-title">…que connecta<br/>amb la pràctica.</h2></div>
           <p>La formació del professorat i el debat entre l'escola i la universitat són parts essencials de la recerca educativa.</p>
         </div>
         <div class="practice-grid">
@@ -100,13 +105,14 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             <span class="mini">JORNADES INTERNACIONALS · UAB</span>
             <div class="practice-event-date"><strong>{jornades2027.edition}</strong><span>{jornades2027.dates}</span></div>
             <div class="practice-card-copy">
-              <h3>{jornades2027.theme}</h3>
-              <p>{jornades2027.subtitle}. Coordinació de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials.</p>
+              <h3>XXIII Jornades Internacionals de Recerca</h3>
+              <p><strong>{jornades2027.theme}.</strong> {jornades2027.subtitle}.</p>
+              <p>27, 28 i 29 de gener de 2027 · UAB. Coordinació de les Jornades de Didàctica de les Ciències Socials.</p>
               <strong>Web de les Jornades ↗</strong>
             </div>
           </a>
         </div>
-      </div>
+        <a class="practice-to-videos" href="#docencia">Veure també les intervencions en vídeo <span aria-hidden="true">↓</span></a>
     </div>
   </section>
 
@@ -319,4 +325,14 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .gredics-official-logo{width:100%;max-width:470px;height:auto;max-height:127px;object-fit:contain;object-position:left center;display:block}
 @media(max-width:1050px){.editorial-research{min-height:380px}}
 @media(max-width:760px){.practice-section{padding-top:64px}.practice-grid{grid-template-columns:1fr}.practice-card{min-height:330px;padding:27px 24px}.practice-event-date strong{font-size:85px}.gredics-identity{min-height:70px}.gredics-official-logo{max-height:100px}.editorial-research{min-height:320px}.editorial-research .editorial-symbol{margin-bottom:8px}}
+
+/* Seccions amb accés clar des del menú; manté la mateixa paleta. */
+.practice-standalone{background:#eaf3f6;padding:92px 0 104px}
+.practice-standalone .section-head{margin-bottom:45px}
+.research-to-practice,.practice-to-videos{display:inline-flex;gap:22px;align-items:center;font-size:13px;color:#1c5d7e;font-weight:800;padding:12px 0;border-bottom:1px solid currentColor}
+.research-to-practice{margin-top:35px}
+.practice-to-videos{margin-top:31px}
+.practice-jornades .practice-card-copy p strong{color:#1b526f}
+.practice-jornades .practice-card-copy p + p{font-size:12px}
+@media(max-width:760px){.practice-standalone{padding:68px 0 78px}}
 </style>
