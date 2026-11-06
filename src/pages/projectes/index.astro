@@ -1,6 +1,6 @@
 ---
-import Base from '../layouts/Base.astro';
-import { profile, researchProjects, otherInitiatives } from '../data/site';
+import Base from '../../layouts/Base.astro';
+import { profile, researchProjects, otherInitiatives } from '../../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,''); const to=(s='')=>root+'/'+s.replace(/^\//,'');
 ---
 <Base title="Projectes i iniciatives" active="projects" description="Projectes de recerca, coordinació editorial i formació oberta de Jordi Castellví Mata.">
