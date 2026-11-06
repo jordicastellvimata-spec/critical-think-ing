@@ -340,18 +340,18 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 @media(max-width:760px){.lab-prompts{grid-template-columns:1fr}}
 
 /* Transició de moviment entre la portada i les línies de recerca, sense elements nous. */
-html.entry-transition-ready .scroll-transition-hero{
+:global(html.entry-transition-ready) .scroll-transition-hero{
   transform:translate3d(0,var(--hero-exit-y,0px),0) scale(var(--hero-exit-scale,1));
   opacity:var(--hero-exit-opacity,1);
   transform-origin:center top;
 }
-html.entry-transition-ready .topics-section>.container{
+:global(html.entry-transition-ready) .topics-section>.container{
   transform:translate3d(0,var(--research-enter-y,0px),0);
   opacity:var(--research-enter-opacity,1);
 }
 @media(prefers-reduced-motion:reduce){
-  html.entry-transition-ready .scroll-transition-hero,
-  html.entry-transition-ready .topics-section>.container{
+  :global(html.entry-transition-ready) .scroll-transition-hero,
+  :global(html.entry-transition-ready) .topics-section>.container{
     transform:none!important;opacity:1!important;
   }
 }
