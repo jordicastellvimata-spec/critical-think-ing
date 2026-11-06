@@ -4,11 +4,14 @@ const {title='Jordi Castellví Mata', description='Pensament crític, educació 
 const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
+// Ordre del menú = ordre vertical de les seccions de la portada.
 const nav = [
-  { label:'Recerca', path:'#projectes', key:'projects' },
+  { label:'Línies de recerca', path:'#recerca', key:'research' },
   { label:'Publicacions', path:'#publicacions', key:'pubs' },
+  { label:'Projectes', path:'#projectes', key:'projects' },
   { label:'Pràctica', path:'#transferencia', key:'practice' },
-  { label:'Vídeos', path:'#docencia', key:'videos' },
+  { label:'Docència', path:'#docencia', key:'teaching' },
+  { label:'GREDICS', path:'#xarxes-academiques', key:'group' },
   { label:'Laboratori', path:'#laboratori', key:'lab' },
   { label:'Sobre mi', path:'#sobre-mi', key:'about' },
 ];
@@ -53,7 +56,7 @@ const nav = [
     (function () {
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
       if (reduced.matches || !('IntersectionObserver' in window)) return;
-      const selectors = '.section-head, .topic-card, .paper, .video-card, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
+      const selectors = '.section-head, .topic-card, .book-feature, .paper, .video-card, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
       const elements = document.querySelectorAll(selectors);
       elements.forEach((el) => el.setAttribute('data-reveal', ''));
       // Habilitem les transicions després de preparar les seccions, per evitar salts inicials.
@@ -95,7 +98,7 @@ button{font:inherit}
 .wordmark{display:flex;align-items:center;gap:11px;font:800 20px/1 'Manrope',Arial,sans-serif;letter-spacing:-.075em;white-space:nowrap}
 .mark{width:35px;height:35px;border-radius:50%;background:#215e81;color:#fff;display:grid;place-items:center;font:600 24px/1 'DM Sans',sans-serif}
 .wordmark-accent{color:#d95f37}
-.desktop-nav{display:flex;align-items:center;gap:26px;margin-left:auto}
+.desktop-nav{display:flex;align-items:center;gap:13px;margin-left:auto}
 .desktop-nav a{font-size:12px;font-weight:700;padding:10px 0;border-bottom:2px solid transparent;white-space:nowrap}
 .desktop-nav a:hover,.desktop-nav a[aria-current=page]{border-color:#d95f37;color:#125e82}
 .desktop-contact{font-size:12px;font-weight:800;white-space:nowrap;color:#fff;background:#1c5879;padding:13px 17px}
@@ -145,7 +148,17 @@ h1,h2,h3,h4,p{margin-top:0}
 .paper .arrow{font-size:22px;color:#1d6387}
 .paper:hover h3{color:#17638b}
 .tag{font-size:10px;font-weight:800;letter-spacing:.1em;color:#226387;text-transform:uppercase}
-@media(max-width:1050px){.desktop-nav{gap:16px}.desktop-contact{display:none}.footer-columns{grid-template-columns:1fr 1fr}}
+@media(max-width:1180px){.desktop-contact{display:none}.desktop-nav{gap:13px}}
+@media(max-width:1040px){
+  .desktop-nav{display:none}
+  .mobile-nav{display:block;margin-left:auto;position:relative}
+  .mobile-nav summary{cursor:pointer;list-style:none;color:#154e6e;font-size:13px;font-weight:800}
+  .mobile-nav summary::-webkit-details-marker{display:none}
+  .mobile-nav summary span{margin-left:7px}
+  .mobile-nav nav{position:absolute;right:0;top:36px;min-width:235px;background:#fff;box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid #d4e0e5;padding:15px;display:flex;flex-direction:column;max-height:75vh;overflow-y:auto}
+  .mobile-nav a{padding:10px;font-size:14px}
+  .footer-columns{grid-template-columns:1fr 1fr}
+}
 @media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:#154e6e;font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:#fff;box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid #d4e0e5;padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:clamp(47px,11vw,75px)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
 
 /* Aparició progressiva en desplaçar-se: manté el contingut llegible sense JavaScript. */
