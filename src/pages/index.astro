@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import {profile, themes, publications, otherIndexedContributions, researchProjects, otherInitiatives} from '../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'');
 const to=(s='')=>root+'/'+s.replace(/^\//,'');
-const indexedCount=publications.length;
 ---
 <Base title="Jordi Castellví Mata" active="home" description="Espai acadèmic de Jordi Castellví Mata: pensament crític, educació democràtica, publicacions, projectes i divulgació.">
   <section class="hero">
@@ -33,7 +32,7 @@ const indexedCount=publications.length;
     <div class="container">
       <div class="section-head">
         <div><div class="eyebrow">Línies de recerca</div><h2 class="section-title">Les preguntes<br/>que ens mouen.</h2></div>
-        <p>La recerca comença amb bones preguntes. Aquestes són les perspectives que travessen la meva feina acadèmica.</p>
+        <p>Pensament crític, participació democràtica i literacitat digital per interpretar els problemes socials del present.</p>
       </div>
       <div class="topics-grid">
         {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk">✳</span></div><h3>{t.name}</h3><p>{t.detail}</p><small>{t.english}</small></article>)}
@@ -45,19 +44,17 @@ const indexedCount=publications.length;
     <div class="container">
       <div class="section-head">
         <div><div class="eyebrow">Producció científica · Revistes indexades</div><h2 class="section-title">Idees que es<br/>converteixen en recerca.</h2></div>
-        <p>{indexedCount} articles publicats en revistes recollides a Scopus i/o Web of Science. Ordenats de més recent a més antic, amb accés a la publicació original.</p>
       </div>
       <div class="paper-list">
         {publications.map(p=><a class="paper" href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.title + '. Obrir la publicació'}><span class="year">{p.year}</span><div><div class="tag">{p.venue} <span class="pub-type">· {p.indexing.join(' · ')}</span></div><h3>{p.title}</h3><p>{p.authors}</p></div><span class="arrow" aria-hidden="true">↗</span></a>)}
       </div>
       <div class="other-outputs">
         <div class="eyebrow">Altres contribucions en revistes indexades</div>
-        <p class="other-explainer">Entrevistes i textos editorials, diferenciats dels articles de recerca.</p>
         <div class="paper-list">
           {otherIndexedContributions.map(p=><a class="paper" href={p.url} target="_blank" rel="noopener noreferrer"><span class="year">{p.year}</span><div><div class="tag">{p.type} · {p.venue} · {p.indexing.join(' · ')}</div><h3>{p.title}</h3><p>{p.authors}</p></div><span class="arrow" aria-hidden="true">↗</span></a>)}
         </div>
       </div>
-      <p class="list-foot">La indexació indicada correspon a la revista, no implica necessàriament que cada document individual ja consti a la base de dades. Per consultar altres aportacions i el currículum complet, visita el <a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a>.</p>
+      <p class="list-foot"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a></p>
     </div>
   </section>
 
@@ -65,7 +62,7 @@ const indexedCount=publications.length;
     <div class="container">
       <div class="section-head">
         <div><div class="eyebrow">Projectes i iniciatives</div><h2 class="section-title">Recerca que connecta<br/>amb la pràctica.</h2></div>
-        <p>Projectes competitius, col·laboracions, edició científica i formació oberta: maneres diferents de generar i compartir coneixement.</p>
+        <p>Educació democràtica, ciutadania i pensament crític a través de la recerca, l'edició científica i la formació docent.</p>
       </div>
       <div class="project-grid">
         <article class="project-feature">
@@ -88,7 +85,7 @@ const indexedCount=publications.length;
 
   <section class="lab-banner" id="laboratori">
     <div class="container lab-grid">
-      <div><div class="eyebrow">Un espai en construcció</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Un espai per pensar en veu alta: conceptes, preguntes, activitats i recursos per portar el pensament crític de la teoria a l'aula.</p><a class="btn" href="#activitats-laboratori">Explorar les activitats <span aria-hidden="true">↗</span></a></div>
+      <div><div class="eyebrow">Un espai en construcció</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Analitzar fonts, contrastar interpretacions, discutir arguments i formular preguntes sobre el món que compartim.</p><a class="btn" href="#activitats-laboratori">Explorar les activitats <span aria-hidden="true">↗</span></a></div>
       <div class="lab-art" aria-hidden="true"><div class="lab-orbit"></div><div class="lab-orbit two"></div><div class="lab-main">¿</div><span class="lab-caption">OBSERVAR / CONTRASTAR / ARGUMENTAR / ACTUAR</span></div>
     </div>
     <div class="container lab-prompts" id="activitats-laboratori">
