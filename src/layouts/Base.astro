@@ -53,7 +53,7 @@ const nav = [
     (function () {
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
       if (reduced.matches || !('IntersectionObserver' in window)) return;
-      const selectors = '.section-head, .topic-card, .paper, .project-feature, .initiative, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
+      const selectors = '.section-head, .topic-card, .paper, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
       const elements = document.querySelectorAll(selectors);
       elements.forEach((el) => el.setAttribute('data-reveal', ''));
       // Habilitem les transicions després de preparar les seccions, per evitar salts inicials.

@@ -1,0 +1,37 @@
+---
+import { journalVisuals } from '../data/journalVisuals';
+const { venue } = Astro.props;
+const visual = journalVisuals[venue] ?? { label: venue, variant: 'blue' };
+---
+<div class={'journal-cover cover-' + visual.variant} aria-label={visual.note ?? 'Identificador visual de la revista ' + venue}>
+  <div class="cover-type" aria-hidden="true">
+    <span class="cover-overline">REVISTA CIENTÍFICA</span>
+    <span class="cover-name">{visual.label}</span>
+    <span class="cover-rule"></span>
+  </div>
+  {visual.image && <img
+    src={visual.image}
+    alt={visual.note ?? 'Imatge de la revista ' + venue}
+    loading="lazy"
+    decoding="async"
+    referrerpolicy="no-referrer-when-downgrade"
+    onerror="this.style.display='none'"
+  />}
+</div>
+<style>
+.journal-cover{width:73px;height:96px;position:relative;overflow:hidden;display:block;background:#194f70;color:#fff;flex-shrink:0;border:1px solid rgba(17,53,69,.12);box-shadow:0 3px 9px rgba(14,46,61,.10)}
+.journal-cover img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:top center}
+.cover-type{height:100%;padding:10px 7px;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.cover-overline{font:700 6px/1.2 'DM Sans',sans-serif;letter-spacing:.08em;opacity:.78}
+.cover-name{font:750 12px/1.12 'Manrope',sans-serif;letter-spacing:-.045em;overflow-wrap:anywhere}
+.cover-rule{height:2px;width:65%;background:currentColor;opacity:.75}
+.cover-orange{background:#c25a37}
+.cover-gold{background:#ac893c}
+.cover-purple{background:#645581}
+.cover-red{background:#b34841}
+.cover-green{background:#315e54}
+.cover-white{background:#e7f3f8;color:#154a69}
+:global(.paper.paper-visual){grid-template-columns:58px 73px minmax(0,1fr) 28px;align-items:center;gap:22px}
+:global(.paper.paper-visual .paper-copy){min-width:0}
+@media(max-width:760px){.journal-cover{width:53px;height:76px}.cover-name{font-size:9px}.cover-overline{font-size:5px}.cover-type{padding:7px 5px}:global(.paper.paper-visual){grid-template-columns:37px 53px minmax(0,1fr) 16px;gap:9px}}
+</style>

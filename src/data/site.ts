@@ -204,32 +204,6 @@ export const publications = [
   }
 ];
 
-// Altres contribucions en revistes indexades, separades dels articles de recerca.
-export const otherIndexedContributions = [
-  {
-    "year": "2021",
-    "authors": "Castellví Mata, J.",
-    "title": "Read the world to write the future: An interview with professors E Wayne Ross and Xosé Manuel Souto, experts in critical social studies",
-    "venue": "Bellaterra Journal of Teaching & Learning Language & Literature",
-    "type": "Entrevista acadèmica",
-    "indexing": [
-      "Scopus"
-    ],
-    "url": "https://doi.org/10.5565/rev/jtl3.974"
-  },
-  {
-    "year": "2021",
-    "authors": "Castellví Mata, J.",
-    "title": "Editor's note: Read the world to write the future: Critical education to address contemporary issues",
-    "venue": "Bellaterra Journal of Teaching & Learning Language & Literature",
-    "type": "Nota editorial",
-    "indexing": [
-      "Scopus"
-    ],
-    "url": "https://doi.org/10.5565/rev/jtl3.982"
-  }
-];
-
 export const researchProjects = [
   {period:'2025—2029', status:'EN CURS', title:'Competències de cultura democràtica en educació primària', code:'PID2024-160676OB-I00', description:'Recerca sobre el desenvolupament i l’ensenyament de competències de cultura democràtica a l’educació primària.', role:'Membre de l’equip investigador', url:'https://portalrecerca.uab.cat/ca/persons/jordi-castellvi-mata-2/'},
   {period:'2020—2023', status:'FINALITZAT', title:'Educació per al futur i esperança en la democràcia', code:'PID2019-107383RB-I00', description:'Repensar l’ensenyament de les ciències socials en temps de canvi, a partir dels futurs i els problemes socials.', role:'Membre de l’equip investigador'},
