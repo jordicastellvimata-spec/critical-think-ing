@@ -26,6 +26,13 @@ jobs:
           node-version: '22'
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+      - name: Ensure Rollup native dependency
+        shell: bash
+        run: |
+          if ! node -e "require.resolve('@rollup/rollup-linux-x64-gnu')" >/dev/null 2>&1; then
+            ROLLUP_VERSION=$(node -p "require('./node_modules/rollup/package.json').version")
+            npm install --no-save --no-audit --no-fund "@rollup/rollup-linux-x64-gnu@$ROLLUP_VERSION"
+          fi
       - name: Build Astro site
         run: npm run build
       - name: Upload Pages artifact

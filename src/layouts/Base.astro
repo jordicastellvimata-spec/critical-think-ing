@@ -5,10 +5,10 @@ const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
 const nav = [
-  { label:'Inici', path:'', key:'home' },
   { label:'Recerca', path:'#recerca', key:'research' },
   { label:'Publicacions', path:'#publicacions', key:'pubs' },
   { label:'Projectes', path:'#projectes', key:'projects' },
+  { label:'Docència', path:'#docencia', key:'teaching' },
   { label:'Laboratori', path:'#laboratori', key:'lab' },
   { label:'Sobre mi', path:'#sobre-mi', key:'about' },
 ];
@@ -53,7 +53,7 @@ const nav = [
     (function () {
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
       if (reduced.matches || !('IntersectionObserver' in window)) return;
-      const selectors = '.section-head, .topic-card, .paper, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
+      const selectors = '.section-head, .topic-card, .paper, .video-card, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy, .hero-visual';
       const elements = document.querySelectorAll(selectors);
       elements.forEach((el) => el.setAttribute('data-reveal', ''));
       // Habilitem les transicions després de preparar les seccions, per evitar salts inicials.

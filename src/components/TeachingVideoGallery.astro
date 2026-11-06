@@ -1,0 +1,94 @@
+---
+import { teachingVideos } from '../data/teachingVideos';
+---
+<section class="section videos-section" id="docencia" aria-labelledby="videos-heading">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Docència · Recursos audiovisuals</div>
+        <h2 class="section-title" id="videos-heading">A l'aula<br/>i en conversa.</h2>
+      </div>
+      <p>Finalitats de l'ensenyament de les ciències socials, educació mediàtica i treball a partir de problemes socials rellevants.</p>
+    </div>
+    <div class="video-grid">
+      {teachingVideos.map((video, i) => (
+        <article class="video-card">
+          <div class="video-frame" data-video-frame>
+            <button
+              class="video-poster"
+              type="button"
+              data-video-id={video.id}
+              data-video-title={video.title}
+              aria-label={'Reprodueix el vídeo: ' + video.title}
+              title={'Reprodueix: ' + video.title}
+            >
+              <img
+                src={'https://i.ytimg.com/vi/' + video.id + '/hqdefault.jpg'}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="480"
+                height="360"
+              />
+              <span class="video-play-icon" aria-hidden="true"><span>▶</span></span>
+              <span class="video-index" aria-hidden="true">{String(i + 1).padStart(2, '0')} / 04</span>
+            </button>
+          </div>
+          <div class="video-content">
+            <div class="video-kicker">{video.category}</div>
+            <h3>{video.title}</h3>
+            <p>{video.detail}</p>
+            <a class="video-external" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={'Obre a YouTube: ' + video.title}>
+              Veure a YouTube <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  // YouTube no rep una connexió al reproductor fins que el visitant prem Play.
+  document.querySelectorAll('.video-poster[data-video-id]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.getAttribute('data-video-id');
+      const title = button.getAttribute('data-video-title') || 'Vídeo';
+      const frame = button.closest('[data-video-frame]');
+      if (!frame || !id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+      iframe.title = title;
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.className = 'video-iframe';
+      frame.replaceChildren(iframe);
+    });
+  });
+</script>
+
+<style>
+.videos-section{background:#fff}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.video-card{border:1px solid #d3e2e8;background:#fbfdfe;min-width:0;overflow:hidden;transition:box-shadow .24s ease}
+.video-card:hover{box-shadow:0 10px 35px rgba(20,57,73,.09)}
+.video-frame{background:#143d54;aspect-ratio:16/9;width:100%;position:relative;overflow:hidden}
+.video-poster{width:100%;height:100%;padding:0;display:block;position:relative;border:0;background:#194f70;color:#fff;cursor:pointer;overflow:hidden}
+.video-poster img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .35s ease,filter .35s ease}
+.video-poster:hover img,.video-poster:focus-visible img{transform:scale(1.035);filter:brightness(.68)}
+.video-poster:focus-visible{outline:3px solid #d95f37;outline-offset:-3px}
+.video-play-icon{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:73px;height:73px;border-radius:50%;background:#f7fafb;color:#1c5879;display:grid;place-items:center;box-shadow:0 4px 23px rgba(0,0,0,.21);transition:transform .2s ease}
+.video-play-icon span{font-size:20px;transform:translateX(2px)}
+.video-poster:hover .video-play-icon{transform:translate(-50%,-50%) scale(1.09)}
+.video-index{position:absolute;right:16px;top:16px;background:#143d54e6;padding:8px 10px;font:800 10px/1 'Manrope',sans-serif;letter-spacing:.12em}
+.video-content{padding:26px 29px 29px}
+.video-kicker{font-size:10px;font-weight:800;letter-spacing:.11em;color:#276385;line-height:1.55}
+.video-content h3{font:650 clamp(21px,2.15vw,29px)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;color:#172d35;margin:16px 0 10px}
+.video-content p{font-size:14px;line-height:1.65;color:#536d78;margin-bottom:20px}
+.video-external{display:inline-flex;gap:13px;align-items:center;color:#176084;font-size:12px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:5px}
+.video-external:hover{color:#d3603c}
+.video-frame :global(.video-iframe){width:100%;height:100%;position:absolute;inset:0;border:0;display:block}
+@media(max-width:760px){.video-grid{grid-template-columns:1fr;gap:17px}.video-content{padding:22px}.video-content h3{font-size:23px}.video-play-icon{width:61px;height:61px}}
+@media(prefers-reduced-motion:reduce){.video-poster img,.video-play-icon,.video-card{transition:none}}
+</style>
