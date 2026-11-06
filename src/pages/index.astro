@@ -20,14 +20,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <a class="text-link" href="#sobre-mi">Conèixer la meva trajectòria <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-grid"></div>
-        <div class="ring ring-one"></div>
-        <div class="ring ring-two"></div>
-        <div class="visual-word">?</div>
-        <div class="visual-bottom"><span>THINK<br/>QUESTION<br/>TRANSFORM</span><span>01—03<br/>CULTURA<br/>CRÍTICA</span></div>
-        <div class="visual-stamp">Educació<br/>·<br/>Democràcia</div>
-      </div>
     </div>
     <div class="container hero-foot"><span>RECERCA · DOCÈNCIA · TRANSFERÈNCIA</span><span>CRITICAL THINKING / SOCIAL SCIENCES EDUCATION</span><a href="#recerca">DESCOBREIX MÉS ↓</a></div>
   </section>
@@ -190,19 +182,13 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 </Base>
 <style>
 .hero{background:#fcfbf7;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.23fr .77fr;gap:6%;padding-top:93px;padding-bottom:84px;align-items:center}
-.hero-copy{position:relative;z-index:2}
-.hero h1{margin:28px 0 29px;white-space:nowrap}
+.hero-grid{display:block;padding-top:clamp(95px,9vw,154px);padding-bottom:clamp(84px,8vw,140px)}
+.hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-copy .eyebrow{justify-content:center}
+.hero h1{font:650 clamp(64px,8.2vw,126px)/1.04 'Manrope',Arial,sans-serif;letter-spacing:-.079em;margin:34px 0 32px;white-space:normal;text-wrap:balance}
 .hero h1 span{color:#d95f37}
-.hero .lead{max-width:625px;font-size:clamp(17px,1.5vw,21px)}
-.hero-actions{display:flex;align-items:center;gap:29px;flex-wrap:wrap;margin-top:39px}
-.hero-visual{min-height:460px;background:#dceef5;border:1px solid #b8d5e0;position:relative;overflow:hidden;box-shadow:18px 18px 0 #f5d6c4}
-.visual-grid{position:absolute;inset:0;background-image:linear-gradient(to right,#9bc4d128 1px,transparent 1px),linear-gradient(to bottom,#9bc4d128 1px,transparent 1px);background-size:30px 30px}
-.ring{position:absolute;border:2px solid #1b7297;width:320px;height:320px;border-radius:50%;top:56px;left:14%;transform:rotate(-18deg)}
-.ring-two{border-color:#d95f37;width:225px;height:225px;top:102px;left:25%}
-.visual-word{font:800 265px/1 'Manrope',sans-serif;letter-spacing:-.1em;position:absolute;top:70px;left:29%;color:#175e80;transform:rotate(12deg)}
-.visual-stamp{position:absolute;top:28px;right:25px;background:#e86f46;color:#fff;border-radius:50%;width:98px;height:98px;display:grid;place-content:center;text-align:center;font-size:12px;font-weight:800;line-height:1.6;transform:rotate(13deg)}
-.visual-bottom{position:absolute;bottom:25px;left:28px;right:27px;display:flex;justify-content:space-between;gap:15px;color:#134c6b;font-size:10px;line-height:1.6;font-weight:800;letter-spacing:.12em}
+.hero .lead{max-width:800px;font-size:clamp(18px,1.55vw,22px);line-height:1.65;margin-inline:auto}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:29px;flex-wrap:wrap;margin-top:39px}
 .hero-foot{border-top:1px solid #dce5e6;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:10px;letter-spacing:.1em;font-weight:800;color:#66808c}
 .hero-foot a{color:#1c5d7d}
 .topics-section{background:#fff}
@@ -261,8 +247,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .contact-strip{background:#e7f2f5;padding:67px 0}
 .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
 .contact-inner h2{font:650 clamp(32px,4vw,55px)/1.16 'Manrope',sans-serif;letter-spacing:-.065em;margin:17px 0 0}
-@media(max-width:1100px){.hero-grid{gap:3%}.hero-visual{min-height:390px}.hero h1{font-size:clamp(48px,5.5vw,70px)}.topics-grid{grid-template-columns:repeat(2,1fr)}.topic-card{min-height:260px}.topic-card h3{margin-top:36px}}
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr;padding-top:62px;padding-bottom:40px;gap:35px}.hero h1{white-space:normal;font-size:clamp(46px,11vw,76px)}.hero-visual{min-height:330px;max-width:500px;width:calc(100% - 15px)}.visual-word{font-size:195px}.ring{height:255px;width:255px;top:37px}.ring-two{width:180px;height:180px;top:75px}.hero-foot{display:none}.topics-grid{grid-template-columns:1fr}.topic-card{min-height:0}.topic-card h3{margin:25px 0 13px}.project-grid,.lab-grid,.about-grid{grid-template-columns:1fr}.project-feature{min-height:400px}.initiative-stack{grid-template-rows:auto}.initiative{min-height:215px}.lab-art{height:250px}.lab-orbit{height:200px;width:200px}.lab-orbit.two{height:150px;width:270px}.lab-main{font-size:165px}.about-panel{padding:22px}.contact-inner{align-items:flex-start;flex-direction:column}.contact-inner .btn{max-width:100%;font-size:11px;overflow-wrap:anywhere}}
+@media(max-width:1100px){.topics-grid{grid-template-columns:repeat(2,1fr)}.topic-card{min-height:260px}.topic-card h3{margin-top:36px}}
+@media(max-width:760px){.hero-grid{padding-top:74px;padding-bottom:72px}.hero h1{font-size:clamp(41px,10.7vw,78px);line-height:1.08;margin:27px 0 27px;letter-spacing:-.075em}.hero .lead{font-size:16px;line-height:1.65}.hero-actions{flex-direction:column;gap:19px;margin-top:30px}.hero-foot{display:none}.topics-grid{grid-template-columns:1fr}.topic-card{min-height:0}.topic-card h3{margin:25px 0 13px}.project-grid,.lab-grid,.about-grid{grid-template-columns:1fr}.project-feature{min-height:400px}.initiative-stack{grid-template-rows:auto}.initiative{min-height:215px}.lab-art{height:250px}.lab-orbit{height:200px;width:200px}.lab-orbit.two{height:150px;width:270px}.lab-main{font-size:165px}.about-panel{padding:22px}.contact-inner{align-items:flex-start;flex-direction:column}.contact-inner .btn{max-width:100%;font-size:11px;overflow-wrap:anywhere}}
 
 /* Completem la portada en una única pàgina, conservant íntegrament la paleta actual. */
 .pub-type{font-weight:600;letter-spacing:.02em;color:#5b8092}
