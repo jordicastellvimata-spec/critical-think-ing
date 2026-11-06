@@ -24,6 +24,16 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     <div class="container hero-foot"><span>RECERCA · DOCÈNCIA · TRANSFERÈNCIA</span><span>CRITICAL THINKING / SOCIAL SCIENCES EDUCATION</span><a href="#recerca">DESCOBREIX MÉS ↓</a></div>
   </section>
 
+  <div class="research-transition" aria-hidden="true">
+    <div class="container research-transition-inner">
+      <span class="research-transition-kicker">DEL MÓN A LES PREGUNTES <span class="research-transition-line"></span> 01 / RECERCA</span>
+      <div class="research-transition-statement">
+        <strong>Qüestionar<span>.</span></strong>
+        <span class="research-transition-arrow">↓</span>
+      </div>
+    </div>
+  </div>
+
   <section class="section topics-section" id="recerca">
     <div class="container">
       <div class="section-head">
@@ -191,6 +201,21 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .hero-actions{display:flex;align-items:center;justify-content:center;gap:29px;flex-wrap:wrap;margin-top:39px}
 .hero-foot{border-top:1px solid #dce5e6;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:10px;letter-spacing:.1em;font-weight:800;color:#66808c}
 .hero-foot a{color:#1c5d7d}
+/* Pont tipogràfic entre la portada i les preguntes: moviment vinculat a l'scroll. */
+.research-transition{--bridge-shift:0px;position:relative;isolation:isolate;z-index:1;min-height:310px;overflow:hidden;background:#164b66;color:#fff}
+.research-transition:before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,#133e57 0%,#1b5f7d 78%,#246c85 100%);z-index:-1}
+.research-transition:after{content:'';position:absolute;width:min(62vw,780px);height:1px;background:#8db9c9;opacity:.35;transform:rotate(-15deg);right:-110px;top:60%}
+.research-transition-inner{padding-top:64px;padding-bottom:100px;transform:translate3d(0,var(--bridge-shift),0);will-change:transform}
+.research-transition-kicker{display:flex;align-items:center;gap:18px;font-size:11px;letter-spacing:.16em;font-weight:800;color:#bed9e5}
+.research-transition-line{height:1px;width:clamp(24px,5vw,72px);background:#e98960}
+.research-transition-statement{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:14px}
+.research-transition-statement strong{font:650 clamp(62px,9.2vw,146px)/1 'Manrope',Arial,sans-serif;letter-spacing:-.085em}
+.research-transition-statement strong span{color:#f0a16c}
+.research-transition-arrow{font:400 clamp(70px,8vw,124px)/1 'Manrope',Arial,sans-serif;color:#f0a16c}
+.topics-section{position:relative;z-index:2;margin-top:-52px;padding-top:clamp(108px,10vw,145px);border-radius:30px 30px 0 0;box-shadow:0 -20px 45px rgba(15,54,76,.13);background:#fff}
+@media(max-width:760px){.research-transition{min-height:245px}.research-transition-inner{padding-top:46px;padding-bottom:91px}.research-transition-kicker{gap:10px;font-size:9px;letter-spacing:.09em}.research-transition-statement{margin-top:22px;gap:6px}.research-transition-statement strong{font-size:clamp(35px,10vw,82px)}.research-transition-arrow{font-size:clamp(36px,10vw,62px)}.topics-section{margin-top:-38px;border-radius:21px 21px 0 0;padding-top:94px}}
+@media(prefers-reduced-motion:reduce){.research-transition-inner{transform:none!important;will-change:auto}}
+
 .topics-section{background:#fff}
 .topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
 .topic-card{border:1px solid #d1e2e8;padding:27px 26px 25px;min-height:318px;display:flex;flex-direction:column;position:relative;overflow:hidden;background:#fbfdfe;transition:transform .2s,border-color .2s}
@@ -339,3 +364,28 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 @media(max-width:1150px){.lab-prompts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.lab-prompts{grid-template-columns:1fr}}
 </style>
+<script is:inline>
+  // Parallax molt suau de la transició, només mentre és visible.
+  (() => {
+    const bridge = document.querySelector('.research-transition');
+    if (!bridge || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let scheduled = false;
+    function updateBridge() {
+      const rect = bridge.getBoundingClientRect();
+      const height = window.innerHeight || 1;
+      const progress = Math.max(0, Math.min(1, (height - rect.top) / (height + rect.height)));
+      bridge.style.setProperty('--bridge-shift', (Math.round((0.5 - progress) * 55)) + 'px');
+      scheduled = false;
+    }
+    const schedule = () => {
+      if (!scheduled) {
+        scheduled = true;
+        requestAnimationFrame(updateBridge);
+      }
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    updateBridge();
+  })();
+</script>
+
