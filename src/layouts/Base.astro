@@ -5,10 +5,10 @@ const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
 const nav = [
-  { label:'Recerca', path:'#recerca', key:'research' },
+  { label:'Recerca', path:'#projectes', key:'projects' },
   { label:'Publicacions', path:'#publicacions', key:'pubs' },
-  { label:'Projectes', path:'#projectes', key:'projects' },
-  { label:'Docència', path:'#docencia', key:'teaching' },
+  { label:'Pràctica', path:'#transferencia', key:'practice' },
+  { label:'Vídeos', path:'#docencia', key:'videos' },
   { label:'Laboratori', path:'#laboratori', key:'lab' },
   { label:'Sobre mi', path:'#sobre-mi', key:'about' },
 ];
