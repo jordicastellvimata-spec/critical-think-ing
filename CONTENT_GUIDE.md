@@ -1,8 +1,8 @@
 # Guia d'edició de critical-think.ing
 
 Aquesta web utilitza Astro i es publica gratuïtament amb GitHub Pages. La portada funciona com una sola pàgina contínua amb navegació per ancoratges. Les subpàgines segueixen disponibles com a consulta ampliada. Els colors actuals es mantenen expressament fins a rebre referències visuals de l'autor. Les pàgines són:
-- `src/pages/index.astro` — portada completa: recerca, 15 articles indexats, projectes i col·lecció editorial, iniciatives pràctiques, GREDICS, ECCSS, laboratori, trajectòria i contacte
-- `src/pages/publicacions/index.astro` — publicacions seleccionades
+- `src/pages/index.astro` — portada contínua amb línies de recerca, llibres i articles, projectes, pràctica, docència, GREDICS i revista, laboratori, trajectòria i contacte
+- `src/pages/publicacions/index.astro` — llibres destacats i articles en revistes indexades
 - `src/pages/projectes/index.astro` — recerca, edició i formació
 - `src/pages/laboratori/index.astro` — recursos sobre pensament crític
 - `src/pages/sobre-mi/index.astro` — biografia i trajectòria
@@ -32,3 +32,8 @@ Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica a
 
 ## Vídeos docents
 Els vídeos de YouTube s'han de mantenir amb el títol i l'enllaç original verificats. El reproductor utilitza youtube-nocookie i no s'activa fins que la persona visitant clica la miniatura. La secció `#docencia` forma part de la portada, sense requerir una pàgina nova. No atribuir continguts, llocs o dates no confirmats als vídeos.
+
+## Llibres destacats i navegació
+- `src/data/featuredBooks.ts` inclou dos llibres verificats: `Enseñar el conflicto` (Dykinson, 2024; Jordi és coeditor) i `¿Cómo investigar en Didáctica de las Ciencias Sociales?` (Octaedro, 2023; Jordi és coautor de tres capítols).
+- `src/components/FeaturedBooks.astro` és la presentació destacada, visible tant a la portada com a Publicacions. La portada d'Octaedro usa una imatge editorial identificada; el llibre de Dykinson té una composició tipogràfica pròpia que no s'ha de confondre amb la portada oficial.
+- A `src/layouts/Base.astro`, l'ordre de navegació ha de reproduir l'ordre vertical de les seccions de la portada: línies de recerca, publicacions, projectes, pràctica, docència, GREDICS i revista, laboratori i sobre mi. El menú compacte es mostra quan les vuit entrades no caben.
