@@ -1,7 +1,7 @@
 # Guia d'edició de critical-think.ing
 
 Aquesta web utilitza Astro i es publica gratuïtament amb GitHub Pages. La portada funciona com una sola pàgina contínua amb navegació per ancoratges. Les subpàgines segueixen disponibles com a consulta ampliada. Els colors actuals es mantenen expressament fins a rebre referències visuals de l'autor. Les pàgines són:
-- `src/pages/index.astro` — portada completa: recerca, 15 articles indexats, projectes, laboratori, trajectòria i contacte
+- `src/pages/index.astro` — portada completa: recerca, 15 articles indexats, projectes i col·lecció editorial, iniciatives pràctiques, GREDICS, ECCSS, laboratori, trajectòria i contacte
 - `src/pages/publicacions/index.astro` — publicacions seleccionades
 - `src/pages/projectes/index.astro` — recerca, edició i formació
 - `src/pages/laboratori/index.astro` — recursos sobre pensament crític
@@ -9,7 +9,7 @@ Aquesta web utilitza Astro i es publica gratuïtament amb GitHub Pages. La porta
 - `src/layouts/Base.astro` — menú, capçalera, estils comuns i peu de pàgina
 
 ## Contingut estructurat
-Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica afegir un objecte a `publications` amb `year`, `authors`, `title`, `venue`, `type`, `indexing` i `url` (DOI verificat). El conjunt principal només inclou articles de revistes indexades a Scopus o Web of Science. Les entrevistes i notes editorials s'han de desar a `otherIndexedContributions`. El criteri d'indexació és de revista, no d'indexació individual de cada article. Tots dos conjunts apareixen a la portada i a la subpàgina de publicacions.
+Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica afegir un objecte a `publications` amb `year`, `authors`, `title`, `venue`, `type`, `indexing` i `url` (DOI verificat). El conjunt principal només inclou articles de revistes indexades a Scopus o Web of Science. Les entrevistes i notes editorials no apareixen a la secció pública de publicacions. El criteri d'indexació és de revista, no d'indexació individual de cada article.
 
 ## Normes per a agents d'IA (Instinct, ChatGPT o altres)
 1. No inventis publicacions, premis, càrrecs, cursos, resultats ni projectes; verifica fonts institucionals o demana confirmació.
@@ -22,3 +22,8 @@ Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica a
 
 ## Desenvolupament
 `npm install`, `npm run dev`, `npm run build`.
+
+## Identitat visual i jornades
+- `public/images/gredics-logo.svg`: vectorització del logotip aportat per l'autor (negres i vermell). No utilitzar el monograma provisional.
+- `src/data/site.ts` (`jornades2027`): dades de les XXIII Jornades extretes de la Segona Circular de 29/10/2026; enllaç oficial: https://webs.uab.cat/jornadesdcs/.
+- A la portada, mantenir separades «Recerca» (projectes i col·lecció temàtica) i «...que connecta amb la pràctica» (MOOC, Jornades). Conservar colors fins a noves indicacions.

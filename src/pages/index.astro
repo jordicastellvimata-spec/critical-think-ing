@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import JournalCover from '../components/JournalCover.astro';
-import {profile, themes, publications, researchProjects, otherInitiatives} from '../data/site';
+import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'');
 const to=(s='')=>root+'/'+s.replace(/^\//,'');
 ---
@@ -56,8 +56,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   <section class="section projects-section" id="projectes">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Projectes i iniciatives</div><h2 class="section-title">Recerca que connecta<br/>amb la pràctica.</h2></div>
-        <p>Educació democràtica, ciutadania i pensament crític a través de la recerca, l'edició científica i la formació docent.</p>
+        <div><div class="eyebrow">Projectes i activitat científica</div><h2 class="section-title">Recerca.</h2></div>
+        <p>Educació democràtica, ciutadania i pensament crític: projectes col·lectius que busquen comprendre la realitat i transformar l'educació.</p>
       </div>
       <div class="project-grid">
         <article class="project-feature">
@@ -65,15 +65,47 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <div class="project-content"><span class="project-code">{researchProjects[0].code}</span><h3>{researchProjects[0].title}</h3><p>{researchProjects[0].description}</p><a href="#mes-projectes" class="project-link">Altres projectes de recerca <span aria-hidden="true">↗</span></a></div>
           <div class="project-circle" aria-hidden="true"></div>
         </article>
-        <div class="initiative-stack">
-          <a class="initiative" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer"><span>{otherInitiatives[0].eyebrow}</span><h3>{otherInitiatives[0].title}</h3><p>{otherInitiatives[0].subtitle}</p><strong>Col·lecció temàtica ↗</strong></a>
-          <a class="initiative mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer"><span>{otherInitiatives[1].eyebrow}</span><h3>La formación del pensamiento crítico en la era digital</h3><p>Curs obert a Coursera · UAB</p><strong>Explorar el MOOC ↗</strong></a>
-        </div>
+        <a class="initiative editorial-research" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
+          <span>EDICIÓ CIENTÍFICA · DISCOVER EDUCATION</span>
+          <div class="research-editorial-content">
+            <span class="editorial-symbol" aria-hidden="true">✳</span>
+            <h3>{otherInitiatives[0].title}</h3>
+            <p>{otherInitiatives[0].subtitle}</p>
+            <p class="editorial-description">Perspectives crítiques sobre educació, democràcia i justícia social.</p>
+          </div>
+          <strong>Descobrir la col·lecció temàtica ↗</strong>
+        </a>
       </div>
       <div class="research-mini-list" id="mes-projectes" aria-label="Altres projectes de recerca">
         {researchProjects.slice(1).map(p=><article class="research-mini"><div><span class="mini">{p.period} · {p.code}</span><h3>{p.title}</h3><p>{p.description}</p></div><span class="research-role">{p.role}</span></article>)}
       </div>
 
+      <div class="practice-section" id="transferencia">
+        <div class="section-head">
+          <div><div class="eyebrow">Docència · Diàleg · Transferència</div><h2 class="section-title">...que connecta<br/>amb la pràctica.</h2></div>
+          <p>La formació del professorat i el debat entre l'escola i la universitat són parts essencials de la recerca educativa.</p>
+        </div>
+        <div class="practice-grid">
+          <a class="practice-card practice-mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer">
+            <span class="mini">FORMACIÓ OBERTA · COURSERA</span>
+            <div class="practice-symbol" aria-hidden="true">↗</div>
+            <div class="practice-card-copy">
+              <h3>La formación del pensamiento crítico en la era digital</h3>
+              <p>MOOC de la UAB sobre literacitat crítica, ciutadania i educació democràtica, del qual soc codirector i docent.</p>
+              <strong>Explorar el curs ↗</strong>
+            </div>
+          </a>
+          <a class="practice-card practice-jornades" href={jornades2027.url} target="_blank" rel="noopener noreferrer">
+            <span class="mini">JORNADES INTERNACIONALS · UAB</span>
+            <div class="practice-event-date"><strong>{jornades2027.edition}</strong><span>{jornades2027.dates}</span></div>
+            <div class="practice-card-copy">
+              <h3>{jornades2027.theme}</h3>
+              <p>{jornades2027.subtitle}. Coordinació de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials.</p>
+              <strong>Web de les Jornades ↗</strong>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -83,9 +115,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       <div class="network-grid">
         <article class="network-feature gredics-feature">
           <div class="network-topline">GRUP DE RECERCA · UAB</div>
-          <div class="gredics-identity" aria-label="GREDICS — Grup de Recerca en Didàctica de les Ciències Socials">
-            <span class="gredics-monogram" aria-hidden="true">G<span>·</span></span>
-            <span class="gredics-wordmark">GREDICS</span>
+          <div class="gredics-identity">
+            <img class="gredics-official-logo" src={to('images/gredics-logo.svg')} alt="Logotip de GREDICS, Grup de Recerca en Didàctica de les Ciències Socials" width="654" height="180" loading="lazy" decoding="async" />
           </div>
           <h3>Grup de Recerca en Didàctica de les Ciències Socials</h3>
           <p>Recerca sobre educació per a la ciutadania, pensament crític, història, problemes socials i cultura democràtica a la Universitat Autònoma de Barcelona.</p>
@@ -262,4 +293,27 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .eccss-content a{margin-top:auto}
 @media(max-width:1050px){.network-grid{grid-template-columns:1fr}.network-feature{min-height:0}.eccss-feature{min-height:310px}.eccss-cover-frame img{max-height:290px}}
 @media(max-width:760px){.gredics-feature{padding:28px 23px}.gredics-identity{gap:13px}.gredics-monogram{width:58px;height:58px;flex-basis:58px;font-size:30px}.gredics-wordmark{font-size:clamp(32px,9vw,43px)}.eccss-feature{grid-template-columns:1fr}.eccss-cover-frame{min-height:220px}.eccss-cover-frame img{max-height:210px;width:auto;max-width:75%}.eccss-content{padding:27px 24px}.eccss-content h3{margin:18px 0}}
+
+/* Estructura editorial: recerca científica i transferència educativa, sense alterar la paleta. */
+.editorial-research{min-height:480px;justify-content:space-between;background:#fff3ea}
+.editorial-research .editorial-symbol{display:block;font-size:66px;color:#cc623e;margin:0 0 22px}
+.editorial-research h3{font-size:clamp(29px,3.25vw,42px);line-height:1.14}
+.editorial-research .editorial-description{margin-top:20px;line-height:1.8;color:#5d727d}
+.practice-section{padding-top:86px;scroll-margin-top:100px}
+.practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.practice-card{display:flex;min-height:360px;flex-direction:column;justify-content:space-between;padding:33px 36px;border:1px solid #cee4eb;background:#e5f1f5;transition:transform .2s ease,border-color .2s ease}
+.practice-card:hover{transform:translateY(-3px);border-color:#80bacd}
+.practice-card .mini{color:#226387}
+.practice-card h3{font:650 clamp(27px,2.45vw,36px)/1.24 'Manrope',sans-serif;letter-spacing:-.05em;max-width:600px;margin-bottom:14px}
+.practice-card p{font-size:14px;color:#526a74;line-height:1.75;max-width:510px}
+.practice-card strong{display:inline-block;font-size:12px;color:#1c5c7e;border-bottom:1px solid currentColor;padding-bottom:5px;margin-top:12px}
+.practice-mooc .practice-symbol{font:500 60px/1 'Manrope',sans-serif;color:#d2653d;margin:12px 0}
+.practice-jornades{background:#fff3ea;border-color:#f0d1bf}
+.practice-event-date{display:flex;align-items:baseline;gap:18px;margin:9px 0 17px}
+.practice-event-date strong{border:0;margin:0;padding:0;color:#d2653d;font:800 clamp(70px,8vw,115px)/.95 'Manrope',sans-serif;letter-spacing:-.09em}
+.practice-event-date span{font:700 12px/1.5 'DM Sans',sans-serif;color:#276385;max-width:135px}
+.gredics-identity{margin:23px 0 25px;width:100%;max-width:470px;min-height:108px;display:flex;align-items:center}
+.gredics-official-logo{width:100%;max-width:470px;height:auto;max-height:127px;object-fit:contain;object-position:left center;display:block}
+@media(max-width:1050px){.editorial-research{min-height:380px}}
+@media(max-width:760px){.practice-section{padding-top:64px}.practice-grid{grid-template-columns:1fr}.practice-card{min-height:330px;padding:27px 24px}.practice-event-date strong{font-size:85px}.gredics-identity{min-height:70px}.gredics-official-logo{max-height:100px}.editorial-research{min-height:320px}.editorial-research .editorial-symbol{margin-bottom:8px}}
 </style>

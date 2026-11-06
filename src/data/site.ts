@@ -204,6 +204,22 @@ export const publications = [
   }
 ];
 
+
+// Jornades coorganitzades per GREDICS i la Unitat de Didàctica de les Ciències Socials (UAB).
+// Dades extretes de la segona circular del 29 d'octubre de 2026.
+export const jornades2027 = {
+  edition: 'XXIII',
+  year: '2027',
+  dates: '27, 28 i 29 de gener de 2027',
+  place: 'Facultat de Ciències de l’Educació · UAB',
+  name: 'Jornades Internacionals de Recerca en Didàctica de les Ciències Socials',
+  theme: 'L’escola davant l’actualitat',
+  subtitle: 'Competències de Cultura Democràtica per canviar el món',
+  description: 'Un espai de trobada entre professorat, investigadors i estudiants per interpretar críticament l’actualitat, contrastar perspectives i connectar la cultura democràtica amb la pràctica educativa.',
+  coordination: 'Jordi Castellví Mata, Neus González-Monfort i Mónica Hernández González',
+  url: 'https://webs.uab.cat/jornadesdcs/'
+};
+
 export const researchProjects = [
   {period:'2025—2029', status:'EN CURS', title:'Competències de cultura democràtica en educació primària', code:'PID2024-160676OB-I00', description:'Recerca sobre el desenvolupament i l’ensenyament de competències de cultura democràtica a l’educació primària.', role:'Membre de l’equip investigador', url:'https://portalrecerca.uab.cat/ca/persons/jordi-castellvi-mata-2/'},
   {period:'2020—2023', status:'FINALITZAT', title:'Educació per al futur i esperança en la democràcia', code:'PID2019-107383RB-I00', description:'Repensar l’ensenyament de les ciències socials en temps de canvi, a partir dels futurs i els problemes socials.', role:'Membre de l’equip investigador'},
