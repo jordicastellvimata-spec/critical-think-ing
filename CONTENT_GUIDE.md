@@ -35,5 +35,5 @@ Els vídeos de YouTube s'han de mantenir amb el títol i l'enllaç original veri
 
 ## Llibres destacats i navegació
 - `src/data/featuredBooks.ts` inclou dos llibres verificats: `Enseñar el conflicto` (Dykinson, 2024; Jordi és coeditor) i `¿Cómo investigar en Didáctica de las Ciencias Sociales?` (Octaedro, 2023; Jordi és coautor de tres capítols).
-- `src/components/FeaturedBooks.astro` és la presentació destacada, visible tant a la portada com a Publicacions. La portada d'Octaedro usa una imatge editorial identificada; el llibre de Dykinson té una composició tipogràfica pròpia que no s'ha de confondre amb la portada oficial.
+- `src/components/FeaturedBooks.astro` és la presentació destacada, visible tant a la portada com a Publicacions. La portada d'Octaedro usa una imatge editorial identificada; el llibre de Dykinson utilitza la portada original facilitada per l'autor, optimitzada per a la web en format SVG amb imatge WebP incrustada.
 - A `src/layouts/Base.astro`, l'ordre de navegació ha de reproduir l'ordre vertical de les seccions de la portada: línies de recerca, publicacions, projectes, pràctica, docència, GREDICS i revista, laboratori i sobre mi. El menú compacte es mostra quan les vuit entrades no caben.
