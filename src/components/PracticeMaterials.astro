@@ -1,0 +1,96 @@
+---
+import { barcanovaBooks, jesuitesProjects } from '../data/practiceMaterials';
+---
+<div class="practice-materials" aria-label="Materials curriculars i projectes educatius">
+  <section class="material-group" aria-labelledby="barcanova-heading">
+    <div class="material-group-head">
+      <div><span class="material-kicker">AUTORIA I DISSENY DE MATERIALS · PRIMÀRIA</span><h3 id="barcanova-heading">Llibres de text <em>Barcanova.</em></h3></div>
+      <p>Col·laboració en els programes Experimenta i Entorn de Coneixement del Medi, amb vuit volums per a 3r i 4t de primària.</p>
+    </div>
+    <div class="material-grid book-grid">
+      {barcanovaBooks.map((b) => (
+        <article class="book-entry">
+          <a class="book-visual" href={`https://www.amazon.es/s?k=${b.isbn}`} target="_blank" rel="noopener noreferrer" aria-label={`Cercar a Amazon ${b.title}, ISBN ${b.isbn}`}>
+            <span class="book-fallback" aria-hidden="true"><small>BARCANOVA · INNOVA 2</small><strong>{b.title}</strong><span>{b.course}</span></span>
+            <img src={b.cover} alt={`Portada de ${b.title}`} loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" onerror="this.style.display='none'" />
+          </a>
+          <div class="book-meta"><span>{b.series.toUpperCase()} · {b.course.toUpperCase()}</span><h4>{b.title}</h4><small>ISBN {b.isbn}</small>
+            <div class="book-links">
+              <a href={`https://www.amazon.es/s?k=${b.isbn}`} target="_blank" rel="noopener noreferrer" aria-label={`Cercar a Amazon ${b.title}`}>Amazon ↗</a>
+              <a href={b.info} target="_blank" rel="noopener noreferrer" aria-label={`Veure la fitxa del llibre ${b.title}`}>Fitxa del llibre ↗</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="materials-note">Els enllaços d’Amazon cerquen cada ISBN; no pressuposen que el llibre hi estigui disponible.</p>
+  </section>
+
+  <section class="material-group jesuites-group" aria-labelledby="jesuites-heading">
+    <div class="material-group-head">
+      <div><span class="material-kicker">DISSENY DE PROJECTES · SECUNDÀRIA</span><h3 id="jesuites-heading">Projectes amb <em>Jesuïtes Educació.</em></h3></div>
+      <p>Cinc projectes educatius de ciències socials construïts al voltant de preguntes sobre el món i la vida col·lectiva.</p>
+    </div>
+    <div class="material-grid jesuites-grid">
+      {jesuitesProjects.map((project, index) => (
+        <article class="jesuites-entry">
+          <div class={`jesuites-poster poster-${project.variant}`} aria-label={`Representació gràfica del projecte ${project.title}`}>
+            <span class="jesuites-small">PROJECTES<br />CIÈNCIES SOCIALS</span>
+            <span class="jesuites-symbol" aria-hidden="true">{String(index+1).padStart(2,'0')}</span>
+            <strong>{project.title}</strong>
+            <span class="jesuites-course">{project.course}</span>
+          </div>
+          <div class="jesuites-copy"><span>PROJECTE · {project.course.toUpperCase()}</span><h4>{project.title}</h4></div>
+        </article>
+      ))}
+    </div>
+    <p class="materials-note">Representacions gràfiques originals d’aquests projectes; les portades d’ús intern de la Fundació Jesuïtes Educació no es reprodueixen.</p>
+  </section>
+</div>
+<style>
+.practice-materials{margin-top:38px;display:grid;gap:80px;min-width:0}
+.material-group{border-top:1px solid var(--line);padding-top:39px}
+.material-group-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:29px}
+.material-group-head>div{max-width:610px}
+.material-kicker{font:800 10px/1.5 'DM Sans',Arial,sans-serif;color:var(--red);letter-spacing:.14em}
+.material-group-head h3{font:650 clamp(30px,3.7vw,50px)/1.15 'Manrope',sans-serif;letter-spacing:-.062em;margin:12px 0 0}
+.material-group-head h3 em{font-style:normal;color:var(--cyan)}
+.material-group-head>p{font-size:14px;line-height:1.7;max-width:345px;color:var(--muted);margin:0}
+.material-grid{display:grid;gap:16px;min-width:0}
+.book-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.book-entry{background:var(--white);border:1px solid var(--line);min-width:0;overflow:hidden;transition:transform .22s,border-color .22s}
+.book-entry:hover,.jesuites-entry:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.book-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:270px;overflow:hidden;padding:21px 25px;background:var(--cyan-pale);text-decoration:none}
+.book-visual img{position:absolute;inset:18px;max-width:calc(100% - 36px);max-height:calc(100% - 36px);width:calc(100% - 36px);height:calc(100% - 36px);object-fit:contain;filter:drop-shadow(0 4px 10px rgba(16,44,61,.17))}
+.book-fallback{display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-height:210px;width:160px;background:#fff;color:var(--cyan);box-shadow:5px 8px 17px rgba(0,0,0,.09);border-top:13px solid #138a70;padding:12px}
+.book-fallback small{font:800 8px 'Manrope',sans-serif;letter-spacing:.11em}
+.book-fallback strong{font:750 18px/1.24 'Manrope',sans-serif;letter-spacing:-.04em}
+.book-fallback>span{font:700 10px 'Manrope',sans-serif}
+.book-meta{padding:18px 18px 21px;display:flex;flex-direction:column;gap:10px}
+.book-meta>span,.jesuites-copy>span{font:800 10px/1.4 'DM Sans',sans-serif;color:var(--red);letter-spacing:.09em}
+.book-meta h4,.jesuites-copy h4{font:650 16px/1.38 'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink);margin:0}
+.book-meta>small{font-size:11px;color:var(--muted)}
+.book-links{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:auto;padding-top:9px}
+.book-links a{font:750 11px 'Manrope',sans-serif;color:var(--cyan);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.book-links a:hover{color:var(--red)}
+.book-links a:focus-visible,.book-visual:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.materials-note{margin:17px 0 0;color:var(--muted);font-size:11px;line-height:1.6}
+.jesuites-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+.jesuites-entry{border:1px solid var(--line);background:var(--offwhite);min-width:0;transition:transform .22s,border-color .22s;overflow:hidden}
+.jesuites-poster{--poster-ink:#194f70;--poster-bg:#cfeef0;--accent:#f27772;aspect-ratio: .70;position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:17px 15px;background:var(--poster-bg);color:var(--poster-ink);isolation:isolate}
+.jesuites-poster:before{content:'';position:absolute;z-index:-1;border:19px solid var(--accent);width:145px;height:145px;right:-62px;top:20%;border-radius:50%;opacity:.7}
+.jesuites-poster:after{content:'';position:absolute;z-index:-1;left:-36px;bottom:7%;width:190px;height:75px;transform:rotate(-17deg);background:var(--accent);opacity:.3}
+.jesuites-small{font:800 9px/1.55 'DM Sans',sans-serif;letter-spacing:.11em;max-width:145px}
+.jesuites-symbol{font:800 42px/1 'Manrope',sans-serif;letter-spacing:-.08em;opacity:.14;align-self:end}
+.jesuites-poster strong{font:750 clamp(17px,1.68vw,27px)/1.13 'Manrope',sans-serif;letter-spacing:-.05em;overflow-wrap:break-word}
+.jesuites-course{font:800 11px 'DM Sans',sans-serif;letter-spacing:.11em}
+.poster-terra{--poster-bg:#e8f3f0;--poster-ink:#075268;--accent:#cc544d}
+.poster-canviar{--poster-bg:#123f55;--poster-ink:#f9f6ee;--accent:#e35550}
+.poster-centre{--poster-bg:#ffded5;--poster-ink:#7b222e;--accent:#137c91}
+.poster-viure{--poster-bg:#d9e4ec;--poster-ink:#104966;--accent:#e85e56}
+.poster-propietat{--poster-bg:#f6ead0;--poster-ink:#6e3040;--accent:#136e82}
+.jesuites-copy{display:flex;flex-direction:column;gap:8px;padding:16px}
+@media(max-width:1100px){.book-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.jesuites-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.jesuites-poster strong{font-size:25px}}
+@media(max-width:760px){.practice-materials{gap:63px;margin-top:29px}.material-group{padding-top:30px}.material-group-head{flex-direction:column;align-items:flex-start;gap:13px}.material-group-head>p{max-width:600px}.book-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.book-visual{min-height:200px;padding:15px}.book-visual img{inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);max-width:calc(100% - 20px);max-height:calc(100% - 20px)}.book-fallback{min-height:155px;width:115px}.book-fallback strong{font-size:13px}.book-meta{padding:13px;gap:7px}.book-meta h4{font-size:13px}.book-links{gap:8px 12px}.jesuites-grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(205px,68vw);grid-template-columns:none;gap:13px;overflow-x:auto;padding-bottom:15px;scroll-snap-type:x mandatory;scroll-padding-inline:0;overscroll-behavior-inline:contain}.jesuites-entry{scroll-snap-align:start}.jesuites-poster{aspect-ratio:.79}.jesuites-poster strong{font-size:clamp(26px,7vw,33px)}}
+@media(prefers-reduced-motion:reduce){.book-entry,.jesuites-entry{transition:none}.book-entry:hover,.jesuites-entry:hover{transform:none}}
+</style>

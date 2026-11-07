@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import JournalCover from '../components/JournalCover.astro';
 import FeaturedBooks from '../components/FeaturedBooks.astro';
 import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
+import PracticeMaterials from '../components/PracticeMaterials.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
@@ -114,6 +115,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             </div>
           </a>
         </div>
+        <PracticeMaterials />
         <a class="practice-to-videos" href="#docencia">Veure també les intervencions en vídeo <span aria-hidden="true">↓</span></a>
     </div>
   </section>
