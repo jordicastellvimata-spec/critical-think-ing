@@ -1,0 +1,103 @@
+---
+const readings = [
+  {
+    issue: '99',
+    journal: 'Íber',
+    year: '2020',
+    theme: 'LECTURA CRÍTICA',
+    title: 'La lectura crítica de los medios digitales',
+    authors: 'Jordi Castellví, Breogán Tosar i Mercè Andreu',
+    description: 'Llegir els mitjans i analitzar els seus missatges de manera crítica.',
+    url: 'https://portalrecerca.uab.cat/ca/publications/la-lectura-cr%C3%ADtica-de-los-medios-digitales/'
+  },
+  {
+    issue: '118',
+    journal: 'Íber',
+    year: '2025',
+    theme: 'LITERACITAT DIGITAL',
+    title: 'Literacidad crítica digital: un decálogo para la enseñanza de las ciencias sociales',
+    authors: 'Antoni Santisteban, Jordi Castellví i Neus González-Monfort',
+    description: 'Un decàleg d’orientacions per a l’ensenyament de les ciències socials.',
+    url: 'https://dialnet.unirioja.es/ejemplar/690637'
+  },
+  {
+    issue: '122',
+    journal: 'Íber',
+    year: '2026',
+    theme: 'INTEL·LIGÈNCIA ARTIFICIAL',
+    title: 'Contribuciones de la IA a la enseñanza de las ciencias sociales y la formación del pensamiento crítico',
+    authors: 'Diego Núñez, Jordi Castellví i Antoni Santisteban',
+    description: 'Què pot aportar la IA a l’ensenyament i al pensament crític?',
+    url: 'https://portalrecerca.uab.cat/ca/publications/contribuciones-de-la-ia-a-la-ense%C3%B1anza-de-las-ciencias-sociales-y/'
+  },
+  {
+    issue: '37',
+    journal: 'Comunicació Educativa',
+    year: '2024',
+    theme: 'JUSTÍCIA SOCIAL',
+    title: 'Formar el pensament crític orientat a la justícia social per fer front al feixisme',
+    authors: 'Jordi Castellví',
+    description: 'Problemes socials rellevants, polarització i discursos d’odi a l’aula.',
+    url: 'https://www.revistes.urv.cat/index.php/comeduc/article/view/4013'
+  }
+];
+---
+<div class="lab-readings" id="lectures-laboratori" aria-labelledby="readings-heading">
+  <div class="readings-header">
+    <div>
+      <span class="reading-eyebrow">LECTURES · RECURSOS PER AL PROFESSORAT</span>
+      <h3 id="readings-heading">Per portar les idees <em>a l’aula.</em></h3>
+    </div>
+    <p>Quatre articles per explorar la lectura crítica, la ciutadania i les qüestions controvertides amb el professorat.</p>
+  </div>
+  <div class="readings-grid">
+    {readings.map((reading, index) => (
+      <a class={'reading-card reading-'+index} href={reading.url} target="_blank" rel="noopener noreferrer" aria-label={'Consultar '+reading.title}>
+        <div class="reading-poster">
+          <div class="reading-poster-head"><strong>{reading.journal}</strong><span>NÚM. {reading.issue}</span></div>
+          <span class="reading-poster-number" aria-hidden="true">{reading.issue}</span>
+          <div class="reading-poster-foot"><span>{reading.theme}</span><strong>{reading.year}</strong></div>
+        </div>
+        <div class="reading-info">
+          <span>{reading.journal.toUpperCase()} · {reading.year}</span>
+          <h4>{reading.title}</h4>
+          <p>{reading.description}</p>
+          <small>{reading.authors}</small>
+          <strong class="reading-action">Consultar l’article ↗</strong>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+<style>
+.lab-readings{padding-top:54px;margin-top:48px;border-top:1px solid rgba(255,255,255,.18);min-width:0}
+.readings-header{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:24px}
+.readings-header>div{min-width:0}
+.reading-eyebrow{color:var(--red-light);font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em}
+.readings-header h3{font:650 clamp(29px,3.6vw,49px)/1.16 'Manrope',sans-serif;letter-spacing:-.059em;margin:13px 0 0;color:var(--white)}
+.readings-header h3 em{font-style:normal;color:var(--red-light)}
+.readings-header p{font:400 13px/1.7 'DM Sans',sans-serif;color:var(--on-dark);max-width:360px;margin:0}
+.readings-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;min-width:0}
+.reading-card{display:flex;flex-direction:column;min-width:0;background:#f7f7f2;text-decoration:none;color:var(--ink);overflow:hidden;border:1px solid rgba(255,255,255,.17);transition:transform .23s ease}
+.reading-card:hover{transform:translateY(-5px)}
+.reading-card:focus-visible{outline:3px solid var(--red-light);outline-offset:3px}
+.reading-poster{height:180px;padding:17px 17px 13px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;isolation:isolate;background:#d9e9e8;color:#094968}
+.reading-poster:before{position:absolute;content:'';width:125px;height:125px;top:50%;left:50%;transform:translate(-50%,-50%) rotate(21deg);border:14px solid currentColor;opacity:.1;z-index:-1}
+.reading-1 .reading-poster{background:#f2d8cf;color:#851e36}
+.reading-2 .reading-poster{background:#123e55;color:#e8f2ef}
+.reading-3 .reading-poster{background:#e65252;color:#fff4e8}
+.reading-poster-head,.reading-poster-foot{display:flex;align-items:start;justify-content:space-between;gap:8px;font:800 9px/1.4 'DM Sans',sans-serif;letter-spacing:.08em}
+.reading-poster-head strong{font:800 19px/1.1 'Manrope',sans-serif;letter-spacing:-.04em}
+.reading-poster-number{font:800 95px/.9 'Manrope',sans-serif;letter-spacing:-.12em;align-self:center;opacity:.92}
+.reading-poster-foot span{max-width:160px}
+.reading-info{padding:19px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:1;min-width:0}
+.reading-info>span{font:800 10px 'DM Sans',sans-serif;letter-spacing:.09em;color:#a64045}
+.reading-info h4{font:700 15px/1.4 'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink);overflow-wrap:break-word;margin:0}
+.reading-info p{font:400 12px/1.6 'DM Sans',sans-serif;color:#51616a;margin:0}
+.reading-info small{font-size:10px;line-height:1.5;color:#51616a}
+.reading-action{font:800 11px 'DM Sans',sans-serif;color:#0c5673;border-bottom:1px solid currentColor;padding-bottom:4px;margin-top:auto}
+@media(max-width:1030px){.readings-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reading-card{display:grid;grid-template-columns:150px minmax(0,1fr)}.reading-poster{height:100%;min-height:245px}.reading-poster-number{font-size:74px}.reading-info{padding:16px}}
+@media(max-width:690px){.readings-header{flex-direction:column;align-items:flex-start;gap:9px}.readings-header p{max-width:550px}.readings-grid{grid-template-columns:1fr}.reading-card{grid-template-columns:130px minmax(0,1fr)}.reading-poster{min-height:250px;padding:12px}.reading-poster-number{font-size:65px}.reading-poster-head strong{font-size:16px}.reading-info h4{font-size:15px}.lab-readings{padding-top:36px;margin-top:35px}}
+@media(max-width:390px){.reading-card{grid-template-columns:95px minmax(0,1fr)}.reading-poster-number{font-size:51px}.reading-poster-head{flex-direction:column;gap:4px}.reading-poster-foot{flex-direction:column;gap:3px}.reading-info{padding:12px;gap:8px}.reading-info h4{font-size:13px}.reading-info p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.reading-card{transition:none}.reading-card:hover{transform:none}}
+</style>
