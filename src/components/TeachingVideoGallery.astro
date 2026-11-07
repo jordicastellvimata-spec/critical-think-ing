@@ -6,9 +6,9 @@ import { teachingVideos } from '../data/teachingVideos';
     <div class="section-head">
       <div>
         <div class="eyebrow">FORMACIÓ DE MESTRES · UNIVERSITAT OBERTA DE CATALUNYA</div>
-        <h2 class="section-title" id="videos-heading">Recursos de didàctica<br />de les ciències socials · UOC</h2>
+        <h2 class="section-title" id="videos-heading">Recursos de didàctica<br />de les ciències socials · <span class="uoc-title-accent">UOC</span></h2>
       </div>
-      <p>Entre 2021 i 2024 vaig col·laborar amb la Universitat Oberta de Catalunya en el disseny de dues assignatures del grau d’Educació Primària: «Ciències Socials i Ciutadania» (de nova creació, amb Isaac González Balletbò) i «Didàctica de les Ciències Socials». La col·laboració va incloure orientacions curriculars, materials d’aprenentatge i recursos audiovisuals com els que es mostren aquí.</p>
+      <p>Entre 2021 i 2024 vaig contribuir a la creació del grau d’Educació Primària de la UOC amb el disseny de dues assignatures noves —«Ciències Socials i Ciutadania» i «Didàctica de les Ciències Socials»— i l’elaboració d’orientacions curriculars, materials d’aprenentatge i recursos audiovisuals.</p>
     </div>
     <div class="video-grid">
       {teachingVideos.map((video, i) => (
@@ -70,6 +70,7 @@ import { teachingVideos } from '../data/teachingVideos';
 
 <style>
 .videos-section{background:var(--white)}
+.videos-section .uoc-title-accent{color:var(--cyan)}
 .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .video-card{border:1px solid var(--line);background:var(--offwhite);min-width:0;overflow:hidden;transition:box-shadow .24s ease}
 .video-card:hover{box-shadow:0 10px 35px rgba(20,57,73,.09)}
