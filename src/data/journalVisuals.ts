@@ -49,5 +49,6 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     note: 'Portada representativa de la revista Sustainability (2023)',
     variant: 'green'
   },
+  'REIDICS. Revista de Investigación en Didáctica de las Ciencias Sociales': { label: 'REIDICS', variant: 'red' },
   'Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia': { label: 'Panta Rei', variant: 'orange' }
 };

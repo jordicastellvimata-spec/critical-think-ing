@@ -2,7 +2,7 @@
 
 Aquesta web utilitza Astro i es publica gratuïtament amb GitHub Pages. La portada funciona com una sola pàgina contínua amb navegació per ancoratges. Les subpàgines segueixen disponibles com a consulta ampliada. Els colors actuals es mantenen expressament fins a rebre referències visuals de l'autor. Les pàgines són:
 - `src/pages/index.astro` — portada contínua amb línies de recerca, llibres i articles, projectes, pràctica, docència, GREDICS i revista, laboratori, trajectòria i contacte
-- `src/pages/publicacions/index.astro` — llibres destacats i articles en revistes indexades
+- `src/pages/publicacions/index.astro` — llibres destacats i selecció d’articles en revistes acadèmiques
 - `src/pages/projectes/index.astro` — recerca, edició i formació
 - `src/pages/laboratori/index.astro` — recursos sobre pensament crític
 - `src/pages/sobre-mi/index.astro` — biografia i trajectòria
@@ -11,7 +11,7 @@ Aquesta web utilitza Astro i es publica gratuïtament amb GitHub Pages. La porta
 - `src/components/TeachingVideoGallery.astro` — miniatures i reproductor YouTube activat amb clic
 
 ## Contingut estructurat
-Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica afegir un objecte a `publications` amb `year`, `authors`, `title`, `venue`, `type`, `indexing` i `url` (DOI verificat). El conjunt principal només inclou articles de revistes indexades a Scopus o Web of Science. Les entrevistes i notes editorials no apareixen a la secció pública de publicacions. El criteri d'indexació és de revista, no d'indexació individual de cada article.
+Les dades editables viuen a `src/data/site.ts`. Afegir una publicació implica afegir un objecte a `publications` amb `year`, `authors`, `title`, `venue`, `type`, `indexing` i `url` (DOI verificat). La selecció principal inclou articles de recerca revisats per parells en revistes acadèmiques, amb identificadors verificats i indicadors editorials com Scopus, Web of Science, FECYT, ERIH PLUS i DOAJ quan pertoqui. Les entrevistes i notes editorials no apareixen a la secció pública de publicacions. Les etiquetes descriuen la revista i poden correspondre a reconeixements obtinguts posteriorment a la publicació de l’article; no impliquen que cada article estigui indexat individualment.
 
 ## Normes per a agents d'IA (Instinct, ChatGPT o altres)
 1. No inventis publicacions, premis, càrrecs, cursos, resultats ni projectes; verifica fonts institucionals o demana confirmació.
