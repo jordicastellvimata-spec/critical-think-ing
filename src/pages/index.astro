@@ -9,6 +9,7 @@ import DiscoProject from '../components/DiscoProject.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
 import ThesisSpotlight from '../components/ThesisSpotlight.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
+import HeroSocialLinks from '../components/HeroSocialLinks.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'');
@@ -22,6 +23,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <div class="eyebrow">Jordi Castellví Mata · Universitat Autònoma de Barcelona</div>
         <h1 class="display">Llegir el món.<br /><span>Escriure el futur.</span></h1>
         <p class="lead">Investigo com l'educació pot ajudar-nos a qüestionar allò que donem per fet, comprendre críticament el present i imaginar futurs més justos.</p>
+        <HeroSocialLinks />
         <div class="hero-actions">
           <a class="btn" href="#publicacions">Explorar publicacions <span aria-hidden="true">↗</span></a>
           <a class="text-link" href="#sobre-mi">Conèixer la meva trajectòria <span aria-hidden="true">→</span></a>
@@ -180,7 +182,17 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 
   <section class="section about-section" id="sobre-mi">
     <div class="container about-grid">
-      <div><div class="eyebrow">Sobre mi</div><h2 class="section-title">Una mica sobre mi.</h2><p class="lead">Treballo a la UAB, on faig classes de didàctica de les ciències socials i participo en projectes de recerca educativa. Bona part de la meva feina gira al voltant de la formació de mestres i de com connectar l'escola amb els debats del nostre temps.</p><a class="btn ghost" href={profile.uab} target="_blank" rel="noopener noreferrer">El meu perfil acadèmic a la UAB <span aria-hidden="true">↗</span></a></div>
+      <div class="about-portrait-column">
+        <div class="eyebrow">Sobre mi</div>
+        <h2 class="section-title">Una mica sobre mi.</h2>
+        <div class="about-identity">
+          <figure class="about-photo"><img src={to('images/jordi-castellvi-retrat.webp')} alt="Retrat de Jordi Castellví Mata" width="700" height="875" loading="lazy" decoding="async" /></figure>
+          <div class="about-personal-copy">
+            <p class="lead">Treballo a la UAB, on faig classes de didàctica de les ciències socials i participo en projectes de recerca educativa. Bona part de la meva feina gira al voltant de la formació de mestres i de com connectar l'escola amb els debats del nostre temps.</p>
+            <a class="btn ghost" href={profile.uab} target="_blank" rel="noopener noreferrer">El meu perfil acadèmic a la UAB <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
       <div class="about-panel">
         <h3 class="panel-title">Formació acadèmica</h3>
         <div class="panel-item"><a href="https://www.uab.cat/ca/doctorats/educacio" target="_blank" rel="noopener noreferrer">Doctorat en Educació <span aria-hidden="true">↗</span></a><small>Universitat Autònoma de Barcelona (UAB)</small></div>
@@ -205,7 +217,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .hero h1{font:650 clamp(64px,8.2vw,126px)/1.04 'Manrope',Arial,sans-serif;letter-spacing:-.079em;margin:34px 0 32px;white-space:normal;text-wrap:balance}
 .hero h1 span{color:var(--red)}
 .hero .lead{max-width:800px;font-size:clamp(18px,1.55vw,22px);line-height:1.65;margin-inline:auto}
-.hero-actions{display:flex;align-items:center;justify-content:center;gap:29px;flex-wrap:wrap;margin-top:39px}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:29px;flex-wrap:wrap;margin-top:24px}
 .hero-foot{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:10px;letter-spacing:.1em;font-weight:800;color:var(--muted)}
 .hero-foot a{color:var(--cyan)}
 .topics-section{background:var(--white)}
@@ -256,6 +268,13 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .about-section h2{margin:20px 0}
 .about-section h2 span{color:var(--red)}
 .about-section .lead{max-width:620px;font-size:17px;margin:0 0 32px}
+.about-identity{display:grid;grid-template-columns:172px minmax(0,1fr);align-items:start;gap:23px;min-width:0}
+.about-photo{margin:0;width:100%;aspect-ratio:4/5;overflow:hidden;background:var(--cyan-pale);border:1px solid var(--line-strong);position:relative}
+.about-photo::after{content:'';height:3px;position:absolute;left:0;bottom:0;width:100%;background:linear-gradient(90deg,var(--cyan) 0 65%,var(--red) 65% 100%)}
+.about-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.about-personal-copy{min-width:0}
+.about-section .about-personal-copy .lead{font-size:15px;line-height:1.72;margin:0 0 20px}
+.about-identity .btn{font-size:11px;line-height:1.5;max-width:100%;white-space:normal;text-align:center}
 .about-panel{background:var(--cyan-pale);padding:30px 37px}
 .panel-title{font:800 11px/1.5 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
 .panel-item{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-bottom:1px solid var(--line)}
@@ -268,9 +287,11 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .contact-strip{background:var(--cyan-pale);padding:67px 0}
 .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
 .contact-inner h2{font:650 clamp(32px,4vw,55px)/1.16 'Manrope',sans-serif;letter-spacing:-.065em;margin:17px 0 0}
-@media(max-width:1100px){.topics-grid{grid-template-columns:repeat(2,1fr)}.topic-card{min-height:260px}.topic-card h3{margin-top:36px}}
-@media(max-width:760px){.hero-grid{padding-top:74px;padding-bottom:72px}.hero h1{font-size:clamp(41px,10.7vw,78px);line-height:1.08;margin:27px 0 27px;letter-spacing:-.075em}.hero .lead{font-size:16px;line-height:1.65}.hero-actions{flex-direction:column;gap:19px;margin-top:30px}.hero-foot{display:none}.topics-grid{grid-template-columns:1fr}.topic-card{min-height:0}.topic-card h3{margin:25px 0 13px}.project-grid,.lab-grid,.about-grid{grid-template-columns:1fr}.project-feature{min-height:400px}.initiative-stack{grid-template-rows:auto}.initiative{min-height:215px}.lab-art{height:250px}.lab-orbit{height:200px;width:200px}.lab-orbit.two{height:150px;width:270px}.lab-main{font-size:165px}.about-panel{padding:22px}.contact-inner{align-items:flex-start;flex-direction:column}.contact-inner .btn{max-width:100%;font-size:11px;overflow-wrap:anywhere}}
+@media(max-width:1100px){.topics-grid{grid-template-columns:repeat(2,1fr)}.topic-card{min-height:260px}.topic-card h3{margin-top:36px}.about-identity{grid-template-columns:135px minmax(0,1fr);gap:16px}.about-section .about-personal-copy .lead{font-size:14px}}
+@media(max-width:760px){.hero-grid{padding-top:74px;padding-bottom:72px}.hero h1{font-size:clamp(41px,10.7vw,78px);line-height:1.08;margin:27px 0 27px;letter-spacing:-.075em}.hero .lead{font-size:16px;line-height:1.65}.hero-actions{flex-direction:column;gap:16px;margin-top:22px}.hero-foot{display:none}.topics-grid{grid-template-columns:1fr}.topic-card{min-height:0}.topic-card h3{margin:25px 0 13px}.project-grid,.lab-grid,.about-grid{grid-template-columns:1fr}.project-feature{min-height:400px}.initiative-stack{grid-template-rows:auto}.initiative{min-height:215px}.lab-art{height:250px}.lab-orbit{height:200px;width:200px}.lab-orbit.two{height:150px;width:270px}.lab-main{font-size:165px}.about-panel{padding:22px}.contact-inner{align-items:flex-start;flex-direction:column}.contact-inner .btn{max-width:100%;font-size:11px;overflow-wrap:anywhere}}
 
+@media(max-width:760px){.about-identity{grid-template-columns:150px minmax(0,1fr);gap:20px}.about-section .about-personal-copy .lead{font-size:15px}}
+@media(max-width:540px){.about-identity{grid-template-columns:minmax(0,1fr);gap:18px}.about-photo{width:175px;max-width:100%}.about-section .about-personal-copy .lead{font-size:16px}}
 /* Completem la portada en una única pàgina, conservant íntegrament la paleta actual. */
 .pub-type{font-weight:600;letter-spacing:.02em;color:var(--muted)}
 .other-outputs{margin-top:58px}
@@ -421,6 +442,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 }
 :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .eyebrow,
 :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .lead,
+:global(html.apple-scroll-ready) .hero-scroll-scene :global(.hero-socials),
 :global(html.apple-scroll-ready) .hero-scroll-scene .hero-actions{
   opacity:var(--support-opacity,1);
   transform:translate3d(0,var(--support-shift,0px),0);
@@ -494,6 +516,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     const research = document.querySelector('.topics-section');
     const header = document.querySelector('.site-header');
     const actions = hero?.querySelector('.hero-actions');
+    const socials = hero?.querySelector('.hero-socials');
     const heroFoot = hero?.querySelector('.hero-foot');
     if (!scene || !hero || !research || !header) return;
 
@@ -558,6 +581,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       // Els enllaços invisibles no han de rebre el focus.
       const inactive = supportProgress > .96;
       if (actions) actions.inert = inactive;
+      if (socials) socials.inert = inactive;
       if (heroFoot) heroFoot.inert = inactive;
       scheduled = false;
     }
@@ -576,6 +600,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         enabled && mobile.matches && !!cardObserver);
       if (!enabled) {
         if (actions) actions.inert = false;
+        if (socials) socials.inert = false;
         if (heroFoot) heroFoot.inert = false;
       } else schedule();
     }
