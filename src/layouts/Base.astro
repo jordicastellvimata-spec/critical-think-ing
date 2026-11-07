@@ -48,7 +48,7 @@ const nav = [
   <footer class="site-footer">
     <div class="container footer-columns">
       <div><a class="footer-mark" href={url('')}>critical-think.ing</a><p>Jordi Castellví Mata<br/>Recerca, educació i pensament crític</p></div>
-      <div class="footer-links"><a href={profile.uab} target="_blank" rel="noreferrer">Perfil UAB ↗</a><a href={profile.orcid} target="_blank" rel="noreferrer">ORCID ↗</a><a href={profile.gredics} target="_blank" rel="noreferrer">GREDICS ↗</a></div>
+      <div class="footer-links" aria-label="Perfils acadèmics i xarxes"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Perfil UAB ↗</a><a href={profile.scholar} target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href={profile.researchgate} target="_blank" rel="noopener noreferrer">ResearchGate ↗</a><a href={profile.bluesky} target="_blank" rel="noopener noreferrer">Bluesky ↗</a><a href={profile.orcid} target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href={profile.gredics} target="_blank" rel="noopener noreferrer">GREDICS ↗</a></div>
       <div class="footer-email"><span>CONTACTE ACADÈMIC</span><a href={'mailto:'+profile.email}>{profile.email} ↗</a><small>© {new Date().getFullYear()} Jordi Castellví Mata</small></div>
     </div>
   </footer>
