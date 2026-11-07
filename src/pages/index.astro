@@ -9,9 +9,10 @@ const root=import.meta.env.BASE_URL.replace(/\/$/,'');
 const to=(s='')=>root+'/'+s.replace(/^\//,'');
 ---
 <Base title="Jordi Castellví Mata" active="home" description="Espai acadèmic de Jordi Castellví Mata: pensament crític, educació democràtica, publicacions, projectes i divulgació.">
+  <div class="hero-scroll-scene">
   <section class="hero">
     <div class="container hero-grid">
-      <div class="hero-copy scroll-transition-hero">
+      <div class="hero-copy scroll-cinematic-hero">
         <div class="eyebrow">Jordi Castellví Mata · Universitat Autònoma de Barcelona</div>
         <h1 class="display">Llegir el món.<br /><span>Escriure el futur.</span></h1>
         <p class="lead">Investigo com l'educació pot ajudar-nos a qüestionar allò que donem per fet, comprendre críticament el present i imaginar futurs més justos.</p>
@@ -23,6 +24,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     </div>
     <div class="container hero-foot"><span>RECERCA · DOCÈNCIA · TRANSFERÈNCIA</span><span>CRITICAL THINKING / SOCIAL SCIENCES EDUCATION</span><a href="#recerca">DESCOBREIX MÉS ↓</a></div>
   </section>
+  </div>
 
   <section class="section topics-section" id="recerca">
     <div class="container">
@@ -339,69 +341,180 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 @media(max-width:1150px){.lab-prompts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.lab-prompts{grid-template-columns:1fr}}
 
-/* Transició de moviment entre la portada i les línies de recerca, sense elements nous. */
-:global(html.entry-transition-ready) .scroll-transition-hero{
-  transform:translate3d(0,var(--hero-exit-y,0px),0) scale(var(--hero-exit-scale,1));
-  opacity:var(--hero-exit-opacity,1);
-  transform-origin:center top;
+/* Relat visual basat en scroll: portada fixa, titular que creix i aparició de la recerca.
+   Sense afegir textos, gràfics o capes entre les seccions. */
+:global(html.apple-scroll-ready) .hero-scroll-scene{
+  height:185svh;
+  position:relative;
+  background:#fcfbf7;
 }
-:global(html.entry-transition-ready) .topics-section>.container{
-  transform:translate3d(0,var(--research-enter-y,0px),0);
-  opacity:var(--research-enter-opacity,1);
+:global(html.apple-scroll-ready) .hero-scroll-scene>.hero{
+  position:sticky;
+  top:var(--hero-nav-height,92px);
+  height:calc(100svh - var(--hero-nav-height,92px));
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  isolation:isolate;
+}
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-grid{
+  display:flex;
+  flex:1;
+  justify-content:center;
+  align-items:center;
+  padding-top:clamp(22px,3.5vh,60px);
+  padding-bottom:clamp(22px,3.5vh,60px);
+}
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy{width:100%;min-width:0}
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy h1{
+  transform:translate3d(0,var(--headline-lift,0px),0) scale(var(--headline-zoom,1));
+  transform-origin:center center;
+  opacity:var(--headline-opacity,1);
+  will-change:transform,opacity;
+}
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .eyebrow,
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .lead,
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-actions{
+  opacity:var(--support-opacity,1);
+  transform:translate3d(0,var(--support-shift,0px),0);
+  will-change:transform,opacity;
+}
+:global(html.apple-scroll-ready) .hero-scroll-scene .hero-foot{
+  position:relative;z-index:2;
+  opacity:var(--support-opacity,1);
+  transform:translate3d(0,var(--foot-shift,0px),0);
+}
+:global(html.apple-scroll-ready) .hero-scroll-scene>.hero:after{
+  content:'';
+  position:absolute;inset:0;
+  background:#fff;
+  opacity:var(--hero-wash,0);
+  pointer-events:none;
+  z-index:1;
+}
+:global(html.apple-scroll-ready) .topics-section{
+  position:relative;
+  z-index:2;
+}
+:global(html.apple-scroll-ready) .topics-section .section-head{
+  opacity:var(--research-head-opacity,1);
+  transform:translate3d(0,var(--research-head-y,0px),0);
+  will-change:transform,opacity;
+}
+:global(html.apple-scroll-ready) .topics-section .topics-grid{
+  opacity:var(--research-cards-opacity,1);
+  transform:translate3d(0,var(--research-cards-y,0px),0);
+  will-change:transform,opacity;
+}
+@media(max-width:760px){
+  :global(html.apple-scroll-ready) .hero-scroll-scene{height:165svh}
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-grid{padding-top:20px;padding-bottom:20px}
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy h1{max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){
-  :global(html.entry-transition-ready) .scroll-transition-hero,
-  :global(html.entry-transition-ready) .topics-section>.container{
-    transform:none!important;opacity:1!important;
+  :global(html.apple-scroll-ready) .hero-scroll-scene{height:auto!important}
+  :global(html.apple-scroll-ready) .hero-scroll-scene>.hero{position:relative!important;height:auto!important;top:0!important}
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy h1,
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .eyebrow,
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy .lead,
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-actions,
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-foot,
+  :global(html.apple-scroll-ready) .topics-section .section-head,
+  :global(html.apple-scroll-ready) .topics-section .topics-grid{
+    opacity:1!important;transform:none!important;will-change:auto!important;
   }
+  :global(html.apple-scroll-ready) .hero-scroll-scene>.hero:after{display:none}
 }
 </style>
 
 <script is:inline>
-  // Desaparició progressiva de la portada i entrada de la recerca lligades a l'scroll.
-  // Sense animació automàtica: la posició sempre reflecteix el desplaçament real.
+  // Animació reversible controlada per scroll, amb un tram de portada fix (sticky).
   (() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const hero = document.querySelector('.hero');
-    const heroCopy = document.querySelector('.scroll-transition-hero');
+    const scene = document.querySelector('.hero-scroll-scene');
+    const hero = scene?.querySelector('.hero');
     const research = document.querySelector('.topics-section');
-    const researchContent = research?.querySelector(':scope > .container');
-    if (!hero || !heroCopy || !research || !researchContent) return;
+    const header = document.querySelector('.site-header');
+    const actions = hero?.querySelector('.hero-actions');
+    const heroFoot = hero?.querySelector('.hero-foot');
+    if (!scene || !hero || !research || !header) return;
 
-    const clamp = (x) => Math.max(0, Math.min(1, x));
-    const smooth = (x) => x * x * (3 - 2 * x);
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const enoughHeight = window.matchMedia('(min-height: 700px)');
+    if (reduced.matches || !enoughHeight.matches) return;
+
+    const root = document.documentElement;
+    const clamp = (value) => Math.max(0, Math.min(1, value));
+    const ease = (value) => value * value * (3 - 2 * value);
+    const windowOf = (p, a, b) => ease(clamp((p - a) / (b - a)));
     let scheduled = false;
-    let firstPaint = true;
 
-    function renderTransition() {
-      const heroBox = hero.getBoundingClientRect();
-      const viewport = window.innerHeight || 1;
-      const heroHeight = Math.max(1, heroBox.height);
-      const exit = smooth(clamp((-heroBox.top - heroHeight * 0.14) / (heroHeight * 0.66)));
+    function render() {
+      const nav = header.getBoundingClientRect().height;
+      scene.style.setProperty('--hero-nav-height', nav + 'px');
 
-      heroCopy.style.setProperty('--hero-exit-y', Math.round(exit * -115) + 'px');
-      heroCopy.style.setProperty('--hero-exit-scale', (1 - exit * .05).toFixed(3));
-      heroCopy.style.setProperty('--hero-exit-opacity', (1 - exit * .68).toFixed(3));
+      const sceneBox = scene.getBoundingClientRect();
+      const stickyHeight = Math.max(1, window.innerHeight - nav);
+      const distance = Math.max(1, sceneBox.height - stickyHeight);
+      const progress = clamp((nav - sceneBox.top) / distance);
 
+      // Primer desapareix el suport. El títol queda fix, creix i s'esvaeix.
+      const zoomProgress = windowOf(progress, .09, .83);
+      const supportProgress = windowOf(progress, .07, .44);
+      const titleExit = windowOf(progress, .43, .92);
+      hero.style.setProperty('--headline-zoom', (1 + zoomProgress * .55).toFixed(4));
+      hero.style.setProperty('--headline-lift', Math.round(zoomProgress * -36) + 'px');
+      hero.style.setProperty('--headline-opacity', (1 - titleExit).toFixed(4));
+      hero.style.setProperty('--support-opacity', (1 - supportProgress).toFixed(4));
+      hero.style.setProperty('--support-shift', Math.round(-45 * supportProgress) + 'px');
+      hero.style.setProperty('--foot-shift', Math.round(-28 * supportProgress) + 'px');
+      hero.style.setProperty('--hero-wash', (windowOf(progress, .64, 1) * .95).toFixed(4));
+
+      // La segona secció entra des de sota, sense superposicions afegides.
       const researchBox = research.getBoundingClientRect();
-      const enter = smooth(clamp((viewport * .9 - researchBox.top) / (viewport * .52)));
-      researchContent.style.setProperty('--research-enter-y', Math.round((1 - enter) * 105) + 'px');
-      researchContent.style.setProperty('--research-enter-opacity', (.28 + enter * .72).toFixed(3));
+      const viewHeight = Math.max(1, window.innerHeight);
+      const headReveal = ease(clamp((viewHeight * .98 - researchBox.top) / (viewHeight * .67)));
+      const cardsReveal = ease(clamp((viewHeight * .88 - researchBox.top) / (viewHeight * .77)));
+      research.style.setProperty('--research-head-y', Math.round((1 - headReveal) * 100) + 'px');
+      research.style.setProperty('--research-head-opacity', headReveal.toFixed(4));
+      research.style.setProperty('--research-cards-y', Math.round((1 - cardsReveal) * 145) + 'px');
+      research.style.setProperty('--research-cards-opacity', cardsReveal.toFixed(4));
 
-      if (firstPaint) {
-        document.documentElement.classList.add('entry-transition-ready');
-        firstPaint = false;
-      }
+      // Els enllaços invisibles no han de rebre el focus.
+      const inactive = supportProgress > .96;
+      if (actions) actions.inert = inactive;
+      if (heroFoot) heroFoot.inert = inactive;
       scheduled = false;
     }
-    function scheduleTransition() {
+
+    function schedule() {
       if (scheduled) return;
       scheduled = true;
-      requestAnimationFrame(renderTransition);
+      requestAnimationFrame(render);
     }
-    renderTransition();
-    window.addEventListener('scroll', scheduleTransition, { passive:true });
-    window.addEventListener('resize', scheduleTransition, { passive:true });
+
+    scene.style.setProperty('--hero-nav-height', header.getBoundingClientRect().height + 'px');
+    root.classList.add('apple-scroll-ready');
+    render();
+    window.addEventListener('scroll', schedule, {passive:true});
+    window.addEventListener('resize', schedule, {passive:true});
+    window.addEventListener('load', schedule, {once:true});
+    reduced.addEventListener?.('change', () => {
+      if (reduced.matches) {
+        root.classList.remove('apple-scroll-ready');
+        if (actions) actions.inert = false;
+        if (heroFoot) heroFoot.inert = false;
+      } else if (enoughHeight.matches) {
+        root.classList.add('apple-scroll-ready');
+        schedule();
+      }
+    });
+    enoughHeight.addEventListener?.('change', () => {
+      root.classList.toggle('apple-scroll-ready', enoughHeight.matches && !reduced.matches);
+      if (!root.classList.contains('apple-scroll-ready')) {
+        if (actions) actions.inert = false;
+        if (heroFoot) heroFoot.inert = false;
+      } else schedule();
+    });
   })();
 </script>
 

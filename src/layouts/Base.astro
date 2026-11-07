@@ -56,8 +56,8 @@ const nav = [
     (function () {
       const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
       if (reduced.matches || !('IntersectionObserver' in window)) return;
-      const selectors = '.section-head, .topic-card, .book-feature, .paper, .video-card, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy:not(.scroll-transition-hero), .hero-visual';
-      const elements = document.querySelectorAll(selectors);
+      const selectors = '.section-head, .topic-card, .book-feature, .paper, .video-card, .project-feature, .initiative, .network-feature, .research-mini, .lab-grid, .lab-prompt, .about-grid, .contact-inner, .hero-copy:not(.scroll-cinematic-hero), .hero-visual';
+      const elements = Array.from(document.querySelectorAll(selectors)).filter(el => !el.closest('.topics-section'));
       elements.forEach((el) => el.setAttribute('data-reveal', ''));
       // Habilitem les transicions després de preparar les seccions, per evitar salts inicials.
       document.documentElement.classList.add('motion-ready');
