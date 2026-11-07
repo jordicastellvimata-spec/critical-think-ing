@@ -14,10 +14,10 @@ export const profile = {
 };
 
 export const themes = [
-  {number:'01', name:'Pensament crític', detail:'Aprendre a qüestionar discursos, contrastar fonts i construir criteris propis.', english:'CRITICAL THINKING'},
-  {number:'02', name:'Educació democràtica', detail:'Diàleg, participació i cultura democràtica a les aules.', english:'DEMOCRATIC EDUCATION'},
-  {number:'03', name:'Ciutadania digital', detail:'Desinformació, alfabetització mediàtica, polarització i discursos d’odi.', english:'DIGITAL CITIZENSHIP'},
-  {number:'04', name:'Didàctica de les ciències socials', detail:'Comprendre problemes socials i imaginar futurs més justos.', english:'SOCIAL SCIENCES EDUCATION'},
+  {number:'01', name:'Relats hegemònics', detail:'Com es construeixen, es transmeten i es qüestionen les visions dominants del món social.', english:'HEGEMONIC NARRATIVES'},
+  {number:'02', name:'Discursos d’odi i contrarelats', detail:'Els discursos d’odi i les respostes educatives per analitzar-los i confrontar-los.', english:'HATE SPEECH & COUNTER-NARRATIVES'},
+  {number:'03', name:'Polarització sociopolítica i populismes', detail:'Els reptes que la polarització i els populismes plantegen a l’educació.', english:'POLARIZATION & POPULISM'},
+  {number:'04', name:'Formació del pensament crític i de la ciutadania crítica', detail:'Com desenvolupar el judici crític i la participació conscient en la vida democràtica.', english:'CRITICAL THINKING & CITIZENSHIP'},
 ];
 
 // Articles publicats en revistes que consten a Scopus o Web of Science al CV acadèmic.
