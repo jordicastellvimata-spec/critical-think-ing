@@ -21,8 +21,8 @@ export const themes = [
   {number:'04', name:'Formació del pensament crític i de la ciutadania crítica', detail:'Com desenvolupar el judici crític i la participació conscient en la vida democràtica.', english:'CRITICAL THINKING & CITIZENSHIP'},
 ];
 
-// Articles publicats en revistes que consten a Scopus o Web of Science al CV acadèmic.
-// Les etiquetes indiquen indexació de la revista, no necessàriament la incorporació de cada article a la base de dades.
+// Selecció d'articles de recerca en revistes acadèmiques amb indicadors editorials verificats.
+// Les etiquetes descriuen la indexació/reconeixement de la revista, no de l'article ni necessàriament en l'any en què es va publicar.
 export const publications = [
   {
     "year": "2026",
@@ -59,6 +59,19 @@ export const publications = [
       "WoS"
     ],
     "url": "https://doi.org/10.17811/rifie.23745"
+  },
+  {
+    "year": "2025",
+    "authors": "Albella Gallego, C. i Castellví Mata, J.",
+    "title": "La polarización en el aula de educación primaria: análisis del diálogo democrático sobre temas controvertidos polarizantes",
+    "venue": "REIDICS. Revista de Investigación en Didáctica de las Ciencias Sociales",
+    "type": "Article de recerca",
+    "indexing": [
+      "FECYT",
+      "ERIH PLUS",
+      "DOAJ"
+    ],
+    "url": "https://doi.org/10.17398/2531-0968.16.152"
   },
   {
     "year": "2025",
@@ -202,7 +215,20 @@ export const publications = [
       "WoS"
     ],
     "url": "https://doi.org/10.6018/pantarei.445831"
-  }
+  },
+  {
+    "year": "2019",
+    "authors": "Castellví Mata, J., Massip Sabater, M. i Pagès Blanch, J.",
+    "title": "Emociones y pensamiento crítico en la era digital: un estudio con alumnado de formación inicial",
+    "venue": "REIDICS. Revista de Investigación en Didáctica de las Ciencias Sociales",
+    "type": "Article de recerca",
+    "indexing": [
+      "FECYT",
+      "ERIH PLUS",
+      "DOAJ"
+    ],
+    "url": "https://doi.org/10.17398/2531-0968.05.23"
+  },
 ];
 
 
