@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import JournalCover from '../components/JournalCover.astro';
 import FeaturedBooks from '../components/FeaturedBooks.astro';
 import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
+import AsteriskIcon from '../components/AsteriskIcon.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'');
@@ -33,7 +34,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <p>Pensament crític, participació democràtica i literacitat digital per interpretar els problemes socials del present.</p>
       </div>
       <div class="topics-grid">
-        {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk">✳</span></div><h3>{t.name}</h3><p>{t.detail}</p><small>{t.english}</small></article>)}
+        {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk"><AsteriskIcon /></span></div><h3>{t.name}</h3><p>{t.detail}</p><small>{t.english}</small></article>)}
       </div>
     </div>
   </section>
@@ -67,7 +68,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <a class="initiative editorial-research" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
           <span>EDICIÓ CIENTÍFICA · DISCOVER EDUCATION</span>
           <div class="research-editorial-content">
-            <span class="editorial-symbol" aria-hidden="true">✳</span>
+            <span class="editorial-symbol" aria-hidden="true"><AsteriskIcon /></span>
             <h3>{otherInitiatives[0].title}</h3>
             <p>{otherInitiatives[0].subtitle}</p>
             <p class="editorial-description">Perspectives crítiques sobre educació, democràcia i justícia social.</p>
