@@ -4,6 +4,10 @@ import JournalCover from '../components/JournalCover.astro';
 import FeaturedBooks from '../components/FeaturedBooks.astro';
 import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
 import PracticeMaterials from '../components/PracticeMaterials.astro';
+import TeacherResources from '../components/TeacherResources.astro';
+import DiscoProject from '../components/DiscoProject.astro';
+import CriticalReadingCards from '../components/CriticalReadingCards.astro';
+import ThesisSpotlight from '../components/ThesisSpotlight.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
@@ -84,6 +88,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         {researchProjects.slice(1).map(p=><article class="research-mini"><div><span class="mini">{p.period} · {p.code}</span><h3>{p.title}</h3><p>{p.description}</p></div><span class="research-role">{p.role}</span></article>)}
       </div>
 
+      <DiscoProject />
       <a class="research-to-practice" href="#transferencia">...que connecta amb la pràctica <span aria-hidden="true">↓</span></a>
     </div>
   </section>
@@ -115,6 +120,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             </div>
           </a>
         </div>
+        <TeacherResources />
         <PracticeMaterials />
         <a class="practice-to-videos" href="#docencia">Veure també les intervencions en vídeo <span aria-hidden="true">↓</span></a>
     </div>
@@ -169,6 +175,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     <div class="container lab-source">
       <small>Font: {criticalLiteracyCitation.authors} ({criticalLiteracyCitation.year}). «{criticalLiteracyCitation.title}». <cite>{criticalLiteracyCitation.journal}</cite>, {criticalLiteracyCitation.volume}, {criticalLiteracyCitation.pages}.</small>
     </div>
+    <div class="container"><CriticalReadingCards /></div>
   </section>
 
   <section class="section about-section" id="sobre-mi">
@@ -183,6 +190,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <a class="panel-link" href={profile.uab} target="_blank" rel="noopener noreferrer">Visitar el meu perfil acadèmic a la UAB ↗</a>
       </div>
     </div>
+    <div class="container"><ThesisSpotlight /></div>
   </section>
 
   <section class="contact-strip" id="contacte">

@@ -1,0 +1,41 @@
+<article class="disco-project" aria-labelledby="disco-heading">
+  <div class="disco-art" aria-hidden="true">
+    <span class="disco-label">CONSELL D’EUROPA<br />DISCO · 2020–2021</span>
+    <div class="disco-orbit">
+      <span class="disco-circle">CDC</span>
+      <span class="disco-dot dot-spain">ES</span>
+      <span class="disco-dot dot-portugal">PT</span>
+      <span class="disco-dot dot-uk">UK</span>
+    </div>
+    <span class="disco-art-bottom">CULTURA DEMOCRÀTICA<br />I FORMACIÓ DE MESTRES</span>
+  </div>
+  <div class="disco-copy">
+    <span class="disco-eyebrow">COOPERACIÓ EUROPEA · PARTICIPACIÓ EN PROJECTE</span>
+    <h3 id="disco-heading">La cultura democràtica també s’aprèn a la universitat.</h3>
+    <p>Vaig participar a <em>Embedding a Democratic Culture Dimension in Teacher Education Programmes</em> (EDCD-TEP), un projecte del programa DISCO del Consell d’Europa per integrar les competències de cultura democràtica a la formació inicial de mestres.</p>
+    <p class="disco-partners">Amb la UAB, l’Instituto Politécnico de Lisboa i la Manchester Metropolitan University.</p>
+    <a href="https://pjp-eu.coe.int/en/web/charter-edc-hre-pilot-projects/embedding-a-democratic-culture-dimension-in-teacher-education-programmes-edcd-tep" target="_blank" rel="noopener noreferrer">Conèixer el projecte al Consell d’Europa <span aria-hidden="true">↗</span></a>
+  </div>
+</article>
+<style>
+.disco-project{margin-top:17px;display:grid;grid-template-columns:minmax(235px,.72fr) minmax(0,1.28fr);background:var(--white);border:1px solid var(--line);overflow:hidden;min-width:0}
+.disco-art{background:var(--cyan-pale);position:relative;min-height:295px;display:flex;flex-direction:column;justify-content:space-between;padding:23px;color:var(--cyan);overflow:hidden}
+.disco-label{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;position:relative;z-index:2}
+.disco-art-bottom{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.1em;position:relative;z-index:2}
+.disco-orbit{width:210px;height:210px;border:1px solid rgba(12,84,112,.28);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center}
+.disco-orbit:before,.disco-orbit:after{content:'';position:absolute;border:1px solid rgba(12,84,112,.19);border-radius:50%;inset:22px}
+.disco-orbit:after{inset:44px}
+.disco-circle{width:91px;height:91px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:var(--white);font:750 30px/1 'Manrope',sans-serif;letter-spacing:-.055em;z-index:1}
+.disco-dot{position:absolute;z-index:2;width:36px;height:36px;background:var(--white);color:var(--cyan);border:1px solid var(--line-strong);display:grid;place-items:center;border-radius:50%;font:800 10px 'DM Sans',sans-serif}
+.dot-spain{top:-17px;left:calc(50% - 18px)}.dot-portugal{bottom:16px;left:-8px}.dot-uk{bottom:16px;right:-8px}
+.disco-copy{padding:29px 34px;display:flex;flex-direction:column;min-width:0}
+.disco-eyebrow{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.1em;color:var(--red)}
+.disco-copy h3{font:650 clamp(24px,2.55vw,36px)/1.16 'Manrope',sans-serif;letter-spacing:-.055em;margin:14px 0 13px}
+.disco-copy p{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 12px}
+.disco-copy em{font-style:italic}
+.disco-copy .disco-partners{font-size:11px;margin-bottom:14px}
+.disco-copy a{color:var(--cyan);font:800 12px/1.5 'DM Sans',sans-serif;text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px;margin-top:auto}
+.disco-copy a:hover{color:var(--red)}
+.disco-copy a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media(max-width:700px){.disco-project{grid-template-columns:1fr}.disco-art{min-height:210px}.disco-orbit{width:170px;height:170px}.disco-circle{width:80px;height:80px}.disco-copy{padding:22px}.disco-copy h3{font-size:26px}}
+</style>
