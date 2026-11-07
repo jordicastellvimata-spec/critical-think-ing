@@ -11,6 +11,7 @@ export const profile = {
   mooc: 'https://www.coursera.org/learn/formacion-pensamiento-critico',
   collection: 'https://link.springer.com/collections/gjgidhehji',
   researchgate: 'https://www.researchgate.net/profile/Jordi-Castellvi-Mata',
+  bluesky: 'https://bsky.app/profile/jcastellvi.bsky.social',
 };
 
 export const themes = [
