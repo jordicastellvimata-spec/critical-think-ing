@@ -69,25 +69,25 @@ import { teachingVideos } from '../data/teachingVideos';
 </script>
 
 <style>
-.videos-section{background:#fff}
+.videos-section{background:var(--white)}
 .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.video-card{border:1px solid #d3e2e8;background:#fbfdfe;min-width:0;overflow:hidden;transition:box-shadow .24s ease}
+.video-card{border:1px solid var(--line);background:var(--offwhite);min-width:0;overflow:hidden;transition:box-shadow .24s ease}
 .video-card:hover{box-shadow:0 10px 35px rgba(20,57,73,.09)}
-.video-frame{background:#143d54;aspect-ratio:16/9;width:100%;position:relative;overflow:hidden}
-.video-poster{width:100%;height:100%;padding:0;display:block;position:relative;border:0;background:#194f70;color:#fff;cursor:pointer;overflow:hidden}
+.video-frame{background:var(--navy);aspect-ratio:16/9;width:100%;position:relative;overflow:hidden}
+.video-poster{width:100%;height:100%;padding:0;display:block;position:relative;border:0;background:var(--navy);color:var(--white);cursor:pointer;overflow:hidden}
 .video-poster img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .35s ease,filter .35s ease}
 .video-poster:hover img,.video-poster:focus-visible img{transform:scale(1.035);filter:brightness(.68)}
-.video-poster:focus-visible{outline:3px solid #d95f37;outline-offset:-3px}
-.video-play-icon{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:73px;height:73px;border-radius:50%;background:#f7fafb;color:#1c5879;display:grid;place-items:center;box-shadow:0 4px 23px rgba(0,0,0,.21);transition:transform .2s ease}
+.video-poster:focus-visible{outline:3px solid var(--red);outline-offset:-3px}
+.video-play-icon{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:73px;height:73px;border-radius:50%;background:var(--offwhite);color:var(--cyan);display:grid;place-items:center;box-shadow:0 4px 23px rgba(0,0,0,.21);transition:transform .2s ease}
 .video-play-icon span{font-size:20px;transform:translateX(2px)}
 .video-poster:hover .video-play-icon{transform:translate(-50%,-50%) scale(1.09)}
-.video-index{position:absolute;right:16px;top:16px;background:#143d54e6;padding:8px 10px;font:800 10px/1 'Manrope',sans-serif;letter-spacing:.12em}
+.video-index{position:absolute;right:16px;top:16px;background:var(--navy-alpha);padding:8px 10px;font:800 10px/1 'Manrope',sans-serif;letter-spacing:.12em}
 .video-content{padding:26px 29px 29px}
-.video-kicker{font-size:10px;font-weight:800;letter-spacing:.11em;color:#276385;line-height:1.55}
-.video-content h3{font:650 clamp(21px,2.15vw,29px)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;color:#172d35;margin:16px 0 10px}
-.video-content p{font-size:14px;line-height:1.65;color:#536d78;margin-bottom:20px}
-.video-external{display:inline-flex;gap:13px;align-items:center;color:#176084;font-size:12px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:5px}
-.video-external:hover{color:#d3603c}
+.video-kicker{font-size:10px;font-weight:800;letter-spacing:.11em;color:var(--cyan);line-height:1.55}
+.video-content h3{font:650 clamp(21px,2.15vw,29px)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;color:var(--ink);margin:16px 0 10px}
+.video-content p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:20px}
+.video-external{display:inline-flex;gap:13px;align-items:center;color:var(--cyan);font-size:12px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:5px}
+.video-external:hover{color:var(--red)}
 .video-frame :global(.video-iframe){width:100%;height:100%;position:absolute;inset:0;border:0;display:block}
 @media(max-width:760px){.video-grid{grid-template-columns:1fr;gap:17px}.video-content{padding:22px}.video-content h3{font-size:23px}.video-play-icon{width:61px;height:61px}}
 @media(prefers-reduced-motion:reduce){.video-poster img,.video-play-icon,.video-card{transition:none}}
