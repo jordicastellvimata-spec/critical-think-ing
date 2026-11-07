@@ -8,6 +8,8 @@ const readings = [
     title: 'La lectura crítica de los medios digitales',
     authors: 'Jordi Castellví, Breogán Tosar i Mercè Andreu',
     description: 'Llegir els mitjans i analitzar els seus missatges de manera crítica.',
+    cover: 'https://www.grao.com/wp-content/uploads/public/IB099T.jpg',
+    coverAlt: 'Portada de la revista Íber, número 99 de 2020: Interpretar problemas y conflictos contemporáneos',
     url: 'https://portalrecerca.uab.cat/ca/publications/la-lectura-cr%C3%ADtica-de-los-medios-digitales/'
   },
   {
@@ -18,6 +20,8 @@ const readings = [
     title: 'Literacidad crítica digital: un decálogo para la enseñanza de las ciencias sociales',
     authors: 'Antoni Santisteban, Jordi Castellví i Neus González-Monfort',
     description: 'Un decàleg d’orientacions per a l’ensenyament de les ciències socials.',
+    cover: 'https://www.grao.com/wp-content/uploads/public/IB118T.jpg',
+    coverAlt: 'Portada de la revista Íber, número 118 de 2025: Ciudadanía, redes y fake news',
     url: 'https://dialnet.unirioja.es/ejemplar/690637'
   },
   {
@@ -28,6 +32,8 @@ const readings = [
     title: 'Contribuciones de la IA a la enseñanza de las ciencias sociales y la formación del pensamiento crítico',
     authors: 'Diego Núñez, Jordi Castellví i Antoni Santisteban',
     description: 'Què pot aportar la IA a l’ensenyament i al pensament crític?',
+    cover: 'https://www.grao.com/wp-content/uploads/public/IB122T.jpg',
+    coverAlt: 'Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en la enseñanza de las ciencias sociales',
     url: 'https://portalrecerca.uab.cat/ca/publications/contribuciones-de-la-ia-a-la-ense%C3%B1anza-de-las-ciencias-sociales-y/'
   },
   {
@@ -38,6 +44,8 @@ const readings = [
     title: 'Formar el pensament crític orientat a la justícia social per fer front al feixisme',
     authors: 'Jordi Castellví',
     description: 'Problemes socials rellevants, polarització i discursos d’odi a l’aula.',
+    cover: '/images/comunicacio-educativa-37-article-cover.webp',
+    coverAlt: 'Primera pàgina original de l’article publicat a Comunicació Educativa, número 37 de 2024',
     url: 'https://www.revistes.urv.cat/index.php/comeduc/article/view/4013'
   }
 ];
@@ -54,9 +62,12 @@ const readings = [
     {readings.map((reading, index) => (
       <a class={'reading-card reading-'+index} href={reading.url} target="_blank" rel="noopener noreferrer" aria-label={'Consultar '+reading.title}>
         <div class="reading-poster">
-          <div class="reading-poster-head"><strong>{reading.journal}</strong><span>NÚM. {reading.issue}</span></div>
-          <span class="reading-poster-number" aria-hidden="true">{reading.issue}</span>
-          <div class="reading-poster-foot"><span>{reading.theme}</span><strong>{reading.year}</strong></div>
+          <div class="reading-cover-fallback" aria-hidden="true">
+            <div class="reading-poster-head"><strong>{reading.journal}</strong><span>NÚM. {reading.issue}</span></div>
+            <span class="reading-poster-number">{reading.issue}</span>
+            <div class="reading-poster-foot"><span>{reading.theme}</span><strong>{reading.year}</strong></div>
+          </div>
+          <img class="reading-cover-image" src={reading.cover} alt={reading.coverAlt} loading="lazy" decoding="async" onerror="this.style.display='none'" />
         </div>
         <div class="reading-info">
           <span>{reading.journal.toUpperCase()} · {reading.year}</span>
@@ -81,11 +92,14 @@ const readings = [
 .reading-card{display:flex;flex-direction:column;min-width:0;background:#f7f7f2;text-decoration:none;color:var(--ink);overflow:hidden;border:1px solid rgba(255,255,255,.17);transition:transform .23s ease}
 .reading-card:hover{transform:translateY(-5px)}
 .reading-card:focus-visible{outline:3px solid var(--red-light);outline-offset:3px}
-.reading-poster{height:180px;padding:17px 17px 13px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;isolation:isolate;background:#d9e9e8;color:#094968}
-.reading-poster:before{position:absolute;content:'';width:125px;height:125px;top:50%;left:50%;transform:translate(-50%,-50%) rotate(21deg);border:14px solid currentColor;opacity:.1;z-index:-1}
-.reading-1 .reading-poster{background:#f2d8cf;color:#851e36}
-.reading-2 .reading-poster{background:#123e55;color:#e8f2ef}
-.reading-3 .reading-poster{background:#e65252;color:#fff4e8}
+.reading-poster{height:232px;padding:0;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;isolation:isolate;background:#e5e9eb;color:#094968}
+.reading-cover-fallback{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:17px 17px 13px}
+.reading-cover-image{position:relative;z-index:1;width:100%;height:100%;display:block;object-fit:contain;object-position:center;background:#ecf0ef}
+.reading-3 .reading-cover-image{background:#fff}
+.reading-cover-fallback:before{position:absolute;content:'';width:125px;height:125px;top:50%;left:50%;transform:translate(-50%,-50%) rotate(21deg);border:14px solid currentColor;opacity:.1;z-index:-1}
+.reading-1 .reading-cover-fallback{background:#f2d8cf;color:#851e36}
+.reading-2 .reading-cover-fallback{background:#123e55;color:#e8f2ef}
+.reading-3 .reading-cover-fallback{background:#e65252;color:#fff4e8}
 .reading-poster-head,.reading-poster-foot{display:flex;align-items:start;justify-content:space-between;gap:8px;font:800 9px/1.4 'DM Sans',sans-serif;letter-spacing:.08em}
 .reading-poster-head strong{font:800 19px/1.1 'Manrope',sans-serif;letter-spacing:-.04em}
 .reading-poster-number{font:800 95px/.9 'Manrope',sans-serif;letter-spacing:-.12em;align-self:center;opacity:.92}
