@@ -26,7 +26,7 @@ export const teachingVideos = [
   {
     id: 'LU0PjSDxIK4',
     title: 'Com ensenyar a partir de problemes socials rellevants a l’educació primària?',
-    detail: 'Problemes socials rellevants a l’aula',
+    detail: 'Diàleg amb Antoni Santisteban',
     category: 'RECURS AUDIOVISUAL · EDUCACIÓ PRIMÀRIA',
     url: 'https://www.youtube.com/watch?v=LU0PjSDxIK4',
   },
