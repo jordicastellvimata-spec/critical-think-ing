@@ -1,5 +1,6 @@
 ---
 import { profile } from '../data/site';
+import AsteriskIcon from '../components/AsteriskIcon.astro';
 const {title='Jordi Castellví Mata', description='Pensament crític, educació democràtica i didàctica de les ciències socials.', active=''} = Astro.props;
 const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
@@ -34,7 +35,7 @@ const nav = [
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="site-header">
     <header class="container header-content">
-      <a class="wordmark" href={url('')} aria-label="Inici de critical-think.ing"><span class="mark">✳</span><span>critical<span class="wordmark-accent">-</span>think<span class="wordmark-accent">.</span>ing</span></a>
+      <a class="wordmark" href={url('')} aria-label="Inici de critical-think.ing"><span class="mark"><AsteriskIcon /></span><span>critical<span class="wordmark-accent">-</span>think<span class="wordmark-accent">.</span>ing</span></a>
       <nav class="desktop-nav" aria-label="Navegació principal">{nav.map(item=><a href={url(item.path)} aria-current={active===item.key?'page':undefined}>{item.label}</a>)}</nav>
       <a class="desktop-contact" href={url('#contacte')}>Contacte <span aria-hidden="true">↗</span></a>
       <details class="mobile-nav">
