@@ -173,9 +173,11 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     <div class="container about-grid">
       <div><div class="eyebrow">Sobre mi</div><h2 class="section-title">Una mica sobre mi.</h2><p class="lead">Treballo a la UAB, on faig classes de didàctica de les ciències socials i participo en projectes de recerca educativa. Bona part de la meva feina gira al voltant de la formació de mestres i de com connectar l'escola amb els debats del nostre temps.</p><a class="btn ghost" href={profile.uab} target="_blank" rel="noopener noreferrer">El meu perfil acadèmic a la UAB <span aria-hidden="true">↗</span></a></div>
       <div class="about-panel">
-        <div class="panel-item"><span>2019</span><p>Doctorat internacional en Educació · UAB</p></div>
-        <div class="panel-item"><span>2021</span><p>Premi extraordinari de doctorat en Educació</p></div>
-        <div class="panel-item"><span>2025—</span><p>Coordinació de la Unitat de Didàctica de les Ciències Socials · UAB</p></div>
+        <h3 class="panel-title">Formació acadèmica</h3>
+        <div class="panel-item"><a href="https://www.uab.cat/ca/doctorats/educacio" target="_blank" rel="noopener noreferrer">Doctorat en Educació <span aria-hidden="true">↗</span></a><small>Universitat Autònoma de Barcelona (UAB)</small></div>
+        <div class="panel-item"><a href="https://www.uab.cat/web/estudiar/l-oferta-de-masters-oficials/informacio-general/recerca-en-educacio-1096480139517.html?param1=1345648391191" target="_blank" rel="noopener noreferrer">Màster Universitari en Recerca en Educació <span aria-hidden="true">↗</span></a><small>Universitat Autònoma de Barcelona (UAB)</small></div>
+        <div class="panel-item"><a href="https://web.ub.edu/ca/web/estudis/w/grau-g1016" target="_blank" rel="noopener noreferrer">Grau en Història <span aria-hidden="true">↗</span></a><small>Universitat de Barcelona (UB)</small></div>
+        <div class="panel-item"><a href="https://educ.ulpgc.es/estudios/grados/educacion-primaria" target="_blank" rel="noopener noreferrer">Grau en Educació Primària <span aria-hidden="true">↗</span></a><small>Universitat de Las Palmas de Gran Canaria (ULPGC)</small></div>
         <a class="panel-link" href={profile.uab} target="_blank" rel="noopener noreferrer">Visitar el meu perfil acadèmic a la UAB ↗</a>
       </div>
     </div>
@@ -245,9 +247,13 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .about-section h2 span{color:var(--red)}
 .about-section .lead{max-width:620px;font-size:17px;margin:0 0 32px}
 .about-panel{background:var(--cyan-pale);padding:30px 37px}
-.panel-item{display:grid;grid-template-columns:88px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-.panel-item span{font:800 21px 'Manrope',sans-serif;color:var(--red)}
-.panel-item p{font-size:14px;font-weight:600;line-height:1.6;margin:0}
+.panel-title{font:800 11px/1.5 'Manrope',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
+.panel-item{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-bottom:1px solid var(--line)}
+.panel-item a{font:650 16px/1.45 'Manrope',sans-serif;color:var(--cyan);text-decoration:none;transition:color .2s}
+.panel-item a span{font-size:13px;color:var(--red)}
+.panel-item a:hover,.panel-item a:focus-visible{color:var(--red)}
+.panel-item a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.panel-item small{font-size:12px;color:var(--muted);line-height:1.45}
 .panel-link{display:inline-block;color:var(--cyan);font-size:13px;font-weight:800;margin-top:25px}
 .contact-strip{background:var(--cyan-pale);padding:67px 0}
 .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
