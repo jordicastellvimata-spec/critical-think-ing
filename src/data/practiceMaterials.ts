@@ -15,9 +15,9 @@ export const barcanovaBooks = [
 ];
 
 export const jesuitesProjects = [
-  { title:'I si haguessis nascut en una altra terra?', course:'1r d’ESO', variant:'terra' },
-  { title:'Podem canviar el món?', course:'1r d’ESO', variant:'canviar' },
-  { title:'Quin és el centre del món?', course:'2n d’ESO', variant:'centre' },
-  { title:'Viure per treballar o treballar per viure?', course:'2n d’ESO', variant:'viure' },
-  { title:'De qui és la terra?', course:'3r d’ESO', variant:'propietat' },
+  { title:'I si haguessis nascut en una altra terra?', course:'1r d’ESO', variant:'terra', cover:'/images/jesuites-proposta-1.jpg' },
+  { title:'Podem canviar el món?', course:'1r d’ESO', variant:'canviar', cover:'/images/jesuites-proposta-2.jpg' },
+  { title:'Quin és el centre del món?', course:'2n d’ESO', variant:'centre', cover:'/images/jesuites-proposta-3.jpg' },
+  { title:'Viure per treballar o treballar per viure?', course:'2n d’ESO', variant:'viure', cover:'/images/jesuites-proposta-4.jpg' },
+  { title:'De qui és la terra?', course:'3r d’ESO', variant:'propietat', cover:'/images/jesuites-proposta-5.jpg' },
 ];
