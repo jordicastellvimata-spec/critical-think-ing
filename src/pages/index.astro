@@ -96,7 +96,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <div class="practice-grid">
           <a class="practice-card practice-mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer">
             <span class="mini">FORMACIÓ OBERTA · COURSERA</span>
-            <div class="practice-symbol" aria-hidden="true">↗</div>
+            <div class="practice-brand" aria-label="Coursera"><span class="practice-brand-fallback" aria-hidden="true">coursera</span><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Coursera_logo_%282020%29.svg" alt="Coursera" width="240" height="35" loading="lazy" decoding="async" onerror="this.style.display='none'" /></div>
             <div class="practice-card-copy">
               <h3>La formación del pensamiento crítico en la era digital</h3>
               <p>MOOC de la UAB sobre literacitat crítica, ciutadania i educació democràtica, del qual soc codirector i docent.</p>
@@ -105,7 +105,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </a>
           <a class="practice-card practice-jornades" href={jornades2027.url} target="_blank" rel="noopener noreferrer">
             <span class="mini">JORNADES INTERNACIONALS · UAB</span>
-            <div class="practice-event-date"><strong>{jornades2027.edition}</strong><span>{jornades2027.dates}</span></div>
+            <div class="practice-event-visual"><img src="/images/jornades-symbol.svg" alt="" width="120" height="120" loading="lazy" decoding="async" /><div class="practice-event-date"><strong>{jornades2027.edition}</strong><span>{jornades2027.dates}</span></div></div>
             <div class="practice-card-copy">
               <h3>XXIII Jornades Internacionals de Recerca</h3>
               <p><strong>{jornades2027.theme}.</strong> {jornades2027.subtitle}.</p>
@@ -321,7 +321,15 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .practice-card h3{font:650 clamp(27px,2.45vw,36px)/1.24 'Manrope',sans-serif;letter-spacing:-.05em;max-width:600px;margin-bottom:14px}
 .practice-card p{font-size:14px;color:var(--muted);line-height:1.75;max-width:510px}
 .practice-card strong{display:inline-block;font-size:12px;color:var(--cyan);border-bottom:1px solid currentColor;padding-bottom:5px;margin-top:12px}
-.practice-mooc .practice-symbol{font:500 60px/1 'Manrope',sans-serif;color:var(--red);margin:12px 0}
+.practice-brand{display:flex;position:relative;align-items:center;width:min(100%,260px);height:75px;margin:12px 0 18px}
+.practice-brand img{display:block;position:relative;z-index:1;width:100%;height:48px;object-fit:contain;object-position:left center}
+.practice-brand-fallback{position:absolute;inset:0;display:flex;align-items:center;font:800 43px/1 'Manrope',sans-serif;letter-spacing:-.065em;color:#0056d2}
+.practice-event-visual{display:flex;align-items:center;gap:18px;margin:10px 0 18px}
+.practice-event-visual>img{display:block;width:116px;height:116px;object-fit:contain;flex:0 0 116px}
+.practice-event-visual .practice-event-date{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin:0}
+.practice-event-visual .practice-event-date strong{font-size:70px;letter-spacing:-.07em}
+.practice-event-visual .practice-event-date span{max-width:180px}
+@media(max-width:760px){.practice-brand{height:63px;margin:10px 0 15px}.practice-brand img{height:44px}.practice-event-visual{gap:14px}.practice-event-visual>img{width:100px;height:100px;flex-basis:100px}.practice-event-visual .practice-event-date strong{font-size:62px}}
 .practice-jornades{background:var(--rose);border-color:var(--rose-line)}
 .practice-event-date{display:flex;align-items:baseline;gap:18px;margin:9px 0 17px}
 .practice-event-date strong{border:0;margin:0;padding:0;color:var(--red);font:800 clamp(70px,8vw,115px)/.95 'Manrope',sans-serif;letter-spacing:-.09em}
