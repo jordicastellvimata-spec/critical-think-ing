@@ -30,8 +30,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   <section class="section topics-section" id="recerca">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Línies de recerca</div><h2 class="section-title">Les preguntes<br/>que ens mouen.</h2></div>
-        <p>Pensament crític, participació democràtica i literacitat digital per interpretar els problemes socials del present.</p>
+        <div><div class="eyebrow">Àmbit de recerca · Didàctica de les ciències socials</div><h2 class="section-title">Línies<br/>de recerca.</h2></div>
+        <p>Investigo com interpretem el món social i com l’educació pot ajudar a qüestionar discursos i formar una ciutadania crítica.</p>
       </div>
       <div class="topics-grid">
         {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk"><AsteriskIcon /></span></div><h3>{t.name}</h3><p>{t.detail}</p><small>{t.english}</small></article>)}
@@ -201,8 +201,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .topic-card:nth-child(2){background:var(--cyan-pale)}.topic-card:nth-child(3){background:var(--rose)}.topic-card:nth-child(4){background:var(--offwhite)}
 .topic-top{display:flex;justify-content:space-between;align-items:center;color:var(--cyan);font-weight:800;font-size:11px;letter-spacing:.13em}
 .topic-asterisk{font-size:27px;color:var(--red)}
-.topic-card h3{font:650 24px/1.2 'Manrope',sans-serif;letter-spacing:-.055em;margin:60px 0 13px}
-.topic-card p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:25px}
+.topic-card h3{font:650 clamp(20px,1.65vw,24px)/1.23 'Manrope',sans-serif;letter-spacing:-.055em;margin:38px 0 13px}
+.topic-card p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:19px}
 .topic-card small{font-size:10px;letter-spacing:.09em;font-weight:800;color:var(--cyan);margin-top:auto}
 .list-foot{font-size:12px;color:var(--muted);margin:23px 0 0}.list-foot a{color:var(--cyan);font-weight:800}
 .projects-section{background:var(--paper)}
