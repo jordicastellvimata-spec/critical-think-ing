@@ -477,6 +477,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     }
 
     function render() {
+      if (!canAnimate()) { scheduled = false; return; }
       const nav = header.getBoundingClientRect().height;
       scene.style.setProperty('--hero-nav-height', nav + 'px');
 
