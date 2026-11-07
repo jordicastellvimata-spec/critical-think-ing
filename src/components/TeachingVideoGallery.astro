@@ -5,10 +5,10 @@ import { teachingVideos } from '../data/teachingVideos';
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Docència · Recursos audiovisuals</div>
-        <h2 class="section-title" id="videos-heading">A l'aula</h2>
+        <div class="eyebrow">FORMACIÓ DE MESTRES · UNIVERSITAT OBERTA DE CATALUNYA</div>
+        <h2 class="section-title" id="videos-heading">Recursos de didàctica<br />de les ciències socials · UOC</h2>
       </div>
-      <p>Finalitats de l'ensenyament de les ciències socials, educació mediàtica i treball a partir de problemes socials rellevants.</p>
+      <p>Entre 2021 i 2024 vaig col·laborar amb la Universitat Oberta de Catalunya en el disseny de dues assignatures del grau d’Educació Primària: «Ciències Socials i Ciutadania» (de nova creació, amb Isaac González Balletbò) i «Didàctica de les Ciències Socials». La col·laboració va incloure orientacions curriculars, materials d’aprenentatge i recursos audiovisuals com els que es mostren aquí.</p>
     </div>
     <div class="video-grid">
       {teachingVideos.map((video, i) => (
@@ -35,7 +35,7 @@ import { teachingVideos } from '../data/teachingVideos';
             </button>
           </div>
           <div class="video-content">
-            <div class="video-kicker">{video.category}</div>
+            <div class="video-kicker">RECURS AUDIOVISUAL · UOC · {video.category}</div>
             <h3>{video.title}</h3>
             <p>{video.detail}</p>
             <a class="video-external" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={'Obre a YouTube: ' + video.title}>
