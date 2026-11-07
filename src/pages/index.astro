@@ -318,7 +318,9 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .practice-card{display:grid;grid-template-rows:auto 153px minmax(0,1fr);min-height:475px;padding:33px 36px;border:1px solid var(--line);background:var(--cyan-pale);transition:transform .2s ease,border-color .2s ease;min-width:0}
 .practice-card:hover{transform:translateY(-3px);border-color:var(--line-strong)}
 .practice-card .mini{color:var(--cyan)}
-.practice-card-copy{align-self:end;min-width:0}
+.practice-card-copy{display:flex;flex-direction:column;align-self:stretch;min-width:0}
+.practice-card-copy h3{margin-top:0}
+.practice-card-copy>strong{align-self:flex-start;margin-top:auto}
 .practice-card h3{font:650 clamp(27px,2.45vw,36px)/1.24 'Manrope',sans-serif;letter-spacing:-.05em;max-width:600px;margin-bottom:14px}
 .practice-card p{font-size:14px;color:var(--muted);line-height:1.75;max-width:510px}
 .practice-card strong{display:inline-block;font-size:12px;color:var(--cyan);border-bottom:1px solid currentColor;padding-bottom:5px;margin-top:12px}
@@ -353,7 +355,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 @media(max-width:760px){.practice-standalone{padding:68px 0 78px}}
 @media(max-width:760px){
   .practice-card{min-height:0;grid-template-rows:auto 127px auto;padding:27px 24px}
-  .practice-card-copy{align-self:start}
+   .practice-card-copy{align-self:stretch}
   .practice-brand{min-height:125px;gap:11px}
   .practice-brand img{width:37px;height:37px;flex-basis:37px}
   .practice-brand-wordmark{font-size:clamp(34px,10vw,44px)}
