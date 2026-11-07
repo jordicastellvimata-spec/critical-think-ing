@@ -408,9 +408,20 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   will-change:transform,opacity;
 }
 @media(max-width:760px){
-  :global(html.apple-scroll-ready) .hero-scroll-scene{height:165svh}
-  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-grid{padding-top:20px;padding-bottom:20px}
+  :global(html.apple-scroll-ready) .hero-scroll-scene{height:175svh}
+  :global(html.apple-scroll-ready) .hero-scroll-scene .hero-grid{padding-top:18px;padding-bottom:18px}
   :global(html.apple-scroll-ready) .hero-scroll-scene .hero-copy h1{max-width:100%}
+  /* Al mòbil, el titular entra com a l'escriptori, però les targetes apareixen d'una en una. */
+  :global(html.apple-scroll-ready) .topics-section.mobile-cards-ready .topics-grid{
+    opacity:1!important;transform:none!important;will-change:auto;
+  }
+  .topics-section.mobile-cards-ready .topic-card{
+    opacity:0;transform:translate3d(0,24px,0);
+    transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1),border-color .2s;
+  }
+  .topics-section.mobile-cards-ready .topic-card.is-visible{
+    opacity:1;transform:translate3d(0,0,0);
+  }
 }
 @media(prefers-reduced-motion:reduce){
   :global(html.apple-scroll-ready) .hero-scroll-scene{height:auto!important}
@@ -425,6 +436,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     opacity:1!important;transform:none!important;will-change:auto!important;
   }
   :global(html.apple-scroll-ready) .hero-scroll-scene>.hero:after{display:none}
+  .topics-section.mobile-cards-ready .topic-card{opacity:1!important;transform:none!important}
 }
 </style>
 
@@ -440,21 +452,37 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     if (!scene || !hero || !research || !header) return;
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const enoughHeight = window.matchMedia('(min-height: 700px)');
-    if (reduced.matches || !enoughHeight.matches) return;
+    const desktopHeight = window.matchMedia('(min-height: 700px)');
+    const mobileHeight = window.matchMedia('(min-height: 600px)');
+    const mobile = window.matchMedia('(max-width: 760px)');
+    const canAnimate = () => !reduced.matches &&
+      (mobile.matches ? mobileHeight.matches : desktopHeight.matches);
 
     const root = document.documentElement;
     const clamp = (value) => Math.max(0, Math.min(1, value));
     const ease = (value) => value * value * (3 - 2 * value);
     const windowOf = (p, a, b) => ease(clamp((p - a) / (b - a)));
     let scheduled = false;
+    const cards = Array.from(research.querySelectorAll('.topic-card'));
+    let cardObserver;
+    if ('IntersectionObserver' in window) {
+      cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          cardObserver.unobserve(entry.target);
+        });
+      }, {threshold:.08,rootMargin:'0px 0px -25px 0px'});
+      cards.forEach(card => cardObserver.observe(card));
+    }
 
     function render() {
       const nav = header.getBoundingClientRect().height;
       scene.style.setProperty('--hero-nav-height', nav + 'px');
 
       const sceneBox = scene.getBoundingClientRect();
-      const stickyHeight = Math.max(1, window.innerHeight - nav);
+      // Mesurem l'alçada fixa (svh) real de la portada: les barres del navegador mòbil no creen salts.
+      const stickyHeight = Math.max(1, hero.getBoundingClientRect().height);
       const distance = Math.max(1, sceneBox.height - stickyHeight);
       const progress = clamp((nav - sceneBox.top) / distance);
 
@@ -462,7 +490,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       const zoomProgress = windowOf(progress, .09, .83);
       const supportProgress = windowOf(progress, .07, .44);
       const titleExit = windowOf(progress, .43, .92);
-      hero.style.setProperty('--headline-zoom', (1 + zoomProgress * .55).toFixed(4));
+      hero.style.setProperty('--headline-zoom', (1 + zoomProgress * (mobile.matches ? .35 : .55)).toFixed(4));
       hero.style.setProperty('--headline-lift', Math.round(zoomProgress * -36) + 'px');
       hero.style.setProperty('--headline-opacity', (1 - titleExit).toFixed(4));
       hero.style.setProperty('--support-opacity', (1 - supportProgress).toFixed(4));
@@ -493,29 +521,26 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       requestAnimationFrame(render);
     }
 
-    scene.style.setProperty('--hero-nav-height', header.getBoundingClientRect().height + 'px');
-    root.classList.add('apple-scroll-ready');
-    render();
-    window.addEventListener('scroll', schedule, {passive:true});
-    window.addEventListener('resize', schedule, {passive:true});
-    window.addEventListener('load', schedule, {once:true});
-    reduced.addEventListener?.('change', () => {
-      if (reduced.matches) {
-        root.classList.remove('apple-scroll-ready');
-        if (actions) actions.inert = false;
-        if (heroFoot) heroFoot.inert = false;
-      } else if (enoughHeight.matches) {
-        root.classList.add('apple-scroll-ready');
-        schedule();
-      }
-    });
-    enoughHeight.addEventListener?.('change', () => {
-      root.classList.toggle('apple-scroll-ready', enoughHeight.matches && !reduced.matches);
-      if (!root.classList.contains('apple-scroll-ready')) {
+    function syncMotion() {
+      const enabled = canAnimate();
+      root.classList.toggle('apple-scroll-ready', enabled);
+      // Evitem ocultar les targetes si no hi ha observador o s'ha activat el moviment reduït.
+      research.classList.toggle('mobile-cards-ready',
+        enabled && mobile.matches && !!cardObserver);
+      if (!enabled) {
         if (actions) actions.inert = false;
         if (heroFoot) heroFoot.inert = false;
       } else schedule();
-    });
+    }
+
+    scene.style.setProperty('--hero-nav-height', header.getBoundingClientRect().height + 'px');
+    syncMotion();
+    window.addEventListener('scroll', schedule, {passive:true});
+    window.addEventListener('resize', () => { syncMotion(); schedule(); }, {passive:true});
+    window.addEventListener('load', schedule, {once:true});
+    [reduced,desktopHeight,mobileHeight,mobile].forEach(
+      mq => mq.addEventListener?.('change', syncMotion)
+    );
   })();
 </script>
 
