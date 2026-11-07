@@ -68,7 +68,10 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <a class="initiative editorial-research" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
           <span>EDICIÓ CIENTÍFICA · DISCOVER EDUCATION</span>
           <div class="research-editorial-content">
-            <span class="editorial-symbol" aria-hidden="true"><AsteriskIcon /></span>
+            <div class="discover-cover" aria-label="Portada de la revista Discover Education, de Springer Nature">
+              <span class="discover-cover-fallback" aria-hidden="true">Discover<br />Education</span>
+              <img src="https://media.springernature.com/w500/springer-static/cover/journal/44217.jpg" alt="Portada de la revista Discover Education (Springer Nature)" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+            </div>
             <h3>{otherInitiatives[0].title}</h3>
             <p>{otherInitiatives[0].subtitle}</p>
             <p class="editorial-description">Perspectives crítiques sobre educació, democràcia i justícia social.</p>
@@ -305,6 +308,9 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 /* Estructura editorial: recerca científica i transferència educativa, sense alterar la paleta. */
 .editorial-research{min-height:480px;justify-content:space-between;background:var(--rose)}
 .editorial-research .editorial-symbol{display:block;font-size:66px;color:var(--red);margin:0 0 22px}
+.editorial-research .discover-cover{display:block;position:relative;width:116px;height:148px;overflow:hidden;background:#16426a;color:#fff;margin:0 0 19px;border:1px solid rgba(10,33,57,.13);box-shadow:5px 9px 19px rgba(23,47,70,.17)}
+.editorial-research .discover-cover-fallback{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;padding:13px;font:800 18px/1.15 'Manrope',sans-serif;letter-spacing:-.05em}
+.editorial-research .discover-cover img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
 .editorial-research h3{font-size:clamp(29px,3.25vw,42px);line-height:1.14}
 .editorial-research .editorial-description{margin-top:20px;line-height:1.8;color:var(--muted)}
 .practice-section{padding-top:86px;scroll-margin-top:100px}
@@ -323,6 +329,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .gredics-identity{margin:23px 0 25px;width:100%;max-width:470px;min-height:108px;display:flex;align-items:center}
 .gredics-official-logo{width:100%;max-width:470px;height:auto;max-height:127px;object-fit:contain;object-position:left center;display:block}
 @media(max-width:1050px){.editorial-research{min-height:380px}}
+@media(max-width:760px){.editorial-research .discover-cover{width:84px;height:110px;margin-bottom:11px}.editorial-research .discover-cover-fallback{font-size:14px;padding:9px}}
 @media(max-width:760px){.practice-section{padding-top:64px}.practice-grid{grid-template-columns:1fr}.practice-card{min-height:330px;padding:27px 24px}.practice-event-date strong{font-size:85px}.gredics-identity{min-height:70px}.gredics-official-logo{max-height:100px}.editorial-research{min-height:320px}.editorial-research .editorial-symbol{margin-bottom:8px}}
 
 /* Seccions amb accés clar des del menú; manté la mateixa paleta. */
