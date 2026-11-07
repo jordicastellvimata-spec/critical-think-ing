@@ -1,13 +1,12 @@
 <article class="disco-project" aria-labelledby="disco-heading">
   <div class="disco-art">
-    <span class="disco-label">CONSELL D’EUROPA<br />DISCO · 2020–2021</span>
-    <div class="disco-visual">
-      <div class="disco-orbit" aria-hidden="true"><span></span><span></span></div>
-      <div class="disco-logo-frame">
+    <span class="disco-label">CONSELL D’EUROPA <span aria-hidden="true">·</span> PROGRAMA DISCO</span>
+    <div class="disco-brand-stage">
+      <div class="disco-logo" role="img" aria-label="Logotip oficial de DISCO — Democratic and Inclusive School Culture in Operation">
         <span class="disco-logo-fallback" aria-hidden="true">DISCO</span>
         <img
           src="https://www.coe.int/documents/21202288/0/DISCO-logo-vertical%2BEN_image_web.jpg/ec99332e-7b78-6139-9f8f-259bb22ed797?t=1539962301000"
-          alt="Logotip oficial de DISCO — Democratic and Inclusive School Culture in Operation"
+          alt=""
           width="512"
           height="512"
           loading="lazy"
@@ -16,7 +15,7 @@
         />
       </div>
     </div>
-    <span class="disco-art-bottom">CULTURA DEMOCRÀTICA<br />I FORMACIÓ DE MESTRES</span>
+    <span class="disco-art-bottom">2020–2021 <span aria-hidden="true">/</span> CULTURA DEMOCRÀTICA I FORMACIÓ DE MESTRES</span>
   </div>
   <div class="disco-copy">
     <span class="disco-eyebrow">COOPERACIÓ EUROPEA · PARTICIPACIÓ EN PROJECTE</span>
@@ -27,20 +26,17 @@
   </div>
 </article>
 <style>
-.disco-project{margin-top:17px;display:grid;grid-template-columns:minmax(235px,.72fr) minmax(0,1.28fr);background:var(--white);border:1px solid var(--line);overflow:hidden;min-width:0}
-.disco-art{background:var(--cyan-pale);position:relative;min-height:327px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:23px;color:var(--cyan);overflow:hidden;isolation:isolate}
-.disco-label{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;position:relative;z-index:2}
-.disco-art-bottom{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.1em;position:relative;z-index:2}
-.disco-visual{display:grid;place-items:center;align-self:center;position:relative;z-index:1;padding:8px 12px;flex:1;max-width:100%}
-.disco-orbit{position:absolute;width:255px;height:255px;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid rgba(12,84,112,.17);border-radius:50%;pointer-events:none;z-index:-1}
-.disco-orbit:before,.disco-orbit:after{content:'';position:absolute;inset:27px;border:1px solid rgba(12,84,112,.12);border-radius:50%}
-.disco-orbit:after{inset:55px;border-color:rgba(197,71,72,.2)}
-.disco-orbit span{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--red);top:10px;right:29px}
-.disco-orbit span+span{background:var(--cyan);top:auto;right:auto;bottom:5px;left:41px}
-.disco-logo-frame{width:min(185px,100%);aspect-ratio:1;position:relative;display:grid;place-items:center;padding:9px;background:#fff;box-shadow:0 11px 29px rgba(12,65,86,.13);border:1px solid rgba(12,65,86,.1);border-radius:3px;transform:rotate(-2deg)}
-.disco-logo-frame img{position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);object-fit:contain;background:#fff}
-.disco-logo-fallback{font:800 38px/1 'Manrope',sans-serif;letter-spacing:-.04em;color:#124b91}
-.disco-copy{padding:29px 34px;display:flex;flex-direction:column;min-width:0}
+.disco-project{margin-top:17px;display:grid;grid-template-columns:minmax(245px,.82fr) minmax(0,1.18fr);background:var(--white);border:1px solid var(--line);overflow:hidden;min-width:0}
+.disco-art{position:relative;display:flex;flex-direction:column;min-height:353px;min-width:0;padding:25px 28px 21px;background:#fff;color:var(--cyan);border-right:1px solid var(--line)}
+.disco-art::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--cyan) 0 75%,var(--red) 75% 100%)}
+.disco-label{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.13em;color:var(--cyan);position:relative;z-index:1}
+.disco-label span,.disco-art-bottom span{color:var(--red)}
+.disco-brand-stage{display:flex;justify-content:center;align-items:center;flex:1;width:100%;min-width:0;padding:11px 0 8px}
+.disco-logo{position:relative;width:min(100%,285px);aspect-ratio:1;display:grid;place-items:center;background:#fff}
+.disco-logo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;background:#fff}
+.disco-logo-fallback{font:750 clamp(40px,5vw,56px)/1 'Manrope',sans-serif;letter-spacing:-.06em;color:#174c8a}
+.disco-art-bottom{border-top:1px solid var(--line);padding-top:13px;width:100%;font:800 9px/1.55 'DM Sans',sans-serif;letter-spacing:.1em;color:var(--muted)}
+.disco-copy{background:var(--offwhite);padding:29px 34px;display:flex;flex-direction:column;min-width:0}
 .disco-eyebrow{font:800 10px/1.5 'DM Sans',sans-serif;letter-spacing:.1em;color:var(--red)}
 .disco-copy h3{font:650 clamp(24px,2.55vw,36px)/1.16 'Manrope',sans-serif;letter-spacing:-.055em;margin:14px 0 13px}
 .disco-copy p{font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 12px}
@@ -49,6 +45,17 @@
 .disco-copy a{color:var(--cyan);font:800 12px/1.5 'DM Sans',sans-serif;text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start;padding-bottom:3px;margin-top:auto}
 .disco-copy a:hover{color:var(--red)}
 .disco-copy a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-@media(max-width:700px){.disco-project{grid-template-columns:1fr}.disco-art{min-height:250px;padding:18px 21px}.disco-orbit{width:220px;height:220px}.disco-logo-frame{width:154px}.disco-copy{padding:22px}.disco-copy h3{font-size:26px}}
-@media(prefers-reduced-motion:reduce){.disco-logo-frame{transform:none}}
+@media(max-width:700px){
+  .disco-project{grid-template-columns:minmax(0,1fr)}
+  .disco-art{min-height:0;padding:19px 22px 16px;border-right:0;border-bottom:1px solid var(--line)}
+  .disco-brand-stage{padding:12px 0}
+  .disco-logo{width:min(65%,225px)}
+  .disco-copy{padding:23px}
+  .disco-copy h3{font-size:26px}
+}
+@media(max-width:375px){
+  .disco-art{padding-inline:17px}
+  .disco-logo{width:min(70%,196px)}
+  .disco-art-bottom{font-size:8px}
+}
 </style>
