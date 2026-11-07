@@ -1,6 +1,7 @@
 /**
  * Llibres acadèmics de Jordi Castellví Mata.
- * Dades verificades a les editorials Octaedro (2023) i Dykinson (2024).
+ * Dades dels llibres verificades a Octaedro (2023) i Dykinson (2024).
+ * Informe individual de 2024 incorporat a partir de la publicació original aportada per l'autor.
  */
 export const featuredBooks = [
   {
@@ -32,5 +33,18 @@ export const featuredBooks = [
     isbn: '978-84-19690-20-3',
     coverVariant: 'methods',
     coverUrl: 'https://octaedro.com/wp-content/uploads/2023/06/09556-1-600x920.jpg',
+  },
+  {
+    year: '2024',
+    role: 'AUTORIA · INFORME',
+    title: 'Medi social a educació infantil',
+    subtitle: 'Com aprenem sobre el medi social a l’escola?',
+    contributors: 'Jordi Castellví Mata · Universitat Autònoma de Barcelona · Escola Montserrat Solà · GREDICS',
+    publisher: 'UAB',
+    description: 'Informe elaborat en col·laboració amb l’Escola Montserrat Solà, GREDICS i la Unitat de Didàctica de les Ciències Socials de la UAB. Explora com els infants aprenen sobre el temps, l’espai, la família, la cultura i la identitat a través de la vida quotidiana de l’escola.',
+    url: 'documents/medi-social-educacio-infantil-2024.pdf',
+    primaryLabel: 'Llegir l’informe (PDF)',
+    coverVariant: 'infantil',
+    coverUrl: 'images/medi-social-educacio-infantil-cover.webp',
   },
 ] as const;

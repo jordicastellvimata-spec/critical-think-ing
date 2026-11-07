@@ -2,11 +2,12 @@
 import { featuredBooks } from '../data/featuredBooks';
 const { compact = false } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? (book.coverUrl.startsWith('https://') ? book.coverUrl : base + '/' + book.coverUrl.replace(/^\/+/, '')) : undefined;
+const toLink = (url) => /^https?:\/\//.test(url) ? url : base + '/' + url.replace(/^\/+/, '');
+const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.coverUrl) : undefined;
 ---
 <div class:list={['books-showcase', { 'books-compact': compact }]}>
   <div class="books-heading">
-    <div class="eyebrow">Obres col·lectives · Didàctica de les ciències socials</div>
+    <div class="eyebrow">Llibres i informes · Didàctica de les ciències socials</div>
     <h3>Llibres</h3>
   </div>
   <div class="books-grid">
@@ -37,8 +38,10 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? (book.coverUr
           <p class="book-contributors">{book.contributors}</p>
           <p class="book-description">{book.description}</p>
           <div class="book-links">
-            <a href={book.url} target="_blank" rel="noopener noreferrer">Fitxa editorial <span aria-hidden="true">↗</span></a>
-            <a href={book.secondaryUrl} target="_blank" rel="noopener noreferrer">{book.secondaryLabel} <span aria-hidden="true">↗</span></a>
+            <a href={toLink(book.url)} target="_blank" rel="noopener noreferrer">{'primaryLabel' in book ? book.primaryLabel : 'Fitxa editorial'} <span aria-hidden="true">↗</span></a>
+            {'secondaryUrl' in book && book.secondaryUrl && (
+              <a href={toLink(book.secondaryUrl)} target="_blank" rel="noopener noreferrer">{book.secondaryLabel} <span aria-hidden="true">↗</span></a>
+            )}
           </div>
         </div>
       </article>
@@ -60,6 +63,8 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? (book.coverUr
 .cover-title{font:750 16px/1.25 'Manrope',sans-serif;letter-spacing:-.05em;overflow-wrap:break-word}
 .cover-bottom-rule{height:2px;width:75%;background:var(--red-light);margin-top:14px}
 .official-book-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.book-infantil .official-book-cover{object-fit:contain;background:#fff}
+.book-infantil .book-cover-fallback{background:linear-gradient(155deg,#056ac3,#0e9ec9)}
 .book-details{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
 .book-kicker{color:var(--red);font-weight:800;letter-spacing:.08em;font-size:10px;line-height:1.5}
 .book-details h4{font:650 clamp(19px,1.8vw,25px)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;margin:13px 0 11px;color:var(--ink)}
@@ -69,8 +74,9 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? (book.coverUr
 .book-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:14px 17px}
 .book-links a{font-size:11px;font-weight:800;line-height:1.5;color:var(--cyan);border-bottom:1px solid currentColor;padding-bottom:3px}
 .book-links a:hover{color:var(--red)}
+.book-feature:last-child:nth-child(odd){grid-column:span 2}
 .books-compact{padding:0}
-@media(max-width:1190px){.books-grid{grid-template-columns:1fr}.book-feature{grid-template-columns:165px minmax(0,1fr);min-height:0}.book-cover{width:165px}}
+@media(max-width:1190px){.book-feature:last-child:nth-child(odd){grid-column:auto}.books-grid{grid-template-columns:1fr}.book-feature{grid-template-columns:165px minmax(0,1fr);min-height:0}.book-cover{width:165px}}
 @media(max-width:650px){.book-feature{grid-template-columns:100px minmax(0,1fr);gap:17px;padding:18px}.book-cover{width:100px}.book-cover-fallback{padding:12px 8px}.book-publisher{font-size:8px}.cover-title{font-size:11px}.cover-emblem{font-size:44px}.book-details h4{font-size:19px}.book-kicker{font-size:9px}.book-description{font-size:12px}.book-links{gap:11px}.books-heading{display:block}}
 @media(max-width:420px){.book-feature{grid-template-columns:1fr}.book-cover{width:126px}.book-details{width:100%}}
 @media(prefers-reduced-motion:reduce){.book-feature{transition:none}}
