@@ -1,7 +1,7 @@
 ---
 import { profile } from '../data/site';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
-const {title='Jordi Castellví Mata', description='Pensament crític, educació democràtica i didàctica de les ciències socials.', active=''} = Astro.props;
+const {title='Jordi Castellví Mata', seoTitle = `${title} | critical-think.ing`, description='Pensament crític, educació democràtica i didàctica de les ciències socials.', active=''} = Astro.props;
 const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
@@ -26,7 +26,7 @@ const nav = [
   <meta name="description" content={description} />
   <meta property="og:title" content={title + ' | critical-think.ing'} />
   <meta property="og:description" content={description} />
-  <title>{title} | critical-think.ing</title>
+  <title>{seoTitle}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
