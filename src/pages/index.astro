@@ -12,7 +12,6 @@ import AsteriskIcon from '../components/AsteriskIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
-import ArrelaProject from '../components/ArrelaProject.astro';
 const root=import.meta.env.BASE_URL.replace(/\/$/,'');
 const to=(s='')=>root+'/'+s.replace(/^\//,'');
 ---
@@ -134,7 +133,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </a>
         </div>
         <TeacherResources />
-        <ArrelaProject />
         <PracticeMaterials />
         <a class="practice-to-videos" href="#docencia">Veure també les intervencions en vídeo <span aria-hidden="true">↓</span></a>
     </div>
