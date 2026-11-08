@@ -78,6 +78,43 @@ Contacte i col·laboracions|||Contacto y colaboraciones|||Contact and collaborat
 Parlem-ne.|||Hablemos.|||Let’s talk.|||Échangeons.
 Escriu-me|||Escríbeme|||Email me|||Écrivez-moi
 `),
+  ...block(String.raw`
+Relats hegemònics|||Relatos hegemónicos|||Hegemonic narratives|||Récits hégémoniques
+Com es construeixen, es transmeten i es qüestionen les visions dominants del món social.|||Cómo se construyen, transmiten y cuestionan las visiones dominantes del mundo social.|||How dominant views of society are constructed, transmitted and questioned.|||Comment les visions dominantes du monde social se construisent, se transmettent et sont remises en question.
+Discursos d’odi i contrarelats|||Discursos de odio y contrarrelatos|||Hate speech and counter-narratives|||Discours de haine et contre-récits
+Els discursos d’odi i les respostes educatives per analitzar-los i confrontar-los.|||Los discursos de odio y las respuestas educativas para analizarlos y confrontarlos.|||Hate speech and educational responses to analyse and challenge it.|||Les discours de haine et les réponses éducatives pour les analyser et les combattre.
+Polarització sociopolítica i populismes|||Polarización sociopolítica y populismos|||Sociopolitical polarization and populism|||Polarisation sociopolitique et populismes
+Els reptes que la polarització i els populismes plantegen a l’educació.|||Los retos que la polarización y los populismos plantean a la educación.|||The challenges polarization and populism pose to education.|||Les défis posés à l’éducation par la polarisation et les populismes.
+Formació del pensament crític i de la ciutadania crítica|||Formación del pensamiento crítico y de la ciudadanía crítica|||Developing critical thinking and critical citizenship|||Développer la pensée critique et la citoyenneté critique
+Com desenvolupar el judici crític i la participació conscient en la vida democràtica.|||Cómo desarrollar el juicio crítico y la participación consciente en la vida democrática.|||How to develop critical judgement and meaningful participation in democratic life.|||Comment développer le jugement critique et une participation consciente à la vie démocratique.
+EN CURS|||EN CURSO|||ONGOING|||EN COURS
+FINALITZAT|||FINALIZADO|||COMPLETED|||TERMINÉ
+Competències de cultura democràtica en educació primària|||Competencias de cultura democrática en educación primaria|||Competences for democratic culture in primary education|||Compétences pour une culture démocratique à l’école primaire
+Recerca sobre el desenvolupament i l’ensenyament de competències de cultura democràtica a l’educació primària.|||Investigación sobre el desarrollo y la enseñanza de competencias para la cultura democrática en educación primaria.|||Research on developing and teaching competences for democratic culture in primary education.|||Recherche sur le développement et l’enseignement des compétences pour une culture démocratique à l’école primaire.
+Membre de l’equip investigador|||Miembro del equipo investigador|||Research team member|||Membre de l’équipe de recherche
+Educació per al futur i esperança en la democràcia|||Educación para el futuro y esperanza en la democracia|||Education for the future and hope in democracy|||Éducation à l’avenir et espoir dans la démocratie
+Repensar l’ensenyament de les ciències socials en temps de canvi, a partir dels futurs i els problemes socials.|||Repensar la enseñanza de las ciencias sociales en tiempos de cambio, a partir de los futuros y los problemas sociales.|||Rethinking social studies education in times of change through futures and social issues.|||Repenser l’enseignement des sciences sociales dans un contexte de changement, à partir des futurs et des questions sociales.
+Interpretar problemes i conflictes contemporanis|||Interpretar problemas y conflictos contemporáneos|||Interpreting contemporary issues and conflicts|||Interpréter les problèmes et conflits contemporains
+Una investigació sobre la contribució de les ciències socials a la formació d’una ciutadania global crítica.|||Una investigación sobre la contribución de las ciencias sociales a la formación de una ciudadanía global crítica.|||A study of how social studies education contributes to critical global citizenship.|||Une recherche sur la contribution des sciences sociales à la formation d’une citoyenneté mondiale critique.
+Membre col·laborador de l’equip|||Miembro colaborador del equipo|||Collaborating team member|||Membre collaborateur de l’équipe
+Col·lecció temàtica de Discover Education (Springer Nature)|||Colección temática de Discover Education (Springer Nature)|||Topical collection in Discover Education (Springer Nature)|||Collection thématique de Discover Education (Springer Nature)
+Coordinació editorial d’una col·lecció sobre educació, democràcia i justícia social, amb Núria Arís i Antoni Santisteban.|||Coordinación editorial de una colección sobre educación, democracia y justicia social, con Núria Arís y Antoni Santisteban.|||Editorial coordination of a collection on education, democracy and social justice with Núria Arís and Antoni Santisteban.|||Coordination éditoriale d’une collection sur l’éducation, la démocratie et la justice sociale avec Núria Arís et Antoni Santisteban.
+Veure la convocatòria|||Ver la convocatoria|||View the call for papers|||Voir l’appel à contributions
+MOOC de la Universitat Autònoma de Barcelona|||MOOC de la Universidad Autónoma de Barcelona|||MOOC by the Autonomous University of Barcelona|||MOOC de l’Université autonome de Barcelone
+Curs en línia sobre literacitat crítica, ciutadania i educació democràtica. Hi participo com a docent i codirector.|||Curso en línea sobre literacidad crítica, ciudadanía y educación democrática. Participo como docente y codirector.|||An online course on critical literacy, citizenship and democratic education, which I co-direct and teach.|||Cours en ligne sur la littératie critique, la citoyenneté et l’éducation démocratique, dont je suis enseignant et codirecteur.
+Descobrir el MOOC|||Descubrir el MOOC|||Explore the MOOC|||Découvrir le MOOC
+Activitat editorial|||Actividad editorial|||Editorial work|||Activité éditoriale
+Participació en la direcció adjunta i en el treball editorial d’una revista especialitzada en didàctica de les ciències socials.|||Participación en la dirección adjunta y el trabajo editorial de una revista especializada en didáctica de las ciencias sociales.|||Associate editorial leadership and editorial work for a journal specializing in social studies education.|||Participation à la direction adjointe et au travail éditorial d’une revue spécialisée en didactique des sciences sociales.
+Visitar la revista|||Visitar la revista|||Visit the journal|||Consulter la revue
+EDICIÓ ACADÈMICA · 2026|||EDICIÓN ACADÉMICA · 2026|||ACADEMIC EDITING · 2026|||ÉDITION ACADÉMIQUE · 2026
+REVISTES CIENTÍFIQUES|||REVISTAS CIENTÍFICAS|||ACADEMIC JOURNALS|||REVUES SCIENTIFIQUES
+L’escola davant l’actualitat|||La escuela ante la actualidad|||Schools facing current affairs|||L’école face à l’actualité
+Competències de Cultura Democràtica per canviar el món|||Competencias de cultura democrática para cambiar el mundo|||Competences for democratic culture to change the world|||Des compétences de culture démocratique pour changer le monde
+Un espai de trobada entre professorat, investigadors i estudiants per interpretar críticament l’actualitat, contrastar perspectives i connectar la cultura democràtica amb la pràctica educativa.|||Un espacio de encuentro entre docentes, investigadores y estudiantes para interpretar críticamente la actualidad, contrastar perspectivas y conectar la cultura democrática con la práctica educativa.|||A meeting place for teachers, researchers and students to critically interpret current events, compare perspectives and connect democratic culture with educational practice.|||Un espace de rencontre entre enseignants, chercheurs et étudiants pour analyser l’actualité de manière critique, confronter les points de vue et relier la culture démocratique à la pratique éducative.
+27, 28 i 29 de gener de 2027|||27, 28 y 29 de enero de 2027|||27–29 January 2027|||27, 28 et 29 janvier 2027
+Jornades Internacionals de Recerca en Didàctica de les Ciències Socials|||Jornadas Internacionales de Investigación en Didáctica de las Ciencias Sociales|||International Conference on Social Studies Education Research|||Journées internationales de recherche en didactique des sciences sociales
+Facultat de Ciències de l’Educació · UAB|||Facultad de Ciencias de la Educación · UAB|||Faculty of Education · UAB|||Faculté des sciences de l’éducation · UAB
+`),
   //NEXT
 ];
 
