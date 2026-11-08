@@ -71,12 +71,14 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <div class="project-meta"><span>PROJECTE DE RECERCA · EN CURS</span><span>{researchProjects[0].period}</span></div>
           <div class="project-content"><span class="project-code">{researchProjects[0].code}</span><h3>{researchProjects[0].title}</h3><p>{researchProjects[0].description}</p><a href="#mes-projectes" class="project-link">Altres projectes de recerca <span aria-hidden="true">↗</span></a></div>
           <div class="project-funding" aria-label="Entitats finançadores del projecte PID2024-160676OB-I00">
-            <span class="project-funding-kicker">PROJECTE PID2024-160676OB-I00 · FINANÇAMENT</span>
             <div class="project-funding-logos">
-              <span class="project-funding-fallback" aria-hidden="true">MICIU <span>·</span> COFINANCIADO POR LA UNIÓN EUROPEA <span>·</span> AEI</span>
-              <img src="https://raw.githubusercontent.com/project-auroras/auroras/main/logos/MICIU%2BCofinanciado%2BAEI.jpg" alt="Logotips de les entitats finançadores: Ministerio de Ciencia, Innovación y Universidades; Cofinanciado por la Unión Europea; Agencia Estatal de Investigación" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+              <span class="project-funding-fallback" aria-hidden="true">MICIU <span>·</span> UE <span>·</span> AEI</span>
+              <img src="https://raw.githubusercontent.com/project-auroras/auroras/main/logos/MICIU%2BCofinanciado%2BAEI.jpg" alt="Logotips del Ministeri de Ciència, Innovació i Universitats, de la Unió Europea i de l’Agència Estatal d’Investigació" loading="lazy" decoding="async" onerror="this.style.display='none'" />
             </div>
-            <span class="project-funding-credit">Finançat per MICIU/AEI/10.13039/501100011033 i per FEDER, UE.</span>
+            <div class="project-funding-info">
+              <span class="project-funding-kicker">FINANÇAMENT INSTITUCIONAL</span>
+              <span class="project-funding-credit">MICIU/AEI/10.13039/501100011033 · FEDER, UE</span>
+            </div>
           </div>
           <div class="project-circle" aria-hidden="true"></div>
         </article>
@@ -248,15 +250,16 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .project-content p{max-width:470px;font-size:15px;line-height:1.75;color:var(--on-dark)}
 .project-link{display:inline-block;margin-top:20px;border-bottom:1px solid var(--red-light);padding-bottom:8px;font-size:13px;font-weight:800}
 .project-circle{position:absolute;width:400px;height:400px;border:1px solid var(--cyan-line-alpha);border-radius:50%;right:-170px;top:-70px;pointer-events:none}
-.project-funding{position:relative;z-index:2;align-self:stretch;margin-top:24px;background:#fff;color:var(--ink);padding:15px 18px 12px;border:1px solid rgba(255,255,255,.65);min-width:0}
-.project-funding-kicker{display:block;color:var(--cyan);font:800 9px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.11em}
-.project-funding-logos{position:relative;width:100%;height:108px;margin:9px auto 4px;display:grid;place-items:center;overflow:hidden;background:#fff}
+.project-funding{position:relative;z-index:2;align-self:stretch;margin-top:20px;display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:9px 14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.26);min-width:0}
+.project-funding-logos{position:relative;flex:0 1 260px;max-width:min(100%,260px);height:57px;display:grid;place-items:center;overflow:hidden;background:#fff}
 .project-funding-logos img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
-.project-funding-fallback{font:800 clamp(10px,1.2vw,13px)/1.55 'Manrope',Arial,sans-serif;color:var(--cyan);text-align:center;letter-spacing:.015em}
+.project-funding-fallback{font:800 13px/1.3 'Manrope',Arial,sans-serif;color:var(--cyan);text-align:center}
 .project-funding-fallback span{color:var(--red)}
-.project-funding-credit{display:block;font-size:9px;line-height:1.45;color:var(--muted);text-align:center}
-@media(max-width:760px){.project-funding{margin-top:24px;padding:13px 13px 11px}.project-funding-logos{height:84px}.project-funding-kicker{font-size:8px;letter-spacing:.07em}}
-@media(max-width:400px){.project-funding-logos{height:68px}.project-funding-credit{font-size:8px}}
+.project-funding-info{display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:1 1 150px;min-width:0}
+.project-funding-kicker{display:block;color:var(--on-dark);font:800 8px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.11em}
+.project-funding-credit{display:block;font-size:9px;line-height:1.5;color:var(--on-dark);overflow-wrap:anywhere}
+@media(max-width:760px){.project-funding{gap:9px 12px;margin-top:18px;padding-top:11px}.project-funding-logos{flex-basis:235px;max-width:min(100%,235px);height:50px}.project-funding-info{flex-basis:160px}}
+@media(max-width:400px){.project-funding-logos{flex-basis:215px;max-width:min(100%,215px);height:45px}.project-funding-info{flex-basis:100%}}
 .initiative-stack{display:grid;grid-template-rows:1fr 1fr;gap:17px}
 .initiative{padding:30px;background:var(--rose);border:1px solid var(--rose-line);display:flex;flex-direction:column}
 .initiative.mooc{background:var(--cyan-pale);border-color:var(--line)}
