@@ -6,6 +6,7 @@ import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
 import PracticeMaterials from '../components/PracticeMaterials.astro';
 import TeacherResources from '../components/TeacherResources.astro';
 import DiscoProject from '../components/DiscoProject.astro';
+import QuestionarActivities from '../components/QuestionarActivities.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
 import ThesisSpotlight from '../components/ThesisSpotlight.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
@@ -177,7 +178,16 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       <div class="lab-art" aria-hidden="true"><div class="lab-orbit"></div><div class="lab-orbit two"></div><div class="lab-main">¿</div><span class="lab-caption">OBSERVAR / CONTRASTAR / ARGUMENTAR / ACTUAR</span></div>
     </div>
     <div class="container lab-prompts" id="activitats-laboratori" aria-label="Quatre dimensions de la literacitat crítica">
-      {criticalLiteracyDimensions.map(d => (
+      {criticalLiteracyDimensions.map(d => d.number === '01' ? (
+        <details class="lab-disclosure" id="questionar-allo-comu">
+          <summary class="lab-prompt">
+            <span class="lab-prompt-title">{d.title}</span>
+            <span class="lab-prompt-description">{d.description}</span>
+            <span class="lab-prompt-action"><span>Explora les set activitats</span><span class="lab-chevron" aria-hidden="true"></span></span>
+          </summary>
+          <QuestionarActivities />
+        </details>
+      ) : (
         <article class="lab-prompt">
           <h3>{d.title}</h3>
           <p>{d.description}</p>
@@ -328,8 +338,19 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .journal-initiative>span:last-child{font-size:12px;color:var(--cyan);font-weight:700}
 .lab-prompts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:52px;scroll-margin-top:96px}
 .lab-prompt{border:1px solid var(--line-strong);padding:28px;min-height:205px}
-.lab-prompt h3{font:650 22px/1.35 'Manrope',sans-serif;letter-spacing:-.04em;margin:4px 0 12px}
-.lab-prompt p{font-size:13px;color:var(--on-dark);line-height:1.65;margin:0}
+.lab-prompt h3,.lab-prompt-title{display:block;font:650 22px/1.35 'Manrope',sans-serif;letter-spacing:-.04em;margin:4px 0 12px}
+.lab-prompt p,.lab-prompt-description{display:block;font-size:13px;color:var(--on-dark);line-height:1.65;margin:0}
+.lab-disclosure{min-width:0;scroll-margin-top:96px}
+.lab-disclosure[open]{grid-column:1/-1}
+.lab-disclosure summary{height:100%;list-style:none;cursor:pointer;transition:background .2s,border-color .2s}
+.lab-disclosure[open] summary{height:auto;min-height:0}
+.lab-disclosure summary::-webkit-details-marker{display:none}
+.lab-disclosure summary:hover,.lab-disclosure[open] summary{background:rgba(255,255,255,.06);border-color:var(--red-light)}
+.lab-disclosure summary:focus-visible{outline:2px solid var(--red-light);outline-offset:3px}
+.lab-prompt-action{display:flex;align-items:center;gap:12px;margin-top:16px;color:var(--red-light);font-size:13px;font-weight:700}
+.lab-chevron{flex:none;width:8px;height:8px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);transition:transform .2s}
+.lab-disclosure[open] .lab-chevron{transform:rotate(225deg)}
+@media(prefers-reduced-motion:reduce){.lab-disclosure summary,.lab-chevron{transition:none}}
 .lab-deeper{margin-top:28px}
 .lab-deeper .text-link{color:var(--red-light)}
 .contact-email{font-weight:500;margin-left:8px}

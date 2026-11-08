@@ -1,3 +1,5 @@
+import { questionarTranslations, questionarReferences } from './questionar.mjs';
+
 // Catalog of editorial translations. Published article, book and video titles retain their
 // original language to preserve accurate bibliographic references.
 const block = s => s.trim().split('\n').filter(Boolean).map(line => {
@@ -6,6 +8,7 @@ const block = s => s.trim().split('\n').filter(Boolean).map(line => {
   return cells;
 });
 export const catalog = [
+  ...questionarTranslations,
   ...block(String.raw`
 Publicacions sobre pensament crític i educació | Jordi Castellví Mata|||Publicaciones sobre pensamiento crítico y educación | Jordi Castellví Mata|||Publications on Critical Thinking and Education | Jordi Castellví Mata|||Publications sur la pensée critique et l’éducation | Jordi Castellví Mata
 Jordi Castellví Mata | Perfil acadèmic|||Jordi Castellví Mata | Perfil académico|||Jordi Castellví Mata | Academic Profile|||Jordi Castellví Mata | Profil académique
@@ -377,6 +380,7 @@ Logotip del MITECO, Ministeri per a la Transició Ecològica i el Repte Demogrà
 ];
 
 export const exactOriginals = [
+  ...questionarReferences,
   'Jordi Castellví Mata','critical-think.ing','GREDICS','UAB','ORCID','ResearchGate',
   'Bluesky','Google Scholar','Barcanova.','Jesuïtes Educació.','Discover','Education',
   'La formación del pensamiento crítico en la era digital','Enseñanza de las Ciencias Sociales',
