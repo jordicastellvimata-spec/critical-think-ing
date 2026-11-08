@@ -338,6 +338,21 @@ Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en 
 Primera pàgina original de l’article publicat a Comunicació Educativa, número 37 de 2024|||Primera página original del artículo publicado en Comunicació Educativa, número 37 de 2024|||Original first page of the article published in Comunicació Educativa, issue 37 (2024)|||Première page originale de l’article publié dans Comunicació Educativa, numéro 37 (2024)
 `),
   ...block(String.raw`
+L’escola davant l’actualitat.|||La escuela ante la actualidad.|||Schools facing current affairs.|||L’école face à l’actualité.
+Competències de Cultura Democràtica per canviar el món.|||Competencias de cultura democrática para cambiar el mundo.|||Competences for democratic culture to change the world.|||Des compétences de culture démocratique pour changer le monde.
+27, 28 i 29 de gener de 2027 · Universitat Autònoma de Barcelona|||27, 28 y 29 de enero de 2027 · Universidad Autónoma de Barcelona|||27–29 January 2027 · Autonomous University of Barcelona|||27, 28 et 29 janvier 2027 · Université autonome de Barcelone
+EDUCACIÓ PRIMÀRIA · 2025|||EDUCACIÓN PRIMARIA · 2025|||PRIMARY EDUCATION · 2025|||ENSEIGNEMENT PRIMAIRE · 2025
+EDUCACIÓ SECUNDÀRIA · 2025|||EDUCACIÓN SECUNDARIA · 2025|||SECONDARY EDUCATION · 2025|||ENSEIGNEMENT SECONDAIRE · 2025
+EXPERIMENTA · 3R DE PRIMÀRIA|||EXPERIMENTA · 3.º DE PRIMARIA|||EXPERIMENTA · YEAR 3 PRIMARY|||EXPERIMENTA · 3e ANNÉE DU PRIMAIRE
+EXPERIMENTA · 4T DE PRIMÀRIA|||EXPERIMENTA · 4.º DE PRIMARIA|||EXPERIMENTA · YEAR 4 PRIMARY|||EXPERIMENTA · 4e ANNÉE DU PRIMAIRE
+ENTORN · 3R DE PRIMÀRIA|||ENTORN · 3.º DE PRIMARIA|||ENTORN · YEAR 3 PRIMARY|||ENTORN · 3e ANNÉE DU PRIMAIRE
+ENTORN · 4T DE PRIMÀRIA|||ENTORN · 4.º DE PRIMARIA|||ENTORN · YEAR 4 PRIMARY|||ENTORN · 4e ANNÉE DU PRIMAIRE
+NÚM. 99|||NÚM. 99|||NO. 99|||N° 99
+NÚM. 118|||NÚM. 118|||NO. 118|||N° 118
+NÚM. 122|||NÚM. 122|||NO. 122|||N° 122
+NÚM. 37|||NÚM. 37|||NO. 37|||N° 37
+`),
+  ...block(String.raw`
 Professor universitari i investigador en didàctica de les ciències socials|||Profesor universitario e investigador en didáctica de las ciencias sociales|||University lecturer and researcher in social studies education|||Enseignant-chercheur en didactique des sciences sociales
 Jordi Castellví Mata · Universitat Autònoma de Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Universidad Autónoma de Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Autonomous University of Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Université autonome de Barcelone · Escola Montserrat Solà · GREDICS
 Font: Lewison, M., Flint, A. S. i Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Fuente: Lewison, M., Flint, A. S. y Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Source: Lewison, M., Flint, A. S. and Van Sluys, K. (2002). “Taking on Critical Literacy: The Journey of Newcomers and Novices”.|||Source : Lewison, M., Flint, A. S. et Van Sluys, K. (2002). « Taking on Critical Literacy: The Journey of Newcomers and Novices ».
