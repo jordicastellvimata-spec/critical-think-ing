@@ -178,6 +178,81 @@ Finalitats educatives i ciutadania|||Finalidades educativas y ciudadanía|||Educ
 Diàleg amb Antoni Santisteban|||Diálogo con Antoni Santisteban|||Dialogue with Antoni Santisteban|||Dialogue avec Antoni Santisteban
 Veure a YouTube|||Ver en YouTube|||Watch on YouTube|||Regarder sur YouTube
 `),
+  ...block(String.raw`
+CONSELL D’EUROPA|||CONSEJO DE EUROPA|||COUNCIL OF EUROPE|||CONSEIL DE L’EUROPE
+PROGRAMA DISCO|||PROGRAMA DISCO|||DISCO PROGRAMME|||PROGRAMME DISCO
+CULTURA DEMOCRÀTICA I FORMACIÓ DE MESTRES|||CULTURA DEMOCRÁTICA Y FORMACIÓN DE DOCENTES|||DEMOCRATIC CULTURE AND TEACHER EDUCATION|||CULTURE DÉMOCRATIQUE ET FORMATION DES ENSEIGNANTS
+COOPERACIÓ EUROPEA · PARTICIPACIÓ EN PROJECTE|||COOPERACIÓN EUROPEA · PARTICIPACIÓN EN PROYECTO|||EUROPEAN COOPERATION · PROJECT PARTICIPATION|||COOPÉRATION EUROPÉENNE · PARTICIPATION AU PROJET
+La cultura democràtica també s’aprèn a la universitat.|||La cultura democrática también se aprende en la universidad.|||Democratic culture is learned at university too.|||La culture démocratique s’apprend aussi à l’université.
+Vaig participar a|||Participé en|||I took part in|||J’ai participé à
+(EDCD-TEP), un projecte del programa DISCO del Consell d’Europa per integrar les competències de cultura democràtica a la formació inicial de mestres.|||(EDCD-TEP), un proyecto del programa DISCO del Consejo de Europa para integrar las competencias de cultura democrática en la formación inicial del profesorado.|||(EDCD-TEP), a project in the Council of Europe's DISCO programme to integrate competences for democratic culture into initial teacher education.|||(EDCD-TEP), un projet du programme DISCO du Conseil de l’Europe visant à intégrer les compétences pour une culture démocratique dans la formation initiale des enseignants.
+Amb la UAB, l’Instituto Politécnico de Lisboa i la Manchester Metropolitan University.|||Con la UAB, el Instituto Politécnico de Lisboa y la Manchester Metropolitan University.|||With UAB, the Instituto Politécnico de Lisboa and Manchester Metropolitan University.|||Avec l’UAB, l’Instituto Politécnico de Lisboa et la Manchester Metropolitan University.
+Unió Europea · Consell d’Europa|||Unión Europea · Consejo de Europa|||European Union · Council of Europe|||Union européenne · Conseil de l’Europe
+PROGRAMA FINANÇAT PER LA UE I EL CONSELL D’EUROPA|||PROGRAMA FINANCIADO POR LA UE Y EL CONSEJO DE EUROPA|||PROGRAMME FUNDED BY THE EU AND COUNCIL OF EUROPE|||PROGRAMME FINANCÉ PAR L’UE ET LE CONSEIL DE L’EUROPE
+Conèixer el projecte al Consell d’Europa|||Conocer el proyecto en el Consejo de Europa|||Read about the Council of Europe project|||Découvrir le projet au Conseil de l’Europe
+LECTURES · RECURSOS PER AL PROFESSORAT|||LECTURAS · RECURSOS PARA DOCENTES|||READING · RESOURCES FOR TEACHERS|||LECTURES · RESSOURCES POUR LES ENSEIGNANTS
+Per portar les idees|||Para llevar las ideas|||Bringing ideas|||Pour faire entrer les idées
+a l’aula.|||al aula.|||into the classroom.|||dans la classe.
+Quatre articles per explorar la lectura crítica, la ciutadania i les qüestions controvertides amb el professorat.|||Cuatro artículos para explorar la lectura crítica, la ciudadanía y las cuestiones controvertidas con el profesorado.|||Four articles for teachers exploring critical reading, citizenship and controversial issues.|||Quatre articles destinés aux enseignants pour explorer la lecture critique, la citoyenneté et les questions controversées.
+LECTURA CRÍTICA|||LECTURA CRÍTICA|||CRITICAL READING|||LECTURE CRITIQUE
+LITERACITAT DIGITAL|||LITERACIDAD DIGITAL|||DIGITAL LITERACY|||LITTÉRATIE NUMÉRIQUE
+INTEL·LIGÈNCIA ARTIFICIAL|||INTELIGENCIA ARTIFICIAL|||ARTIFICIAL INTELLIGENCE|||INTELLIGENCE ARTIFICIELLE
+JUSTÍCIA SOCIAL|||JUSTICIA SOCIAL|||SOCIAL JUSTICE|||JUSTICE SOCIALE
+Llegir els mitjans i analitzar els seus missatges de manera crítica.|||Leer críticamente los medios y analizar sus mensajes.|||Critically reading media and analysing their messages.|||Lire les médias et analyser leurs messages de manière critique.
+Un decàleg d’orientacions per a l’ensenyament de les ciències socials.|||Un decálogo de orientaciones para la enseñanza de las ciencias sociales.|||Ten guidelines for teaching social studies.|||Dix recommandations pour l’enseignement des sciences sociales.
+Què pot aportar la IA a l’ensenyament i al pensament crític?|||¿Qué puede aportar la IA a la enseñanza y al pensamiento crítico?|||What can AI contribute to teaching and critical thinking?|||Que peut apporter l’IA à l’enseignement et à la pensée critique ?
+Problemes socials rellevants, polarització i discursos d’odi a l’aula.|||Problemas sociales relevantes, polarización y discursos de odio en el aula.|||Social issues, polarization and hate speech in the classroom.|||Questions sociales, polarisation et discours de haine en classe.
+Consultar l’article ↗|||Consultar el artículo ↗|||Read the article ↗|||Consulter l’article ↗
+NÚM.|||NÚM.|||NO.|||N°
+REVISTA CIENTÍFICA|||REVISTA CIENTÍFICA|||ACADEMIC JOURNAL|||REVUE SCIENTIFIQUE
+TESI DOCTORAL · UAB · 2019|||TESIS DOCTORAL · UAB · 2019|||DOCTORAL THESIS · UAB · 2019|||THÈSE DE DOCTORAT · UAB · 2019
+Literacitat crítica digital en els estudis socials.|||Literacidad crítica digital en los estudios sociales.|||Critical digital literacy in social studies.|||Littératie numérique critique dans l’enseignement des sciences sociales.
+Estudis de cas en educació primària|||Estudios de caso en educación primaria|||Case studies in primary education|||Études de cas dans l’enseignement primaire
+Una recerca sobre com es poden desenvolupar la lectura crítica del món digital i la participació de l’alumnat a través de l’ensenyament de les ciències socials.|||Una investigación sobre cómo desarrollar la lectura crítica del mundo digital y la participación del alumnado mediante la enseñanza de las ciencias sociales.|||Research into developing critical reading of the digital world and student participation through social studies education.|||Une recherche sur le développement de la lecture critique du monde numérique et de la participation des élèves grâce à l’enseignement des sciences sociales.
+Llegir la tesi en accés obert|||Leer la tesis en acceso abierto|||Read the open-access thesis|||Lire la thèse en accès libre
+Recerca · Edició · Transferència|||Investigación · Edición · Transferencia|||Research · Publishing · Knowledge exchange|||Recherche · Édition · Transfert
+Projectes|||Proyectos|||Projects|||Projets
+i iniciatives.|||e iniciativas.|||and initiatives.|||et initiatives.
+Investigacions sobre cultura democràtica, ciutadania crítica i futurs, juntament amb iniciatives de formació i edició científica.|||Investigaciones sobre cultura democrática, ciudadanía crítica y futuros, junto con iniciativas de formación y edición científica.|||Research on democratic culture, critical citizenship and futures, alongside teacher education and scholarly publishing initiatives.|||Recherches sur la culture démocratique, la citoyenneté critique et les futurs, avec des initiatives de formation et d’édition scientifique.
+Investigació|||Investigación|||Research|||Recherche
+Projectes de recerca.|||Proyectos de investigación.|||Research projects.|||Projets de recherche.
+Grup de recerca · UAB|||Grupo de investigación · UAB|||Research group · UAB|||Groupe de recherche · UAB
+Grup de Recerca en Didàctica de les Ciències Socials de la Universitat Autònoma de Barcelona.|||Grupo de Investigación en Didáctica de las Ciencias Sociales de la Universidad Autónoma de Barcelona.|||The Social Studies Education Research Group at the Autonomous University of Barcelona.|||Le Groupe de recherche en didactique des sciences sociales de l’Université autonome de Barcelone.
+Visitar GREDICS ↗|||Visitar GREDICS ↗|||Visit GREDICS ↗|||Consulter GREDICS ↗
+Edició científica · Formació · Jornades|||Edición científica · Formación · Jornadas|||Scholarly publishing · Training · Conferences|||Édition scientifique · Formation · Colloques
+Recerca que connecta|||Investigación que conecta|||Research connecting|||Une recherche en lien
+amb la pràctica.|||con la práctica.|||with practice.|||avec la pratique.
+ORGANITZACIÓ ACADÈMICA · 2027|||ORGANIZACIÓN ACADÉMICA · 2027|||ACADEMIC ORGANISATION · 2027|||ORGANISATION ACADÉMIQUE · 2027
+Coordinació amb Neus González-Monfort i Mónica Hernández González.|||Coordinación con Neus González-Monfort y Mónica Hernández González.|||Co-organised with Neus González-Monfort and Mónica Hernández González.|||Coordination avec Neus González-Monfort et Mónica Hernández González.
+Web de les Jornades ↗|||Web de las Jornadas ↗|||Conference website ↗|||Site des Journées ↗
+Producció científica|||Producción científica|||Research output|||Production scientifique
+Publicacions|||Publicaciones|||Publications|||Publications
+Pensament crític, ciutadania democràtica, alfabetització digital, discursos d’odi i educació per al futur.|||Pensamiento crítico, ciudadanía democrática, alfabetización digital, discursos de odio y educación para el futuro.|||Critical thinking, democratic citizenship, digital literacy, hate speech and education for the future.|||Pensée critique, citoyenneté démocratique, littératie numérique, discours de haine et éducation aux futurs.
+Articles de recerca · 2019—2026|||Artículos de investigación · 2019—2026|||Research articles · 2019—2026|||Articles de recherche · 2019—2026
+Veure el catàleg complet a la UAB ↗|||Ver el catálogo completo en la UAB ↗|||View all publications at UAB ↗|||Voir l’ensemble des publications à l’UAB ↗
+Portal de Recerca UAB ↗|||Portal de Investigación UAB ↗|||UAB Research Portal ↗|||Portail de recherche de l’UAB ↗
+Idees · Recursos · Activitats|||Ideas · Recursos · Actividades|||Ideas · Resources · Activities|||Idées · Ressources · Activités
+Un espai per posar el pensament crític en moviment: pensar conceptes, formular preguntes i imaginar com treballar-los a l’aula.|||Un espacio para poner el pensamiento crítico en movimiento: pensar conceptos, formular preguntas e imaginar cómo trabajarlos en el aula.|||A space to put critical thinking into practice: explore concepts, ask questions and imagine classroom activities.|||Un espace pour mettre la pensée critique en mouvement : explorer des concepts, formuler des questions et imaginer leur mise en œuvre en classe.
+Les quatre dimensions de la literacitat crítica|||Las cuatro dimensiones de la literacidad crítica|||The four dimensions of critical literacy|||Les quatre dimensions de la littératie critique
+Qüestionar, interpretar|||Cuestionar, interpretar|||Question, interpret|||Questionner, interpréter
+i transformar.|||y transformar.|||and transform.|||et transformer.
+Mirar la realitat amb altres ulls, escoltar perspectives diverses, examinar les relacions de poder i actuar per la justícia social.|||Mirar la realidad con otros ojos, escuchar perspectivas diversas, examinar las relaciones de poder y actuar por la justicia social.|||Look at reality differently, listen to diverse perspectives, examine power relations and act for social justice.|||Regarder la réalité autrement, écouter des points de vue divers, examiner les rapports de pouvoir et agir pour la justice sociale.
+Per aprofundir|||Para profundizar|||Explore further|||Pour aller plus loin
+De la teoria|||De la teoría|||From theory|||De la théorie
+a la pràctica.|||a la práctica.|||to practice.|||à la pratique.
+El MOOC «La formación del pensamiento crítico en la era digital» aprofundeix en la lectura crítica de la informació, la ciutadania i l'educació democràtica.|||El MOOC «La formación del pensamiento crítico en la era digital» profundiza en la lectura crítica de la información, la ciudadanía y la educación democrática.|||The MOOC «La formación del pensamiento crítico en la era digital» explores critical reading of information, citizenship and democratic education.|||Le MOOC «La formación del pensamiento crítico en la era digital» approfondit la lecture critique de l’information, la citoyenneté et l’éducation démocratique.
+Veure el curs a Coursera ↗|||Ver el curso en Coursera ↗|||View the course on Coursera ↗|||Voir le cours sur Coursera ↗
+Educar per pensar críticament és, també, educar per participar.|||Educar para pensar críticamente también es educar para participar.|||Teaching people to think critically also means teaching them to participate.|||Éduquer à la pensée critique, c’est aussi éduquer à la participation.
+IDEA CENTRAL DEL LABORATORI|||IDEA CENTRAL DEL LABORATORIO|||CORE IDEA OF THE LAB|||IDÉE CLÉ DU LABORATOIRE
+Qüestionar allò comú|||Cuestionar lo cotidiano|||Question the commonplace|||Questionner les évidences
+Mirar la vida quotidiana amb altres ulls: problematitzar allò que donem per fet i analitzar com els textos i el llenguatge construeixen la realitat i les identitats.|||Mirar la vida cotidiana con otros ojos: problematizar lo que damos por sentado y analizar cómo los textos y el lenguaje construyen la realidad y las identidades.|||Look at everyday life from a different perspective: question assumptions and explore how texts and language construct reality and identities.|||Regarder le quotidien autrement : questionner les évidences et analyser comment les textes et le langage construisent la réalité et les identités.
+Multiperspectiva|||Multiperspectiva|||Multiple perspectives|||Multiperspectivité
+Contrastar punts de vista diversos, fins i tot contradictoris; preguntar-nos quines veus s’escolten i quines falten, i recuperar les que han estat silenciades o marginades.|||Contrastar puntos de vista diversos, incluso contradictorios; preguntarnos qué voces se escuchan y cuáles faltan, y recuperar las silenciadas o marginadas.|||Compare diverse, even contradictory, perspectives; ask whose voices are heard and whose are missing, and bring back those silenced or marginalized.|||Confronter des points de vue variés, parfois contradictoires ; interroger les voix entendues et absentes, et retrouver celles qui ont été réduites au silence ou marginalisées.
+Problemes socials rellevants|||Problemas sociales relevantes|||Relevant social issues|||Questions sociales majeures
+Anar més enllà de les vivències individuals per comprendre els sistemes sociopolítics, les relacions de poder i les desigualtats que condicionen la vida quotidiana.|||Ir más allá de las experiencias individuales para comprender los sistemas sociopolíticos, las relaciones de poder y las desigualdades que condicionan la vida cotidiana.|||Go beyond individual experiences to understand the sociopolitical systems, power relations and inequalities that shape daily life.|||Dépasser les expériences individuelles pour comprendre les systèmes sociopolitiques, les rapports de pouvoir et les inégalités qui façonnent le quotidien.
+Acció social|||Acción social|||Social action|||Action sociale
+Passar de la reflexió a l’acció per transformar la realitat: qüestionar els privilegis i les injustícies, i promoure la participació i la justícia social.|||Pasar de la reflexión a la acción para transformar la realidad: cuestionar los privilegios y las injusticias, y promover la participación y la justicia social.|||Move from reflection to action to transform society: challenge privilege and injustice, and promote participation and social justice.|||Passer de la réflexion à l’action pour transformer la réalité : questionner les privilèges et les injustices, et encourager la participation et la justice sociale.
+`),
   //NEXT
 ];
 
