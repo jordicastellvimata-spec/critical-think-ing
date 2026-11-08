@@ -38,6 +38,17 @@ const nav = [
       <a class="wordmark" href={url('')} aria-label="Inici de critical-think.ing"><span class="mark"><AsteriskIcon /></span><span>critical<span class="wordmark-accent">-</span>think<span class="wordmark-accent">.</span>ing</span></a>
       <nav class="desktop-nav" aria-label="Navegació principal">{nav.map(item=><a href={url(item.path)} aria-current={active===item.key?'page':undefined}>{item.label}</a>)}</nav>
       <a class="desktop-contact" href={url('#contacte')}>Contacte <span aria-hidden="true">↗</span></a>
+      <div class="language-picker">
+        <details aria-label="Selector d'idioma">
+          <summary aria-label="Canviar l’idioma" aria-haspopup="true"><span class="lang-current-text" data-lang-current="CA">CA</span><span class="lang-chevron" aria-hidden="true"></span></summary>
+          <nav aria-label="Idiomes disponibles" class="language-options">
+            <a href="/" data-lang-link="ca" lang="ca" hreflang="ca">Català</a>
+            <a href="/es/" data-lang-link="es" lang="es" hreflang="es">Español</a>
+            <a href="/en/" data-lang-link="en" lang="en" hreflang="en">English</a>
+            <a href="/fr/" data-lang-link="fr" lang="fr" hreflang="fr">Français</a>
+          </nav>
+        </details>
+      </div>
       <details class="mobile-nav">
         <summary aria-label="Obrir el menú">Menú <span aria-hidden="true">☰</span></summary>
         <nav aria-label="Navegació mòbil">{nav.map(item=><a href={url(item.path)}>{item.label}</a>)}<a href={url('#contacte')}>Contacte ↗</a></nav>
@@ -45,6 +56,13 @@ const nav = [
     </header>
   </div>
   <main id="main"><slot /></main>
+  <script is:inline>
+    document.querySelectorAll('[data-lang-link]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.location.hash) link.href = link.href.split('#')[0] + window.location.hash;
+      });
+    });
+  </script>
   <footer class="site-footer">
     <div class="container footer-columns">
       <div><a class="footer-mark" href={url('')}>critical-think.ing</a><p>Jordi Castellví Mata<br/>Recerca, educació i pensament crític</p></div>
@@ -105,6 +123,17 @@ button{font:inherit}
 .desktop-contact{font-size:12px;font-weight:800;white-space:nowrap;color:var(--white);background:var(--cyan);padding:13px 17px}
 .desktop-contact:hover,.btn:hover{background:var(--cyan-dark)}
 .desktop-contact span{margin-left:10px}
+.language-picker{position:relative;flex-shrink:0;z-index:65}
+.language-picker details{position:relative}
+.language-picker summary{min-width:52px;min-height:39px;display:flex;align-items:center;justify-content:center;gap:8px;list-style:none;cursor:pointer;padding:8px 10px;border:1px solid var(--line-strong);border-radius:2px;background:var(--paper);color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:.05em}
+.language-picker summary::-webkit-details-marker{display:none}
+.language-picker summary:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.language-picker details[open] summary,.language-picker summary:hover{background:var(--cyan-pale)}
+.lang-chevron{display:inline-block;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.language-options{position:absolute;top:calc(100% + 7px);right:0;min-width:160px;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);box-shadow:0 13px 28px rgba(15,55,73,.13);padding:7px;z-index:90}
+.language-options a{display:block;padding:11px 13px;font-size:12px;font-weight:700;color:var(--cyan);white-space:nowrap}
+.language-options a:hover,.language-options a[aria-current=page]{background:var(--cyan-pale);color:var(--red)}
+.language-options a:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .mobile-nav{display:none}
 .eyebrow{display:flex;align-items:center;gap:11px;font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:var(--cyan)}
 .eyebrow:before{content:'';height:8px;width:8px;flex:0 0 8px;background:var(--red);border-radius:50%}
@@ -160,8 +189,9 @@ h1,h2,h3,h4,p{margin-top:0}
   .mobile-nav a{padding:10px;font-size:14px}
   .footer-columns{grid-template-columns:1fr 1fr}
 }
-@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:clamp(47px,11vw,75px)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
+@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px;gap:11px}.language-picker summary{min-height:35px;min-width:46px;padding:7px 8px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:clamp(47px,11vw,75px)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
 
+@media(max-width:360px){.wordmark .mark{display:none}.wordmark{font-size:16px}.header-content{gap:8px}}
 /* Aparició progressiva en desplaçar-se: manté el contingut llegible sense JavaScript. */
 .scroll-progress{height:3px;position:fixed;top:0;left:0;right:0;background:var(--cyan);z-index:100;transform-origin:left;transform:scaleX(0);pointer-events:none}
 main section[id]{scroll-margin-top:96px}
