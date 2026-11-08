@@ -7,6 +7,8 @@ const block = s => s.trim().split('\n').filter(Boolean).map(line => {
 });
 export const catalog = [
   ...block(String.raw`
+Publicacions sobre pensament crític i educació | Jordi Castellví Mata|||Publicaciones sobre pensamiento crítico y educación | Jordi Castellví Mata|||Publications on Critical Thinking and Education | Jordi Castellví Mata|||Publications sur la pensée critique et l’éducation | Jordi Castellví Mata
+Jordi Castellví Mata | Perfil acadèmic|||Jordi Castellví Mata | Perfil académico|||Jordi Castellví Mata | Academic Profile|||Jordi Castellví Mata | Profil académique
 Jordi Castellví Mata · Universitat Autònoma de Barcelona|||Jordi Castellví Mata · Universidad Autónoma de Barcelona|||Jordi Castellví Mata · Autonomous University of Barcelona|||Jordi Castellví Mata · Université autonome de Barcelone
 Llegir el món.|||Leer el mundo.|||Read the world.|||Lire le monde.
 Escriure el futur.|||Escribir el futuro.|||Write the future.|||Écrire l’avenir.
