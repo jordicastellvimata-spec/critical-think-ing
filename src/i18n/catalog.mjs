@@ -296,6 +296,47 @@ Divulgació i conversa|||Divulgación y conversación|||Outreach and conversatio
 Identificador acadèmic|||Identificador académico|||Researcher identifier|||Identifiant de chercheur
 Grup de recerca|||Grupo de investigación|||Research group|||Groupe de recherche
 `),
+  ...block(String.raw`
+Espai acadèmic de Jordi Castellví Mata: pensament crític, educació democràtica, publicacions, projectes i divulgació.|||Espacio académico de Jordi Castellví Mata: pensamiento crítico, educación democrática, publicaciones, proyectos y divulgación.|||Jordi Castellví Mata's academic website: critical thinking, democratic education, publications, projects and outreach.|||Site académique de Jordi Castellví Mata : pensée critique, éducation démocratique, publications, projets et diffusion des connaissances.
+Universitat Autònoma de Barcelona (UAB)|||Universidad Autónoma de Barcelona (UAB)|||Autonomous University of Barcelona (UAB)|||Université autonome de Barcelone (UAB)
+Universitat de Barcelona (UB)|||Universidad de Barcelona (UB)|||University of Barcelona (UB)|||Université de Barcelone (UB)
+Universitat de Las Palmas de Gran Canaria (ULPGC)|||Universidad de Las Palmas de Gran Canaria (ULPGC)|||University of Las Palmas de Gran Canaria (ULPGC)|||Université de Las Palmas de Gran Canaria (ULPGC)
+Llibres de text Barcanova|||Libros de texto Barcanova|||Barcanova textbooks|||Manuels scolaires Barcanova
+Galeria dels vuit llibres de Barcanova|||Galería de ocho libros de Barcanova|||Gallery of eight Barcanova textbooks|||Galerie de huit manuels Barcanova
+Galeria dels cinc projectes de Jesuïtes Educació|||Galería de cinco proyectos de Jesuïtes Educació|||Gallery of five Jesuïtes Educació projects|||Galerie de cinq projets de Jesuïtes Educació
+Llibre anterior|||Libro anterior|||Previous book|||Livre précédent
+Llibre següent|||Libro siguiente|||Next book|||Livre suivant
+Projecte anterior|||Proyecto anterior|||Previous project|||Projet précédent
+Projecte següent|||Proyecto siguiente|||Next project|||Projet suivant
+Projectes de Jesuïtes Educació|||Proyectos de Jesuïtes Educació|||Jesuïtes Educació projects|||Projets de Jesuïtes Educació
+carrusel|||carrusel|||carousel|||carrousel
+Materials curriculars i projectes educatius|||Materiales curriculares y proyectos educativos|||Curricular resources and educational projects|||Ressources curriculaires et projets éducatifs
+Navegació principal|||Navegación principal|||Main navigation|||Navigation principale
+Navegació mòbil|||Navegación móvil|||Mobile navigation|||Navigation mobile
+Inici de critical-think.ing|||Inicio de critical-think.ing|||critical-think.ing homepage|||Accueil de critical-think.ing
+Canviar l’idioma|||Cambiar el idioma|||Change language|||Changer de langue
+Idiomes disponibles|||Idiomas disponibles|||Available languages|||Langues disponibles
+Obrir el menú|||Abrir el menú|||Open menu|||Ouvrir le menu
+Perfils acadèmics i xarxes socials|||Perfiles académicos y redes sociales|||Academic profiles and social networks|||Profils académiques et réseaux sociaux
+Quatre dimensions de la literacitat crítica|||Cuatro dimensiones de la literacidad crítica|||Four dimensions of critical literacy|||Quatre dimensions de la littératie critique
+Retrat de Jordi Castellví Mata|||Retrato de Jordi Castellví Mata|||Portrait of Jordi Castellví Mata|||Portrait de Jordi Castellví Mata
+Entitats finançadores del projecte PID2024-160676OB-I00|||Entidades financiadoras del proyecto PID2024-160676OB-I00|||Funding organisations of project PID2024-160676OB-I00|||Organismes financeurs du projet PID2024-160676OB-I00
+Logotips del Ministeri de Ciència, Innovació i Universitats, de la Unió Europea i de l’Agència Estatal d’Investigació|||Logotipos del Ministerio de Ciencia, Innovación y Universidades, la Unión Europea y la Agencia Estatal de Investigación|||Logos of the Ministry of Science, Innovation and Universities, the European Union and the State Research Agency|||Logos du ministère de la Science, de l’Innovation et des Universités, de l’Union européenne et de l’Agence nationale de la recherche espagnole
+Portada de la revista Discover Education, de Springer Nature|||Portada de la revista Discover Education, de Springer Nature|||Cover of Discover Education by Springer Nature|||Couverture de la revue Discover Education de Springer Nature
+Portada de la revista Discover Education (Springer Nature)|||Portada de la revista Discover Education (Springer Nature)|||Cover of Discover Education (Springer Nature)|||Couverture de Discover Education (Springer Nature)
+Imatge original de les Jornades: la Terra damunt una columna i un grup de persones|||Imagen original de las Jornadas: la Tierra sobre una columna y un grupo de personas|||Original conference image: the Earth above a column and a group of people|||Illustration originale des Journées : la Terre au-dessus d’une colonne et un groupe de personnes
+Logotip de GREDICS, Grup de Recerca en Didàctica de les Ciències Socials|||Logotipo de GREDICS, Grupo de Investigación en Didáctica de las Ciencias Sociales|||Logo of GREDICS, the Social Studies Education Research Group|||Logo de GREDICS, Groupe de recherche en didactique des sciences sociales
+Portada de la revista Enseñanza de las Ciencias Sociales, número 23(1), 2025|||Portada de la revista Enseñanza de las Ciencias Sociales, número 23(1), 2025|||Cover of Enseñanza de las Ciencias Sociales, issue 23(1), 2025|||Couverture de Enseñanza de las Ciencias Sociales, numéro 23(1), 2025
+Logotip oficial de DISCO — Democratic and Inclusive School Culture in Operation|||Logotipo oficial de DISCO — Democratic and Inclusive School Culture in Operation|||Official logo of DISCO — Democratic and Inclusive School Culture in Operation|||Logo officiel de DISCO — Democratic and Inclusive School Culture in Operation
+Finançament institucional del programa DISCO|||Financiación institucional del programa DISCO|||Institutional funding of the DISCO programme|||Financement institutionnel du programme DISCO
+Logotips institucionals del programa conjunt de la Unió Europea i el Consell d’Europa|||Logotipos institucionales del programa conjunto de la Unión Europea y el Consejo de Europa|||Institutional logos of the joint European Union and Council of Europe programme|||Logos institutionnels du programme conjoint de l’Union européenne et du Conseil de l’Europe
+Consultar la tesi doctoral en accés obert|||Consultar la tesis doctoral en acceso abierto|||Read the open-access doctoral thesis|||Consulter la thèse de doctorat en accès libre
+Portada original vermella de la tesi doctoral Literacitat crítica digital en els estudis socials|||Portada original roja de la tesis doctoral Literacitat crítica digital en els estudis socials|||Original red cover of the doctoral thesis Literacitat crítica digital en els estudis socials|||Couverture rouge originale de la thèse Literacitat crítica digital en els estudis socials
+Portada de la revista Íber, número 99 de 2020: Interpretar problemas y conflictos contemporáneos|||Portada de la revista Íber, número 99 de 2020: Interpretar problemas y conflictos contemporáneos|||Cover of Íber, issue 99 (2020): Interpretar problemas y conflictos contemporáneos|||Couverture de Íber, numéro 99 (2020) : Interpretar problemas y conflictos contemporáneos
+Portada de la revista Íber, número 118 de 2025: Ciudadanía, redes y fake news|||Portada de la revista Íber, número 118 de 2025: Ciudadanía, redes y fake news|||Cover of Íber, issue 118 (2025): Ciudadanía, redes y fake news|||Couverture de Íber, numéro 118 (2025) : Ciudadanía, redes y fake news
+Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en la enseñanza de las ciencias sociales|||Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en la enseñanza de las ciencias sociales|||Cover of Íber, issue 122 (2026): La inteligencia artificial en la enseñanza de las ciencias sociales|||Couverture de Íber, numéro 122 (2026) : La inteligencia artificial en la enseñanza de las ciencias sociales
+Primera pàgina original de l’article publicat a Comunicació Educativa, número 37 de 2024|||Primera página original del artículo publicado en Comunicació Educativa, número 37 de 2024|||Original first page of the article published in Comunicació Educativa, issue 37 (2024)|||Première page originale de l’article publié dans Comunicació Educativa, numéro 37 (2024)
+`),
   //NEXT
 ];
 
