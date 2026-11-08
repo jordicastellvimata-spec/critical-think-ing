@@ -1,0 +1,105 @@
+---
+import { questionarActivities, questionarLabels } from '../i18n/questionar.mjs';
+
+const [
+  heading, , prompt, twist, reflection, teaching, sources, illustrationCredit, mapAlt, mapCredit,
+  mouseAlt
+] = questionarLabels.map(([ca]) => ca);
+const labels = [prompt, twist, reflection, teaching];
+
+const illustrations = [
+  `<circle cx="112" cy="54" r="26" fill="#a6afc2"/><circle cx="208" cy="54" r="26" fill="#a6afc2"/>
+<circle cx="112" cy="54" r="14" fill="#f5aea2"/><circle cx="208" cy="54" r="14" fill="#f5aea2"/>
+<path d="M192 141q53 20 58-12t-22-21" fill="none" stroke="#f5aea2" stroke-width="5"/>
+<ellipse cx="160" cy="128" rx="36" ry="29" fill="#a6afc2"/><ellipse cx="160" cy="132" rx="20" ry="17" fill="#dce2ed"/>
+<ellipse cx="160" cy="85" rx="55" ry="39" fill="#a6afc2"/>
+<path d="M107 91l-21-7m21 16-23 3m129-12 21-7m-21 16 23 3" stroke="#dce2ed" stroke-width="2"/>
+<circle cx="143" cy="83" r="4" fill="#141b31"/><circle cx="177" cy="83" r="4" fill="#141b31"/>
+<ellipse cx="160" cy="94" rx="7" ry="5" fill="#141b31"/><path d="M153 103q7 6 14 0" fill="none" stroke="#141b31" stroke-width="2"/>`,
+  null,
+  `<rect x="85" y="22" width="150" height="134" rx="5" fill="none" stroke="#dce2ed" stroke-width="2"/>
+<path d="M130 33h60M215 156h15" stroke="#dce2ed" stroke-width="4"/>
+<rect x="141" y="45" width="38" height="13" rx="2" fill="#f5aea2"/>
+<g fill="#a6afc2"><rect x="103" y="73" width="26" height="16" rx="2"/><rect x="147" y="73" width="26" height="16" rx="2"/><rect x="191" y="73" width="26" height="16" rx="2"/><rect x="103" y="100" width="26" height="16" rx="2"/><rect x="147" y="100" width="26" height="16" rx="2"/><rect x="191" y="100" width="26" height="16" rx="2"/><rect x="103" y="127" width="26" height="16" rx="2"/><rect x="147" y="127" width="26" height="16" rx="2"/><rect x="191" y="127" width="26" height="16" rx="2"/></g>`,
+  `<circle cx="121" cy="71" r="25" fill="#f5aea2"/><path d="M95 70c-4-40 61-42 51-1l-16-15-35 16Z" fill="#59647e"/>
+<path d="M77 145c3-33 17-46 44-46s41 13 44 46" fill="#a6afc2"/>
+<path d="M133 145v-14m49-62h55v65h-55z" stroke="#dce2ed" stroke-width="4" fill="none"/><path d="M194 84h30m-30 13h30m-30 13h15" stroke="#f5aea2" stroke-width="3"/>`,
+  `<g fill="#f5aea2"><circle cx="91" cy="64" r="16"/><circle cx="160" cy="64" r="16"/><circle cx="229" cy="64" r="16"/></g>
+<g fill="none" stroke="#dce2ed" stroke-width="3"><circle cx="91" cy="119" r="16"/><circle cx="160" cy="119" r="16"/><circle cx="229" cy="119" r="16"/><path d="M115 64h21m48 0h21m-90 55h21m48 0h21"/></g>`,
+  `<g fill="#a6afc2"><rect x="55" y="55" width="77" height="85" rx="9"/><rect x="188" y="55" width="77" height="85" rx="9"/></g>
+<g fill="none" stroke="#dce2ed" stroke-width="3"><path d="M79 55V39h29v16m105 0V39h29v16M78 78v40m31-40v40m102-40v40m31-40v40"/></g>
+<path d="M143 84h31l-8-8m11 33h-31l8 8" fill="none" stroke="#f5aea2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`,
+  `<path d="M48 91l59-52 51 45m4 0 51-45 59 52" fill="none" stroke="#dce2ed" stroke-width="4" stroke-linecap="round"/>
+<path d="M64 85v62h86V85m20 0v62h86V85" fill="none" stroke="#a6afc2" stroke-width="3"/>
+<g fill="#f5aea2"><circle cx="93" cy="97" r="9"/><circle cx="122" cy="111" r="7"/><circle cx="197" cy="98" r="9"/><circle cx="230" cy="98" r="9"/></g>
+<g fill="none" stroke="#f5aea2" stroke-width="5" stroke-linecap="round"><path d="M80 133v-8a13 13 0 0 1 26 0v8m7 0v-3a9 9 0 0 1 18 0v3m53 0v-7a13 13 0 0 1 26 0v7m7 0v-7a13 13 0 0 1 26 0v7"/></g>`
+];
+const mapSource = 'https://commons.wikimedia.org/wiki/File:Blank-map-world-south-up.png';
+const mapImage = 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Blank-map-world-south-up.png';
+---
+
+<section class="activity-panel" aria-labelledby="questionar-activitats">
+  <h3 id="questionar-activitats">{heading}</h3>
+  <div class="activity-grid">
+    {questionarActivities.map(({ title: [title], steps, references }, index) => {
+      const illustration = illustrations[index];
+      return (
+        <article class="activity-card">
+          <figure>
+            <div class="activity-image">
+              {illustration ? (
+                <svg viewBox="0 0 320 176" role={index === 0 ? "img" : undefined} aria-label={index === 0 ? mouseAlt : undefined} aria-hidden={index === 0 ? undefined : "true"} focusable="false">
+                  <g set:html={illustration} />
+                </svg>
+              ) : (
+                <img src={mapImage} alt={mapAlt} width="1425" height="625" loading="lazy" decoding="async" />
+              )}
+            </div>
+            <figcaption>
+              {illustration ? illustrationCredit : <a href={mapSource}>{mapCredit}</a>}
+            </figcaption>
+          </figure>
+          <div class="activity-copy">
+            <span class="activity-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h4>{title}</h4>
+            <dl>
+              {steps.map(([step], stepIndex) => (
+                <div><dt>{labels[stepIndex]}</dt><dd>{step}</dd></div>
+              ))}
+            </dl>
+            <div class="activity-sources">
+              <h5>{sources}</h5>
+              <ul>{references.map(([citation, url]) => <li><a href={url}>{citation}</a></li>)}</ul>
+            </div>
+          </div>
+        </article>
+      );
+    })}
+  </div>
+</section>
+
+<style>
+  .activity-panel{padding-block:28px 12px}
+  .activity-panel h3,.activity-panel h4{font-family:'Manrope',sans-serif;line-height:1.2;letter-spacing:-.035em}
+  .activity-panel h3{font-size:clamp(22px,3vw,34px);margin:0 0 20px}
+  .activity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .activity-card{min-width:0;border:1px solid var(--line-strong);background:rgba(255,255,255,.035)}
+  figure{margin:0}
+  .activity-image{display:grid;place-items:center;aspect-ratio:2 / 1;background:radial-gradient(ellipse at 50% 55%,#35415d,#141b31 82%)}
+  .activity-image svg{display:block;width:100%;height:100%;max-height:240px}
+  .activity-image img{display:block;width:100%;height:auto}
+  figcaption{padding:8px 18px;font-size:11px;color:var(--on-dark)}
+  .activity-copy{padding:10px clamp(16px,3vw,30px) 26px}
+  .activity-number,.activity-copy dt{color:var(--red-light);font-size:13px;font-weight:800}
+  .activity-number{letter-spacing:.12em}
+  .activity-copy h4{font-size:clamp(22px,2.5vw,31px);margin:6px 0 18px}
+  dl{display:grid;gap:12px;margin:0}
+  dd{margin:3px 0 0;color:var(--on-dark);font-size:14px;line-height:1.65}
+  .activity-sources{border-top:1px solid var(--line-strong);margin-top:18px;padding-top:12px}
+  h5{font-size:13px;margin:0 0 5px}
+  ul{padding-inline-start:1.2em;margin:0;color:var(--on-dark);font-size:12px;line-height:1.65}
+  a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+  a:hover{color:var(--red-light)}
+  a:focus-visible{outline:2px solid var(--red-light);outline-offset:3px}
+  @media(max-width:760px){.activity-grid{grid-template-columns:1fr}}
+</style>
