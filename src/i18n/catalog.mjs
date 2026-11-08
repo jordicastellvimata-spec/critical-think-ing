@@ -115,6 +115,69 @@ Un espai de trobada entre professorat, investigadors i estudiants per interpreta
 Jornades Internacionals de Recerca en Didàctica de les Ciències Socials|||Jornadas Internacionales de Investigación en Didáctica de las Ciencias Sociales|||International Conference on Social Studies Education Research|||Journées internationales de recherche en didactique des sciences sociales
 Facultat de Ciències de l’Educació · UAB|||Facultad de Ciencias de la Educación · UAB|||Faculty of Education · UAB|||Faculté des sciences de l’éducation · UAB
 `),
+  ...block(String.raw`
+Llibres i informes · Didàctica de les ciències socials|||Libros e informes · Didáctica de las ciencias sociales|||Books and reports · Social studies education|||Livres et rapports · Didactique des sciences sociales
+Llibres|||Libros|||Books|||Livres
+COEDICIÓ|||COEDICIÓN|||CO-EDITED VOLUME|||CODIRECTION
+COAUTORIA · 3 CAPÍTOLS|||COAUTORÍA · 3 CAPÍTULOS|||CO-AUTHOR · 3 CHAPTERS|||COAUTORAT · 3 CHAPITRES
+AUTORIA · INFORME|||AUTORÍA · INFORME|||AUTHOR · REPORT|||AUTEUR · RAPPORT
+Una obra col·lectiva sobre el conflicte com a qüestió social rellevant i sobre el paper de l’educació en la cultura democràtica i la justícia social.|||Una obra colectiva sobre el conflicto como cuestión social relevante y el papel de la educación en la cultura democrática y la justicia social.|||A collective volume on conflict as a relevant social issue and the role of education in democratic culture and social justice.|||Un ouvrage collectif sur le conflit en tant que question sociale majeure et sur le rôle de l’éducation dans la culture démocratique et la justice sociale.
+Contribucions als capítols d’investigació qualitativa, qüestions i protocols ètics, i elaboració de l’informe de recerca i redacció científica.|||Contribuciones a los capítulos sobre investigación cualitativa, cuestiones y protocolos éticos, elaboración de informes y escritura científica.|||Contributions to chapters on qualitative research, ethics and protocols, research reporting and academic writing.|||Contributions aux chapitres sur la recherche qualitative, les questions et protocoles éthiques, les rapports de recherche et la rédaction scientifique.
+Informe elaborat en col·laboració amb l’Escola Montserrat Solà, GREDICS i la Unitat de Didàctica de les Ciències Socials de la UAB. Explora com els infants aprenen sobre el temps, l’espai, la família, la cultura i la identitat a través de la vida quotidiana de l’escola.|||Informe elaborado con la Escola Montserrat Solà, GREDICS y la Unidad de Didáctica de las Ciencias Sociales de la UAB. Explora cómo los niños aprenden sobre el tiempo, el espacio, la familia, la cultura y la identidad en la vida cotidiana de la escuela.|||A report developed with Escola Montserrat Solà, GREDICS and UAB's Social Studies Education Unit. It explores how children learn about time, space, family, culture and identity through everyday school life.|||Rapport élaboré avec l’Escola Montserrat Solà, GREDICS et l’unité de didactique des sciences sociales de l’UAB. Il examine comment les enfants découvrent le temps, l’espace, la famille, la culture et l’identité dans la vie quotidienne de l’école.
+Fitxa editorial|||Ficha editorial|||Publisher's page|||Fiche de l’éditeur
+Descarregar en accés obert|||Descargar en acceso abierto|||Download open-access edition|||Télécharger en accès libre
+Llegir l’informe (PDF)|||Leer el informe (PDF)|||Read the report (PDF)|||Lire le rapport (PDF)
+Delfín Ortega-Sánchez, Jordi Castellví Mata i Neus González-Monfort (eds.)|||Delfín Ortega-Sánchez, Jordi Castellví Mata y Neus González-Monfort (eds.)|||Delfín Ortega-Sánchez, Jordi Castellví Mata and Neus González-Monfort (eds.)|||Delfín Ortega-Sánchez, Jordi Castellví Mata et Neus González-Monfort (dir.)
+Delfín Ortega-Sánchez (ed.); Jordi Castellví Mata, Jesús Marolla i Carmen Escribano, entre altres autors|||Delfín Ortega-Sánchez (ed.); Jordi Castellví Mata, Jesús Marolla y Carmen Escribano, entre otros autores|||Delfín Ortega-Sánchez (ed.); Jordi Castellví Mata, Jesús Marolla and Carmen Escribano, among other authors|||Delfín Ortega-Sánchez (dir.) ; Jordi Castellví Mata, Jesús Marolla et Carmen Escribano, entre autres auteurs
+AUTORIA I DISSENY DE MATERIALS · PRIMÀRIA|||AUTORÍA Y DISEÑO DE MATERIALES · PRIMARIA|||AUTHORSHIP AND MATERIAL DESIGN · PRIMARY|||CONCEPTION DE MATÉRIELS · PRIMAIRE
+Llibres de text de medi natural, social i cultural de|||Libros de texto de conocimiento del medio natural, social y cultural de|||Natural, social and cultural studies textbooks by|||Manuels de découverte du monde naturel, social et culturel de
+Col·laboració en els programes Experimenta i Entorn de Coneixement del Medi, amb vuit volums per a 3r i 4t de primària.|||Colaboración en los programas Experimenta y Entorn de Conocimiento del Medio, con ocho volúmenes para 3.º y 4.º de primaria.|||Contributions to the Experimenta and Entorn programmes, with eight volumes for Years 3 and 4 of primary school.|||Participation aux collections Experimenta et Entorn de découverte du monde, avec huit volumes pour les 3e et 4e années du primaire.
+Desplaça les portades per explorar els llibres|||Desliza las portadas para explorar los libros|||Swipe through the book covers|||Faites défiler les couvertures
+3r de primària|||3.º de primaria|||Year 3 of primary school|||3e année du primaire
+4t de primària|||4.º de primaria|||Year 4 of primary school|||4e année du primaire
+3R DE PRIMÀRIA|||3.º DE PRIMARIA|||YEAR 3|||3e ANNÉE DU PRIMAIRE
+4T DE PRIMÀRIA|||4.º DE PRIMARIA|||YEAR 4|||4e ANNÉE DU PRIMAIRE
+Fitxa del llibre ↗|||Ficha del libro ↗|||Book details ↗|||Fiche du livre ↗
+Els enllaços d’Amazon cerquen cada ISBN; no pressuposen que el llibre hi estigui disponible.|||Los enlaces de Amazon buscan cada ISBN; no garantizan que el libro esté disponible.|||Amazon links search each ISBN; they do not imply that the book is in stock.|||Les liens Amazon recherchent chaque ISBN, sans garantir la disponibilité du livre.
+DISSENY DE PROJECTES · SECUNDÀRIA|||DISEÑO DE PROYECTOS · SECUNDARIA|||PROJECT DESIGN · SECONDARY|||CONCEPTION DE PROJETS · SECONDAIRE
+Projectes amb|||Proyectos con|||Projects with|||Projets avec
+Vaig dissenyar cinc projectes de ciències socials i vaig compartir la coordinació de l’equip que va desenvolupar un total de 24 projectes per a tota l’etapa de l’ESO.|||Diseñé cinco proyectos de ciencias sociales y compartí la coordinación del equipo que desarrolló un total de 24 proyectos para toda la ESO.|||I designed five social studies projects and co-coordinated the team that developed 24 projects across the entire lower secondary stage.|||J’ai conçu cinq projets de sciences sociales et co-coordonné l’équipe qui a développé 24 projets pour l’ensemble du secondaire obligatoire.
+Desplaça les portades per explorar els projectes|||Desliza las portadas para explorar los proyectos|||Swipe through the project covers|||Faites défiler les couvertures des projets
+Portades de presentació dels projectes desenvolupats amb Jesuïtes Educació.|||Portadas utilizadas para presentar los proyectos desarrollados con Jesuïtes Educació.|||Presentation covers for projects developed with Jesuïtes Educació.|||Couvertures de présentation des projets élaborés avec Jesuïtes Educació.
+1r d’ESO|||1.º de ESO|||Year 1 of compulsory secondary education|||1re année du secondaire obligatoire
+2n d’ESO|||2.º de ESO|||Year 2 of compulsory secondary education|||2e année du secondaire obligatoire
+3r d’ESO|||3.º de ESO|||Year 3 of compulsory secondary education|||3e année du secondaire obligatoire
+1R D’ESO|||1.º DE ESO|||YEAR 1 · SECONDARY|||1re ANNÉE · SECONDAIRE
+2N D’ESO|||2.º DE ESO|||YEAR 2 · SECONDARY|||2e ANNÉE · SECONDAIRE
+3R D’ESO|||3.º DE ESO|||YEAR 3 · SECONDARY|||3e ANNÉE · SECONDAIRE
+PROJECTE · 1R D’ESO|||PROYECTO · 1.º DE ESO|||PROJECT · YEAR 1 SECONDARY|||PROJET · 1re ANNÉE DU SECONDAIRE
+PROJECTE · 2N D’ESO|||PROYECTO · 2.º DE ESO|||PROJECT · YEAR 2 SECONDARY|||PROJET · 2e ANNÉE DU SECONDAIRE
+PROJECTE · 3R D’ESO|||PROYECTO · 3.º DE ESO|||PROJECT · YEAR 3 SECONDARY|||PROJET · 3e ANNÉE DU SECONDAIRE
+MATERIALS OBERTS · GENERALITAT DE CATALUNYA · 2025|||MATERIALES ABIERTOS · GENERALITAT DE CATALUNYA · 2025|||OPEN EDUCATIONAL RESOURCES · GOVERNMENT OF CATALONIA · 2025|||RESSOURCES LIBRES · GÉNÉRALITÉ DE CATALOGNE · 2025
+Recursos per|||Recursos para|||Resources to|||Ressources pour
+llegir el món.|||leer el mundo.|||read the world.|||lire le monde.
+Dos materials per a la pràctica docent, publicats pel Departament d’Educació i Formació Professional amb Antoni Santisteban.|||Dos materiales para la práctica docente, publicados por el Departamento de Educación y Formación Profesional con Antoni Santisteban.|||Two classroom resources published by Catalonia's Department of Education and Vocational Training with Antoni Santisteban.|||Deux ressources pédagogiques publiées par le département de l’Éducation et de la Formation professionnelle de Catalogne avec Antoni Santisteban.
+EDUCACIÓ PRIMÀRIA|||EDUCACIÓN PRIMARIA|||PRIMARY EDUCATION|||ENSEIGNEMENT PRIMAIRE
+EDUCACIÓ SECUNDÀRIA|||EDUCACIÓN SECUNDARIA|||SECONDARY EDUCATION|||ENSEIGNEMENT SECONDAIRE
+Recursos per llegir críticament el món i escriure per comprendre’l i transformar-lo.|||Recursos para leer críticamente el mundo y escribir para comprenderlo y transformarlo.|||Resources for critically reading the world and writing to understand and transform it.|||Ressources pour lire le monde de façon critique et écrire afin de le comprendre et de le transformer.
+Orientacions sobre la interpretació crítica de discursos, l’argumentació i el diàleg davant qüestions socials.|||Orientaciones sobre la interpretación crítica de los discursos, la argumentación y el diálogo ante cuestiones sociales.|||Guidance on the critical interpretation of discourse, argumentation and dialogue about social issues.|||Orientations sur l’interprétation critique des discours, l’argumentation et le dialogue autour des questions sociales.
+Antoni Santisteban i Jordi Castellví|||Antoni Santisteban y Jordi Castellví|||Antoni Santisteban and Jordi Castellví|||Antoni Santisteban et Jordi Castellví
+Jordi Castellví i Antoni Santisteban|||Jordi Castellví y Antoni Santisteban|||Jordi Castellví and Antoni Santisteban|||Jordi Castellví et Antoni Santisteban
+Consultar el recurs|||Consultar el recurso|||View the resource|||Consulter la ressource
+FORMACIÓ DE MESTRES · UNIVERSITAT OBERTA DE CATALUNYA|||FORMACIÓN DE DOCENTES · UNIVERSITAT OBERTA DE CATALUNYA|||TEACHER EDUCATION · OPEN UNIVERSITY OF CATALONIA|||FORMATION DES ENSEIGNANTS · UNIVERSITÉ OUVERTE DE CATALOGNE
+Recursos de didàctica|||Recursos de didáctica|||Social studies|||Ressources de didactique
+de les ciències socials ·|||de las ciencias sociales ·|||education resources ·|||des sciences sociales ·
+Entre 2021 i 2024 vaig contribuir a la creació del grau d’Educació Primària de la UOC amb el disseny de dues assignatures noves —«Ciències Socials i Ciutadania» i «Didàctica de les Ciències Socials»— i l’elaboració d’orientacions curriculars, materials d’aprenentatge i recursos audiovisuals.|||Entre 2021 y 2024 contribuí a la creación del grado de Educación Primaria de la UOC mediante el diseño de dos nuevas asignaturas —«Ciencias Sociales y Ciudadanía» y «Didáctica de las Ciencias Sociales»— y la elaboración de orientaciones curriculares, materiales de aprendizaje y recursos audiovisuales.|||Between 2021 and 2024, I helped develop UOC's new Primary Education degree by designing two new modules—Social Sciences and Citizenship, and Social Studies Education—and producing curriculum guidance, learning materials and videos.|||Entre 2021 et 2024, j’ai contribué à la création de la nouvelle licence d’enseignement primaire de l’UOC, en concevant deux cours —« Sciences sociales et citoyenneté » et « Didactique des sciences sociales »— ainsi que des orientations curriculaires, des supports pédagogiques et des vidéos.
+RECURS AUDIOVISUAL · UOC · CONVERSA · DIDÀCTICA DE LES CIÈNCIES SOCIALS|||RECURSO AUDIOVISUAL · UOC · CONVERSACIÓN · DIDÁCTICA DE LAS CIENCIAS SOCIALES|||VIDEO RESOURCE · UOC · CONVERSATION · SOCIAL STUDIES EDUCATION|||RESSOURCE VIDÉO · UOC · CONVERSATION · DIDACTIQUE DES SCIENCES SOCIALES
+RECURS AUDIOVISUAL · UOC · CONVERSA · EDUCACIÓ MEDIÀTICA|||RECURSO AUDIOVISUAL · UOC · CONVERSACIÓN · EDUCACIÓN MEDIÁTICA|||VIDEO RESOURCE · UOC · CONVERSATION · MEDIA EDUCATION|||RESSOURCE VIDÉO · UOC · CONVERSATION · ÉDUCATION AUX MÉDIAS
+RECURS AUDIOVISUAL · UOC · RECURS AUDIOVISUAL · CIÈNCIES SOCIALS|||RECURSO AUDIOVISUAL · UOC · RECURSO AUDIOVISUAL · CIENCIAS SOCIALES|||VIDEO RESOURCE · UOC · SOCIAL STUDIES|||RESSOURCE VIDÉO · UOC · SCIENCES SOCIALES
+RECURS AUDIOVISUAL · UOC · RECURS AUDIOVISUAL · EDUCACIÓ PRIMÀRIA|||RECURSO AUDIOVISUAL · UOC · RECURSO AUDIOVISUAL · EDUCACIÓN PRIMARIA|||VIDEO RESOURCE · UOC · PRIMARY EDUCATION|||RESSOURCE VIDÉO · UOC · ENSEIGNEMENT PRIMAIRE
+Entrevista amb Pilar Benejam|||Entrevista con Pilar Benejam|||Interview with Pilar Benejam|||Entretien avec Pilar Benejam
+Entrevista con Consuelo Díez|||Entrevista con Consuelo Díez|||Interview with Consuelo Díez|||Entretien avec Consuelo Díez
+Finalitats educatives i ciutadania|||Finalidades educativas y ciudadanía|||Educational aims and citizenship|||Finalités éducatives et citoyenneté
+Diàleg amb Antoni Santisteban|||Diálogo con Antoni Santisteban|||Dialogue with Antoni Santisteban|||Dialogue avec Antoni Santisteban
+Veure a YouTube|||Ver en YouTube|||Watch on YouTube|||Regarder sur YouTube
+`),
   //NEXT
 ];
 
