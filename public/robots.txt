@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://critical-think.ing/sitemap.xml
