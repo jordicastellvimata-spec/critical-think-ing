@@ -337,7 +337,12 @@ Portada de la revista Íber, número 118 de 2025: Ciudadanía, redes y fake news
 Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en la enseñanza de las ciencias sociales|||Portada de la revista Íber, número 122 de 2026: La inteligencia artificial en la enseñanza de las ciencias sociales|||Cover of Íber, issue 122 (2026): La inteligencia artificial en la enseñanza de las ciencias sociales|||Couverture de Íber, numéro 122 (2026) : La inteligencia artificial en la enseñanza de las ciencias sociales
 Primera pàgina original de l’article publicat a Comunicació Educativa, número 37 de 2024|||Primera página original del artículo publicado en Comunicació Educativa, número 37 de 2024|||Original first page of the article published in Comunicació Educativa, issue 37 (2024)|||Première page originale de l’article publié dans Comunicació Educativa, numéro 37 (2024)
 `),
-  //NEXT
+  ...block(String.raw`
+Professor universitari i investigador en didàctica de les ciències socials|||Profesor universitario e investigador en didáctica de las ciencias sociales|||University lecturer and researcher in social studies education|||Enseignant-chercheur en didactique des sciences sociales
+Jordi Castellví Mata · Universitat Autònoma de Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Universidad Autónoma de Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Autonomous University of Barcelona · Escola Montserrat Solà · GREDICS|||Jordi Castellví Mata · Université autonome de Barcelone · Escola Montserrat Solà · GREDICS
+Font: Lewison, M., Flint, A. S. i Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Fuente: Lewison, M., Flint, A. S. y Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Source: Lewison, M., Flint, A. S. and Van Sluys, K. (2002). “Taking on Critical Literacy: The Journey of Newcomers and Novices”.|||Source : Lewison, M., Flint, A. S. et Van Sluys, K. (2002). « Taking on Critical Literacy: The Journey of Newcomers and Novices ».
+`),
+
 ];
 
 export const exactOriginals = [
@@ -357,5 +362,6 @@ export const attributePrefixes = [
   ['Reprodueix el vídeo: ', ['Reproduce el vídeo: ','Play video: ','Lire la vidéo : ']],
   ['Reprodueix: ', ['Reproduce: ','Play: ','Lire : ']],
   ['Cercar a Amazon ', ['Buscar en Amazon ','Search Amazon for ','Rechercher sur Amazon ']],
-  ['Veure la fitxa de ', ['Ver la ficha de ','View details for ','Voir la fiche de ']]
+  ['Veure la fitxa de ', ['Ver la ficha de ','View details for ','Voir la fiche de ']],
+  ['Font: ', ['Fuente: ','Source: ','Source : ']]
 ];
