@@ -358,6 +358,20 @@ Jordi Castellví Mata · Universitat Autònoma de Barcelona · Escola Montserrat
 Font: Lewison, M., Flint, A. S. i Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Fuente: Lewison, M., Flint, A. S. y Van Sluys, K. (2002). «Taking on Critical Literacy: The Journey of Newcomers and Novices».|||Source: Lewison, M., Flint, A. S. and Van Sluys, K. (2002). “Taking on Critical Literacy: The Journey of Newcomers and Novices”.|||Source : Lewison, M., Flint, A. S. et Van Sluys, K. (2002). « Taking on Critical Literacy: The Journey of Newcomers and Novices ».
 `),
 
+  ...block(String.raw`
+JOC DE TAULA EDUCATIU · 2026|||JUEGO DE MESA EDUCATIVO · 2026|||EDUCATIONAL BOARD GAME · 2026|||JEU DE SOCIÉTÉ ÉDUCATIF · 2026
+El joc per sostenir el territori|||El juego para sostener el territorio|||A game for resilient rural communities|||Un jeu pour faire vivre les territoires
+Un joc de taula educatiu per treballar el despoblament rural, l’arrelament i la sostenibilitat territorial a través de la presa de decisions.|||Un juego de mesa educativo para abordar la despoblación rural, el arraigo y la sostenibilidad territorial mediante la toma de decisiones.|||An educational board game exploring rural depopulation, people's ties to place and territorial sustainability through decision-making.|||Un jeu de société éducatif pour aborder le dépeuplement rural, l’ancrage territorial et la durabilité des territoires à travers la prise de décision.
+Conceptualització i continguts didàctics:|||Conceptualización y contenidos didácticos:|||Concept and educational content:|||Conception et contenus pédagogiques :
+Víctor López Simó, Laura Martín Ferrer, David Martín Martín i Jordi Castellví Mata.|||Víctor López Simó, Laura Martín Ferrer, David Martín Martín y Jordi Castellví Mata.|||Víctor López Simó, Laura Martín Ferrer, David Martín Martín and Jordi Castellví Mata.|||Víctor López Simó, Laura Martín Ferrer, David Martín Martín et Jordi Castellví Mata.
+Disseny i producció:|||Diseño y producción:|||Design and production:|||Conception et production :
+, amb Joan Jubany i Lorente, Aitor Sampere González, Xevi Riera Asensio i Joan Sabata.|||, con Joan Jubany i Lorente, Aitor Sampere González, Xevi Riera Asensio y Joan Sabata.|||, with Joan Jubany i Lorente, Aitor Sampere González, Xevi Riera Asensio and Joan Sabata.|||, avec Joan Jubany i Lorente, Aitor Sampere González, Xevi Riera Asensio et Joan Sabata.
+PROJECTE DE LA DIPUTACIÓ DE LLEIDA · AMB FINANÇAMENT DEL MITECO|||PROYECTO DE LA DIPUTACIÓN DE LLEIDA · CON FINANCIACIÓN DEL MITECO|||A DIPUTACIÓ DE LLEIDA PROJECT · FUNDED BY MITECO|||PROJET DE LA DIPUTACIÓ DE LLEIDA · FINANCÉ PAR LE MITECO
+Institucions promotores i finançadores|||Instituciones promotoras y financiadoras|||Promoting and funding institutions|||Organismes porteurs et financeurs
+Fotografia real d’ARRELA·T amb la caixa, el tauler, els saquets i les peces del joc|||Fotografía de ARRELA·T con la caja, el tablero, las bolsas y las piezas del juego|||Photo of ARRELA·T showing the box, board, pouches and game pieces|||Photographie d’ARRELA·T avec sa boîte, son plateau, ses sachets et ses pièces de jeu
+Logotip de la Diputació de Lleida|||Logotipo de la Diputación de Lleida|||Logo of the Diputació de Lleida|||Logo de la Diputació de Lleida
+Logotip del MITECO, Ministeri per a la Transició Ecològica i el Repte Demogràfic|||Logotipo del MITECO, Ministerio para la Transición Ecológica y el Reto Demográfico|||Logo of MITECO, Spain's Ministry for the Ecological Transition and the Demographic Challenge|||Logo du MITECO, ministère espagnol de la Transition écologique et du Défi démographique
+`),
 ];
 
 export const exactOriginals = [
@@ -365,7 +379,7 @@ export const exactOriginals = [
   'Bluesky','Google Scholar','Barcanova.','Jesuïtes Educació.','Discover','Education',
   'La formación del pensamiento crítico en la era digital','Enseñanza de las Ciencias Sociales',
   'MICIU','AEI','UE','FEDER, UE','coursera','Amazon','ISBN','2027 · UAB',
-  'CRITICAL THINKING / SOCIAL SCIENCES EDUCATION'
+  'CRITICAL THINKING / SOCIAL SCIENCES EDUCATION', 'ARRELA·T', 'Punts Volats', 'Diputació de Lleida', 'Ministerio para la Transición Ecológica y el Reto Demográfico'
 ];
 export const attributePrefixes = [
   ['Portada de ', ['Portada de ','Cover of ','Couverture de ']],
