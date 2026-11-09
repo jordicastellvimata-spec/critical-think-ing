@@ -2,6 +2,33 @@
 import { profile } from '../data/site';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 const {title='Jordi Castellví Mata', seoTitle = `${title} | critical-think.ing`, description='Pensament crític, educació democràtica i didàctica de les ciències socials.', active=''} = Astro.props;
+
+const identityId = 'https://critical-think.ing/#person';
+const academicSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://critical-think.ing/#website',
+      name: 'critical-think.ing',
+      url: 'https://critical-think.ing/',
+      inLanguage: ['ca', 'es', 'en', 'fr'],
+      about: { '@id': identityId }
+    },
+    {
+      '@type': 'Person',
+      '@id': identityId,
+      name: profile.name,
+      url: 'https://critical-think.ing/',
+      image: 'https://critical-think.ing/images/jordi-castellvi-retrat.webp',
+      description: profile.role,
+      jobTitle: 'Professor universitari i investigador en didàctica de les ciències socials',
+      worksFor: { '@type': 'CollegeOrUniversity', name: 'Universitat Autònoma de Barcelona', url: 'https://www.uab.cat/' },
+      knowsAbout: ['Didàctica de les ciències socials','Pensament crític','Educació democràtica','Discursos d’odi i contrarelats','Ciutadania crítica'],
+      sameAs: [profile.uab, profile.orcid, profile.scholar, profile.researchgate, profile.gredicsProfile, profile.bluesky]
+    }
+  ]
+};
 const root = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
@@ -24,9 +51,19 @@ const nav = [
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#FCFBF8" />
   <meta name="description" content={description} />
-  <meta property="og:title" content={title + ' | critical-think.ing'} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="critical-think.ing" />
+  <meta property="og:title" content={seoTitle} />
   <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://critical-think.ing/images/jordi-castellvi-retrat.webp" />
+  <meta property="og:image:alt" content="Retrat de Jordi Castellví Mata" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={seoTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://critical-think.ing/images/jordi-castellvi-retrat.webp" />
   <title>{seoTitle}</title>
+  <script type="application/ld+json" set:html={JSON.stringify(academicSchema)} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />

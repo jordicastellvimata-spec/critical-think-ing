@@ -1,15 +1,19 @@
-# critical-think-ing
+# critical-think.ing
 
-Primera versió de la web acadèmica de Jordi Castellví Mata, desenvolupada amb Astro i publicada a GitHub Pages.
+Web acadèmica de Jordi Castellví Mata, construïda amb Astro i publicada a GitHub Pages al domini propi **https://critical-think.ing/**.
 
 ## Desenvolupament
 
 - `npm install`
 - `npm run dev`
-- `npm run build`
+- `npm run build` — genera les versions CA/ES/EN/FR i verifica metadades SEO, URL canòniques, hreflang, dades estructurades, enllaços i sitemaps.
 
-La publicació a GitHub Pages es configura automàticament amb `.github/workflows/deploy.yml` quan s'actualitza la branca `main`.
+## Indexació i SEO
 
-Adreça provisional prevista: https://jordicastellvimata-spec.github.io/critical-think-ing/
+- `public/robots.txt` apunta a `public/sitemap-index.xml`, que referencia el `sitemap.xml` generat automàticament.
+- `scripts/seo.mjs` conté títols i descripcions de cada secció en quatre idiomes.
+- `scripts/localize.mjs` genera URL canòniques, `hreflang`, metadades socials i el sitemap multilingüe.
+- `src/layouts/Base.astro` publica dades estructurades de la identitat acadèmica.
+- `scripts/check-seo.mjs` valida aquests elements a cada compilació.
 
-La web continua en desenvolupament; el domini propi encara no s'ha contractat.
+La publicació a GitHub Pages es fa amb `.github/workflows/deploy.yml` quan es fusionen canvis a `main`.

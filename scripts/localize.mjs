@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parse, serialize } from 'parse5';
 import { catalog, exactOriginals, attributePrefixes } from '../src/i18n/catalog.mjs';
+import { seoPages } from './seo.mjs';
 
 const dist = path.resolve('dist');
 const origin = 'https://critical-think.ing';
@@ -62,6 +63,11 @@ function element(tag,attributes){
  return {nodeName:tag,tagName:tag,attrs:Object.entries(attributes).map(([name,value])=>({name,value})),namespaceURI:'http://www.w3.org/1999/xhtml',childNodes:[]};
 }
 function currentRoute(p){return p.replace(/index\.html$/,'').replace(/^\.\//,'')}
+function setHeadMeta(head,name,value,key='name'){
+ const existing=(head.childNodes||[]).find(node=>node.tagName==='meta' && attr(node,key)===name);
+ if(existing)setAttr(existing,'content',value);
+ else addChild(head,element('meta',{[key]:name,content:value}));
+}
 function localizedRoute(route,locale){return '/' + (locale==='ca'?'':locale+'/') + route}
 function publicAsset(url){return publicPrefixes.some(p=>url.startsWith(p))}
 function translatedHref(href,locale) {
@@ -125,6 +131,19 @@ for(const [file,html] of source){
        }
      }
    });
+   // Localized editorial metadata and social preview URLs.
+   const seo=seoPages[route]?.[locale];
+   if(seo){
+     const titleNode=find(head,'title');
+     if(titleNode)titleNode.childNodes=[{nodeName:'#text',value:seo.title,parentNode:titleNode}];
+     setHeadMeta(head,'description',seo.description);
+     setHeadMeta(head,'og:title',seo.title,'property');
+     setHeadMeta(head,'og:description',seo.description,'property');
+     setHeadMeta(head,'twitter:title',seo.title);
+     setHeadMeta(head,'twitter:description',seo.description);
+   }
+   setHeadMeta(head,'og:url',canonical,'property');
+   setHeadMeta(head,'og:locale',{ca:'ca_ES',es:'es_ES',en:'en_GB',fr:'fr_FR'}[locale],'property');
    const dest=path.join(dist,(locale==='ca'?'':locale),file);
    fs.mkdirSync(path.dirname(dest),{recursive:true});
    fs.writeFileSync(dest,serialize(doc));
@@ -132,8 +151,20 @@ for(const [file,html] of source){
  }
 }
 // A language change preserves the current section's hash; anchor IDs are the same in all languages.
-const sitemap=locales.flatMap(locale=>pages.map(file=>origin+localizedRoute(currentRoute(file),locale)));
-fs.writeFileSync(path.join(dist,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+sitemap.map(u=>'  <url><loc>'+u.replace(/&/g,'&amp;')+'</loc></url>').join('\n')+'\n</urlset>\n');
+const xmlEscape = value => String(value).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const sitemapUrls=pages.flatMap(file=>{
+ const route=currentRoute(file);
+ return locales.map(locale=>{
+   const loc=origin+localizedRoute(route,locale);
+   const alternates=locales.map(alt=>
+     '    <xhtml:link rel="alternate" hreflang="'+alt+'" href="'+xmlEscape(origin+localizedRoute(route,alt))+'" />'
+   );
+   alternates.push('    <xhtml:link rel="alternate" hreflang="x-default" href="'+xmlEscape(origin+localizedRoute(route,'ca'))+'" />');
+   return '  <url>\n    <loc>'+xmlEscape(loc)+'</loc>\n'+alternates.join('\n')+'\n  </url>';
+ });
+});
+fs.writeFileSync(path.join(dist,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+sitemapUrls.join('\n')+'\n</urlset>\n');
+
 // Validate all internal routes, assets and anchors after translation.
 const ids=new Map();
 for(const [route,doc] of allDocuments){
