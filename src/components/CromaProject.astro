@@ -1,0 +1,55 @@
+<section class="croma-compact" aria-labelledby="croma-title">
+  <figure class="croma-images">
+    <div class="croma-photo croma-photo-paint" role="img" aria-label="Fotografia oficial del CROMA 2.0: una mà pinta durant una activitat"></div>
+    <div class="croma-photo croma-photo-research" role="img" aria-label="Fotografia oficial del CROMA 2.0: activitat de recerca davant d'un ordinador"></div>
+    <figcaption>Imatges: Fundació Autònoma Solidària · UAB</figcaption>
+  </figure>
+
+  <div class="croma-body">
+    <span class="croma-eyebrow">PROJECTE SOCIOEDUCATIU · UAB / FAS</span>
+    <h3 id="croma-title">CROMA 2.0 <span>Recerca, escola i equitat educativa</span></h3>
+    <p>El CROMA 2.0 és un programa de la Fundació Autònoma Solidària que connecta la Universitat Autònoma de Barcelona amb escoles de primària del Vallès Occidental per promoure la igualtat d'oportunitats i l'interès per aprendre.</p>
+    <p>Hi participo a través de GREDICS, que contribueix a transformar la recerca universitària en propostes educatives i tallers per a infants de primària.</p>
+
+    <details class="croma-more">
+      <summary>Conèixer els projectes i les activitats <span class="croma-plus" aria-hidden="true">+</span></summary>
+      <div class="croma-expanded">
+        <p><strong>De la recerca a l'escola.</strong> GREDICS és un dels grups assessors del CROMA 2.0: contribueix a l'adaptació pedagògica dels continguts i a la formació de l'estudiantat que dinamitza els tallers.</p>
+        <p><strong>Aprendre a pensar críticament.</strong> Entre les iniciatives del grup hi ha el projecte «Tothom igual de diferent» i els tallers «Tastets per pensar» (2026), sobre igualtat, diversitat, justícia i lectura crítica de la realitat social.</p>
+        <div class="croma-links">
+          <a href="https://www.uab.cat/web/accio-social-/programes-socioeducatius/primaria-croma-2-0-1345769966975.html" target="_blank" rel="noopener noreferrer">Programa CROMA 2.0 a la UAB ↗</a>
+          <a href="https://webs.uab.cat/gredics/2026/05/21/tastets-per-pensar-tallers-del-programa-croma-2-0-de-la-fas/" target="_blank" rel="noopener noreferrer">Veure «Tastets per pensar» ↗</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<style>
+.croma-compact{border-top:1px solid var(--line);margin-top:34px;padding:28px 0 4px;display:grid;grid-template-columns:minmax(145px,220px) minmax(0,1fr);align-items:start;gap:clamp(20px,3vw,42px)}
+.croma-images{margin:0;min-width:0;display:grid;gap:9px}
+.croma-photo{width:100%;background-color:var(--cyan-pale);background-image:url("https://www.uab.cat/Imatge/577/3/capcalera_AS_CROMA%2C0.jpg");background-repeat:no-repeat;background-size:300% auto;border:1px solid var(--line);border-radius:6px}
+.croma-photo-paint{aspect-ratio:306/269;background-position:left center}
+.croma-photo-research{aspect-ratio:1.65;background-position:center center}
+.croma-images figcaption{font:500 10px/1.45 'DM Sans',Arial,sans-serif;color:var(--muted)}
+.croma-eyebrow{display:block;font:800 10px/1.5 'DM Sans',Arial,sans-serif;color:var(--red);letter-spacing:.11em}
+.croma-body h3{font:700 clamp(23px,2.6vw,35px)/1.14 'Manrope',sans-serif;letter-spacing:-.055em;color:var(--ink);margin:8px 0 12px}
+.croma-body h3 span{display:block;font-size:.57em;font-weight:550;letter-spacing:-.025em;color:var(--cyan);margin-top:5px}
+.croma-body>p{max-width:680px;color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 10px}
+.croma-more{margin-top:19px;border-top:1px solid var(--line);max-width:690px}
+.croma-more summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;color:var(--cyan);font:800 12px/1.45 'DM Sans',Arial,sans-serif}
+.croma-more summary::-webkit-details-marker{display:none}
+.croma-more summary:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.croma-plus{font-size:22px;font-weight:400;line-height:1;transition:transform .2s ease}
+.croma-more[open] .croma-plus{transform:rotate(45deg)}
+.croma-expanded{padding:0 0 14px}
+.croma-expanded p{color:var(--muted);font-size:12px;line-height:1.7;margin:0 0 11px}
+.croma-expanded strong{color:var(--ink);font-weight:750}
+.croma-links{display:flex;flex-wrap:wrap;gap:9px 21px;padding-top:6px}
+.croma-links a{color:var(--cyan);font:800 11px/1.5 'DM Sans',Arial,sans-serif;text-underline-offset:4px}
+.croma-links a:hover{color:var(--red)}
+.croma-links a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:640px){.croma-compact{grid-template-columns:110px minmax(0,1fr);gap:15px;margin-top:27px;padding-top:22px}.croma-body h3{font-size:23px}.croma-body>p{font-size:12px}.croma-eyebrow{font-size:9px}.croma-images figcaption{font-size:9px}.croma-photo-research{aspect-ratio:1.15}}
+@media(max-width:420px){.croma-compact{grid-template-columns:1fr}.croma-images{grid-template-columns:1fr 1fr;align-items:start;gap:9px}.croma-photo{aspect-ratio:306/269}.croma-images figcaption{grid-column:1/-1}.croma-body h3{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.croma-plus{transition:none}}
+</style>
