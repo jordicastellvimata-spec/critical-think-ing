@@ -425,6 +425,17 @@ Llegir el llibre complet (PDF)|||Leer el libro completo (PDF)|||Read the full bo
 Fitxa al DDD de la UAB|||Ficha en el DDD de la UAB|||UAB repository record|||Notice dans le dépôt numérique de l’UAB
 `),
   ...block(String.raw`
+FORMACIÓ DEL PROFESSORAT · FUNDACIÓ ICO / UB / UAB|||FORMACIÓN DEL PROFESORADO · FUNDACIÓN ICO / UB / UAB|||TEACHER TRAINING · ICO FOUNDATION / UB / UAB|||FORMATION DES ENSEIGNANTS · FONDATION ICO / UB / UAB
+He participat com a docent en aquesta formació en línia de 40 hores, desenvolupada per la Fundació ICO, la Universitat de Barcelona i la Universitat Autònoma de Barcelona.|||He participado como docente en esta formación en línea de 40 horas, desarrollada por la Fundación ICO, la Universidad de Barcelona y la Universidad Autónoma de Barcelona.|||I contributed as a lecturer to this 40-hour online teacher-training course, developed by the ICO Foundation, the University of Barcelona and the Autonomous University of Barcelona.|||J’ai participé en tant qu’enseignant à cette formation en ligne de 40 heures, conçue par la Fondation ICO, l’Université de Barcelone et l’Université autonome de Barcelone.
+El curs parteix de situacions quotidianes —la botiga, la casa, el banc i l’escola— per treballar la presa de decisions econòmiques, el consum responsable i la ciutadania crítica a primària.|||El curso parte de situaciones cotidianas —la tienda, la casa, el banco y la escuela— para trabajar la toma de decisiones económicas, el consumo responsable y la ciudadanía crítica en primaria.|||The course uses everyday situations —the shop, home, bank and school— to explore economic decision-making, responsible consumption and critical citizenship in primary education.|||Le cours part de situations quotidiennes —le magasin, la maison, la banque et l’école— pour aborder la prise de décision économique, la consommation responsable et la citoyenneté critique à l’école primaire.
+Web oficial del curs ↗|||Web oficial del curso ↗|||Official course website ↗|||Site officiel du cours ↗
+Programa i professorat (PDF) ↗|||Programa y profesorado (PDF) ↗|||Programme and teaching team (PDF) ↗|||Programme et équipe enseignante (PDF) ↗
+Dades del curs|||Datos del curso|||Course details|||Informations sur le cours
+Formació en línia|||Formación en línea|||Online training|||Formation en ligne
+RECONEIXEMENT · 2024|||RECONOCIMIENTO · 2024|||AWARD · 2024|||DISTINCTION · 2024
+Premi Finanzas para Todos|||Premio Finanzas para Todos|||Finanzas para Todos Award|||Prix Finanzas para Todos
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
@@ -442,6 +453,7 @@ export const exactOriginals = [
   'Jordi Castellví Mata','critical-think.ing','GREDICS','UAB','ORCID','ResearchGate',
   'Bluesky','Google Scholar','Barcanova.','Jesuïtes Educació.','Discover','Education',
   'La formación del pensamiento crítico en la era digital','Enseñanza de las Ciencias Sociales',
+  'Curso de educación financiera para profesorado de Primaria',
   'MICIU','AEI','UE','FEDER, UE','coursera','Amazon','ISBN','2027 · UAB',
   'CRITICAL THINKING / SOCIAL SCIENCES EDUCATION', 'ARRELA·T', 'Punts Volats', 'Diputació de Lleida', 'Ministerio para la Transición Ecológica y el Reto Demográfico'
 ];
