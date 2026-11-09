@@ -183,5 +183,5 @@ console.log('i18n: tots els enllaços interns, fitxers locals, ancoratges i enll
 for(const locale of ['es','en','fr']) {
  const list=[...untranslated[locale]].sort();
  console.log('i18n '+locale+': '+(known.size)+' entrades de traducció; '+list.length+' textos sense correspondència explícita.');
- if(list.length)console.log('i18n '+locale+' mostres: '+list.slice(0,30).join(' | '));
+ if(list.length)console.log('i18n '+locale+' mostres: '+list.join(' | '));
 }
