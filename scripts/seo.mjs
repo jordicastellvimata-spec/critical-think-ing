@@ -6,7 +6,7 @@ export const seoPages = {
       "description": "Web acadèmica de Jordi Castellví Mata, investigador a la UAB. Didàctica de les ciències socials, pensament crític, educació democràtica i publicacions."
     },
     "es": {
-      "title": "Jordi Castellví Mata | Pensamiento crítico y ciencias sociales",
+      "title": "Jordi Castellví Mata | Pensamiento crítico y educación",
       "description": "Web académica de Jordi Castellví Mata, investigador de la UAB. Didáctica de las ciencias sociales, pensamiento crítico, educación democrática y publicaciones."
     },
     "en": {

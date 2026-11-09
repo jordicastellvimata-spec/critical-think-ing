@@ -1,6 +1,8 @@
 ---
 import { featuredBooks } from '../data/featuredBooks';
 const { compact = false } = Astro.props;
+const HeadingTag = compact ? 'h2' : 'h3';
+const BookTitleTag = compact ? 'h3' : 'h4';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const toLink = (url) => /^https?:\/\//.test(url) ? url : base + '/' + url.replace(/^\/+/, '');
 const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.coverUrl) : undefined;
@@ -8,7 +10,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 <div class:list={['books-showcase', { 'books-compact': compact }]}>
   <div class="books-heading">
     <div class="eyebrow">Llibres i informes · Didàctica de les ciències socials</div>
-    <h3>Llibres</h3>
+    <HeadingTag>Llibres</HeadingTag>
   </div>
   <div class="books-grid">
     {featuredBooks.map((book) => (
@@ -33,7 +35,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
         </div>
         <div class="book-details">
           <div class="book-kicker">{book.role} <span aria-hidden="true">·</span> {book.year}</div>
-          <h4>{book.title}</h4>
+          <BookTitleTag>{book.title}</BookTitleTag>
           <p class="book-subtitle">{book.subtitle}</p>
           <p class="book-contributors">{book.contributors}</p>
           <p class="book-description">{book.description}</p>
@@ -51,7 +53,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 <style>
 .books-showcase{padding:6px 0 36px;min-width:0}
 .books-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:0 0 20px}
-.books-heading h3{font:650 clamp(27px,3vw,38px)/1.1 'Manrope',sans-serif;letter-spacing:-.065em;margin:10px 0 0;color:var(--ink)}
+.books-heading :is(h2,h3){font:650 clamp(27px,3vw,38px)/1.1 'Manrope',sans-serif;letter-spacing:-.065em;margin:10px 0 0;color:var(--ink)}
 /* Tres targetes equilibrades en una sola fila a l'escriptori. */
 .books-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;min-width:0}
 .book-feature{background:var(--white);border:1px solid var(--line);display:grid;grid-template-columns:96px minmax(0,1fr);align-content:start;align-items:start;gap:15px;min-width:0;padding:18px;box-shadow:0 7px 20px rgba(20,53,67,.042);transition:transform .25s ease,box-shadow .25s ease}
@@ -68,7 +70,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 .book-infantil .book-cover-fallback{background:linear-gradient(155deg,#056ac3,#0e9ec9)}
 .book-details{display:flex;flex-direction:column;align-items:flex-start;min-width:0;min-height:100%;overflow-wrap:break-word}
 .book-kicker{color:var(--red);font-weight:800;letter-spacing:.07em;font-size:9px;line-height:1.5}
-.book-details h4{font:650 clamp(16px,1.5vw,19px)/1.24 'Manrope',sans-serif;letter-spacing:-.04em;margin:8px 0 7px;color:var(--ink)}
+.book-details :is(h3,h4){font:650 clamp(16px,1.5vw,19px)/1.24 'Manrope',sans-serif;letter-spacing:-.04em;margin:8px 0 7px;color:var(--ink)}
 .book-subtitle{font-size:11px;line-height:1.45;font-weight:700;color:var(--cyan);margin:0 0 9px}
 .book-contributors{font-size:10px;line-height:1.4;color:var(--muted);margin:0 0 9px}
 .book-description{font-size:11px;line-height:1.55;color:var(--muted);margin:0 0 13px}
@@ -81,13 +83,13 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
   .books-grid{gap:12px}
   .book-feature{grid-template-columns:86px minmax(0,1fr);padding:14px;gap:12px}
   .book-cover{width:86px}
-  .book-details h4{font-size:16px}
+  .book-details :is(h3,h4){font-size:16px}
 }
 @media(max-width:1020px){
   .books-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .book-feature{grid-template-columns:104px minmax(0,1fr);padding:18px;gap:17px}
   .book-cover{width:104px}
-  .book-details h4{font-size:19px}
+  .book-details :is(h3,h4){font-size:19px}
   .book-description{font-size:11.5px}
 }
 @media(max-width:690px){
@@ -95,12 +97,12 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
   .book-feature{grid-template-columns:108px minmax(0,1fr);padding:16px;gap:16px}
   .book-cover{width:108px}
   .books-heading{margin-bottom:17px}
-  .book-details h4{font-size:19px}
+  .book-details :is(h3,h4){font-size:19px}
 }
 @media(max-width:380px){
   .book-feature{grid-template-columns:90px minmax(0,1fr);padding:12px;gap:12px}
   .book-cover{width:90px}
-  .book-details h4{font-size:17px}
+  .book-details :is(h3,h4){font-size:17px}
   .book-subtitle,.book-description{font-size:10.5px}
   .book-links{gap:8px}
 }
