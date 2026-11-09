@@ -79,6 +79,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 .book-links a:hover{color:var(--red)}
 .book-links a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .books-compact{padding:0}
+.books-compact .books-heading :is(h2,h3){font-size:var(--type-section)}
 @media(max-width:1160px){
   .books-grid{gap:12px}
   .book-feature{grid-template-columns:86px minmax(0,1fr);padding:14px;gap:12px}

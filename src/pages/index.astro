@@ -9,7 +9,6 @@ import DiscoProject from '../components/DiscoProject.astro';
 import FinancialEducationCourse from '../components/FinancialEducationCourse.astro';
 import QuestionarActivities from '../components/QuestionarActivities.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
-import ThesisSpotlight from '../components/ThesisSpotlight.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
@@ -491,7 +490,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .multi-book-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.multi-book-actions a{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:800;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
 .multi-book-secondary{border:1px solid var(--line-strong);color:var(--white)}.multi-book-secondary:hover{border-color:var(--red-light);color:var(--red-light)}
 .multi-book-actions a:focus-visible{outline:2px solid var(--red-light);outline-offset:3px}
-@media(max-width:760px){.multi-book-panel{grid-template-columns:1fr;padding:22px;gap:27px}.multi-book-cover{width:min(70%,225px)}.multi-book-info h3{font-size:clamp(30px,9vw,43px)}.multi-book-facts{grid-template-columns:1fr 1fr;gap:15px}.multi-book-perspectives strong{font-size:12px}}
+@media(max-width:760px){.multi-book-panel{grid-template-columns:1fr;padding:22px;gap:27px}.multi-book-cover{width:min(70%,225px)}.multi-book-info h3{font-size:var(--type-subsection)}.multi-book-facts{grid-template-columns:1fr 1fr;gap:15px}.multi-book-perspectives strong{font-size:12px}}
 @media(max-width:420px){.multi-book-facts{grid-template-columns:1fr}.multi-book-perspectives>div{gap:7px;padding:12px 8px}.multi-book-actions a{width:100%}}
 @media(prefers-reduced-motion:reduce){.multi-book-actions a{transition:none}}
 .lab-deeper{margin-top:28px}
@@ -584,7 +583,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   .practice-jornades{grid-template-rows:auto 160px auto}.practice-event-visual{min-height:160px}.practice-event-art{width:95px;height:157px;flex-basis:95px}
 }
 @media(max-width:360px){.practice-event-art{width:83px;height:138px;flex-basis:83px}.practice-event-visual .practice-event-date strong{font-size:51px}}
-.articles-section-title{font:650 clamp(26px,3.3vw,39px)/1.13 'Manrope',sans-serif;letter-spacing:-.06em;margin:13px 0 26px;color:var(--ink)}
+.articles-section-title{font:650 var(--type-subsection)/1.13 'Manrope',sans-serif;letter-spacing:-.06em;margin:13px 0 26px;color:var(--ink)}
 
 .lab-source{margin-top:16px}
 .lab-source small{display:block;max-width:1100px;color:var(--on-dark);font-size:11px;line-height:1.7}
