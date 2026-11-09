@@ -1,0 +1,33 @@
+name: Inspect GREDICS book cover
+on:
+  push:
+    paths: ['.github/workflows/inspect-gredics-cover.yml']
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract cover from UAB DDD
+        shell: bash
+        run: |
+          python -m pip install -q pymupdf Pillow
+          python - <<'PY'
+          import urllib.request, fitz, io, base64
+          from PIL import Image
+          url='https://ddd.uab.cat/pub/llibres/2011/197111/quesocvivensciesoc_a2011.pdf'
+          req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+          with urllib.request.urlopen(req,timeout=30) as res:
+              data=res.read()
+          print('PDF size',len(data))
+          doc=fitz.open(stream=data,filetype='pdf')
+          print('PDF pages',len(doc))
+          page=doc[0]
+          pix=page.get_pixmap(matrix=fitz.Matrix(2,2),alpha=False)
+          im=Image.open(io.BytesIO(pix.tobytes('png'))).convert('RGB')
+          print('COVER dimensions',im.size)
+          im.thumbnail((900,1400))
+          out=io.BytesIO()
+          im.save(out,format='JPEG',quality=87,optimize=True)
+          print('GREDICS_COVER_B64_START')
+          print(base64.b64encode(out.getvalue()).decode())
+          print('GREDICS_COVER_B64_END')
+          PY
