@@ -281,7 +281,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </article>
         </details>
       ) : (
-        <article class="lab-prompt">
+        <article class="lab-prompt" id="accio-social">
           <h3>{d.title}</h3>
           <p>{d.description}</p>
         </article>
@@ -384,10 +384,10 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .initiative{padding:30px;background:var(--rose);border:1px solid var(--rose-line);display:flex;flex-direction:column}
 .initiative.mooc{background:var(--cyan-pale);border-color:var(--line)}
 .initiative>span{font-size:10px;letter-spacing:.12em;color:var(--red);font-weight:800}
-.initiative h4{font:650 var(--type-item)//1.23 'Manrope',sans-serif;letter-spacing:-.045em;margin:15px 0 9px}
+.initiative h4{font:650 var(--type-item)/1.23 'Manrope',sans-serif;letter-spacing:-.045em;margin:15px 0 9px}
 .initiative p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
 .initiative strong{font-size:12px;color:var(--cyan);margin-top:auto;padding-top:15px}
-.initiative:hover h3{color:var(--red)}
+.initiative:hover h4{color:var(--red)}
 .under-projects{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;margin-top:30px}
 .lab-banner{background:var(--navy);color:var(--white);padding:93px 0;overflow:hidden}
 .lab-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8%;align-items:center}
@@ -439,7 +439,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .research-mini-list{margin-top:32px;border-top:1px solid var(--line);scroll-margin-top:96px}
 .research-mini{display:grid;grid-template-columns:1.35fr .55fr;gap:30px;align-items:center;border-bottom:1px solid var(--line);padding:22px 0}
 .research-mini .mini{color:var(--red);font-size:10px}
-.research-mini h4{font:650 var(--type-item)//1.33 'Manrope',sans-serif;letter-spacing:-.04em;margin:12px 0 9px}
+.research-mini h4{font:650 var(--type-item)/1.33 'Manrope',sans-serif;letter-spacing:-.04em;margin:12px 0 9px}
 .research-mini p{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
 .research-role{font-size:12px;font-weight:700;color:var(--cyan);line-height:1.5}
 .journal-initiative{margin-top:24px;background:var(--cyan-pale);border:1px solid var(--line);padding:22px 25px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
@@ -509,7 +509,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .gredics-monogram{height:80px;width:80px;flex:0 0 80px;display:grid;place-items:center;border-radius:50%;background:var(--cyan);color:var(--white);font:800 40px/1 'Manrope',sans-serif;letter-spacing:-.1em;position:relative}
 .gredics-monogram span{font-size:22px;color:var(--red-light)}
 .gredics-wordmark{font:800 clamp(35px,3.5vw,54px)/1 'Manrope',sans-serif;letter-spacing:-.09em;color:var(--navy)}
-.gredics-feature h4{font:650 var(--type-item)//1.25 'Manrope',sans-serif;letter-spacing:-.05em;margin:0 0 14px}
+.gredics-feature h4{font:650 var(--type-item)/1.25 'Manrope',sans-serif;letter-spacing:-.05em;margin:0 0 14px}
 .gredics-feature p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 23px}
 .network-actions{margin-top:auto;display:flex;gap:24px;flex-wrap:wrap}
 .network-actions a,.eccss-content a{font-size:12px;font-weight:800;color:var(--cyan);border-bottom:1px solid currentColor;padding-bottom:5px}
@@ -537,7 +537,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .practice-card:hover{transform:translateY(-3px);border-color:var(--line-strong)}
 .practice-card .mini{color:var(--cyan)}
 .practice-card-copy{display:flex;flex-direction:column;align-self:stretch;min-width:0}
-.practice-card-copy h3{margin-top:0}
+.practice-card-copy h4{margin-top:0}
 .practice-card-copy>strong{align-self:flex-start;margin-top:auto}
 .practice-card h4{font:650 var(--type-item)/1.24 'Manrope',sans-serif;letter-spacing:-.05em;max-width:600px;margin-bottom:14px}
 .practice-card p{font-size:14px;color:var(--muted);line-height:1.75;max-width:510px}
@@ -689,6 +689,15 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   :global(html.apple-scroll-ready) .hero-scroll-scene>.hero:after{display:none}
   .topics-section.mobile-cards-ready .topic-card{opacity:1!important;transform:none!important}
 }
+
+/* Domain-specific rules must override the legacy two-column cards. */
+.projects-section .project-grid{grid-template-columns:minmax(0,1fr)}
+.practice-section .practice-grid{grid-template-columns:minmax(0,1fr)}
+.research-networks .research-network-grid{grid-template-columns:minmax(0,1fr)}
+.lab-banner .section-deeper-link{color:var(--red-light)}
+.lab-banner .section-deeper-link:hover{color:var(--white)}
+@media(max-width:1080px){.editorial-section .editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.editorial-section .editorial-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 
 <script is:inline>
