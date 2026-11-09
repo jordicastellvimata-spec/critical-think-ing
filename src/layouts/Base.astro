@@ -102,7 +102,16 @@ const nav = [
   </script>
   <footer class="site-footer">
     <div class="container footer-columns">
-      <div><a class="footer-mark" href={url('')}>critical-think.ing</a><p>Jordi Castellví Mata<br/>Recerca, educació i pensament crític</p></div>
+      <div>
+        <a class="footer-mark" href={url('')}>critical-think.ing</a>
+        <p>Jordi Castellví Mata<br/>Recerca, educació i pensament crític</p>
+        <nav class="footer-site-links" aria-label="Seccions de la web">
+          <a href={url('publicacions/')}>Publicacions</a>
+          <a href={url('projectes/')}>Projectes</a>
+          <a href={url('laboratori/')}>Laboratori</a>
+          <a href={url('sobre-mi/')}>Sobre mi</a>
+        </nav>
+      </div>
       <div class="footer-links" aria-label="Perfils acadèmics i xarxes"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Perfil UAB ↗</a><a href={profile.scholar} target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href={profile.researchgate} target="_blank" rel="noopener noreferrer">ResearchGate ↗</a><a href={profile.bluesky} target="_blank" rel="noopener noreferrer">Bluesky ↗</a><a href={profile.orcid} target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href={profile.gredics} target="_blank" rel="noopener noreferrer">GREDICS ↗</a></div>
       <div class="footer-email"><span>CONTACTE ACADÈMIC</span><a href={'mailto:'+profile.email}>{profile.email} ↗</a><small>© {new Date().getFullYear()} Jordi Castellví Mata</small></div>
     </div>
@@ -198,6 +207,10 @@ h1,h2,h3,h4,p{margin-top:0}
 .site-footer{background:var(--navy);color:var(--white);padding:58px 0 65px}
 .footer-columns{display:grid;grid-template-columns:1.25fr .7fr 1fr;gap:45px}
 .footer-mark{font:800 21px/1 'Manrope',sans-serif;letter-spacing:-.06em}
+.footer-site-links{display:grid;grid-template-columns:repeat(2,max-content);column-gap:23px;row-gap:12px;margin-top:22px}
+.footer-site-links a{font-size:12px;font-weight:650;color:var(--on-dark);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line-strong)}
+.footer-site-links a:hover,.footer-site-links a:focus-visible{color:var(--white);text-decoration-color:var(--red-light)}
+
 .site-footer p{color:var(--on-dark);font-size:13px;line-height:1.8;margin:20px 0 0}
 .footer-links{display:flex;flex-direction:column;gap:14px;font-weight:600;font-size:13px}
 .footer-links a:hover,.footer-email a:hover{color:var(--red-light)}
