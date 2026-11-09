@@ -1,0 +1,28 @@
+name: Inspect original book cover
+on:
+  push:
+    paths:
+      - '.github/workflows/cover-inspect.yml'
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and inspect cover
+        shell: bash
+        run: |
+          python -m pip install -q Pillow
+          python - <<'PY'
+          import base64, io, urllib.request
+          from PIL import Image
+          url='https://imagessl.casadellibro.com/a/l/s7/26/9788484523826.webp'
+          with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=20) as response:
+              payload=response.read()
+          img=Image.open(io.BytesIO(payload))
+          print(f'Dimensions original cover {img.width}x{img.height}; {len(payload)} bytes')
+          img.thumbnail((350,550),Image.Resampling.LANCZOS)
+          out=io.BytesIO()
+          img.convert('RGB').save(out,format='JPEG',quality=80)
+          print('COVER_BASE64_START')
+          print(base64.b64encode(out.getvalue()).decode('ascii'))
+          print('COVER_BASE64_END')
+          PY
