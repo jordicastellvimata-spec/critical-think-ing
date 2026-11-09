@@ -187,6 +187,47 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </summary>
           <QuestionarActivities />
         </details>
+      ) : d.number === '02' ? (
+        <details class="lab-disclosure" id="multiperspectiva">
+          <summary class="lab-prompt">
+            <span class="lab-prompt-title">{d.title}</span>
+            <span class="lab-prompt-description">{d.description}</span>
+            <span class="lab-prompt-action"><span>Descobreix el llibre recomanat</span><span class="lab-chevron" aria-hidden="true"></span></span>
+          </summary>
+          <article class="multi-book-panel" aria-labelledby="multi-book-title">
+            <div class="multi-book-visual">
+              <div class="multi-book-cover">
+                <div class="multi-book-placeholder" aria-hidden="true">
+                  <span>HISTÒRIA<br />DE L’ALTRE</span>
+                  <small>ISRAEL · PALESTINA<br />UN CONFLICTE, DUES MIRADES</small>
+                  <div class="multi-book-placeholder-lines"><i></i><i></i></div>
+                </div>
+                <img src="https://imagessl.casadellibro.com/a/l/s7/26/9788484523826.webp" alt="Coberta de l’edició catalana d’Història de l’altre, publicada per Intermón Oxfam" width="320" height="450" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+              </div>
+              <span class="multi-book-image-note">Una història compartida, explicada des de dues mirades.</span>
+            </div>
+            <div class="multi-book-info">
+              <div class="multi-book-kicker">LECTURA RECOMANADA · MULTIPERSPECTIVA</div>
+              <h3 id="multi-book-title"><cite>Història de l’altre</cite></h3>
+              <p class="multi-book-subtitle">Israel i Palestina, un conflicte, dues mirades</p>
+              <p class="multi-book-lead">Un recurs meravellós per treballar la multiperspectiva a l’aula. Escrit conjuntament per sis docents palestins i sis d’israelians, presenta en paral·lel relats sobre uns mateixos esdeveniments històrics. Convida a reconèixer les veus, comparar les interpretacions i contrastar-les críticament amb les evidències.</p>
+              <div class="multi-book-perspectives" aria-label="Dues perspectives històriques en paral·lel">
+                <div><span class="multi-perspective-number">01</span><strong>Relat israelià</strong></div>
+                <div><span class="multi-perspective-number">02</span><strong>Relat palestí</strong></div>
+              </div>
+              <dl class="multi-book-facts">
+                <div><dt>Autoria</dt><dd>12 docents d’història (6 palestins i 6 israelians)</dd></div>
+                <div><dt>Editorial i any</dt><dd>Intermón Oxfam · 2006</dd></div>
+                <div><dt>Edició</dt><dd>Català · 103 pàgines</dd></div>
+                <div><dt>ISBN</dt><dd>978-84-8452-382-6</dd></div>
+              </dl>
+              <div class="multi-book-actions">
+                <a class="multi-book-amazon" href="https://www.amazon.es/s?k=9788484523826" target="_blank" rel="noopener noreferrer">Cercar a Amazon <span aria-hidden="true">↗</span></a>
+                <a class="multi-book-secondary" href="https://tienda.oxfamintermon.org/libros-solidarios/2700-historia-del-otro-castellano.html" target="_blank" rel="noopener noreferrer">Edició castellana a Oxfam <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </details>
       ) : (
         <article class="lab-prompt">
           <h3>{d.title}</h3>
@@ -351,6 +392,34 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-chevron{flex:none;width:8px;height:8px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg);transition:transform .2s}
 .lab-disclosure[open] .lab-chevron{transform:rotate(225deg)}
 @media(prefers-reduced-motion:reduce){.lab-disclosure summary,.lab-chevron{transition:none}}
+.multi-book-panel{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.6fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:16px;padding:clamp(22px,4vw,50px);border:1px solid var(--line-strong);border-radius:18px;background:radial-gradient(ellipse at 8% 14%,rgba(46,170,192,.17),transparent 53%),linear-gradient(140deg,#202b44,#111d34)}
+.multi-book-visual{min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.multi-book-cover{position:relative;width:min(100%,290px);aspect-ratio:320/450;transform:rotate(-2deg);box-shadow:11px 19px 33px rgba(0,0,0,.28),3px 5px 0 rgba(230,248,249,.22);border:1px solid rgba(255,255,255,.3);overflow:hidden;background:#b5dce2}
+.multi-book-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.multi-book-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12% 10%;background:linear-gradient(162deg,#c6e4e5 0%,#98b9c8 54%,#e9b8af 100%);color:#13223b;font-family:'Manrope',sans-serif}
+.multi-book-placeholder>span{font-size:clamp(23px,3vw,36px);font-weight:800;line-height:1.07;letter-spacing:-.07em}
+.multi-book-placeholder small{font-size:11px;font-weight:800;line-height:1.8;letter-spacing:.09em}
+.multi-book-placeholder-lines{position:absolute;top:50%;left:10%;right:10%;height:2px;background:#183f60;transform:rotate(-12deg)}
+.multi-book-placeholder-lines i{position:absolute;display:block;width:44%;height:3px;top:14px;background:#c84d52}.multi-book-placeholder-lines i:last-child{right:0;top:28px;background:#185f79}
+.multi-book-image-note{max-width:260px;text-align:center;color:var(--on-dark);font-size:12px;line-height:1.5}
+.multi-book-info{min-width:0}.multi-book-kicker{color:var(--red-light);font-weight:800;font-size:11px;letter-spacing:.12em}
+.multi-book-info h3{font:750 clamp(33px,4.4vw,58px)/1.08 'Manrope',sans-serif;letter-spacing:-.055em;margin:14px 0 6px}.multi-book-info h3 cite{font-style:normal}
+.multi-book-subtitle{font:500 clamp(17px,2vw,22px)/1.4 'Manrope',sans-serif!important;color:#dbe5f3!important;margin:0 0 20px!important}
+.multi-book-lead{color:#dce2ee!important;font-size:clamp(15px,1.65vw,18px)!important;line-height:1.68!important;margin:0 0 24px!important}
+.multi-book-perspectives{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:20px 0 23px}
+.multi-book-perspectives>div{display:flex;align-items:center;gap:12px;min-width:0;padding:16px 13px;background:rgba(255,255,255,.055);border:1px solid var(--line-strong);border-radius:9px}
+.multi-book-perspectives>div:first-child{border-top:3px solid #7ac7d6}.multi-book-perspectives>div:last-child{border-top:3px solid var(--red-light)}
+.multi-perspective-number{color:var(--red-light);font-size:11px;font-weight:800}.multi-book-perspectives strong{font-size:14px;line-height:1.3}
+.multi-book-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;margin:0 0 24px;padding-top:19px;border-top:1px solid var(--line-strong)}
+.multi-book-facts div{min-width:0}.multi-book-facts dt{color:var(--on-dark);font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:800}
+.multi-book-facts dd{margin:4px 0 0;overflow-wrap:anywhere;font-size:14px;line-height:1.45;color:var(--white)}
+.multi-book-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.multi-book-actions a{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:800;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.multi-book-amazon{background:var(--red-light);color:var(--ink)}.multi-book-amazon:hover{background:var(--red-light-hover);color:var(--ink)}
+.multi-book-secondary{border:1px solid var(--line-strong);color:var(--white)}.multi-book-secondary:hover{border-color:var(--red-light);color:var(--red-light)}
+.multi-book-actions a:focus-visible{outline:2px solid var(--red-light);outline-offset:3px}
+@media(max-width:760px){.multi-book-panel{grid-template-columns:1fr;padding:22px;gap:27px}.multi-book-cover{width:min(67%,250px)}.multi-book-info h3{font-size:clamp(30px,9vw,43px)}.multi-book-facts{grid-template-columns:1fr 1fr;gap:15px}.multi-book-perspectives strong{font-size:12px}}
+@media(max-width:420px){.multi-book-facts{grid-template-columns:1fr}.multi-book-perspectives>div{gap:7px;padding:12px 8px}.multi-book-actions a{width:100%}}
+@media(prefers-reduced-motion:reduce){.multi-book-actions a{transition:none}}
 .lab-deeper{margin-top:28px}
 .lab-deeper .text-link{color:var(--red-light)}
 .contact-email{font-weight:500;margin-left:8px}
