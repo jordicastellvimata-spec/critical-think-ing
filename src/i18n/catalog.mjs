@@ -394,6 +394,21 @@ Català · 103 pàgines|||Catalán · 103 páginas|||Catalan · 103 pages|||Cata
 Cercar a Amazon|||Buscar en Amazon|||Search Amazon|||Rechercher sur Amazon
 Edició castellana a Oxfam|||Edición en castellano en Oxfam|||Spanish-language edition at Oxfam|||Édition espagnole chez Oxfam
 `),
+  ...block(String.raw`
+Explora el llibre de GREDICS|||Explora el libro de GREDICS|||Explore GREDICS's book|||Découvrir le livre de GREDICS
+Portada original de Les qüestions socialment vives i l’ensenyament de les ciències socials, Documents 97, UAB|||Portada original de Les qüestions socialment vives i l’ensenyament de les ciències socials, Documents 97, UAB|||Original cover of Les qüestions socialment vives i l’ensenyament de les ciències socials, Documents 97, UAB|||Couverture originale de Les qüestions socialment vives i l’ensenyament de les ciències socials, Documents 97, UAB
+Coberta original · Servei de Publicacions de la UAB|||Cubierta original · Servicio de Publicaciones de la UAB|||Original cover · UAB Publishing Service|||Couverture originale · Service des publications de l’UAB
+GREDICS · LECTURA RECOMANADA|||GREDICS · LECTURA RECOMENDADA|||GREDICS · RECOMMENDED READING|||GREDICS · LECTURE RECOMMANDÉE
+Un llibre per portar els conflictes i debats del món a l’aula|||Un libro para llevar los conflictos y debates del mundo al aula|||A book for bringing social conflicts and debates into the classroom|||Un livre pour aborder les conflits et les débats du monde en classe
+Una obra de referència per pensar per què i com treballar les qüestions socialment vives a les classes de ciències socials. Recull les ponències de les VII Jornades Internacionals de Recerca en Didàctica de les Ciències Socials i ofereix perspectives teòriques i propostes didàctiques per abordar problemes controvertits, argumentar amb criteri i formar una ciutadania crítica.|||Una obra de referencia para reflexionar sobre por qué y cómo trabajar las cuestiones socialmente vivas en las clases de ciencias sociales. Recoge las ponencias de las VII Jornadas Internacionales de Investigación en Didáctica de las Ciencias Sociales y ofrece perspectivas teóricas y propuestas didácticas para abordar problemas controvertidos, argumentar con rigor y formar una ciudadanía crítica.|||A key reference for exploring why and how to teach socially controversial issues in social studies. It brings together papers from the 7th International Research Conference on Social Studies Education, offering theoretical perspectives and classroom approaches to contentious issues, evidence-based argument and critical citizenship.|||Un ouvrage de référence pour réfléchir aux raisons et aux manières d’aborder les questions socialement vives en cours de sciences sociales. Il réunit les communications des VIIes Journées internationales de recherche en didactique des sciences sociales et propose des perspectives théoriques et des pistes pédagogiques pour étudier des sujets controversés, argumenter avec rigueur et former des citoyens critiques.
+Coordinació|||Coordinación|||Edited by|||Coordination
+Joan Pagès i Antoni Santisteban|||Joan Pagès y Antoni Santisteban|||Joan Pagès and Antoni Santisteban|||Joan Pagès et Antoni Santisteban
+UAB, Servei de Publicacions · 2011|||UAB, Servicio de Publicaciones · 2011|||UAB Publishing Service · 2011|||Service des publications de l’UAB · 2011
+Col·lecció|||Colección|||Series|||Collection
+Documents, 97 · 161 pàgines|||Documents, 97 · 161 páginas|||Documents, 97 · 161 pages|||Documents, 97 · 161 pages
+Llegir el llibre complet (PDF)|||Leer el libro completo (PDF)|||Read the full book (PDF)|||Lire le livre intégral (PDF)
+Fitxa al DDD de la UAB|||Ficha en el DDD de la UAB|||UAB repository record|||Notice dans le dépôt numérique de l’UAB
+`),
 ];
 
 export const exactOriginals = [

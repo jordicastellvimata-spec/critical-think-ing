@@ -227,6 +227,38 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             </div>
           </article>
         </details>
+      ) : d.number === '03' ? (
+        <details class="lab-disclosure" id="problemes-socials-rellevants">
+          <summary class="lab-prompt">
+            <span class="lab-prompt-title">{d.title}</span>
+            <span class="lab-prompt-description">{d.description}</span>
+            <span class="lab-prompt-action"><span>Explora el llibre de GREDICS</span><span class="lab-chevron" aria-hidden="true"></span></span>
+          </summary>
+          <article class="multi-book-panel social-book-panel" aria-labelledby="social-book-title">
+            <div class="multi-book-visual">
+              <div class="multi-book-cover social-book-cover">
+                <img src="/images/questions-socialment-vives-gredics-2011.jpg" alt="Portada original de Les qüestions socialment vives i l’ensenyament de les ciències socials, Documents 97, UAB" width="900" height="1291" loading="lazy" decoding="async" />
+              </div>
+              <span class="multi-book-image-note">Coberta original · Servei de Publicacions de la UAB</span>
+            </div>
+            <div class="multi-book-info">
+              <div class="multi-book-kicker">GREDICS · LECTURA RECOMANADA</div>
+              <h3 id="social-book-title"><cite>Les qüestions socialment vives i l’ensenyament de les ciències socials</cite></h3>
+              <p class="multi-book-subtitle">Un llibre per portar els conflictes i debats del món a l’aula</p>
+              <p class="multi-book-lead">Una obra de referència per pensar per què i com treballar les qüestions socialment vives a les classes de ciències socials. Recull les ponències de les VII Jornades Internacionals de Recerca en Didàctica de les Ciències Socials i ofereix perspectives teòriques i propostes didàctiques per abordar problemes controvertits, argumentar amb criteri i formar una ciutadania crítica.</p>
+              <dl class="multi-book-facts">
+                <div><dt>Coordinació</dt><dd>Joan Pagès i Antoni Santisteban</dd></div>
+                <div><dt>Edició</dt><dd>UAB, Servei de Publicacions · 2011</dd></div>
+                <div><dt>Col·lecció</dt><dd>Documents, 97 · 161 pàgines</dd></div>
+                <div><dt>ISBN</dt><dd>978-84-490-2836-6</dd></div>
+              </dl>
+              <div class="multi-book-actions">
+                <a class="multi-book-amazon" href="https://ddd.uab.cat/pub/llibres/2011/197111/quesocvivensciesoc_a2011.pdf" target="_blank" rel="noopener noreferrer">Llegir el llibre complet (PDF) <span aria-hidden="true">↗</span></a>
+                <a class="multi-book-secondary" href="https://ddd.uab.cat/record/197111" target="_blank" rel="noopener noreferrer">Fitxa al DDD de la UAB <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </details>
       ) : (
         <article class="lab-prompt">
           <h3>{d.title}</h3>
@@ -392,6 +424,12 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-disclosure[open] .lab-chevron{transform:rotate(225deg)}
 @media(prefers-reduced-motion:reduce){.lab-disclosure summary,.lab-chevron{transition:none}}
 .multi-book-panel{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.6fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:16px;padding:clamp(22px,4vw,50px);border:1px solid var(--line-strong);border-radius:18px;background:radial-gradient(ellipse at 8% 14%,rgba(46,170,192,.17),transparent 53%),linear-gradient(140deg,#202b44,#111d34)}
+.social-book-panel{background:radial-gradient(ellipse at 8% 12%,rgba(107,173,135,.18),transparent 56%),linear-gradient(140deg,#1d3a36,#111d34)}
+.social-book-panel .multi-book-kicker{color:#a8dfb8}
+.social-book-cover{aspect-ratio:900/1291;background:#aed5b8;width:min(100%,270px)}
+.social-book-cover img{object-fit:contain;width:100%;height:100%;display:block}
+.social-book-panel .multi-book-amazon{background:#b4e3c3;color:#122832}
+.social-book-panel .multi-book-amazon:hover{background:#d4f3d9;color:#122832}
 .multi-book-visual{min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px}
 .multi-book-cover{position:relative;width:min(100%,250px);aspect-ratio:800/1169;box-shadow:11px 19px 33px rgba(0,0,0,.28),3px 5px 0 rgba(230,248,249,.22);border:1px solid rgba(255,255,255,.3);overflow:hidden;background:#b5dce2}
 .multi-book-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;image-rendering:auto}
