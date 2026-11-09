@@ -222,7 +222,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
                 <div><dt>ISBN</dt><dd>978-84-8452-382-6</dd></div>
               </dl>
               <div class="multi-book-actions">
-                <a class="multi-book-amazon" href="https://www.amazon.es/s?k=9788484523826" target="_blank" rel="noopener noreferrer">Cercar a Amazon <span aria-hidden="true">↗</span></a>
                 <a class="multi-book-secondary" href="https://tienda.oxfamintermon.org/libros-solidarios/2700-historia-del-otro-castellano.html" target="_blank" rel="noopener noreferrer">Edició castellana a Oxfam <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -394,8 +393,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 @media(prefers-reduced-motion:reduce){.lab-disclosure summary,.lab-chevron{transition:none}}
 .multi-book-panel{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.6fr);gap:clamp(24px,5vw,64px);align-items:center;margin-top:16px;padding:clamp(22px,4vw,50px);border:1px solid var(--line-strong);border-radius:18px;background:radial-gradient(ellipse at 8% 14%,rgba(46,170,192,.17),transparent 53%),linear-gradient(140deg,#202b44,#111d34)}
 .multi-book-visual{min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px}
-.multi-book-cover{position:relative;width:min(100%,290px);aspect-ratio:320/450;transform:rotate(-2deg);box-shadow:11px 19px 33px rgba(0,0,0,.28),3px 5px 0 rgba(230,248,249,.22);border:1px solid rgba(255,255,255,.3);overflow:hidden;background:#b5dce2}
-.multi-book-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.multi-book-cover{position:relative;width:min(100%,235px);aspect-ratio:320/450;box-shadow:11px 19px 33px rgba(0,0,0,.28),3px 5px 0 rgba(230,248,249,.22);border:1px solid rgba(255,255,255,.3);overflow:hidden;background:#b5dce2}
+.multi-book-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;image-rendering:auto;filter:contrast(1.035)}
 .multi-book-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12% 10%;background:linear-gradient(162deg,#c6e4e5 0%,#98b9c8 54%,#e9b8af 100%);color:#13223b;font-family:'Manrope',sans-serif}
 .multi-book-placeholder>span{font-size:clamp(23px,3vw,36px);font-weight:800;line-height:1.07;letter-spacing:-.07em}
 .multi-book-placeholder small{font-size:11px;font-weight:800;line-height:1.8;letter-spacing:.09em}
@@ -414,10 +413,9 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .multi-book-facts div{min-width:0}.multi-book-facts dt{color:var(--on-dark);font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:800}
 .multi-book-facts dd{margin:4px 0 0;overflow-wrap:anywhere;font-size:14px;line-height:1.45;color:var(--white)}
 .multi-book-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.multi-book-actions a{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;font-size:13px;font-weight:800;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
-.multi-book-amazon{background:var(--red-light);color:var(--ink)}.multi-book-amazon:hover{background:var(--red-light-hover);color:var(--ink)}
 .multi-book-secondary{border:1px solid var(--line-strong);color:var(--white)}.multi-book-secondary:hover{border-color:var(--red-light);color:var(--red-light)}
 .multi-book-actions a:focus-visible{outline:2px solid var(--red-light);outline-offset:3px}
-@media(max-width:760px){.multi-book-panel{grid-template-columns:1fr;padding:22px;gap:27px}.multi-book-cover{width:min(67%,250px)}.multi-book-info h3{font-size:clamp(30px,9vw,43px)}.multi-book-facts{grid-template-columns:1fr 1fr;gap:15px}.multi-book-perspectives strong{font-size:12px}}
+@media(max-width:760px){.multi-book-panel{grid-template-columns:1fr;padding:22px;gap:27px}.multi-book-cover{width:min(70%,225px)}.multi-book-info h3{font-size:clamp(30px,9vw,43px)}.multi-book-facts{grid-template-columns:1fr 1fr;gap:15px}.multi-book-perspectives strong{font-size:12px}}
 @media(max-width:420px){.multi-book-facts{grid-template-columns:1fr}.multi-book-perspectives>div{gap:7px;padding:12px 8px}.multi-book-actions a{width:100%}}
 @media(prefers-reduced-motion:reduce){.multi-book-actions a{transition:none}}
 .lab-deeper{margin-top:28px}
