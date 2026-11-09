@@ -409,6 +409,14 @@ Documents, 97 · 161 pàgines|||Documents, 97 · 161 páginas|||Documents, 97 ·
 Llegir el llibre complet (PDF)|||Leer el libro completo (PDF)|||Read the full book (PDF)|||Lire le livre intégral (PDF)
 Fitxa al DDD de la UAB|||Ficha en el DDD de la UAB|||UAB repository record|||Notice dans le dépôt numérique de l’UAB
 `),
+  ...block(String.raw`
+Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
+Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
+HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
+HATE SPEECH & COUNTER-NARRATIVES|||DISCURSOS DE ODIO Y CONTRARRELATOS|||HATE SPEECH & COUNTER-NARRATIVES|||DISCOURS DE HAINE ET CONTRE-RÉCITS
+POLARIZATION & POPULISM|||POLARIZACIÓN Y POPULISMOS|||POLARIZATION & POPULISM|||POLARISATION ET POPULISMES
+CRITICAL THINKING & CITIZENSHIP|||PENSAMIENTO CRÍTICO Y CIUDADANÍA|||CRITICAL THINKING & CITIZENSHIP|||PENSÉE CRITIQUE ET CITOYENNETÉ
+`),
 ];
 
 export const exactOriginals = [
