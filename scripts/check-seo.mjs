@@ -39,6 +39,12 @@ for(const [route,translated] of Object.entries(seoPages)){
    assert(attr(link('alternate','x-default'),'href')===url(route,'ca'),prefix+'x-default mismatch');
    assert(sitemap.includes('<loc>'+canonical+'</loc>'),prefix+'URL missing from sitemap');
    assert(sitemap.includes('hreflang="'+locale+'" href="'+canonical+'"'),prefix+'sitemap alternate missing');
+   const footerNav=tags(doc,'nav').find(n=>(attr(n,'class')||'').split(/\s+/).includes('footer-site-links'));
+   assert(!!footerNav,prefix+'missing internal navigation in footer');
+   const linkedRoutes=tags(footerNav,'a').map(n=>attr(n,'href'));
+   for(const section of ['publicacions/','projectes/','laboratori/','sobre-mi/'])
+     assert(linkedRoutes.includes(url(section,locale).replace(origin,'')),prefix+'missing localized internal link '+section);
+
    const ld=tags(head,'script').find(n=>attr(n,'type')==='application/ld+json');
    try{const data=JSON.parse(textOf(ld));assert(data['@graph']?.some(n=>n['@type']==='Person'&&n.name==='Jordi Castellví Mata'),prefix+'missing Person JSON-LD')}
    catch{errors.push(prefix+'invalid JSON-LD')}

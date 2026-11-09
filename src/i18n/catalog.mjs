@@ -244,6 +244,7 @@ amb la pràctica.|||con la práctica.|||with practice.|||avec la pratique.
 ORGANITZACIÓ ACADÈMICA · 2027|||ORGANIZACIÓN ACADÉMICA · 2027|||ACADEMIC ORGANISATION · 2027|||ORGANISATION ACADÉMIQUE · 2027
 Coordinació amb Neus González-Monfort i Mónica Hernández González.|||Coordinación con Neus González-Monfort y Mónica Hernández González.|||Co-organised with Neus González-Monfort and Mónica Hernández González.|||Coordination avec Neus González-Monfort et Mónica Hernández González.
 Producció científica|||Producción científica|||Research output|||Production scientifique
+Seccions de la web|||Secciones del sitio web|||Website sections|||Rubriques du site
 Publicacions|||Publicaciones|||Publications|||Publications
 Pensament crític, ciutadania democràtica, alfabetització digital, discursos d’odi i educació per al futur.|||Pensamiento crítico, ciudadanía democrática, alfabetización digital, discursos de odio y educación para el futuro.|||Critical thinking, democratic citizenship, digital literacy, hate speech and education for the future.|||Pensée critique, citoyenneté démocratique, littératie numérique, discours de haine et éducation aux futurs.
 Articles de recerca · 2019—2026|||Artículos de investigación · 2019—2026|||Research articles · 2019—2026|||Articles de recherche · 2019—2026
