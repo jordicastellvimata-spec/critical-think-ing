@@ -22,7 +22,7 @@ const resources = [
   <div class="resources-heading">
     <div>
       <span class="resources-eyebrow">MATERIALS OBERTS · GENERALITAT DE CATALUNYA · 2025</span>
-      <h3 id="resources-heading">Recursos per <em>llegir el món.</em></h3>
+      <h4 id="resources-heading">Recursos per <em>llegir el món.</em></h4>
     </div>
     <p>Dos materials per a la pràctica docent, publicats pel Departament d’Educació i Formació Professional amb Antoni Santisteban.</p>
   </div>
@@ -34,7 +34,7 @@ const resources = [
         </a>
         <div class="resource-copy">
           <span class="resource-level">{resource.level} · {resource.year}</span>
-          <h4>{resource.title}</h4>
+          <h5>{resource.title}</h5>
           <p>{resource.description}</p>
           <small>{resource.authors}</small>
           <a href={resource.url} class="resource-link" target="_blank" rel="noopener noreferrer">Consultar el recurs <span aria-hidden="true">↗</span></a>
@@ -48,8 +48,8 @@ const resources = [
 .resources-heading{display:flex;align-items:end;justify-content:space-between;gap:27px;margin-bottom:26px}
 .resources-heading>div{min-width:0}
 .resources-eyebrow{display:block;color:var(--red);font:800 10px/1.4 'DM Sans',sans-serif;letter-spacing:.12em}
-.resources-heading h3{font:650 clamp(29px,3.4vw,45px)/1.16 'Manrope',sans-serif;letter-spacing:-.06em;margin:12px 0 0}
-.resources-heading h3 em{font-style:normal;color:var(--cyan)}
+.resources-heading h4{font:650 var(--type-item)/1.16 'Manrope',sans-serif;letter-spacing:-.06em;margin:12px 0 0}
+.resources-heading h4 em{font-style:normal;color:var(--cyan)}
 .resources-heading>p{max-width:365px;line-height:1.6;font-size:13px;color:var(--muted);margin:0}
 .resources-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .resource-card{min-width:0;display:grid;grid-template-columns:minmax(105px,35%) minmax(0,1fr);gap:19px;background:var(--white);border:1px solid var(--line);padding:19px;transition:transform .2s ease,border-color .2s ease}
@@ -58,15 +58,15 @@ const resources = [
 .resource-cover img{display:block;width:100%;height:100%;object-fit:cover}
 .resource-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
 .resource-level{font:800 10px/1.45 'DM Sans',sans-serif;letter-spacing:.09em;color:var(--red)}
-.resource-copy h4{margin:13px 0 9px;font:700 clamp(17px,1.7vw,23px)/1.24 'Manrope',sans-serif;letter-spacing:-.045em;color:var(--ink);overflow-wrap:break-word}
+.resource-copy h5{margin:13px 0 9px;font:700 clamp(17px,1.7vw,23px)/1.24 'Manrope',sans-serif;letter-spacing:-.045em;color:var(--ink);overflow-wrap:break-word}
 .resource-copy p{margin:0 0 11px;font:400 12px/1.6 'DM Sans',sans-serif;color:var(--muted)}
 .resource-copy small{font-size:11px;line-height:1.5;color:var(--muted);margin-bottom:13px}
 .resource-link{font:800 11px/1.5 'DM Sans',sans-serif;color:var(--cyan);border-bottom:1px solid currentColor;text-decoration:none;margin-top:auto;padding-bottom:3px}
 .resource-link:hover{color:var(--red)}
 .resource-link:focus-visible,.resource-cover:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-@media(max-width:1080px){.resource-card{grid-template-columns:120px minmax(0,1fr);gap:14px;padding:14px}.resource-copy h4{font-size:18px}}
+@media(max-width:1080px){.resource-card{grid-template-columns:120px minmax(0,1fr);gap:14px;padding:14px}.resource-copy h5{font-size:18px}}
 @media(max-width:810px){.resources-heading{flex-direction:column;align-items:flex-start;gap:12px}.resources-heading>p{max-width:620px}.resources-grid{grid-template-columns:minmax(0,1fr)}.resource-card{grid-template-columns:155px minmax(0,1fr)}}
-@media(max-width:520px){.teacher-resources{margin-top:27px;padding-top:32px}.resource-card{grid-template-columns:97px minmax(0,1fr);gap:12px;padding:12px}.resource-copy h4{font-size:16px;margin:7px 0}.resource-copy p{font-size:11px}.resource-copy small{font-size:10px}.resources-grid{gap:12px}}
+@media(max-width:520px){.teacher-resources{margin-top:27px;padding-top:32px}.resource-card{grid-template-columns:97px minmax(0,1fr);gap:12px;padding:12px}.resource-copy h5{font-size:16px;margin:7px 0}.resource-copy p{font-size:11px}.resource-copy small{font-size:10px}.resources-grid{gap:12px}}
 @media(max-width:355px){.resource-card{grid-template-columns:86px minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.resource-card{transition:none}.resource-card:hover{transform:none}}
 </style>

@@ -34,12 +34,9 @@ const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
 // Ordre del menú = ordre vertical de les seccions de la portada.
 const nav = [
-  { label:'Línies de recerca', path:'#recerca', key:'research' },
+  { label:'Recerca i projectes', path:'#recerca', key:'research' },
   { label:'Publicacions', path:'#publicacions', key:'pubs' },
-  { label:'Projectes', path:'#projectes', key:'projects' },
-  { label:'Pràctica', path:'#transferencia', key:'practice' },
-  { label:'Docència', path:'#docencia', key:'teaching' },
-  { label:'GREDICS', path:'#xarxes-academiques', key:'group' },
+  { label:'Docència i transferència', path:'#transferencia', key:'practice' },
   { label:'Laboratori', path:'#laboratori', key:'lab' },
   { label:'Sobre mi', path:'#sobre-mi', key:'about' },
 ];
@@ -150,7 +147,7 @@ const nav = [
 </body>
 </html>
 <style is:global>
-:root{--paper:#FCFBF8;--white:#FFFFFF;--offwhite:#F7FBFC;--ink:#172A33;--navy:#103746;--cyan:#006C85;--cyan-dark:#00536B;--cyan-bright:#00A3BC;--red:#C53243;--red-dark:#AC2537;--red-light:#FFB7BF;--red-light-hover:#FFD1D6;--rose:#FDECEF;--rose-line:#F2D5DB;--cyan-pale:#E8F7FA;--line:#D2E2E6;--line-strong:#A4C9D2;--on-dark:#D5EDF3;--muted:#536873;--cyan-line-alpha:rgba(0,163,188,.35);--navy-alpha:rgba(16,55,70,.9);font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none;font-weight:400}
+:root{--paper:#FCFBF8;--white:#FFFFFF;--offwhite:#F7FBFC;--ink:#172A33;--navy:#103746;--cyan:#006C85;--cyan-dark:#00536B;--cyan-bright:#00A3BC;--red:#C53243;--red-dark:#AC2537;--red-light:#FFB7BF;--red-light-hover:#FFD1D6;--rose:#FDECEF;--rose-line:#F2D5DB;--cyan-pale:#E8F7FA;--line:#D2E2E6;--line-strong:#A4C9D2;--on-dark:#D5EDF3;--muted:#536873;--cyan-line-alpha:rgba(0,163,188,.35);--navy-alpha:rgba(16,55,70,.9);--type-hero:clamp(44px,6vw,84px);--type-page:clamp(45px,5.1vw,72px);--type-section:clamp(34px,4vw,50px);--type-subsection:clamp(26px,2.7vw,32px);--type-item:clamp(20px,2vw,24px);--type-detail:clamp(16px,1.5vw,20px);font-family:'DM Sans',Arial,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none;font-weight:400}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;min-width:320px}
@@ -184,9 +181,9 @@ button{font:inherit}
 .eyebrow{display:flex;align-items:center;gap:11px;font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:var(--cyan)}
 .eyebrow:before{content:'';height:8px;width:8px;flex:0 0 8px;background:var(--red);border-radius:50%}
 h1,h2,h3,h4,p{margin-top:0}
-.display{font:650 clamp(56px,6.6vw,105px)/1.04 'Manrope',Arial,sans-serif;letter-spacing:-.079em}
-.section-title{font:650 clamp(37px,4.3vw,61px)/1.11 'Manrope',Arial,sans-serif;letter-spacing:-.068em}
-.page-title{font:650 clamp(51px,6vw,83px)/1.09 'Manrope',Arial,sans-serif;letter-spacing:-.073em}
+.display{font:650 var(--type-hero)/1.04 'Manrope',Arial,sans-serif;letter-spacing:-.079em}
+.section-title{font:650 var(--type-section)/1.11 'Manrope',Arial,sans-serif;letter-spacing:-.068em}
+.page-title{font:650 var(--type-page)/1.09 'Manrope',Arial,sans-serif;letter-spacing:-.073em}
 .lead{font-size:19px;line-height:1.68;color:var(--muted)}
 .muted{color:var(--muted)}
 .mini{font-size:11px;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
@@ -202,7 +199,7 @@ h1,h2,h3,h4,p{margin-top:0}
 .section-alt{background:var(--cyan-pale)}
 .section-light{background:var(--white)}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:38px}
-.section-head h2{margin:15px 0 0}
+.section-head :is(h2,h3){margin:15px 0 0}
 .section-head p{max-width:320px;color:var(--muted);font-size:14px;line-height:1.75;margin:0}
 .site-footer{background:var(--navy);color:var(--white);padding:58px 0 65px}
 .footer-columns{display:grid;grid-template-columns:1.25fr .7fr 1fr;gap:45px}
@@ -223,10 +220,10 @@ h1,h2,h3,h4,p{margin-top:0}
 .paper-list{border-top:1px solid var(--line)}
 .paper{display:grid;grid-template-columns:85px 1fr 35px;gap:25px;border-bottom:1px solid var(--line);padding:27px 0}
 .paper .year{font:700 15px 'Manrope',sans-serif;color:var(--red)}
-.paper h3{font:650 clamp(17px,1.75vw,23px)/1.4 'Manrope',sans-serif;letter-spacing:-.035em;margin:0 0 10px}
+.paper :is(h3,h4){font:650 clamp(17px,1.75vw,23px)/1.4 'Manrope',sans-serif;letter-spacing:-.035em;margin:0 0 10px}
 .paper p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
 .paper .arrow{font-size:22px;color:var(--cyan)}
-.paper:hover h3{color:var(--cyan)}
+.paper:hover :is(h3,h4){color:var(--cyan)}
 .tag{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--cyan);text-transform:uppercase}
 @media(max-width:1180px){.desktop-contact{display:none}.desktop-nav{gap:13px}}
 @media(max-width:1040px){
@@ -239,7 +236,7 @@ h1,h2,h3,h4,p{margin-top:0}
   .mobile-nav a{padding:10px;font-size:14px}
   .footer-columns{grid-template-columns:1fr 1fr}
 }
-@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px;gap:11px}.language-picker summary{min-height:35px;min-width:46px;padding:7px 8px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:clamp(47px,11vw,75px)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
+@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px;gap:11px}.language-picker summary{min-height:35px;min-width:46px;padding:7px 8px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:var(--type-hero)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
 
 @media(max-width:360px){.wordmark .mark{display:none}.wordmark{font-size:16px}.header-content{gap:8px}}
 /* Aparició progressiva en desplaçar-se: manté el contingut llegible sense JavaScript. */

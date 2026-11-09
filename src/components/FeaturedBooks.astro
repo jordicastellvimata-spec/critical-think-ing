@@ -53,7 +53,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 <style>
 .books-showcase{padding:6px 0 36px;min-width:0}
 .books-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:0 0 20px}
-.books-heading :is(h2,h3){font:650 clamp(27px,3vw,38px)/1.1 'Manrope',sans-serif;letter-spacing:-.065em;margin:10px 0 0;color:var(--ink)}
+.books-heading :is(h2,h3){font:650 var(--type-subsection)/1.1 'Manrope',sans-serif;letter-spacing:-.065em;margin:10px 0 0;color:var(--ink)}
 /* Tres targetes equilibrades en una sola fila a l'escriptori. */
 .books-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch;min-width:0}
 .book-feature{background:var(--white);border:1px solid var(--line);display:grid;grid-template-columns:96px minmax(0,1fr);align-content:start;align-items:start;gap:15px;min-width:0;padding:18px;box-shadow:0 7px 20px rgba(20,53,67,.042);transition:transform .25s ease,box-shadow .25s ease}
@@ -79,6 +79,7 @@ const coverFor = (book) => ('coverUrl' in book && book.coverUrl) ? toLink(book.c
 .book-links a:hover{color:var(--red)}
 .book-links a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .books-compact{padding:0}
+.books-compact .books-heading :is(h2,h3){font-size:var(--type-section)}
 @media(max-width:1160px){
   .books-grid{gap:12px}
   .book-feature{grid-template-columns:86px minmax(0,1fr);padding:14px;gap:12px}

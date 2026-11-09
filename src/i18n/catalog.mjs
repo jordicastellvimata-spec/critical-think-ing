@@ -439,6 +439,21 @@ RECONEIXEMENT · 2024|||RECONOCIMIENTO · 2024|||AWARD · 2024|||DISTINCTION · 
 Premi Finanzas para Todos|||Premio Finanzas para Todos|||Finanzas para Todos Award|||Prix Finanzas para Todos
 `),
   ...block(String.raw`
+Projectes de recerca|||Proyectos de investigación|||Research projects|||Projets de recherche
+Equips i xarxes de recerca|||Equipos y redes de investigación|||Research teams and networks|||Équipes et réseaux de recherche
+Grups i xarxes de recerca|||Grupos y redes de investigación|||Research groups and networks|||Groupes et réseaux de recherche
+Docència i transferència|||Docencia y transferencia|||Teaching and knowledge exchange|||Enseignement et transfert
+Formació del professorat|||Formación del profesorado|||Teacher education|||Formation des enseignants
+Materials i projectes didàctics|||Materiales y proyectos didácticos|||Teaching materials and educational projects|||Ressources et projets pédagogiques
+Activitat editorial i dinamització acadèmica|||Actividad editorial y dinamización académica|||Editorial and academic activities|||Activités éditoriales et animation académique
+Veure tots els projectes ↗|||Ver todos los proyectos ↗|||Browse all research projects ↗|||Voir tous les projets ↗
+Consultar totes les publicacions ↗|||Consultar todas las publicaciones ↗|||Browse all publications ↗|||Consulter toutes les publications ↗
+Conèixer els fonaments del Laboratori ↗|||Conocer los fundamentos del Laboratorio ↗|||Explore the Lab foundations ↗|||Découvrir les fondements du Laboratoire ↗
+Coneix la meva trajectòria acadèmica ↗|||Conoce mi trayectoria académica ↗|||Explore my academic background ↗|||Découvrir mon parcours académique ↗
+Explorar activitats i recursos ↗|||Explorar actividades y recursos ↗|||Explore activities and resources ↗|||Explorer les activités et ressources ↗
+Tesi doctoral|||Tesis doctoral|||Doctoral thesis|||Thèse de doctorat
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
