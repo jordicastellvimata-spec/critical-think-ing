@@ -175,13 +175,34 @@ for(const file of pages){
     }
   }
 }
-if(errors.length){
- console.error('ERRORS D’ENLLAÇOS I ANCORATGES:\n'+errors.join('\n'));process.exit(1);
+// Regression checks: all four localizations must include correctly translated lab resources.
+const labTexts = {
+  ca: ['Explora les set activitats','Descobreix el llibre recomanat','Explora el llibre de GREDICS','Un recurs meravellós per treballar la multiperspectiva','Llegir el llibre complet (PDF)'],
+  es: ['Explora las siete actividades','Descubre el libro recomendado','Explora el libro de GREDICS','Un recurso maravilloso para trabajar la multiperspectiva','Leer el libro completo (PDF)'],
+  en: ['Explore the seven activities','Explore the recommended book',"Explore GREDICS's book",'A wonderful resource for teaching multiple perspectives','Read the full book (PDF)'],
+  fr: ['Découvrir les sept activités','Découvrir le livre recommandé','Découvrir le livre de GREDICS','Une ressource remarquable pour travailler la multiperspectivité','Lire le livre intégral (PDF)']
+};
+for(const locale of locales) {
+  const doc=allDocuments.get(localizedRoute('',locale));
+  if(!doc){errors.push(locale+' → no existeix la portada localitzada');continue;}
+  let textContent='';
+  walk(doc,node=>{if(node.nodeName==='#text'&&!['script','style'].includes(node.parentNode?.tagName))textContent+=' '+node.value;});
+  const normalized=norm(textContent);
+  for(const snippet of labTexts[locale]) {
+    if(!normalized.includes(snippet))errors.push(locale+' → text del laboratori pendent: '+snippet);
+  }
+  for(const id of ['questionar-allo-comu','multiperspectiva','problemes-socials-rellevants']) {
+    if(!ids.get(localizedRoute('',locale))?.has(id))errors.push(locale+' → desplegable absent: '+id);
+  }
 }
+if(errors.length){
+ console.error('ERRORS D’ENLLAÇOS, ANCORATGES O IDIOMES:\n'+errors.join('\n'));process.exit(1);
+}
+console.log('i18n: desplegables del laboratori i textos dels quatre idiomes verificats.');
 console.log('i18n: '+pages.length+' pàgines × '+locales.length+' idiomes = '+(pages.length*locales.length)+' pàgines verificades.');
 console.log('i18n: tots els enllaços interns, fitxers locals, ancoratges i enllaços externs preservats.');
 for(const locale of ['es','en','fr']) {
  const list=[...untranslated[locale]].sort();
  console.log('i18n '+locale+': '+(known.size)+' entrades de traducció; '+list.length+' textos sense correspondència explícita.');
- if(list.length)console.log('i18n '+locale+' mostres: '+list.join(' | '));
+ if(list.length)console.log('i18n '+locale+' mostres: '+list.slice(0,20).join(' | '));
 }
