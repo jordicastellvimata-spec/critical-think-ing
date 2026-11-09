@@ -36,6 +36,17 @@ jobs:
                   print('CANDIDATE',name,other.size,len(data))
               except Exception as ex:
                   print('CANDIDATE',name,'ERROR',str(ex)[:160])
+          g_url='https://books.google.com/books/content?vid=ISBN9788484523826&printsec=frontcover&img=1&zoom=4&source=gbs_api'
+          with urllib.request.urlopen(urllib.request.Request(g_url,headers={'User-Agent':'Mozilla/5.0'}),timeout=15) as response:
+              g_bytes=response.read()
+          g_image=Image.open(io.BytesIO(g_bytes))
+          print(f'Google Books exact ISBN: {g_image.size} and {len(g_bytes)} bytes')
+          g_image.thumbnail((500,720),Image.Resampling.LANCZOS)
+          preview=io.BytesIO()
+          g_image.convert('RGB').save(preview,format='JPEG',quality=80)
+          print('GOOGLE_BOOKS_BASE64_START')
+          print(base64.b64encode(preview.getvalue()).decode('ascii'))
+          print('GOOGLE_BOOKS_BASE64_END')
           img.thumbnail((350,550),Image.Resampling.LANCZOS)
           out=io.BytesIO()
           img.convert('RGB').save(out,format='JPEG',quality=80)
