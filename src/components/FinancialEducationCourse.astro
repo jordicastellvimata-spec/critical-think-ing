@@ -1,8 +1,12 @@
 <section class="financial-education" aria-labelledby="financial-education-title">
   <div class="financial-education-main">
+    <figure class="financial-education-visual">
+      <img src="https://www.fundacionico.es/documents/137403/644238/Portada%2Blibro.jpg/e570f0ed-ef88-3b60-88b6-53c0a00b6aa4?t=1759992074837" alt="Portada de la guia Educación financiera: un kit para el aula de primaria, publicada per la Fundació ICO" width="512" height="512" loading="lazy" decoding="async" />
+      <figcaption>Imatge de la Fundació ICO · Il·lustració de Miriam Sugranyes Coca</figcaption>
+    </figure>
     <span class="financial-education-eyebrow">FORMACIÓ DEL PROFESSORAT · FUNDACIÓ ICO / UB / UAB</span>
-    <h3 id="financial-education-title">Curso de educación financiera para profesorado de Primaria</h3>
-    <p>He participat com a docent en aquesta formació en línia de 40 hores, desenvolupada per la Fundació ICO, la Universitat de Barcelona i la Universitat Autònoma de Barcelona.</p>
+    <h3 id="financial-education-title">Curs de formació en educació financera per al professorat de primària</h3>
+    <p>He format part de l’equip docent del curs de formació en educació financera per a mestres d’educació primària, un programa en línia de 40 hores desenvolupat conjuntament per la Fundació ICO, la Universitat de Barcelona i la Universitat Autònoma de Barcelona.</p>
     <p>El curs parteix de situacions quotidianes —la botiga, la casa, el banc i l’escola— per treballar la presa de decisions econòmiques, el consum responsable i la ciutadania crítica a primària.</p>
     <div class="financial-education-links">
       <a href="https://www.fundacionico.es/curso-de-educaci%C3%B3n-financiera-para-profesores-de-primaria" target="_blank" rel="noopener noreferrer">Web oficial del curs ↗</a>
@@ -17,7 +21,11 @@
 
 <style>
 .financial-education{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,230px);gap:26px;align-items:stretch;border:1px solid var(--line);background:var(--cyan-pale);margin:28px 0 16px;padding:26px}
-.financial-education-main{min-width:0;align-self:center}
+.financial-education-main{min-width:0;align-self:center;display:flow-root}
+.financial-education-visual{float:right;width:clamp(150px,31%,205px);margin:0 0 12px 24px}
+.financial-education-visual img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#eef5f5;border:1px solid var(--line)}
+.financial-education-visual figcaption{margin-top:7px;font-size:9px;line-height:1.45;color:var(--muted)}
+
 .financial-education-eyebrow{display:block;color:var(--red);font-size:10px;letter-spacing:.08em;line-height:1.5;font-weight:800;margin-bottom:12px}
 .financial-education h3{font:650 clamp(21px,2.4vw,29px)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:0 0 14px;color:var(--ink)}
 .financial-education p{font-size:13px;line-height:1.7;color:var(--muted);margin:9px 0;max-width:770px}
@@ -32,6 +40,6 @@
 .financial-education-award{padding-top:18px;border-top:1px solid rgba(255,255,255,.24);display:flex;flex-direction:column;gap:7px}
 .financial-education-award span{color:var(--red-light);font-size:9px;font-weight:800;letter-spacing:.1em}
 .financial-education-award strong{color:var(--white);font:650 15px/1.4 'Manrope',sans-serif}
-@media(max-width:760px){.financial-education{grid-template-columns:1fr;padding:20px;gap:20px}.financial-education-side{flex-direction:row;justify-content:space-between;gap:20px;align-items:center}.financial-education-award{border-top:0;border-left:1px solid rgba(255,255,255,.24);padding-top:0;padding-left:16px;max-width:190px}.financial-education-hours strong{font-size:32px}}
+@media(max-width:760px){.financial-education-visual{float:none;width:min(100%,260px);margin:0 0 20px}.financial-education{grid-template-columns:1fr;padding:20px;gap:20px}.financial-education-side{flex-direction:row;justify-content:space-between;gap:20px;align-items:center}.financial-education-award{border-top:0;border-left:1px solid rgba(255,255,255,.24);padding-top:0;padding-left:16px;max-width:190px}.financial-education-hours strong{font-size:32px}}
 @media(max-width:400px){.financial-education-side{flex-direction:column;align-items:flex-start}.financial-education-award{border-top:1px solid rgba(255,255,255,.24);border-left:0;padding:12px 0 0;max-width:none}}
 </style>
