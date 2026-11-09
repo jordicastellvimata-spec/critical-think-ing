@@ -1,3 +1,7 @@
+---
+const { nested = false } = Astro.props;
+const Heading = nested ? "h4" : "h3";
+---
 <section class="financial-education" aria-labelledby="financial-education-title">
   <div class="financial-education-main">
     <figure class="financial-education-visual">
@@ -5,7 +9,7 @@
       <figcaption>Imatge de la Fundació ICO · Il·lustració de Miriam Sugranyes Coca</figcaption>
     </figure>
     <span class="financial-education-eyebrow">FORMACIÓ DEL PROFESSORAT · FUNDACIÓ ICO / UB / UAB</span>
-    <h3 id="financial-education-title">Curs de formació en educació financera per al professorat de primària</h3>
+    <Heading id="financial-education-title">Curs de formació en educació financera per al professorat de primària</Heading>
     <p>He format part de l’equip docent del curs de formació en educació financera per a mestres d’educació primària, un programa en línia de 40 hores desenvolupat conjuntament per la Fundació ICO, la Universitat de Barcelona i la Universitat Autònoma de Barcelona.</p>
     <p>El curs parteix de situacions quotidianes —la botiga, la casa, el banc i l’escola— per treballar la presa de decisions econòmiques, el consum responsable i la ciutadania crítica a primària.</p>
     <div class="financial-education-links">
@@ -27,7 +31,7 @@
 .financial-education-visual figcaption{margin-top:7px;font-size:9px;line-height:1.45;color:var(--muted)}
 
 .financial-education-eyebrow{display:block;color:var(--red);font-size:10px;letter-spacing:.08em;line-height:1.5;font-weight:800;margin-bottom:12px}
-.financial-education h3{font:650 clamp(21px,2.4vw,29px)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:0 0 14px;color:var(--ink)}
+.financial-education :is(h3,h4){font:650 var(--type-item)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:0 0 14px;color:var(--ink)}
 .financial-education p{font-size:13px;line-height:1.7;color:var(--muted);margin:9px 0;max-width:770px}
 .financial-education-links{display:flex;flex-wrap:wrap;gap:12px 21px;margin-top:18px}
 .financial-education-links a{font-size:12px;font-weight:800;line-height:1.5;color:var(--cyan);text-decoration:underline;text-underline-offset:4px}
