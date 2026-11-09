@@ -33,40 +33,6 @@ jobs:
             ROLLUP_VERSION=$(node -p "require('./node_modules/rollup/package.json').version")
             npm install --no-save --no-audit --no-fund "@rollup/rollup-linux-x64-gnu@$ROLLUP_VERSION"
           fi
-      - name: Prepare a sharper original book cover
-        shell: bash
-        run: |
-          python -m pip install -q Pillow
-          python - <<'PY'
-          import io, os, urllib.request
-          from PIL import Image, ImageFilter
-          sizes = ['s12','s11','s10','s9','s8','s7']
-          options = []
-          for size in sizes:
-              url = f'https://imagessl.casadellibro.com/a/l/{size}/26/9788484523826.webp'
-              try:
-                  req = urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; educational website cover preview)'})
-                  with urllib.request.urlopen(req,timeout=9) as response:
-                      data = response.read(4000000)
-                  img = Image.open(io.BytesIO(data))
-                  img.load()
-                  if min(img.size) < 100: continue
-                  print(f'Cover candidate {size}: {img.width}x{img.height}, {len(data)} bytes')
-                  options.append((img.width*img.height,size,img))
-              except Exception as ex:
-                  print(f'Cover candidate {size} unavailable: {type(ex).__name__}: {ex}')
-          if not options:
-              print('No usable original cover available; leaving existing remote cover unchanged.')
-          else:
-              _, selected, img = max(options,key=lambda x:x[0])
-              img = img.convert('RGB')
-              if img.width < 900:
-                  img = img.resize((900,round(img.height*900/img.width)),Image.Resampling.LANCZOS)
-                  img = img.filter(ImageFilter.UnsharpMask(radius=1.1,percent=115,threshold=3))
-              os.makedirs('public/images',exist_ok=True)
-              img.save('public/images/historia-altre-cover.webp','WEBP',quality=93,method=6)
-              print(f'Selected {selected}; optimized file: {img.width}x{img.height}')
-          PY
       - name: Build Astro site
         run: npm run build
       - name: Upload Pages artifact
