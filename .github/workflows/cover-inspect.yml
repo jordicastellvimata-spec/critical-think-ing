@@ -19,6 +19,23 @@ jobs:
               payload=response.read()
           img=Image.open(io.BytesIO(payload))
           print(f'Dimensions original cover {img.width}x{img.height}; {len(payload)} bytes')
+          candidates={
+           'openlibrary': 'https://covers.openlibrary.org/b/isbn/9788484523826-L.jpg?default=false',
+           'google_books_0': 'https://books.google.com/books/content?vid=ISBN9788484523826&printsec=frontcover&img=1&zoom=2&source=gbs_api',
+           'google_books_1': 'https://books.google.com/books/content?vid=ISBN9788484523826&printsec=frontcover&img=1&zoom=4&source=gbs_api',
+           'agapea': 'https://www.agapea.com/portadas/9788484523826-i.jpg',
+           'cdl_jpg': 'https://imagessl.casadellibro.com/a/l/s7/26/9788484523826.jpg',
+           'cdl_largerjpg': 'https://imagessl.casadellibro.com/a/l/s8/26/9788484523826.jpg',
+           'amazon': 'https://images-na.ssl-images-amazon.com/images/P/8484523829.01.LZZZZZZZ.jpg',
+          }
+          for name,url in candidates.items():
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=7) as res:
+                      data=res.read(6000000)
+                  other=Image.open(io.BytesIO(data))
+                  print('CANDIDATE',name,other.size,len(data))
+              except Exception as ex:
+                  print('CANDIDATE',name,'ERROR',str(ex)[:160])
           img.thumbnail((350,550),Image.Resampling.LANCZOS)
           out=io.BytesIO()
           img.convert('RGB').save(out,format='JPEG',quality=80)
