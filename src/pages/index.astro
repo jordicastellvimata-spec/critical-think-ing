@@ -24,7 +24,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy scroll-cinematic-hero">
-        <div class="eyebrow">Jordi Castellví Mata · Universitat Autònoma de Barcelona</div>
+        <div class="eyebrow hero-eyebrow"><span class="hero-eyebrow-content"><span class="hero-eyebrow-name">Jordi Castellví Mata</span><span class="hero-eyebrow-separator"> · </span><span class="hero-eyebrow-university">Universitat Autònoma de Barcelona</span></span></div>
         <h1 class="display">Llegir el món.<br /><span>Escriure el futur.</span></h1>
         <p class="lead">Investigo com l'educació pot ajudar-nos a qüestionar allò que donem per fet, comprendre críticament el present i imaginar futurs més justos.</p>
         <HeroSocialLinks />
@@ -349,6 +349,12 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .hero-grid{display:block;padding-top:clamp(95px,9vw,154px);padding-bottom:clamp(84px,8vw,140px)}
 .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .hero-copy .eyebrow{justify-content:center}
+@media(max-width:760px){
+  .hero-copy .hero-eyebrow{width:100%;align-items:flex-start;gap:8px;font-size:clamp(9px,2.65vw,11px);letter-spacing:.12em}
+  .hero-eyebrow-name,.hero-eyebrow-university{display:block;white-space:nowrap}
+  .hero-eyebrow-separator{display:none}
+  .hero-copy .hero-eyebrow::before{margin-top:6px}
+}
 .hero h1{font:650 var(--type-hero)/1.04 'Manrope',Arial,sans-serif;letter-spacing:-.079em;margin:34px 0 32px;white-space:normal;text-wrap:balance}
 .hero h1 span{color:var(--red)}
 .hero .lead{max-width:800px;font-size:clamp(18px,1.55vw,22px);line-height:1.65;margin-inline:auto}
