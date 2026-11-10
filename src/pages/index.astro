@@ -142,7 +142,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         </div>
       </details>
       <p class="list-foot"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a></p>
-      <div class="scientific-output-divider"><ThesisSpotlight /></div>
       <div class="editorial-section editorial-in-publications" id="activitat-editorial">
       <div class="section-head">
         <div><div class="eyebrow">Edició científica · Formació · Jornades</div><h3 class="subsection-title">Edició científica i Jornades</h3></div>
@@ -349,6 +348,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       </div>
     </div>
     <div class="container"><p class="section-deeper-wrap"><a class="section-deeper-link" href={to("sobre-mi/")}>Coneix la meva trajectòria acadèmica ↗</a></p></div>
+    <div class="container thesis-personal"><ThesisSpotlight /></div>
   </section>
 
 <section class="contact-strip" id="contacte">
@@ -359,7 +359,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 /* Reordered existing material under the six narrative sections. */
 .editorial-in-publications{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);background:transparent}
 .editorial-in-publications .editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.scientific-output-divider{margin:45px 0 0;border-top:1px solid var(--line);padding-top:30px}
+.thesis-personal{margin-top:38px}
 .classroom-section{background:var(--white)}
 .classroom-section .practice-materials{margin-top:0}
 .classroom-section .section-head{margin-bottom:34px}
