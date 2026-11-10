@@ -1,12 +1,13 @@
 ---
 import { teachingVideos } from '../data/teachingVideos';
+const { embedded = false } = Astro.props;
 ---
-<section class="section videos-section" id="docencia" aria-labelledby="videos-heading">
+<section class:list={["section videos-section", {embedded}]} id="docencia" aria-labelledby="videos-heading">
   <div class="container">
     <div class="section-head">
       <div>
         <div class="eyebrow">FORMACIÓ DE MESTRES · UNIVERSITAT OBERTA DE CATALUNYA</div>
-        <h3 class="subsection-title" id="videos-heading">Recursos de didàctica<br />de les ciències socials · <span class="uoc-title-accent">UOC</span></h3>
+        <h4 class="subsection-title" id="videos-heading">Recursos de didàctica<br />de les ciències socials · <span class="uoc-title-accent">UOC</span></h4>
       </div>
       <p>Entre 2021 i 2024 vaig contribuir a la creació del grau d’Educació Primària de la UOC amb el disseny de dues assignatures noves —«Ciències Socials i Ciutadania» i «Didàctica de les Ciències Socials»— i l’elaboració d’orientacions curriculars, materials d’aprenentatge i recursos audiovisuals.</p>
     </div>
@@ -36,7 +37,7 @@ import { teachingVideos } from '../data/teachingVideos';
           </div>
           <div class="video-content">
             <div class="video-kicker">RECURS AUDIOVISUAL · UOC · {video.category}</div>
-            <h4>{video.title}</h4>
+            <h5>{video.title}</h5>
             <p>{video.detail}</p>
             <a class="video-external" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={'Obre a YouTube: ' + video.title}>
               Veure a YouTube <span aria-hidden="true">↗</span>
@@ -69,6 +70,10 @@ import { teachingVideos } from '../data/teachingVideos';
 </script>
 
 <style>
+.videos-section.embedded{padding:0;background:transparent}
+.videos-section.embedded .container{width:100%;max-width:none;margin:0}
+.videos-section.embedded .section-head{margin-bottom:26px}
+.videos-section.embedded .subsection-title{font-size:var(--type-item)}
 .videos-section .subsection-title{font:650 var(--type-subsection)/1.17 "Manrope",sans-serif;letter-spacing:-.055em;margin:12px 0 23px}
 .videos-section{background:var(--white)}
 .videos-section .uoc-title-accent{color:var(--cyan)}
@@ -86,11 +91,11 @@ import { teachingVideos } from '../data/teachingVideos';
 .video-index{position:absolute;right:16px;top:16px;background:var(--navy-alpha);padding:8px 10px;font:800 10px/1 'Manrope',sans-serif;letter-spacing:.12em}
 .video-content{padding:26px 29px 29px}
 .video-kicker{font-size:10px;font-weight:800;letter-spacing:.11em;color:var(--cyan);line-height:1.55}
-.video-content h4{font:650 var(--type-item)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;color:var(--ink);margin:16px 0 10px}
+.video-content h5{font:650 var(--type-item)/1.23 'Manrope',sans-serif;letter-spacing:-.047em;color:var(--ink);margin:16px 0 10px}
 .video-content p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:20px}
 .video-external{display:inline-flex;gap:13px;align-items:center;color:var(--cyan);font-size:12px;font-weight:800;border-bottom:1px solid currentColor;padding-bottom:5px}
 .video-external:hover{color:var(--red)}
 .video-frame :global(.video-iframe){width:100%;height:100%;position:absolute;inset:0;border:0;display:block}
-@media(max-width:760px){.video-grid{grid-template-columns:1fr;gap:17px}.video-content{padding:22px}.video-content h4{font-size:23px}.video-play-icon{width:61px;height:61px}}
+@media(max-width:760px){.video-grid{grid-template-columns:1fr;gap:17px}.video-content{padding:22px}.video-content h5{font-size:23px}.video-play-icon{width:61px;height:61px}}
 @media(prefers-reduced-motion:reduce){.video-poster img,.video-play-icon,.video-card{transition:none}}
 </style>

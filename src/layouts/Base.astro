@@ -34,9 +34,10 @@ const url = (p='') => root + '/' + p.replace(/^\//,'');
 // Navegació principal en una sola pàgina; les subpàgines continuen accessibles com a arxiu.
 // Ordre del menú = ordre vertical de les seccions de la portada.
 const nav = [
-  { label:'Recerca i projectes', path:'#recerca', key:'research' },
+  { label:'Recerca', path:'#recerca', key:'research' },
   { label:'Publicacions', path:'#publicacions', key:'pubs' },
-  { label:'Docència i transferència', path:'#transferencia', key:'practice' },
+  { label:'Formació de mestres', path:'#transferencia', key:'practice' },
+  { label:'A les aules', path:'#aules', key:'classrooms' },
   { label:'Laboratori', path:'#laboratori', key:'lab' },
   { label:'Sobre mi', path:'#sobre-mi', key:'about' },
 ];

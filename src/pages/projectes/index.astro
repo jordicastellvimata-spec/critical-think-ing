@@ -11,20 +11,20 @@ const root=import.meta.env.BASE_URL.replace(/\/$/,''); const to=(s='')=>root+'/'
     <div class="research-list">{researchProjects.map(p=><article class="research-item"><div class="research-year"><strong>{p.period}</strong><span>{p.status}</span></div><div><span class="tag">{p.code}</span><h3>{p.title}</h3><p>{p.description}</p><small>{p.role}</small></div></article>)}</div>
     <div class="group-box"><div class="group-identity"><img class="group-logo" src={to('images/gredics-logo.svg')} alt="Logotip de GREDICS" width="654" height="180" loading="lazy" decoding="async" /><div><span class="mini">Grup de recerca · UAB</span><h3>GREDICS</h3><p>Grup de Recerca en Didàctica de les Ciències Socials de la Universitat Autònoma de Barcelona.</p></div></div><a class="btn" href={profile.gredics} target="_blank" rel="noopener noreferrer">Visitar GREDICS ↗</a></div>
   </div></section>
+  <section class="section"><div class="container">
+    <div class="section-head"><div><div class="eyebrow">Edició científica · Formació · Jornades</div><h2 class="section-title">Edició científica i Jornades</h2></div></div>
+    <div class="initiative-list">
+      {otherInitiatives.filter((_, i) => i !== 1).map(item=><article class="initiative-card"><span class="mini">{item.eyebrow}</span><h3>{item.title}</h3><p class="subtitle">{item.subtitle}</p><p>{item.description}</p><a class="text-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkText} ↗</a></article>)}
+      <article class="initiative-card jornades-project"><span class="mini">ORGANITZACIÓ ACADÈMICA · 2027</span><h3>{jornades2027.edition} Jornades Internacionals de Recerca en Didàctica de les Ciències Socials</h3><p class="subtitle">{jornades2027.dates} · Universitat Autònoma de Barcelona</p><p><strong>{jornades2027.theme}</strong><br/>{jornades2027.subtitle}.</p><p>Coordinació amb Neus González-Monfort i Mónica Hernández González.</p><a class="text-link" href={jornades2027.url} target="_blank" rel="noopener noreferrer">Web de les Jornades ↗</a></article>
+    </div>
+  </div></section>
   <section class="section section-alt"><div class="container">
-    <div class="section-head"><div><div class="eyebrow">Edició científica · Formació · Jornades</div><h2 class="section-title">Formació del professorat</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">Edició científica · Formació · Jornades</div><h2 class="section-title">Formació permanent</h2></div></div>
     <div class="initiative-list">
       {otherInitiatives.slice(1,2).map(item=><article class="initiative-card"><span class="mini">{item.eyebrow}</span><h3>{item.title}</h3><p class="subtitle">{item.subtitle}</p><p>{item.description}</p><a class="text-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkText} ↗</a></article>)}
       
     </div>
     <FinancialEducationCourse />
-  </div></section>
-  <section class="section"><div class="container">
-    <div class="section-head"><div><div class="eyebrow">Edició científica · Formació · Jornades</div><h2 class="section-title">Activitat editorial i dinamització acadèmica</h2></div></div>
-    <div class="initiative-list">
-      {otherInitiatives.filter((_, i) => i !== 1).map(item=><article class="initiative-card"><span class="mini">{item.eyebrow}</span><h3>{item.title}</h3><p class="subtitle">{item.subtitle}</p><p>{item.description}</p><a class="text-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkText} ↗</a></article>)}
-      <article class="initiative-card jornades-project"><span class="mini">ORGANITZACIÓ ACADÈMICA · 2027</span><h3>{jornades2027.edition} Jornades Internacionals de Recerca en Didàctica de les Ciències Socials</h3><p class="subtitle">{jornades2027.dates} · Universitat Autònoma de Barcelona</p><p><strong>{jornades2027.theme}</strong><br/>{jornades2027.subtitle}.</p><p>Coordinació amb Neus González-Monfort i Mónica Hernández González.</p><a class="text-link" href={jornades2027.url} target="_blank" rel="noopener noreferrer">Web de les Jornades ↗</a></article>
-    </div>
   </div></section>
 </Base>
 <style>
