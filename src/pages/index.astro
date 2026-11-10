@@ -5,6 +5,8 @@ import FeaturedBooks from '../components/FeaturedBooks.astro';
 import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
 import PracticeMaterials from '../components/PracticeMaterials.astro';
 import ThesisSpotlight from '../components/ThesisSpotlight.astro';
+import EditorialActivities from '../components/EditorialActivities.astro';
+import ScientificConferences from '../components/ScientificConferences.astro';
 import TeacherResources from '../components/TeacherResources.astro';
 import DiscoProject from '../components/DiscoProject.astro';
 import FinancialEducationCourse from '../components/FinancialEducationCourse.astro';
@@ -43,7 +45,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 <section class="section topics-section" id="recerca">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Àmbit de recerca · Didàctica de les ciències socials</div><h2 class="section-title">Idees que es converteixen en recerca.</h2><h3 class="subsection-title topic-subtitle">Línies de recerca</h3></div>
+        <div><div class="eyebrow">Àmbit de recerca · Didàctica de les ciències socials</div><h2 class="section-title">Idees que es converteixen en <span class="section-cyan">recerca.</span></h2><h3 class="subsection-title topic-subtitle">Línies de recerca</h3></div>
         <p>Investigo com interpretem el món social i com l’educació pot ajudar a qüestionar discursos i formar una ciutadania crítica.</p>
       </div>
       <div class="topics-grid">
@@ -123,7 +125,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 <section class="section section-alt" id="publicacions">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Producció científica · Publicacions acadèmiques</div><h2 class="section-title">Recerca que connecta amb la pràctica.</h2></div>
+        <div><div class="eyebrow">Producció científica · Publicacions acadèmiques</div><h2 class="section-title">Recerca que connecta amb la <span class="section-cyan">pràctica.</span></h2></div>
       </div>
       <FeaturedBooks />
       <h3 class="articles-section-title">Articles de recerca</h3>
@@ -142,48 +144,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         </div>
       </details>
       <p class="list-foot"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a></p>
-      <div class="editorial-section editorial-in-publications" id="activitat-editorial">
-      <div class="section-head">
-        <div><div class="eyebrow">Edició científica · Formació · Jornades</div><h3 class="subsection-title">Edició científica i Jornades</h3></div>
-      </div>
-      <div class="editorial-grid">
-        <a class="initiative editorial-research" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
-          <span>EDICIÓ CIENTÍFICA · DISCOVER EDUCATION</span>
-          <div class="research-editorial-content">
-            <div class="discover-cover" aria-label="Portada de la revista Discover Education, de Springer Nature">
-              <span class="discover-cover-fallback" aria-hidden="true">Discover<br />Education</span>
-              <img src="https://media.springernature.com/w500/springer-static/cover/journal/44217.jpg" alt="Portada de la revista Discover Education (Springer Nature)" loading="lazy" decoding="async" onerror="this.style.display='none'" />
-            </div>
-            <h4>{otherInitiatives[0].title}</h4>
-            <p>{otherInitiatives[0].subtitle}</p>
-            <p class="editorial-description">Perspectives crítiques sobre educació, democràcia i justícia social.</p>
-          </div>
-          <strong>Descobrir la col·lecció temàtica ↗</strong>
-        </a>
-        <article class="network-feature eccss-feature">
-          <div class="eccss-cover-frame">
-            <img src="https://www.uab.cat/ca/didactica-llengua-literatura-ciencies-socials/img/r/revista.jpg" alt="Portada de la revista Enseñanza de las Ciencias Sociales, número 23(1), 2025" loading="lazy" decoding="async"/>
-          </div>
-          <div class="eccss-content">
-            <div class="network-topline">REVISTA CIENTÍFICA · ACTIVITAT EDITORIAL</div>
-            <h4>Enseñanza de las Ciencias Sociales</h4>
-            <p>Revista d'investigació en didàctica de la geografia, la història i les ciències socials. Hi participo com a director adjunt.</p>
-            <a href={otherInitiatives[2].url} target="_blank" rel="noopener noreferrer">Visitar la revista ↗</a>
-          </div>
-        </article>
-        <a class="practice-card practice-jornades" href={jornades2027.url} target="_blank" rel="noopener noreferrer">
-            <span class="mini">JORNADES INTERNACIONALS · UAB</span>
-            <div class="practice-event-visual"><div class="practice-event-date"><strong>{jornades2027.edition}</strong><span>27–29 GENER<br />2027 · UAB</span></div><span class="practice-event-art"><img src="https://www.uab.cat/ca/didactica-llengua-literatura-ciencies-socials/img/illustracio-tres-columnes-classiques-grups-persones-central-soste-planeta-terra-color-laterals-apareixen-blanc-negre-simbolitzant-leducacio-social-diversitat-global/opcio.jpg" alt="Imatge original de les Jornades: la Terra damunt una columna i un grup de persones" width="500" height="277" loading="lazy" decoding="async" /></span></div>
-            <div class="practice-card-copy">
-              <h4>XXIII Jornades Internacionals de Recerca en Didàctica de les Ciències Socials</h4>
-              <p><strong>{jornades2027.theme}.</strong> {jornades2027.subtitle}.</p>
-              <p>Coordinació de les Jornades de Didàctica de les Ciències Socials a la UAB.</p>
-              <strong>Web de les Jornades ↗</strong>
-            </div>
-          </a>
-      </div>
-
-      </div>
+      <EditorialActivities />
+      <ScientificConferences />
     </div>
   </section>
 
@@ -218,7 +180,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       <div class="section-head">
         <div>
           <div class="eyebrow">Materials curriculars i projectes educatius</div>
-          <h2 class="section-title">Transferència a les aules.</h2>
+          <h2 class="section-title">Transferència a les <span class="section-cyan">aules.</span></h2>
         </div>
       </div>
       <PracticeMaterials />
@@ -356,6 +318,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   </section>
 </Base>
 <style>
+.section-cyan{color:var(--cyan)}
 /* Reordered existing material under the six narrative sections. */
 .editorial-in-publications{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);background:transparent}
 .editorial-in-publications .editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}

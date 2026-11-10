@@ -1,0 +1,84 @@
+---
+import {jornades2027} from '../data/site';
+const {standalone = false} = Astro.props;
+const Heading = standalone ? 'h2' : 'h3';
+const CardHeading = standalone ? 'h3' : 'h4';
+---
+<div class:list={['academic-congresses',{standalone}]} id={standalone ? undefined : 'congressos-cientifics'}>
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Jornades · Recerca · Comunitat acadèmica</div>
+      <Heading class={standalone ? 'section-title' : 'subsection-title'}>Congressos <span class="congress-accent">científics.</span></Heading>
+    </div>
+  </div>
+  <div class="congress-grid">
+    <a class="scientific-event-card" href={jornades2027.url} target="_blank" rel="noopener noreferrer">
+      <div class="scientific-event-visual jornades-visual">
+        <div class="scientific-event-date">
+          <strong>{jornades2027.edition}</strong>
+          <span>27–29 GENER<br />2027 · UAB</span>
+        </div>
+        <img src="https://www.uab.cat/ca/didactica-llengua-literatura-ciencies-socials/img/illustracio-tres-columnes-classiques-grups-persones-central-soste-planeta-terra-color-laterals-apareixen-blanc-negre-simbolitzant-leducacio-social-diversitat-global/opcio.jpg" alt="Imatge original de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials" width="500" height="277" loading="lazy" decoding="async" />
+      </div>
+      <div class="scientific-event-copy">
+        <span class="event-kicker">JORNADES INTERNACIONALS · UAB</span>
+        <CardHeading>XXIII Jornades Internacionals de Recerca en Didàctica de les Ciències Socials</CardHeading>
+        <p><strong>{jornades2027.theme}.</strong> {jornades2027.subtitle}.</p>
+        <p>Coordinació de les Jornades de Didàctica de les Ciències Socials a la UAB.</p>
+        <span class="event-link">Web de les Jornades ↗</span>
+      </div>
+    </a>
+    <a class="scientific-event-card" href="https://red14.net/red14-impulsa/" target="_blank" rel="noopener noreferrer">
+      <div class="scientific-event-visual impulsa-visual">
+        <div class="impulsa-logo-area">
+          <span class="impulsa-red14-fallback" aria-hidden="true">Red<span>14</span></span>
+          <img src="https://red14.net/wp-content/uploads/2023/10/red14logo.png" alt="Logotip de Red14" width="320" height="120" loading="lazy" decoding="async" onerror="this.style.display='none';this.previousElementSibling.style.display='inline-block'" />
+        </div>
+        <div class="impulsa-visual-lettering">
+          <strong>IMPULSA</strong>
+          <span>RECERCA · FORMACIÓ · INTERCANVI</span>
+        </div>
+      </div>
+      <div class="scientific-event-copy">
+        <span class="event-kicker">JORNADES RED14 IMPULSA</span>
+        <CardHeading>Red14 IMPULSA</CardHeading>
+        <p>Jornades de metodologia de la recerca en didàctica de les ciències socials, adreçades especialment a doctorands i investigadors novells.</p>
+        <p>Col·laboració en la preparació d'un taller sobre intel·ligència artificial aplicada a la recerca en didàctica de les ciències socials.</p>
+        <span class="event-link">Conèixer Red14 IMPULSA ↗</span>
+      </div>
+    </a>
+  </div>
+</div>
+<style>
+.academic-congresses{margin-top:55px;padding-top:37px;border-top:1px solid var(--line)}
+.academic-congresses.standalone{margin-top:53px}
+.academic-congresses .section-head{margin-bottom:25px}
+.academic-congresses .subsection-title{font:650 var(--type-subsection)/1.17 'Manrope',sans-serif;letter-spacing:-.055em;margin:13px 0 0}
+.congress-accent{color:var(--cyan)}
+.congress-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.scientific-event-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid var(--line);background:var(--white);text-decoration:none;transition:box-shadow .22s ease}
+.scientific-event-card:hover{box-shadow:0 12px 30px rgba(19,50,72,.08)}
+.scientific-event-card:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.scientific-event-visual{position:relative;height:215px;padding:25px 31px;display:flex;align-items:center;justify-content:space-between;gap:14px;overflow:hidden}
+.jornades-visual{background:var(--rose)}
+.jornades-visual img{display:block;width:42%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:multiply}
+.scientific-event-date{display:flex;flex-direction:column;gap:9px}
+.scientific-event-date strong{font:800 clamp(65px,6vw,92px)/.95 'Manrope',sans-serif;letter-spacing:-.095em;color:var(--red)}
+.scientific-event-date span{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.08em;line-height:1.55}
+.impulsa-visual{background:#e2eff2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px}
+.impulsa-logo-area{min-height:40px;display:flex;align-items:center}
+.impulsa-logo-area img{width:auto;max-width:165px;max-height:57px;object-fit:contain}
+.impulsa-red14-fallback{display:none;color:var(--navy);font:800 30px/1 'Manrope',sans-serif;letter-spacing:-.08em}
+.impulsa-red14-fallback span{color:var(--red)}
+.impulsa-visual-lettering{display:flex;flex-direction:column;gap:7px}
+.impulsa-visual-lettering strong{font:800 clamp(33px,4.1vw,57px)/1 'Manrope',sans-serif;letter-spacing:-.075em;color:var(--navy)}
+.impulsa-visual-lettering span{font:800 9px/1.5 'DM Sans',sans-serif;letter-spacing:.14em;color:var(--cyan)}
+.scientific-event-copy{padding:29px 31px 30px;display:flex;flex-direction:column;align-items:flex-start;flex:1;gap:0}
+.event-kicker{font-size:10px;font-weight:800;letter-spacing:.13em;color:var(--cyan);line-height:1.6}
+.scientific-event-copy :is(h3,h4){font:650 var(--type-item)/1.24 'Manrope',sans-serif;letter-spacing:-.048em;margin:18px 0 12px;color:var(--ink)}
+.scientific-event-copy p{font-size:14px;color:var(--muted);line-height:1.73;margin:0 0 12px}
+.scientific-event-copy p strong{color:var(--ink)}
+.event-link{font-size:12px;font-weight:800;color:var(--cyan);border-bottom:1px solid currentColor;margin-top:auto;padding-top:16px;padding-bottom:4px}
+@media(max-width:760px){.congress-grid{grid-template-columns:minmax(0,1fr)}.scientific-event-visual{height:195px;padding:22px 23px}.scientific-event-copy{padding:24px 23px}.academic-congresses{margin-top:42px}}
+@media(prefers-reduced-motion:reduce){.scientific-event-card{transition:none}}
+</style>
