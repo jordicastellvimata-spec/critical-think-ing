@@ -102,6 +102,19 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             <a href={profile.gredicsProfile} target="_blank" rel="noopener noreferrer">El meu perfil ↗</a>
           </div>
         </article>
+        <article class="network-feature red14-feature">
+          <div class="network-topline">XARXA DE RECERCA · DIDÀCTICA DE LES CIÈNCIES SOCIALS</div>
+          <div class="red14-logo-holder">
+            <span class="red14-logo-fallback" aria-hidden="true">Red<span>14</span></span>
+            <img src="https://red14.net/wp-content/uploads/2023/10/red14logo.png" alt="Logotip de Red14, xarxa d'investigació en ensenyament de les ciències socials" width="320" height="110" loading="lazy" decoding="async" onerror="this.style.display='none';this.previousElementSibling.style.display='block'" />
+          </div>
+          <h4>Red14 · Xarxa d'investigació en ensenyament de les ciències socials</h4>
+          <p>Formo part de Red14 a través de GREDICS, un dels grups integrants de la xarxa. Constituïda el 2014, reuneix equips de recerca de diverses universitats de l’Estat espanyol per impulsar la col·laboració científica, la formació d’investigadors i la transferència del coneixement al professorat.</p>
+          <div class="network-actions">
+            <a href="https://red14.net/" target="_blank" rel="noopener noreferrer">Web de Red14 ↗</a>
+            <a href="https://red14.net/grupos/" target="_blank" rel="noopener noreferrer">Grups de la xarxa ↗</a>
+          </div>
+        </article>
         
       </div>
     </div>
@@ -117,8 +130,18 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       <div class="paper-list">
         {publications.slice(0,5).map(p=><a class="paper paper-visual" href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.title + '. Obrir la publicació'}><span class="year">{p.year}</span><JournalCover venue={p.venue}/><div class="paper-copy"><div class="tag">{p.venue} <span class="pub-type">· {p.indexing.join(' · ')}</span></div><h4>{p.title}</h4><p>{p.authors}</p></div><span class="arrow" aria-hidden="true">↗</span></a>)}
       </div>
+      <details class="publication-disclosure">
+        <summary class="publication-disclosure-trigger">
+          <span class="publication-label-more">Mostra tots els articles</span>
+          <span class="publication-label-less">Mostra menys articles</span>
+          <span class="publication-disclosure-count">({publications.length})</span>
+          <span class="publication-disclosure-icon" aria-hidden="true">+</span>
+        </summary>
+        <div class="paper-list publication-extra-list">
+          {publications.slice(5).map(p=><a class="paper paper-visual" href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.title + '. Obrir la publicació'}><span class="year">{p.year}</span><JournalCover venue={p.venue}/><div class="paper-copy"><div class="tag">{p.venue} <span class="pub-type">· {p.indexing.join(' · ')}</span></div><h4>{p.title}</h4><p>{p.authors}</p></div><span class="arrow" aria-hidden="true">↗</span></a>)}
+        </div>
+      </details>
       <p class="list-foot"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a></p>
-      <p class="section-deeper-wrap"><a class="section-deeper-link" href={to("publicacions/")}>Consultar totes les publicacions ↗</a></p>
       <div class="scientific-output-divider"><ThesisSpotlight /></div>
       <div class="editorial-section editorial-in-publications" id="activitat-editorial">
       <div class="section-head">
@@ -718,6 +741,28 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-banner .section-deeper-link:hover{color:var(--white)}
 @media(max-width:1080px){.editorial-section .editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.editorial-section .editorial-grid{grid-template-columns:minmax(0,1fr)}}
+/* Els articles continuen disponibles a la portada sense carregar una altra pàgina. */
+.publication-disclosure{margin:20px 0 0;border-bottom:1px solid var(--line)}
+.publication-disclosure-trigger{display:flex;align-items:center;gap:10px;min-height:54px;padding:10px 4px;cursor:pointer;list-style:none;color:var(--cyan);font-size:14px;font-weight:800;transition:color .2s}
+.publication-disclosure-trigger::-webkit-details-marker{display:none}
+.publication-disclosure-trigger:hover{color:var(--red)}
+.publication-disclosure-trigger:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.publication-disclosure-count{font-size:12px;color:var(--muted);font-weight:600}
+.publication-disclosure-icon{display:grid;place-items:center;margin-left:auto;width:30px;height:30px;font-size:24px;font-weight:500;transition:transform .2s}
+.publication-label-less,.publication-disclosure[open] .publication-label-more{display:none}
+.publication-disclosure[open] .publication-label-less{display:inline}
+.publication-disclosure[open] .publication-disclosure-icon{transform:rotate(45deg)}
+.publication-extra-list{margin-top:6px}
+.red14-feature{display:flex;flex-direction:column;padding:34px 39px;background:var(--offwhite)}
+.red14-logo-holder{position:relative;display:flex;align-items:center;min-height:129px;margin:18px 0 9px}
+.red14-logo-holder img{position:relative;display:block;width:min(100%,260px);height:95px;object-fit:contain;object-position:left center}
+.red14-logo-fallback{display:none;font:800 52px/1 'Manrope',sans-serif;letter-spacing:-.08em;color:var(--navy)}
+.red14-logo-fallback span{color:var(--red)}
+.red14-feature h4{font:650 var(--type-item)/1.25 'Manrope',sans-serif;letter-spacing:-.05em;margin:0 0 14px}
+.red14-feature p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 23px}
+.research-networks .research-network-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.research-networks .research-network-grid{grid-template-columns:minmax(0,1fr)}.red14-feature{padding:28px 23px}}
+@media(prefers-reduced-motion:reduce){.publication-disclosure-icon,.publication-disclosure-trigger{transition:none}}
 </style>
 
 <script is:inline>
