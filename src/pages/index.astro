@@ -4,6 +4,7 @@ import JournalCover from '../components/JournalCover.astro';
 import FeaturedBooks from '../components/FeaturedBooks.astro';
 import TeachingVideoGallery from '../components/TeachingVideoGallery.astro';
 import PracticeMaterials from '../components/PracticeMaterials.astro';
+import ThesisSpotlight from '../components/ThesisSpotlight.astro';
 import TeacherResources from '../components/TeacherResources.astro';
 import DiscoProject from '../components/DiscoProject.astro';
 import FinancialEducationCourse from '../components/FinancialEducationCourse.astro';
@@ -37,10 +38,12 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 
 
 
+
+
 <section class="section topics-section" id="recerca">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Àmbit de recerca · Didàctica de les ciències socials</div><h2 class="section-title">Recerca i projectes</h2><h3 class="subsection-title topic-subtitle">Línies de recerca</h3></div>
+        <div><div class="eyebrow">Àmbit de recerca · Didàctica de les ciències socials</div><h2 class="section-title">Idees que es converteixen en recerca.</h2><h3 class="subsection-title topic-subtitle">Línies de recerca</h3></div>
         <p>Investigo com interpretem el món social i com l’educació pot ajudar a qüestionar discursos i formar una ciutadania crítica.</p>
       </div>
       <div class="topics-grid">
@@ -107,7 +110,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 <section class="section section-alt" id="publicacions">
     <div class="container">
       <div class="section-head">
-        <div><div class="eyebrow">Producció científica · Publicacions acadèmiques</div><h2 class="section-title">Publicacions</h2></div>
+        <div><div class="eyebrow">Producció científica · Publicacions acadèmiques</div><h2 class="section-title">Recerca que connecta amb la pràctica.</h2></div>
       </div>
       <FeaturedBooks />
       <h3 class="articles-section-title">Articles de recerca</h3>
@@ -116,42 +119,10 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
       </div>
       <p class="list-foot"><a href={profile.uab} target="_blank" rel="noopener noreferrer">Portal de Recerca de la UAB ↗</a></p>
       <p class="section-deeper-wrap"><a class="section-deeper-link" href={to("publicacions/")}>Consultar totes les publicacions ↗</a></p>
-    </div>
-  </section>
-
-<section class="section practice-section practice-standalone" id="transferencia">
-    <div class="container">
-        <div class="section-head">
-          <div><div class="eyebrow">Transferència i formació</div><h2 class="section-title">Docència i transferència</h2></div>
-          <p>La formació del professorat i el debat entre l'escola i la universitat són parts essencials de la recerca educativa.</p>
-        </div>
-        <h3 class="subsection-title">Formació del professorat</h3>
-        <div class="practice-grid">
-          <a class="practice-card practice-mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer">
-            <span class="mini">FORMACIÓ OBERTA · COURSERA</span>
-            <div class="practice-brand" aria-label="Coursera"><img src="/images/coursera-symbol.svg" alt="" width="43" height="43" loading="lazy" decoding="async" /><span class="practice-brand-wordmark" aria-hidden="true">coursera</span></div>
-            <div class="practice-card-copy">
-              <h4>La formación del pensamiento crítico en la era digital</h4>
-              <p>MOOC de la UAB sobre literacitat crítica, ciutadania i educació democràtica, del qual soc codirector i docent.</p>
-              <strong>Explorar el curs ↗</strong>
-            </div>
-          </a>
-          
-        </div>
-        <FinancialEducationCourse nested={true} />
-        <h3 class="subsection-title subsection-offset">Materials i projectes didàctics</h3>
-        <TeacherResources />
-        <PracticeMaterials />
-        <a class="practice-to-videos" href="#docencia">Veure també les intervencions en vídeo <span aria-hidden="true">↓</span></a>
-    </div>
-  </section>
-
-  <TeachingVideoGallery />
-
-  <section class="section editorial-section" id="activitat-editorial">
-    <div class="container">
+      <div class="scientific-output-divider"><ThesisSpotlight /></div>
+      <div class="editorial-section editorial-in-publications" id="activitat-editorial">
       <div class="section-head">
-        <div><div class="eyebrow">Edició científica · Formació · Jornades</div><h3 class="subsection-title">Activitat editorial i dinamització acadèmica</h3></div>
+        <div><div class="eyebrow">Edició científica · Formació · Jornades</div><h3 class="subsection-title">Edició científica i Jornades</h3></div>
       </div>
       <div class="editorial-grid">
         <a class="initiative editorial-research" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
@@ -189,6 +160,46 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             </div>
           </a>
       </div>
+
+      </div>
+    </div>
+  </section>
+
+<section class="section practice-section practice-standalone" id="transferencia">
+    <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Transferència i formació</div><h2 class="section-title">Transferència a la formació de mestres.</h2></div>
+          <p>La formació del professorat i el debat entre l'escola i la universitat són parts essencials de la recerca educativa.</p>
+        </div>
+        <h3 class="subsection-title">Formació inicial</h3>
+        <TeachingVideoGallery embedded={true} />
+        <h3 class="subsection-title subsection-offset">Formació permanent</h3>
+        <div class="practice-grid">
+          <a class="practice-card practice-mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer">
+            <span class="mini">FORMACIÓ OBERTA · COURSERA</span>
+            <div class="practice-brand" aria-label="Coursera"><img src="/images/coursera-symbol.svg" alt="" width="43" height="43" loading="lazy" decoding="async" /><span class="practice-brand-wordmark" aria-hidden="true">coursera</span></div>
+            <div class="practice-card-copy">
+              <h4>La formación del pensamiento crítico en la era digital</h4>
+              <p>MOOC de la UAB sobre literacitat crítica, ciutadania i educació democràtica, del qual soc codirector i docent.</p>
+              <strong>Explorar el curs ↗</strong>
+            </div>
+          </a>
+          
+        </div>
+        <FinancialEducationCourse nested={true} />
+        <TeacherResources />
+    </div>
+  </section>
+
+<section class="section classroom-section" id="aules">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Materials curriculars i projectes educatius</div>
+          <h2 class="section-title">Transferència a les aules.</h2>
+        </div>
+      </div>
+      <PracticeMaterials />
     </div>
   </section>
 
@@ -322,6 +333,16 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
   </section>
 </Base>
 <style>
+/* Reordered existing material under the six narrative sections. */
+.editorial-in-publications{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);background:transparent}
+.editorial-in-publications .editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.scientific-output-divider{margin:45px 0 0;border-top:1px solid var(--line);padding-top:30px}
+.classroom-section{background:var(--white)}
+.classroom-section .practice-materials{margin-top:0}
+.classroom-section .section-head{margin-bottom:34px}
+.practice-section .subsection-offset{margin-top:45px}
+@media(max-width:1080px){.editorial-in-publications .editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.editorial-in-publications .editorial-grid{grid-template-columns:minmax(0,1fr)}.editorial-in-publications{margin-top:36px}}
 .subsection-title{font:650 var(--type-subsection)/1.17 'Manrope',sans-serif;letter-spacing:-.055em;margin:12px 0 23px}
 .topic-subtitle{margin-top:21px}
 .subsection-offset{margin-top:46px}

@@ -11,7 +11,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
     <div class="material-group-head">
       <div>
         <span class="material-kicker">AUTORIA I DISSENY DE MATERIALS · PRIMÀRIA</span>
-        <h4 id="barcanova-heading">Llibres de text de medi natural, social i cultural de <em>Barcanova.</em></h4>
+        <h3 id="barcanova-heading">Llibres de text de medi natural, social i cultural de <em>Barcanova.</em></h3>
       </div>
       <p>Col·laboració en els programes Experimenta i Entorn de Coneixement del Medi, amb vuit volums per a 3r i 4t de primària.</p>
     </div>
@@ -38,7 +38,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
               </a>
               <div class="book-meta">
                 <span>{b.series.toUpperCase()} · {b.course.toUpperCase()}</span>
-                <h5>{b.title}</h5>
+                <h4>{b.title}</h4>
                 <small>ISBN {b.isbn}</small>
                 <div class="book-links">
                   <a href={'https://www.amazon.es/s?k='+b.isbn} target="_blank" rel="noopener noreferrer" aria-label={'Cercar a Amazon '+b.title}>Amazon ↗</a>
@@ -61,7 +61,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
     <div class="material-group-head">
       <div>
         <span class="material-kicker">DISSENY DE PROJECTES · SECUNDÀRIA</span>
-        <h4 id="jesuites-heading">Projectes amb <em>Jesuïtes Educació.</em></h4>
+        <h3 id="jesuites-heading">Projectes amb <em>Jesuïtes Educació.</em></h3>
       </div>
       <p>Vaig dissenyar cinc projectes de ciències socials i vaig compartir la coordinació de l’equip que va desenvolupar un total de 24 projectes per a tota l’etapa de l’ESO.</p>
     </div>
@@ -83,7 +83,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
               </div>
               <div class="jesuites-copy">
                 <span>PROJECTE · {p.course.toUpperCase()}</span>
-                <h5>{p.title}</h5>
+                <h4>{p.title}</h4>
               </div>
             </article>
           ))}
@@ -101,8 +101,8 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
 .material-group-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:25px;min-width:0}
 .material-group-head>div{max-width:620px;min-width:0}
 .material-kicker{font:800 10px/1.5 'DM Sans',Arial,sans-serif;color:var(--red);letter-spacing:.14em}
-.material-group-head h4{font:650 var(--type-item)/1.15 'Manrope',sans-serif;letter-spacing:-.062em;margin:12px 0 0;overflow-wrap:break-word}
-.material-group-head h4 em{font-style:normal;color:var(--cyan)}
+.material-group-head h3{font:650 var(--type-subsection)/1.15 'Manrope',sans-serif;letter-spacing:-.062em;margin:12px 0 0;overflow-wrap:break-word}
+.material-group-head h3 em{font-style:normal;color:var(--cyan)}
 .material-group-head>p{font-size:14px;line-height:1.7;max-width:345px;color:var(--muted);margin:0}
 .coverflow{min-width:0;width:100%;max-width:100%}
 .coverflow-top{display:flex;justify-content:space-between;align-items:center;gap:18px;min-width:0}
@@ -132,7 +132,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
 .book-fallback>span{font:700 10px 'Manrope',sans-serif}
 .book-meta{padding:17px 17px 19px;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
 .book-meta>span,.jesuites-copy>span{font:800 10px/1.35 'DM Sans',sans-serif;color:var(--red);letter-spacing:.07em}
-.book-meta h5,.jesuites-copy h5{font:650 16px/1.36 'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink);margin:0;overflow-wrap:anywhere}
+.book-meta h4,.jesuites-copy h4{font:650 16px/1.36 'Manrope',sans-serif;letter-spacing:-.035em;color:var(--ink);margin:0;overflow-wrap:anywhere}
 .book-meta>small{font-size:11px;color:var(--muted)}
 .book-links{display:flex;flex-wrap:wrap;align-items:center;gap:9px 13px;margin-top:auto;padding-top:8px}
 .book-links a{font:750 11px 'Manrope',sans-serif;color:var(--cyan);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
@@ -153,7 +153,7 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
   .book-visual{min-height:238px}
   .book-fallback{width:145px;min-height:177px}
   .book-fallback strong{font-size:15px}
-  .book-meta h5,.jesuites-copy h5{font-size:14px}
+  .book-meta h4,.jesuites-copy h4{font-size:14px}
   .flow-item.is-before{transform:perspective(750px) rotateY(22deg) scale(.83)}
   .flow-item.is-after{transform:perspective(750px) rotateY(-22deg) scale(.83)}
   .coverflow-hint{font-size:11px}

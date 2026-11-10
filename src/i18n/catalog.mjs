@@ -454,6 +454,18 @@ Explorar activitats i recursos ↗|||Explorar actividades y recursos ↗|||Explo
 Tesi doctoral|||Tesis doctoral|||Doctoral thesis|||Thèse de doctorat
 `),
   ...block(String.raw`
+Idees que es converteixen en recerca.|||Ideas que se convierten en investigación.|||Ideas that become research.|||Des idées qui deviennent des projets de recherche.
+Recerca que connecta amb la pràctica.|||Investigación que conecta con la práctica.|||Research that connects with practice.|||Une recherche en lien avec la pratique.
+Transferència a la formació de mestres.|||Transferencia a la formación del profesorado.|||Knowledge transfer to teacher education.|||Transfert vers la formation des enseignants.
+Transferència a les aules.|||Transferencia a las aulas.|||From research to classrooms.|||Transfert vers les classes.
+Formació inicial|||Formación inicial|||Initial teacher education|||Formation initiale
+Formació permanent|||Formación permanente|||Continuing teacher education|||Formation continue
+Edició científica i Jornades|||Edición científica y jornadas|||Academic publishing and conferences|||Édition scientifique et journées d’étude
+Formació de mestres|||Formación del profesorado|||Teacher education|||Formation des enseignants
+A les aules|||En las aulas|||In the classroom|||En classe
+Recerca|||Investigación|||Research|||Recherche
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
