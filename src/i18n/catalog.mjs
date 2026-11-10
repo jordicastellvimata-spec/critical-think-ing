@@ -466,6 +466,16 @@ A les aules|||En las aulas|||In the classroom|||En classe
 Recerca|||Investigación|||Research|||Recherche
 `),
   ...block(String.raw`
+Mostra tots els articles|||Mostrar todos los artículos|||Show all research articles|||Afficher tous les articles
+Mostra menys articles|||Mostrar menos artículos|||Show fewer articles|||Afficher moins d’articles
+XARXA DE RECERCA · DIDÀCTICA DE LES CIÈNCIES SOCIALS|||RED DE INVESTIGACIÓN · DIDÁCTICA DE LAS CIENCIAS SOCIALES|||RESEARCH NETWORK · SOCIAL SCIENCES EDUCATION|||RÉSEAU DE RECHERCHE · DIDACTIQUE DES SCIENCES SOCIALES
+Red14 · Xarxa d'investigació en ensenyament de les ciències socials|||Red14 · Red de investigación en enseñanza de las ciencias sociales|||Red14 · Research network in social sciences education|||Red14 · Réseau de recherche en didactique des sciences sociales
+Formo part de Red14 a través de GREDICS, un dels grups integrants de la xarxa. Constituïda el 2014, reuneix equips de recerca de diverses universitats de l’Estat espanyol per impulsar la col·laboració científica, la formació d’investigadors i la transferència del coneixement al professorat.|||Formo parte de Red14 a través de GREDICS, uno de los grupos integrantes de la red. Constituida en 2014, reúne a equipos de investigación de diversas universidades españolas para impulsar la colaboración científica, la formación de investigadores y la transferencia del conocimiento al profesorado.|||I belong to Red14 through GREDICS, one of the network's member research groups. Established in 2014, Red14 brings together research teams from universities across Spain to promote scholarly collaboration, researcher training and knowledge exchange with teachers.|||Je fais partie de Red14 par l’intermédiaire de GREDICS, l’un des groupes de recherche membres du réseau. Créé en 2014, Red14 réunit des équipes de plusieurs universités espagnoles afin de favoriser la collaboration scientifique, la formation des chercheurs et le transfert des connaissances vers les enseignants.
+Web de Red14 ↗|||Web de Red14 ↗|||Red14 website ↗|||Site de Red14 ↗
+Grups de la xarxa ↗|||Grupos de la red ↗|||Member research groups ↗|||Groupes de recherche membres ↗
+Logotip de Red14, xarxa d'investigació en ensenyament de les ciències socials|||Logotipo de Red14, red de investigación en enseñanza de las ciencias sociales|||Red14 logo, a research network in social sciences education|||Logo de Red14, réseau de recherche en didactique des sciences sociales
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
@@ -480,7 +490,7 @@ export const exactOriginals = [
   'Història de l’altre', 'Israel i Palestina, un conflicte, dues mirades',
   'Intermón Oxfam · 2006', '978-84-8452-382-6',
   'HISTÒRIA', 'DE L’ALTRE', 'ISRAEL · PALESTINA', 'UN CONFLICTE, DUES MIRADES',
-  'Jordi Castellví Mata','critical-think.ing','GREDICS','UAB','ORCID','ResearchGate',
+  'Jordi Castellví Mata','critical-think.ing','GREDICS','Red14','UAB','ORCID','ResearchGate',
   'Bluesky','Google Scholar','Barcanova.','Jesuïtes Educació.','Discover','Education',
   'La formación del pensamiento crítico en la era digital','Enseñanza de las Ciencias Sociales',
   'Curso de educación financiera para profesorado de Primaria',
