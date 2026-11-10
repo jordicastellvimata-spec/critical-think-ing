@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ThesisSpotlight from '../../components/ThesisSpotlight.astro';
 import {profile} from '../../data/site';
 const root=import.meta.env.BASE_URL.replace(/\/$/,''); const to=(s='')=>root+'/'+s.replace(/^\//,'');
 const profileLinks = [
@@ -53,8 +54,12 @@ const profileLinks = [
       </div>
     </div>
   </section>
+  <section class="section thesis-personal-archive" aria-label="Tesi doctoral">
+    <div class="container"><ThesisSpotlight /></div>
+  </section>
 </Base>
 <style>
+.thesis-personal-archive{padding-top:16px;padding-bottom:65px}
 .page-hero h1 span{color:var(--red)}.about-grid{display:grid;grid-template-columns:1fr .7fr;gap:11%;align-items:start}.about-grid h2{margin:20px 0 30px}.body{font-size:17px;line-height:1.82;color:var(--muted);margin-bottom:24px}.about-grid .btn{margin-top:14px}aside{background:var(--cyan-pale);padding:30px 35px}.fact{padding:22px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}.fact:last-child{border-bottom:0}.fact span{font-size:12px;color:var(--red);font-weight:800;letter-spacing:.08em}.fact strong{font:650 22px/1.35 'Manrope',sans-serif;letter-spacing:-.05em}.fact small{font-size:12px;color:var(--muted)}.links{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
 .links .profile-entry{display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0;min-height:92px;padding:17px 10px 17px 0;border-bottom:1px solid var(--line);color:var(--cyan);text-decoration:none;transition:color .2s ease}
 .profile-entry-main{display:flex;align-items:center;gap:15px;min-width:0}
