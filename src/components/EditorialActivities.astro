@@ -1,0 +1,99 @@
+---
+import {otherInitiatives} from '../data/site';
+const {standalone = false} = Astro.props;
+const Heading = standalone ? 'h2' : 'h3';
+const CardHeading = standalone ? 'h3' : 'h4';
+---
+<div class:list={['academic-editorials',{standalone}]} id={standalone ? undefined : 'activitat-editorial'}>
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Revistes i col·leccions científiques</div>
+      <Heading class={standalone ? 'section-title' : 'subsection-title'}>Edició científica.</Heading>
+    </div>
+  </div>
+  <div class="editorial-issues-grid">
+    <a class="editorial-journal-card" href={otherInitiatives[0].url} target="_blank" rel="noopener noreferrer">
+      <div class="journal-art editorial-humanizing-art">
+        <div class="discover-image">
+          <img src="https://media.springernature.com/w500/springer-static/cover/journal/44217.jpg" alt="Portada de la revista Discover Education de Springer Nature" width="220" height="290" loading="lazy" decoding="async" onerror="this.style.display='none'" />
+          <span class="discover-fallback" aria-hidden="true">discover<br />education</span>
+        </div>
+      </div>
+      <div class="editorial-journal-info">
+        <span class="editorial-kicker">COL·LECCIÓ TEMÀTICA · SPRINGER NATURE</span>
+        <CardHeading>{otherInitiatives[0].title}</CardHeading>
+        <p class="editorial-subtitle">{otherInitiatives[0].subtitle}</p>
+        <p>{otherInitiatives[0].description}</p>
+        <strong>Descobrir la col·lecció temàtica ↗</strong>
+      </div>
+    </a>
+    <article class="editorial-journal-card">
+      <div class="journal-art editorial-eccss-art">
+        <img class="eccss-journal-image" src="https://www.uab.cat/ca/didactica-llengua-literatura-ciencies-socials/img/r/revista.jpg" alt="Portada de la revista Enseñanza de las Ciencias Sociales" loading="lazy" decoding="async" />
+      </div>
+      <div class="editorial-journal-info">
+        <span class="editorial-kicker">REVISTA CIENTÍFICA · ACTIVITAT EDITORIAL</span>
+        <CardHeading>Enseñanza de las Ciencias Sociales</CardHeading>
+        <p>Revista d'investigació en didàctica de la geografia, la història i les ciències socials. Hi participo com a director adjunt.</p>
+        <a href={otherInitiatives[2].url} target="_blank" rel="noopener noreferrer">Visitar la revista ↗</a>
+      </div>
+    </article>
+    <a class="editorial-journal-card" href="https://www.mdpi.com/journal/socsci/special_issues/V5B3581K20" target="_blank" rel="noopener noreferrer">
+      <div class="journal-art editorial-mdpi-art">
+        <div class="mdpi-cover-art" role="img" aria-label="Identitat gràfica del monogràfic de la revista Social Sciences">
+          <span class="mdpi-art-series">social sciences</span>
+          <span class="mdpi-art-rule"></span>
+          <span class="mdpi-art-issue">Civic Education<br />in the Digital Age</span>
+          <span class="mdpi-art-publisher">MDPI · SPECIAL ISSUE</span>
+        </div>
+      </div>
+      <div class="editorial-journal-info">
+        <span class="editorial-kicker">MONOGRÀFIC · SOCIAL SCIENCES (MDPI)</span>
+        <CardHeading>Civic Education in the Digital Age</CardHeading>
+        <p>Coedició del monogràfic amb Antoni Santisteban-Fernández sobre educació cívica, pensament crític i cultura democràtica en entorns digitals.</p>
+        <strong>Consultar el monogràfic ↗</strong>
+      </div>
+    </a>
+  </div>
+</div>
+<style>
+.academic-editorials{margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+.academic-editorials.standalone{margin-top:0;padding-top:0;border-top:0}
+.academic-editorials .section-head{margin-bottom:25px}
+.academic-editorials .subsection-title{font:650 var(--type-subsection)/1.17 'Manrope',sans-serif;letter-spacing:-.055em;margin:13px 0 0}
+.editorial-accent{color:var(--cyan)}
+.editorial-issues-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:19px}
+.editorial-journal-card{display:grid;grid-template-columns:minmax(0,34%) minmax(0,66%);min-height:275px;background:var(--white);border:1px solid var(--line);overflow:hidden;min-width:0;text-decoration:none;transition:box-shadow .2s ease}
+a.editorial-journal-card:hover{box-shadow:0 12px 30px rgba(20,51,67,.08)}
+a.editorial-journal-card:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.journal-art{min-width:0;display:grid;place-items:center;padding:24px 36px;background:#e7eff1}
+.editorial-humanizing-art{background:#e3eff3}
+.editorial-eccss-art{background:#e5f0ef}
+.editorial-mdpi-art{background:#dcebf1}
+.discover-image{position:relative;width:clamp(120px,48%,183px);min-width:120px;aspect-ratio:3/4;display:grid;place-items:center;background:#1b4160;box-shadow:6px 10px 19px rgba(19,50,72,.17)}
+.discover-image img{position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.discover-fallback{position:absolute;color:white;font:700 23px/1.13 'Manrope',sans-serif;letter-spacing:-.06em;padding:12px;overflow-wrap:anywhere}
+.eccss-journal-image{display:block;width:auto;max-width:90%;height:auto;max-height:235px;object-fit:contain;box-shadow:6px 10px 19px rgba(19,50,72,.14)}
+.mdpi-cover-art{width:clamp(120px,48%,183px);min-width:120px;min-height:226px;aspect-ratio:3/4;background:#173f5b;color:#fff;box-shadow:6px 10px 19px rgba(19,50,72,.17);padding:20px 16px;display:flex;flex-direction:column;overflow:hidden}
+.mdpi-art-series{font:italic 600 21px/1.08 Georgia,serif}
+.mdpi-art-rule{display:block;height:2px;width:100%;background:#8ac3d5;margin:24px 0 18px}
+.mdpi-art-issue{font:600 15px/1.35 'Manrope',sans-serif}
+.mdpi-art-publisher{margin-top:auto;font-size:10px;letter-spacing:.09em;font-weight:800;color:#a8dbe2}
+.editorial-journal-info{padding:29px 36px;display:flex;flex-direction:column;align-items:flex-start;gap:0;min-width:0}
+.editorial-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1.5;color:var(--cyan)}
+.editorial-journal-info :is(h3,h4){font:650 var(--type-item)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:19px 0 10px;color:var(--ink)}
+.editorial-journal-info p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 11px}
+.editorial-journal-info .editorial-subtitle{color:var(--cyan);font-size:12px;font-weight:700}
+.editorial-journal-info :is(strong,a){display:inline-flex;font-size:12px;color:var(--cyan);font-weight:800;border-bottom:1px solid currentColor;padding:0 0 5px;margin-top:auto;padding-top:16px;text-decoration:none}
+.editorial-journal-info a:hover{color:var(--red)}
+@media(max-width:760px){
+  .academic-editorials{margin-top:36px;padding-top:28px}
+  .editorial-journal-card{grid-template-columns:minmax(0,1fr)}
+  .journal-art{min-height:202px;padding:22px}
+  .discover-image,.mdpi-cover-art{width:148px;min-width:0}
+  .mdpi-cover-art{min-height:195px}
+  .eccss-journal-image{max-height:190px}
+  .editorial-journal-info{padding:25px 23px}
+}
+@media(prefers-reduced-motion:reduce){.editorial-journal-card{transition:none}}
+</style>

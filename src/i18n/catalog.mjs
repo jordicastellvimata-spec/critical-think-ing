@@ -476,6 +476,35 @@ Grups de la xarxa ↗|||Grupos de la red ↗|||Member research groups ↗|||Grou
 Logotip de Red14, xarxa d'investigació en ensenyament de les ciències socials|||Logotipo de Red14, red de investigación en enseñanza de las ciencias sociales|||Red14 logo, a research network in social sciences education|||Logo de Red14, réseau de recherche en didactique des sciences sociales
 `),
   ...block(String.raw`
+Revistes i col·leccions científiques|||Revistas y colecciones científicas|||Academic journals and collections|||Revues et collections scientifiques
+científica.|||científica.|||publishing.|||scientifique.
+COL·LECCIÓ TEMÀTICA · SPRINGER NATURE|||COLECCIÓN TEMÁTICA · SPRINGER NATURE|||TOPICAL COLLECTION · SPRINGER NATURE|||COLLECTION THÉMATIQUE · SPRINGER NATURE
+Portada de la revista Discover Education de Springer Nature|||Portada de la revista Discover Education de Springer Nature|||Cover of Discover Education (Springer Nature)|||Couverture de la revue Discover Education (Springer Nature)
+MONOGRÀFIC · SOCIAL SCIENCES (MDPI)|||MONOGRÁFICO · SOCIAL SCIENCES (MDPI)|||SPECIAL ISSUE · SOCIAL SCIENCES (MDPI)|||NUMÉRO THÉMATIQUE · SOCIAL SCIENCES (MDPI)
+Identitat gràfica del monogràfic de la revista Social Sciences|||Identidad gráfica del monográfico de la revista Social Sciences|||Graphic identity for the Social Sciences special issue|||Identité graphique du numéro thématique de Social Sciences
+Coedició del monogràfic amb Antoni Santisteban-Fernández sobre educació cívica, pensament crític i cultura democràtica en entorns digitals.|||Coedición del monográfico con Antoni Santisteban-Fernández sobre educación cívica, pensamiento crítico y cultura democrática en entornos digitales.|||Co-editing the special issue with Antoni Santisteban-Fernández, focusing on civic education, critical thinking and democratic culture in digital settings.|||Codirection du numéro thématique avec Antoni Santisteban-Fernández sur l’éducation civique, la pensée critique et la culture démocratique dans les environnements numériques.
+Consultar el monogràfic ↗|||Consultar el monográfico ↗|||Explore the special issue ↗|||Consulter le numéro thématique ↗
+Jornades · Recerca · Comunitat acadèmica|||Jornadas · Investigación · Comunidad académica|||Conferences · Research · Academic community|||Journées · Recherche · Communauté universitaire
+Congressos|||Congresos|||Scientific|||Congrès
+científics.|||científicos.|||conferences.|||scientifiques.
+Imatge original de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials|||Imagen original de las Jornadas Internacionales de Investigación en Didáctica de las Ciencias Sociales|||Original image for the International Conference on Social Studies Education Research|||Visuel officiel des Journées internationales de recherche en didactique des sciences sociales
+RECERCA · FORMACIÓ · INTERCANVI|||INVESTIGACIÓN · FORMACIÓN · INTERCAMBIO|||RESEARCH · TRAINING · EXCHANGE|||RECHERCHE · FORMATION · ÉCHANGES
+JORNADES RED14 IMPULSA|||JORNADAS RED14 IMPULSA|||RED14 IMPULSA RESEARCH DAYS|||JOURNÉES RED14 IMPULSA
+Jornades de metodologia de la recerca en didàctica de les ciències socials, adreçades especialment a doctorands i investigadors novells.|||Jornadas de metodología de la investigación en didáctica de las ciencias sociales, dirigidas especialmente a doctorandos e investigadores noveles.|||Research methodology seminars in social sciences education, particularly for doctoral students and early-career researchers.|||Journées de méthodologie de la recherche en didactique des sciences sociales, destinées notamment aux doctorants et aux jeunes chercheurs.
+Col·laboració en la preparació d'un taller sobre intel·ligència artificial aplicada a la recerca en didàctica de les ciències socials.|||Colaboración en la preparación de un taller sobre inteligencia artificial aplicada a la investigación en didáctica de las ciencias sociales.|||Helping develop a workshop on the use of artificial intelligence in social sciences education research.|||Participation à la préparation d’un atelier sur l’intelligence artificielle appliquée à la recherche en didactique des sciences sociales.
+Conèixer Red14 IMPULSA ↗|||Conocer Red14 IMPULSA ↗|||Explore Red14 IMPULSA ↗|||Découvrir Red14 IMPULSA ↗
+Idees que es converteixen en|||Ideas que se convierten en|||Ideas that become|||Des idées qui deviennent
+recerca.|||investigación.|||research.|||recherche.
+Recerca que connecta amb la|||Investigación que conecta con la|||Research that connects with|||Une recherche qui rejoint la
+pràctica.|||práctica.|||practice.|||pratique.
+Transferència a les|||Transferencia a las|||Knowledge transfer to|||Transfert vers les
+aules.|||aulas.|||classrooms.|||classes.
+Logotip de Red14|||Logotipo de Red14|||Red14 logo|||Logo de Red14
+`),
+  ...block(String.raw`
+Edició científica.|||Edición científica.|||Scholarly publishing.|||Édition scientifique.
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
@@ -488,6 +517,7 @@ CRITICAL THINKING & CITIZENSHIP|||PENSAMIENTO CRÍTICO Y CIUDADANÍA|||CRITICAL 
 export const exactOriginals = [
   ...questionarReferences,
   'Història de l’altre', 'Israel i Palestina, un conflicte, dues mirades',
+  'Red14 IMPULSA','Civic Education in the Digital Age','social sciences','MDPI · SPECIAL ISSUE','IMPULSA',
   'Intermón Oxfam · 2006', '978-84-8452-382-6',
   'HISTÒRIA', 'DE L’ALTRE', 'ISRAEL · PALESTINA', 'UN CONFLICTE, DUES MIRADES',
   'Jordi Castellví Mata','critical-think.ing','GREDICS','Red14','UAB','ORCID','ResearchGate',
