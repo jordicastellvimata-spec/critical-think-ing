@@ -502,6 +502,9 @@ aules.|||aulas.|||classrooms.|||classes.
 Logotip de Red14|||Logotipo de Red14|||Red14 logo|||Logo de Red14
 `),
   ...block(String.raw`
+Edició científica.|||Edición científica.|||Scholarly publishing.|||Édition scientifique.
+`),
+  ...block(String.raw`
 Veure la convocatòria ↗|||Ver la convocatoria ↗|||View the call for papers ↗|||Voir l’appel à contributions ↗
 Descobrir el MOOC ↗|||Descubrir el MOOC ↗|||Explore the MOOC ↗|||Découvrir le MOOC ↗
 HEGEMONIC NARRATIVES|||NARRATIVAS HEGEMÓNICAS|||HEGEMONIC NARRATIVES|||RÉCITS HÉGÉMONIQUES
