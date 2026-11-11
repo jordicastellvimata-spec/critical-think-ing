@@ -66,6 +66,9 @@ RECERCA QUE FONAMENTA L'EXPERIÈNCIA|||INVESTIGACIÓN EN LA QUE SE BASA LA EXPER
 Repetir l'experiència|||Repetir la experiencia|||Try again|||Recommencer l’expérience
 Continuar exercitant el pensament crític|||Seguir ejercitando el pensamiento crítico|||Keep practising critical thinking|||Poursuivre l’exercice de l’esprit critique
 Comença «El relat invisible» ↗|||Empieza «El relato invisible» ↗|||Start «The Invisible Narrative» ↗|||Commencer «Le récit invisible» ↗
+O escriu un titular propi|||O escribe tu propio titular|||Or write your own headline|||Ou rédigez votre propre titre
+Quina pregunta hi trobes a faltar?|||¿Qué pregunta echas en falta?|||What question is missing?|||Quelle question manque-t-il ?
+Has introduït una nova pregunta. Ara caldria investigar-la i contrastar-ne les evidències.|||Has introducido una nueva pregunta. Ahora habría que investigarla y contrastar las pruebas.|||You have raised a new question. The next step would be to investigate it and examine the evidence.|||Vous avez soulevé une nouvelle question. L’étape suivante consisterait à l’étudier et à confronter les preuves.
 `;
 
 export const relatInvisibleTranslations = lines.trim().split('\n').filter(Boolean).map(line => {
