@@ -51,6 +51,11 @@
         <button type="button" class="ri-option" data-alternative aria-pressed="false"><span>02 · PRODUCCIÓ</span><strong data-option-headline>D'on ve el cacau d'aquesta xocolata?</strong><small data-option-explanation>Desplaça la mirada cap a l'origen i la cadena de producció.</small></button>
         <button type="button" class="ri-option" data-alternative aria-pressed="false"><span>03 · EVIDÈNCIES</span><strong data-option-headline>Preu baix, impactes desconeguts: què caldria investigar?</strong><small data-option-explanation>Diferencia allò que sabem d'allò que encara hem de comprovar.</small></button>
       </div>
+      <div class="ri-custom">
+        <label for="ri-own-headline">O escriu un titular propi</label>
+        <input id="ri-own-headline" data-own-headline type="text" maxlength="140" autocomplete="off" placeholder="Quina pregunta hi trobes a faltar?" />
+        <p data-own-explanation>Has introduït una nova pregunta. Ara caldria investigar-la i contrastar-ne les evidències.</p>
+      </div>
       <div class="ri-headline-preview" data-headline-preview hidden aria-live="polite">
         <span>EL TEU NOU ENFOCAMENT</span>
         <h5 data-preview-title></h5>
@@ -97,6 +102,7 @@
     const progress = lab.querySelector('[data-progress]');
     const progressCount = lab.querySelector('[data-progress-count]');
     const preview = lab.querySelector('[data-headline-preview]');
+    const ownHeadline = lab.querySelector('[data-own-headline]');
     const selectedLenses = new Set();
 
     function showStage(name) {
@@ -117,11 +123,20 @@
     alternatives.forEach((button) => {
       button.addEventListener('click', () => {
         alternatives.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+        ownHeadline.value = '';
         lab.querySelector('[data-preview-title]').textContent = button.querySelector('[data-option-headline]').textContent;
         lab.querySelector('[data-preview-explanation]').textContent = button.querySelector('[data-option-explanation]').textContent;
         preview.hidden = false;
         toFindings.disabled = false;
       });
+    });
+    ownHeadline.addEventListener('input', () => {
+      const draft = ownHeadline.value.trim();
+      alternatives.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      lab.querySelector('[data-preview-title]').textContent = draft;
+      lab.querySelector('[data-preview-explanation]').textContent = lab.querySelector('[data-own-explanation]').textContent;
+      preview.hidden = draft.length === 0;
+      toFindings.disabled = draft.length === 0;
     });
     toRewrite.addEventListener('click', () => showStage('rewrite'));
     lab.querySelector('[data-back-to-observe]').addEventListener('click', () => showStage('observe'));
@@ -136,6 +151,7 @@
       toRewrite.disabled = true;
       toFindings.disabled = true;
       preview.hidden = true;
+      ownHeadline.value = '';
       showStage('observe');
     });
   });
@@ -171,6 +187,12 @@
   .ri-next:focus-visible,.ri-back:focus-visible,.ri-finish:focus-visible,.ri-lens:focus-visible,.ri-option:focus-visible{outline:3px solid #f8ad9e;outline-offset:3px}
   .ri-stage-title{margin-top:4px}.ri-stage-subtitle{margin-bottom:25px}.ri-option>span{margin-bottom:18px}
   .ri-option strong{font-size:clamp(17px,1.8vw,21px)}.ri-headline-preview{border:1px solid #79dfec;border-radius:13px;padding:25px;background:rgba(106,205,225,.08);margin-top:20px}.ri-headline-preview>span{color:#83dbea}.ri-headline-preview h5{font:750 clamp(24px,3vw,38px)/1.2 'Manrope',sans-serif;letter-spacing:-.04em;margin:12px 0}.ri-headline-preview p{margin:0;color:var(--ri-dim);font-size:15px}
+  .ri-custom{margin-top:20px;display:grid;gap:9px}
+  .ri-custom label{font-weight:800;font-size:14px;color:var(--ri-ink)}
+  .ri-custom input{width:100%;padding:15px 17px;min-width:0;border:1px solid rgba(255,255,255,.38);border-radius:10px;background:#0f2635;color:var(--ri-ink);font:600 16px 'Manrope',sans-serif}
+  .ri-custom input::placeholder{color:var(--ri-dim);opacity:.88}
+  .ri-custom input:focus-visible{outline:3px solid #f8ad9e;outline-offset:3px}
+  .ri-custom p{font-size:12px;color:var(--ri-dim);margin:0;line-height:1.5}
   .ri-navigation{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:24px}.ri-back{border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:14px 18px;background:transparent;color:var(--ri-ink);font:700 13px 'Manrope',sans-serif;cursor:pointer}.ri-back:hover{background:rgba(255,255,255,.08)}
   .ri-final-grid{display:grid;grid-template-columns: minmax(180px,.75fr) 1.25fr;gap:clamp(20px,4vw,46px);padding:10px 0 24px}.ri-evidence-tag{color:#83dbea}.ri-big-number{font:800 clamp(58px,9vw,115px)/1.05 'Manrope',sans-serif;letter-spacing:-.09em;color:#7ce4eb;margin:20px 0 8px}.ri-number-caption{font-size:14px;line-height:1.6;color:var(--ri-dim);margin:0;max-width:330px}
   .ri-final-copy h4{font:750 clamp(23px,3.2vw,37px)/1.2 'Manrope',sans-serif;letter-spacing:-.055em;margin:0 0 20px}.ri-final-copy p{font-size:16px;line-height:1.75;color:var(--ri-dim)}
