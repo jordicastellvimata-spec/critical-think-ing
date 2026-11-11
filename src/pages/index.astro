@@ -857,3 +857,16 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .ri-practice>h3{font:700 clamp(25px,4vw,44px)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:12px 0}
 .ri-practice>p{max-width:780px;font-size:16px;line-height:1.6;color:var(--on-dark);margin:0}
 </style>
+
+<script>
+  // En arribar des de la subpàgina del laboratori, obre la dimensió enllaçada.
+  function openLabFromHash() {
+    if (!window.location.hash) return;
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = document.getElementById(id);
+    const disclosure = target?.matches('details.lab-disclosure') ? target : target?.closest('details.lab-disclosure');
+    if (disclosure) disclosure.open = true;
+  }
+  openLabFromHash();
+  window.addEventListener('hashchange', openLabFromHash);
+</script>
