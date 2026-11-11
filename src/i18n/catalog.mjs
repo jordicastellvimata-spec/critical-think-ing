@@ -1,7 +1,7 @@
 import { questionarTranslations, questionarReferences } from './questionar.mjs';
 
-// Catalog of editorial translations. Published article, book and video titles retain their
-// original language to preserve accurate bibliographic references.
+// Catalog of editorial translations. Published article and book titles retain their
+// original language; UOC video titles can be localized without altering the Catalan source.
 const block = s => s.trim().split('\n').filter(Boolean).map(line => {
   const cells=line.split('|||').map(s=>s.trim());
   if(cells.length!==4)throw new Error('Four-language entry required: '+line);
@@ -193,6 +193,9 @@ RECURS AUDIOVISUAL · UOC · RECURS AUDIOVISUAL · CIÈNCIES SOCIALS|||RECURSO A
 RECURS AUDIOVISUAL · UOC · RECURS AUDIOVISUAL · EDUCACIÓ PRIMÀRIA|||RECURSO AUDIOVISUAL · UOC · RECURSO AUDIOVISUAL · EDUCACIÓN PRIMARIA|||VIDEO RESOURCE · UOC · PRIMARY EDUCATION|||RESSOURCE VIDÉO · UOC · ENSEIGNEMENT PRIMAIRE
 Entrevista amb Pilar Benejam|||Entrevista con Pilar Benejam|||Interview with Pilar Benejam|||Entretien avec Pilar Benejam
 Entrevista con Consuelo Díez|||Entrevista con Consuelo Díez|||Interview with Consuelo Díez|||Entretien avec Consuelo Díez
+Quina educació volem en ciències socials?|||¿Qué educación queremos en ciencias sociales?|||What kind of social studies education do we want?|||Quelle éducation souhaitons-nous en sciences sociales ?
+Quines són les finalitats de l’ensenyament de les ciències socials?|||¿Cuáles son las finalidades de la enseñanza de las ciencias sociales?|||What are the aims of social studies education?|||Quelles sont les finalités de l’enseignement des sciences sociales ?
+Com ensenyar a partir de problemes socials rellevants a l’educació primària?|||¿Cómo enseñar a partir de problemas sociales relevantes en educación primaria?|||How can social issues be used to teach in primary education?|||Comment enseigner à partir de questions socialement vives à l’école primaire ?
 Finalitats educatives i ciutadania|||Finalidades educativas y ciudadanía|||Educational aims and citizenship|||Finalités éducatives et citoyenneté
 Diàleg amb Antoni Santisteban|||Diálogo con Antoni Santisteban|||Dialogue with Antoni Santisteban|||Dialogue avec Antoni Santisteban
 Veure a YouTube|||Ver en YouTube|||Watch on YouTube|||Regarder sur YouTube
@@ -263,11 +266,11 @@ El MOOC «La formación del pensamiento crítico en la era digital» aprofundeix
 Veure el curs a Coursera ↗|||Ver el curso en Coursera ↗|||View the course on Coursera ↗|||Voir le cours sur Coursera ↗
 Educar per pensar críticament és, també, educar per participar.|||Educar para pensar críticamente también es educar para participar.|||Teaching people to think critically also means teaching them to participate.|||Éduquer à la pensée critique, c’est aussi éduquer à la participation.
 IDEA CENTRAL DEL LABORATORI|||IDEA CENTRAL DEL LABORATORIO|||CORE IDEA OF THE LAB|||IDÉE CLÉ DU LABORATOIRE
-Qüestionar allò comú|||Cuestionar lo cotidiano|||Question the commonplace|||Questionner les évidences
+Qüestionar allò comú|||Cuestionar lo cotidiano|||Disrupt the commonplace|||Questionner les évidences
 Mirar la vida quotidiana amb altres ulls: problematitzar allò que donem per fet i analitzar com els textos i el llenguatge construeixen la realitat i les identitats.|||Mirar la vida cotidiana con otros ojos: problematizar lo que damos por sentado y analizar cómo los textos y el lenguaje construyen la realidad y las identidades.|||Look at everyday life from a different perspective: question assumptions and explore how texts and language construct reality and identities.|||Regarder le quotidien autrement : questionner les évidences et analyser comment les textes et le langage construisent la réalité et les identités.
 Multiperspectiva|||Multiperspectiva|||Multiple perspectives|||Multiperspectivité
 Contrastar punts de vista diversos, fins i tot contradictoris; preguntar-nos quines veus s’escolten i quines falten, i recuperar les que han estat silenciades o marginades.|||Contrastar puntos de vista diversos, incluso contradictorios; preguntarnos qué voces se escuchan y cuáles faltan, y recuperar las silenciadas o marginadas.|||Compare diverse, even contradictory, perspectives; ask whose voices are heard and whose are missing, and bring back those silenced or marginalized.|||Confronter des points de vue variés, parfois contradictoires ; interroger les voix entendues et absentes, et retrouver celles qui ont été réduites au silence ou marginalisées.
-Problemes socials rellevants|||Problemas sociales relevantes|||Relevant social issues|||Questions socialement vives
+Problemes socials rellevants|||Problemas sociales relevantes|||Social issues|||Questions socialement vives
 Anar més enllà de les vivències individuals per comprendre els sistemes sociopolítics, les relacions de poder i les desigualtats que condicionen la vida quotidiana.|||Ir más allá de las experiencias individuales para comprender los sistemas sociopolíticos, las relaciones de poder y las desigualdades que condicionan la vida cotidiana.|||Go beyond individual experiences to understand the sociopolitical systems, power relations and inequalities that shape daily life.|||Dépasser les expériences individuelles pour comprendre les systèmes sociopolitiques, les rapports de pouvoir et les inégalités qui façonnent le quotidien.
 Acció social|||Acción social|||Social action|||Action sociale
 Passar de la reflexió a l’acció per transformar la realitat: qüestionar els privilegis i les injustícies, i promoure la participació i la justícia social.|||Pasar de la reflexión a la acción para transformar la realidad: cuestionar los privilegios y las injusticias, y promover la participación y la justicia social.|||Move from reflection to action to transform society: challenge privilege and injustice, and promote participation and social justice.|||Passer de la réflexion à l’action pour transformer la réalité : questionner les privilèges et les injustices, et encourager la participation et la justice sociale.
