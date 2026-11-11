@@ -1,0 +1,203 @@
+---
+/**
+ * Experiment 01: una peça de ficció didàctica sobre un relat de consum.
+ * No recull dades de visitants ni pretén diagnosticar competències.
+ * Tots els textos editables es tradueixen amb el catàleg del web.
+ */
+---
+<section class="ri-experiment" data-relat-invisible aria-labelledby="ri-title">
+  <div class="ri-topline"><span>EXPERIMENT 01 / 08</span><span>DIMENSIÓ 01 · QÜESTIONAR ALLÒ COMÚ</span></div>
+  <header class="ri-intro">
+    <div class="ri-kicker">CRITICAL THINKING LAB / EXPERIMENT INTERACTIU</div>
+    <h3 id="ri-title">El relat <em>invisible.</em></h3>
+    <p>Una notícia pot explicar fets i, alhora, deixar fora preguntes decisives. Pots descobrir què no t'està explicant?</p>
+    <span class="ri-duration">3 minuts · Sense respostes úniques</span>
+  </header>
+
+  <div class="ri-body">
+    <section class="ri-stage" data-stage="observe" aria-label="Primera fase de l'experiment">
+      <div class="ri-step"><span>01 / OBSERVA</span><span>Una notícia aparentment innocent</span></div>
+      <article class="ri-news" aria-labelledby="ri-news-title">
+        <div class="ri-news-meta"><span>NOTÍCIA FICTÍCIA · EXEMPLE DIDÀCTIC</span><span>CONSUM</span></div>
+        <h4 id="ri-news-title">Una nova xocolata a bon preu triomfa al supermercat</h4>
+        <p>Una marca anuncia una nova línia de xocolata amb un preu més assequible. El seu comunicat destaca que més famílies en podran comprar i presenta el llançament com una bona notícia per al consum.</p>
+      </article>
+      <div class="ri-investigate">
+        <div class="ri-investigate-head">
+          <h4>Què hi ha darrere del titular?</h4>
+          <p>Activa les tres lents. No busquis la resposta correcta: fes visibles les preguntes que el text no planteja.</p>
+        </div>
+        <div class="ri-lenses" role="group" aria-label="Tres lents de lectura crítica">
+          <button type="button" class="ri-lens" data-lens="voice" aria-pressed="false"><span class="ri-lens-number">01</span><strong>Qui parla?</strong><small>La veu dominant</small></button>
+          <button type="button" class="ri-lens" data-lens="absence" aria-pressed="false"><span class="ri-lens-number">02</span><strong>Qui falta?</strong><small>Les veus absents</small></button>
+          <button type="button" class="ri-lens" data-lens="assumption" aria-pressed="false"><span class="ri-lens-number">03</span><strong>Què es dona per fet?</strong><small>La idea naturalitzada</small></button>
+        </div>
+        <div class="ri-reveals" aria-live="polite">
+          <div class="ri-reveal" data-reveal="voice" hidden><strong>El punt de vista de la marca</strong><p>La notícia reprodueix el comunicat d'una empresa. Com canviaria si també consultéssim productors, treballadors o consumidors?</p></div>
+          <div class="ri-reveal" data-reveal="absence" hidden><strong>Allò que no apareix</strong><p>No sabem res sobre la remuneració de qui produeix el cacau, les condicions de treball o l'impacte ambiental. No podem pressuposar-ne les respostes: cal investigar-les.</p></div>
+          <div class="ri-reveal" data-reveal="assumption" hidden><strong>Una bona notícia... per a tothom?</strong><p>El relat tracta un preu baix com un benefici universal. Qui s'hi beneficia? Algú podria assumir-ne els costos?</p></div>
+        </div>
+        <div class="ri-progress"><label for="ri-progress-bar">Lents activades <output data-progress-count>0/3</output></label><progress id="ri-progress-bar" data-progress max="3" value="0"></progress></div>
+        <button type="button" class="ri-next" data-to-rewrite disabled>Reescriure el relat <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="ri-stage" data-stage="rewrite" aria-label="Segona fase de l'experiment" hidden>
+      <div class="ri-step"><span>02 / REESCRIU</span><span>Canvia el focus, canvia el relat</span></div>
+      <h4 class="ri-stage-title">Quin altre titular construiries?</h4>
+      <p class="ri-stage-subtitle">Tria una perspectiva. No hi ha una única formulació crítica: cadascuna obre preguntes diferents.</p>
+      <div class="ri-headline-options" role="group" aria-label="Perspectives alternatives">
+        <button type="button" class="ri-option" data-alternative aria-pressed="false"><span>01 · DISTRIBUCIÓ</span><strong data-option-headline>La xocolata més barata: qui guanya i qui hi perd?</strong><small data-option-explanation>Pregunta com es reparteixen els beneficis i els costos.</small></button>
+        <button type="button" class="ri-option" data-alternative aria-pressed="false"><span>02 · PRODUCCIÓ</span><strong data-option-headline>D'on ve el cacau d'aquesta xocolata?</strong><small data-option-explanation>Desplaça la mirada cap a l'origen i la cadena de producció.</small></button>
+        <button type="button" class="ri-option" data-alternative aria-pressed="false"><span>03 · EVIDÈNCIES</span><strong data-option-headline>Preu baix, impactes desconeguts: què caldria investigar?</strong><small data-option-explanation>Diferencia allò que sabem d'allò que encara hem de comprovar.</small></button>
+      </div>
+      <div class="ri-custom">
+        <label for="ri-own-headline">O escriu un titular propi</label>
+        <input id="ri-own-headline" data-own-headline type="text" maxlength="140" autocomplete="off" placeholder="Quina pregunta hi trobes a faltar?" />
+        <p data-own-explanation>Has introduït una nova pregunta. Ara caldria investigar-la i contrastar-ne les evidències.</p>
+      </div>
+      <div class="ri-headline-preview" data-headline-preview hidden aria-live="polite">
+        <span>EL TEU NOU ENFOCAMENT</span>
+        <h5 data-preview-title></h5>
+        <p data-preview-explanation></p>
+      </div>
+      <div class="ri-navigation">
+        <button type="button" class="ri-back" data-back-to-observe>Tornar a observar</button>
+        <button type="button" class="ri-next" data-to-findings disabled>Descobrir què diu la recerca <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+
+    <section class="ri-stage ri-final" data-stage="findings" aria-label="Resultats i interpretació" hidden>
+      <div class="ri-step"><span>03 / DESCOBREIX</span><span>El que aporta la recerca</span></div>
+      <div class="ri-final-grid">
+        <div>
+          <span class="ri-evidence-tag">UNA DADA PER PENSAR</span>
+          <div class="ri-big-number">1.725</div>
+          <p class="ri-number-caption">alumnes de primària van participar en un estudi sobre discursos hegemònics i literacitat crítica digital.</p>
+        </div>
+        <div class="ri-final-copy">
+          <h4>Veure una altra perspectiva canvia les preguntes.</h4>
+          <p>En aquest estudi, l'alumnat reproduïa majoritàriament narratives hegemòniques, fins i tot quan elaborava un relat propi sobre la producció i el consum de xocolata.</p>
+          <p>Aquest exercici no avalua el teu pensament crític. Et convida a passar de rebre un relat a preguntar qui l'ha construït, què ha deixat fora i quines alternatives podem investigar.</p>
+        </div>
+      </div>
+      <div class="ri-references">
+        <strong>RECERCA QUE FONAMENTA L'EXPERIÈNCIA</strong>
+        <a href="https://doi.org/10.17811/rifie.23745" target="_blank" rel="noopener noreferrer">Andreu-Mediero, Castellví i Díez-Bedmar (2026) · La Didáctica de las Ciencias Sociales ante los discursos hegemónicos <span aria-hidden="true">↗</span></a>
+        <a href="https://doi.org/10.3390/higheredu3040062" target="_blank" rel="noopener noreferrer">Castellví (2024) · Epistemological Obstacles to Social Studies Education <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="ri-navigation"><button type="button" class="ri-back" data-restart>Repetir l'experiència</button><a class="ri-finish" href="#per-exercitar-pensament-critic">Continuar exercitant el pensament crític <span aria-hidden="true">↓</span></a></div>
+    </section>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-relat-invisible]').forEach((lab) => {
+    const stage = (name) => lab.querySelector('[data-stage="' + name + '"]');
+    const lenses = [...lab.querySelectorAll('[data-lens]')];
+    const reveals = [...lab.querySelectorAll('[data-reveal]')];
+    const alternatives = [...lab.querySelectorAll('[data-alternative]')];
+    const toRewrite = lab.querySelector('[data-to-rewrite]');
+    const toFindings = lab.querySelector('[data-to-findings]');
+    const progress = lab.querySelector('[data-progress]');
+    const progressCount = lab.querySelector('[data-progress-count]');
+    const preview = lab.querySelector('[data-headline-preview]');
+    const ownHeadline = lab.querySelector('[data-own-headline]');
+    const selectedLenses = new Set();
+
+    function showStage(name) {
+      ['observe', 'rewrite', 'findings'].forEach((key) => { stage(key).hidden = key !== name; });
+      stage(name).scrollIntoView({ block: 'nearest', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    }
+    lenses.forEach((button) => {
+      button.addEventListener('click', () => {
+        const key = button.dataset.lens;
+        selectedLenses.add(key);
+        lenses.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lens === key)));
+        reveals.forEach((panel) => { panel.hidden = panel.dataset.reveal !== key; });
+        progress.value = selectedLenses.size;
+        progressCount.textContent = selectedLenses.size + '/3';
+        toRewrite.disabled = selectedLenses.size !== 3;
+      });
+    });
+    alternatives.forEach((button) => {
+      button.addEventListener('click', () => {
+        alternatives.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+        ownHeadline.value = '';
+        lab.querySelector('[data-preview-title]').textContent = button.querySelector('[data-option-headline]').textContent;
+        lab.querySelector('[data-preview-explanation]').textContent = button.querySelector('[data-option-explanation]').textContent;
+        preview.hidden = false;
+        toFindings.disabled = false;
+      });
+    });
+    ownHeadline.addEventListener('input', () => {
+      const draft = ownHeadline.value.trim();
+      alternatives.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      lab.querySelector('[data-preview-title]').textContent = draft;
+      lab.querySelector('[data-preview-explanation]').textContent = lab.querySelector('[data-own-explanation]').textContent;
+      preview.hidden = draft.length === 0;
+      toFindings.disabled = draft.length === 0;
+    });
+    toRewrite.addEventListener('click', () => showStage('rewrite'));
+    lab.querySelector('[data-back-to-observe]').addEventListener('click', () => showStage('observe'));
+    toFindings.addEventListener('click', () => showStage('findings'));
+    lab.querySelector('[data-restart]').addEventListener('click', () => {
+      selectedLenses.clear();
+      lenses.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      reveals.forEach((p) => { p.hidden = true; });
+      alternatives.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      progress.value = 0;
+      progressCount.textContent = '0/3';
+      toRewrite.disabled = true;
+      toFindings.disabled = true;
+      preview.hidden = true;
+      ownHeadline.value = '';
+      showStage('observe');
+    });
+  });
+</script>
+
+<style>
+  .ri-experiment{--ri-ink:#eaf3f8;--ri-dim:#b2c3d1;position:relative;isolation:isolate;overflow:hidden;margin-top:27px;border:1px solid rgba(93,209,230,.4);border-radius:24px;color:var(--ri-ink);background:radial-gradient(circle at 90% 0%,rgba(48,156,180,.18),transparent 35%),#101b2a;box-shadow:0 24px 70px rgba(0,0,0,.18)}
+  .ri-experiment [hidden]{display:none!important}
+  .ri-topline{display:flex;justify-content:space-between;gap:12px;padding:16px clamp(18px,4vw,36px);border-bottom:1px solid rgba(255,255,255,.14);font-size:10px;font-weight:800;letter-spacing:.13em;color:#83dbea}
+  .ri-intro{padding:clamp(25px,5vw,54px) clamp(20px,5vw,55px) 24px}
+  .ri-kicker,.ri-step,.ri-news-meta,.ri-evidence-tag,.ri-headline-preview>span,.ri-references>strong{font-size:11px;letter-spacing:.12em;font-weight:800}
+  .ri-kicker{color:#83dbea}.ri-intro h3{font:750 clamp(36px,6.2vw,80px)/1.04 'Manrope',sans-serif;letter-spacing:-.075em;margin:18px 0}.ri-intro em{font-style:normal;color:#72dbe9}
+  .ri-intro p{max-width:760px;font-size:clamp(16px,2vw,21px);line-height:1.6;color:var(--ri-ink);margin:0 0 16px}
+  .ri-duration{display:inline-block;border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:7px 13px;font-size:12px;color:var(--ri-dim)}
+  .ri-body{padding:0 clamp(20px,5vw,55px) clamp(25px,5vw,55px)}
+  .ri-stage{border-top:1px solid rgba(255,255,255,.18);padding-top:25px}.ri-step{display:flex;justify-content:space-between;gap:12px;color:#83dbea;margin-bottom:23px}
+  .ri-news{max-width:860px;margin:0 auto 31px;background:#f7f5ef;color:#152234;border-radius:8px;padding:clamp(20px,4vw,44px);transform:rotate(-.35deg);box-shadow:13px 15px 0 rgba(108,209,224,.13)}
+  .ri-news-meta{display:flex;justify-content:space-between;gap:14px;border-bottom:2px solid #182b3b;padding-bottom:13px;color:#566774}
+  .ri-news h4{font:750 clamp(26px,4vw,46px)/1.16 Georgia,serif;letter-spacing:-.04em;margin:25px 0}
+  .ri-news p{font:400 clamp(15px,1.7vw,19px)/1.75 Georgia,serif;color:#2b3440;margin:0}
+  .ri-investigate-head h4,.ri-stage-title{font:750 clamp(22px,3vw,32px)/1.2 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 10px}
+  .ri-investigate-head p,.ri-stage-subtitle{color:var(--ri-dim);font-size:15px;line-height:1.6;margin:0 0 22px;max-width:740px}
+  .ri-lenses,.ri-headline-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .ri-lens,.ri-option{cursor:pointer;text-align:left;min-width:0;border:1px solid rgba(255,255,255,.25);background:#192b3d;color:var(--ri-ink);border-radius:12px;padding:20px;transition:border-color .2s,background .2s,transform .2s;font:inherit}
+  .ri-lens:hover,.ri-option:hover{border-color:#70dce9;transform:translateY(-2px)}.ri-lens[aria-pressed=true],.ri-option[aria-pressed=true]{border-color:#70dce9;background:#193c4b;box-shadow:inset 0 0 0 1px #70dce9}
+  .ri-lens-number,.ri-option>span{display:block;color:#7ee1ee;font-size:11px;letter-spacing:.09em;font-weight:800;margin-bottom:25px}
+  .ri-lens strong,.ri-option strong{display:block;font:750 clamp(17px,2.1vw,23px)/1.25 'Manrope',sans-serif;letter-spacing:-.035em}
+  .ri-lens small,.ri-option small{display:block;margin-top:8px;color:var(--ri-dim);font-size:13px;line-height:1.5}
+  .ri-reveals{min-height:125px;margin:16px 0}.ri-reveal{border-left:3px solid #79dfec;background:rgba(106,205,225,.09);padding:19px 22px;border-radius:0 12px 12px 0}.ri-reveal strong{font-size:17px}.ri-reveal p{color:var(--ri-dim);line-height:1.65;margin:8px 0 0;font-size:15px}
+  .ri-progress{max-width:440px;margin:0 0 18px}.ri-progress label{display:flex;justify-content:space-between;font-size:12px;color:var(--ri-dim);margin-bottom:9px}.ri-progress progress{display:block;width:100%;height:9px;accent-color:#77ddea}
+  .ri-next,.ri-finish{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:15px 21px;background:#7edfea;color:#101b2a;border:0;border-radius:8px;text-decoration:none;font:800 14px/1.2 'Manrope',sans-serif;cursor:pointer}
+  .ri-next:disabled{cursor:not-allowed;opacity:.38}.ri-next:not(:disabled):hover,.ri-finish:hover{background:#c7f9ff;color:#101b2a}
+  .ri-next:focus-visible,.ri-back:focus-visible,.ri-finish:focus-visible,.ri-lens:focus-visible,.ri-option:focus-visible{outline:3px solid #f8ad9e;outline-offset:3px}
+  .ri-stage-title{margin-top:4px}.ri-stage-subtitle{margin-bottom:25px}.ri-option>span{margin-bottom:18px}
+  .ri-option strong{font-size:clamp(17px,1.8vw,21px)}.ri-headline-preview{border:1px solid #79dfec;border-radius:13px;padding:25px;background:rgba(106,205,225,.08);margin-top:20px}.ri-headline-preview>span{color:#83dbea}.ri-headline-preview h5{font:750 clamp(24px,3vw,38px)/1.2 'Manrope',sans-serif;letter-spacing:-.04em;margin:12px 0}.ri-headline-preview p{margin:0;color:var(--ri-dim);font-size:15px}
+  .ri-custom{margin-top:20px;display:grid;gap:9px}
+  .ri-custom label{font-weight:800;font-size:14px;color:var(--ri-ink)}
+  .ri-custom input{width:100%;padding:15px 17px;min-width:0;border:1px solid rgba(255,255,255,.38);border-radius:10px;background:#0f2635;color:var(--ri-ink);font:600 16px 'Manrope',sans-serif}
+  .ri-custom input::placeholder{color:var(--ri-dim);opacity:.88}
+  .ri-custom input:focus-visible{outline:3px solid #f8ad9e;outline-offset:3px}
+  .ri-custom p{font-size:12px;color:var(--ri-dim);margin:0;line-height:1.5}
+  .ri-navigation{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:24px}.ri-back{border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:14px 18px;background:transparent;color:var(--ri-ink);font:700 13px 'Manrope',sans-serif;cursor:pointer}.ri-back:hover{background:rgba(255,255,255,.08)}
+  .ri-final-grid{display:grid;grid-template-columns: minmax(180px,.75fr) 1.25fr;gap:clamp(20px,4vw,46px);padding:10px 0 24px}.ri-evidence-tag{color:#83dbea}.ri-big-number{font:800 clamp(58px,9vw,115px)/1.05 'Manrope',sans-serif;letter-spacing:-.09em;color:#7ce4eb;margin:20px 0 8px}.ri-number-caption{font-size:14px;line-height:1.6;color:var(--ri-dim);margin:0;max-width:330px}
+  .ri-final-copy h4{font:750 clamp(23px,3.2vw,37px)/1.2 'Manrope',sans-serif;letter-spacing:-.055em;margin:0 0 20px}.ri-final-copy p{font-size:16px;line-height:1.75;color:var(--ri-dim)}
+  .ri-references{display:grid;gap:9px;border-block:1px solid rgba(255,255,255,.17);padding:22px 0}.ri-references strong{color:#83dbea;margin-bottom:6px}.ri-references a{color:var(--ri-ink);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere;font-size:13px;line-height:1.6}.ri-references a:hover{color:#7ce4eb}
+  @media(max-width:850px){.ri-lenses,.ri-headline-options{grid-template-columns:1fr}.ri-lens-number,.ri-option>span{margin-bottom:10px}.ri-reveals{min-height:0}.ri-final-grid{grid-template-columns:1fr}.ri-topline,.ri-step{flex-wrap:wrap}}
+  @media(max-width:540px){.ri-topline{font-size:9px}.ri-news{transform:none;box-shadow:none}.ri-navigation>*{width:100%}.ri-lens,.ri-option{padding:15px}}
+  @media(prefers-reduced-motion:reduce){.ri-lens,.ri-option{transition:none}.ri-lens:hover,.ri-option:hover{transform:none}}
+</style>

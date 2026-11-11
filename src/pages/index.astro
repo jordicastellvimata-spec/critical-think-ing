@@ -11,6 +11,7 @@ import TeacherResources from '../components/TeacherResources.astro';
 import DiscoProject from '../components/DiscoProject.astro';
 import FinancialEducationCourse from '../components/FinancialEducationCourse.astro';
 import QuestionarActivities from '../components/QuestionarActivities.astro';
+import RelatInvisible from '../components/RelatInvisible.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
@@ -198,9 +199,15 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <summary class="lab-prompt">
             <span class="lab-prompt-title">{d.title}</span>
             <span class="lab-prompt-description">{d.description}</span>
-            <span class="lab-prompt-action"><span>Explora les set activitats</span><span class="lab-chevron" aria-hidden="true"></span></span>
+            <span class="lab-prompt-action"><span>Comença l’experiment</span><span class="lab-chevron" aria-hidden="true"></span></span>
           </summary>
-          <QuestionarActivities />
+          <RelatInvisible />
+          <section class="ri-practice" id="per-exercitar-pensament-critic" aria-labelledby="ri-practice-title">
+            <div class="ri-practice-kicker">Explora les set activitats</div>
+            <h3 id="ri-practice-title">Per exercitar el pensament crític</h3>
+            <p>Set propostes per qüestionar allò que donem per fet i traslladar aquesta mirada a la formació del professorat i a l’aula.</p>
+            <QuestionarActivities />
+          </section>
         </details>
       ) : d.number === '02' ? (
         <details class="lab-disclosure" id="multiperspectiva">
@@ -406,7 +413,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-banner .eyebrow{color:var(--on-dark)}
 .lab-banner h2{font:650 var(--type-section)/1.09 'Manrope',sans-serif;letter-spacing:-.067em;margin:24px 0}
 .lab-banner em{font-style:normal;color:var(--red-light)}
-.lab-banner p{font-size:17px;line-height:1.7;color:var(--on-dark);max-width:520px;margin-bottom:31px}
+.lab-grid > div:first-child > p{font-size:17px;line-height:1.7;color:var(--on-dark);max-width:520px;margin-bottom:31px}
 .lab-banner .btn{background:var(--red-light);color:var(--ink)}
 .lab-banner .btn:hover{background:var(--red-light-hover)}
 .lab-art{height:360px;position:relative;display:grid;place-items:center}
@@ -843,3 +850,23 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 </script>
 
 
+
+<style>
+.ri-practice{margin-top:50px;border-top:1px solid var(--line-strong);padding-top:36px;scroll-margin-top:90px}
+.ri-practice-kicker{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--red-light)}
+.ri-practice>h3{font:700 clamp(25px,4vw,44px)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:12px 0}
+.ri-practice>p{max-width:780px;font-size:16px;line-height:1.6;color:var(--on-dark);margin:0}
+</style>
+
+<script>
+  // En arribar des de la subpàgina del laboratori, obre la dimensió enllaçada.
+  function openLabFromHash() {
+    if (!window.location.hash) return;
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = document.getElementById(id);
+    const disclosure = target?.matches('details.lab-disclosure') ? target : target?.closest('details.lab-disclosure');
+    if (disclosure) disclosure.open = true;
+  }
+  openLabFromHash();
+  window.addEventListener('hashchange', openLabFromHash);
+</script>

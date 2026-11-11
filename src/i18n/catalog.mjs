@@ -1,4 +1,5 @@
 import { questionarTranslations, questionarReferences } from './questionar.mjs';
+import { relatInvisibleTranslations } from './relatInvisible.mjs';
 
 // Catalog of editorial translations. Published article and book titles retain their
 // original language; UOC video titles can be localized without altering the Catalan source.
@@ -9,6 +10,7 @@ const block = s => s.trim().split('\n').filter(Boolean).map(line => {
 });
 export const catalog = [
   ...questionarTranslations,
+  ...relatInvisibleTranslations,
   ...block(String.raw`
 Publicacions sobre pensament crític i educació | Jordi Castellví Mata|||Publicaciones sobre pensamiento crítico y educación | Jordi Castellví Mata|||Publications on Critical Thinking and Education | Jordi Castellví Mata|||Publications sur la pensée critique et l’éducation | Jordi Castellví Mata
 Jordi Castellví Mata | Perfil acadèmic|||Jordi Castellví Mata | Perfil académico|||Jordi Castellví Mata | Academic Profile|||Jordi Castellví Mata | Profil académique
