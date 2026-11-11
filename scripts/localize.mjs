@@ -7,6 +7,13 @@ import { seoPages } from './seo.mjs';
 const dist = path.resolve('dist');
 const origin = 'https://critical-think.ing';
 const locales = ['ca','es','en','fr'];
+// La versió catalana manté els vídeos originals; les altres llengües fan servir
+// les versions en castellà facilitades per Jordi. Consuelo Díez no canvia.
+const spanishVideoIds = new Map([
+  ['MsNUgPVIzno', 'jfToCZLVHyI'], // Pilar Benejam
+  ['HF1hAjiPPBs', 'zH4SParIxRY'], // Finalitats
+  ['LU0PjSDxIK4', 'YG2ZMIE22Ac'], // Antoni Santisteban
+]);
 const localeNames = {ca:'Català',es:'Español',en:'English',fr:'Français'};
 const localeCodes = {ca:'CA',es:'ES',en:'EN',fr:'FR'};
 const publicPrefixes = ['/images/','/documents/','/_astro/','/favicon','/assets/'];
@@ -40,7 +47,8 @@ function translate(value,locale,record=true) {
   // Accessible controls often attach a translated verb to the unchanged title of a work.
   for(const [prefix,translations] of attributePrefixes){
     if(text.startsWith(prefix)){
-      const translated=translations[locales.indexOf(locale)-1]+text.slice(prefix.length);
+      const suffix=text.slice(prefix.length);
+      const translated=translations[locales.indexOf(locale)-1]+(known.get(norm(suffix))?.[locale] ?? suffix);
       return String(value).match(/^\s*/)[0]+translated+String(value).match(/\s*$/)[0];
     }
   }
@@ -131,6 +139,19 @@ for(const [file,html] of source){
        }
      }
    });
+   // Replace video players, thumbnails and YouTube links only outside Catalan.
+   if(locale!=='ca') {
+     walk(doc,el=>{
+       if(!el.attrs)return;
+       for(const attribute of ['data-video-id','src','href']) {
+         const value=attr(el,attribute);
+         if(!value)continue;
+         let localized=value;
+         for(const [caId,esId] of spanishVideoIds)localized=localized.replaceAll(caId,esId);
+         if(localized!==value)setAttr(el,attribute,localized);
+       }
+     });
+   }
    // Localized editorial metadata and social preview URLs.
    const seo=seoPages[route]?.[locale];
    if(seo){
@@ -178,7 +199,13 @@ for(const [route,doc] of allDocuments){
   walk(doc,node=>{
     if(node.tagName!=='a')return;
     const href=attr(node,'href');if(!href)return;
-    if(/^https?:\/\//.test(href)){external.push(href);return}
+    if(/^https?:\/\//.test(href)){
+      // For link-integrity checks only, Spanish-language UOC versions
+      // correspond to the same Catalan videos (all other links must match).
+      let comparable=href;
+      for(const [caId,esId] of spanishVideoIds)comparable=comparable.replaceAll(esId,caId);
+      external.push(comparable);return
+    }
     if(href.startsWith('mailto:')||href.startsWith('tel:'))return;
     if(href.startsWith('#')){
       const fragment=decodeURIComponent(href.slice(1));
@@ -219,6 +246,18 @@ for(const locale of locales) {
   let textContent='';
   walk(doc,node=>{if(node.nodeName==='#text'&&!['script','style'].includes(node.parentNode?.tagName))textContent+=' '+node.value;});
   const normalized=norm(textContent);
+  if(locale==='en') {
+    for(const label of ['Disrupt the commonplace','Social issues']) {
+      if(!normalized.includes(label))errors.push('en → dimensió mal traduïda: '+label);
+    }
+    if(normalized.includes('Relevant social issues')||normalized.includes('Question the commonplace'))
+      errors.push('en → hi ha títols antics al laboratori');
+  }
+  const videoIds=new Set();
+  walk(doc,node=>{const videoId=attr(node,'data-video-id');if(videoId)videoIds.add(videoId)});
+  for(const expected of [...(locale==='ca'?spanishVideoIds.keys():spanishVideoIds.values()),'osDMuTI0UKs']) {
+    if(!videoIds.has(expected))errors.push(locale+' → vídeo UOC incorrecte: '+expected);
+  }
   for(const snippet of labTexts[locale]) {
     if(!normalized.includes(snippet))errors.push(locale+' → text del laboratori pendent: '+snippet);
   }
