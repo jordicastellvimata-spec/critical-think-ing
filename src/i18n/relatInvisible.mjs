@@ -65,6 +65,7 @@ Aquest exercici no avalua el teu pensament crític. Et convida a passar de rebre
 RECERCA QUE FONAMENTA L'EXPERIÈNCIA|||INVESTIGACIÓN EN LA QUE SE BASA LA EXPERIENCIA|||RESEARCH BEHIND THE EXPERIENCE|||RECHERCHE À L’ORIGINE DE L’EXPÉRIENCE
 Repetir l'experiència|||Repetir la experiencia|||Try again|||Recommencer l’expérience
 Continuar exercitant el pensament crític|||Seguir ejercitando el pensamiento crítico|||Keep practising critical thinking|||Poursuivre l’exercice de l’esprit critique
+Comença «El relat invisible» ↗|||Empieza «El relato invisible» ↗|||Start «The Invisible Narrative» ↗|||Commencer «Le récit invisible» ↗
 `;
 
 export const relatInvisibleTranslations = lines.trim().split('\n').filter(Boolean).map(line => {
