@@ -1,0 +1,73 @@
+---
+const ideas = [
+ {full:"No tots els laboratoris tenen provetes, tubs d’assaig o matrassos Erlenmeyer.",parts:["NO TOTS ELS","LABORATORIS","TENEN","PROVETES","TUBS D’ASSAIG","O MATRASSOS","ERLENMEYER"]},
+ {full:"Les ciències socials també són ciències.",parts:["LES CIÈNCIES","SOCIALS","TAMBÉ SÓN","CIÈNCIES"]},
+ {full:"Totes les ciències de l’educació són ciències socials.",parts:["TOTES LES","CIÈNCIES DE","L’EDUCACIÓ","SÓN CIÈNCIES","SOCIALS"]},
+ {full:"Com seria un laboratori de pensament crític?",parts:["COM SERIA","UN LABORATORI","DE PENSAMENT","CRÍTIC?"]}
+];
+---
+<div class="thinking-cloud" data-thinking-cloud aria-label="Quatre idees sobre què pot ser un laboratori de pensament crític">
+ <p class="cloud-instruction">Quatre idees per descobrir · Passa-hi el cursor o toca les paraules</p>
+ <div class="cloud-field">
+  {ideas.map((idea,i) => (
+   <button type="button" class={`cloud-idea cloud-idea-${i+1}`} data-idea={i} aria-label={`${i+1} de 4. ${idea.full}`} aria-pressed={i===0 ? 'true':'false'}>
+    <span class="cloud-number" aria-hidden="true">{String(i+1).padStart(2,'0')}</span>
+    {idea.parts.map((part,j)=><span class={`cloud-word cloud-word-${j+1}`} aria-hidden="true">{part}</span>)}
+   </button>
+  ))}
+ </div>
+ <div class="cloud-reveal" aria-live="polite" aria-atomic="true">
+   <span class="cloud-reveal-index" data-cloud-index>01 / 04</span>
+   <p data-cloud-sentence>{ideas[0].full}</p>
+ </div>
+</div>
+<style>
+.thinking-cloud{width:100%;min-width:0;color:#fff}
+.cloud-instruction{font:700 10px/1.5 'Manrope',sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#a4c9d2;text-align:center;margin:0 0 16px}
+.cloud-field{display:grid;grid-template-columns:1fr 1fr;gap:12px 15px;align-items:stretch}
+.cloud-idea{appearance:none;border:1px solid rgba(164,201,210,.2);border-radius:60px 48px 70px 45px;background:rgba(255,255,255,.025);min-width:0;min-height:145px;padding:20px 12px 18px;cursor:pointer;color:inherit;display:flex;flex-wrap:wrap;align-content:center;align-items:center;justify-content:center;gap:4px 9px;position:relative;transition:border-color .2s,background .2s,transform .2s,opacity .2s;font-family:'Manrope',sans-serif}
+.cloud-idea-2{border-radius:46px 70px 45px 65px;transform:translateY(10px)}
+.cloud-idea-3{border-radius:70px 44px 62px 50px;transform:translateX(8px)}
+.cloud-idea-4{border-radius:48px 75px 55px 70px;transform:translate(2px,9px)}
+.cloud-number{position:absolute;top:12px;left:17px;color:#9cbec7;opacity:.7;font-size:10px;letter-spacing:.1em;font-weight:800}
+.cloud-word{display:inline-block;line-height:1.08;font-weight:800;letter-spacing:-.045em;transition:color .22s,text-shadow .22s,opacity .22s;white-space:nowrap}
+.cloud-word:nth-of-type(3n+1){color:#95dce5}
+.cloud-word:nth-of-type(3n+2){color:#ffabb6}
+.cloud-word:nth-of-type(3n){color:#f6f9fa}
+.cloud-idea-1 .cloud-word{font-size:clamp(10px,1vw,15px)}
+.cloud-idea-1 .cloud-word-2,.cloud-idea-1 .cloud-word-4{font-size:clamp(16px,1.65vw,23px)}
+.cloud-idea-2 .cloud-word,.cloud-idea-3 .cloud-word,.cloud-idea-4 .cloud-word{font-size:clamp(13px,1.25vw,20px)}
+.cloud-idea-2 .cloud-word-2,.cloud-idea-3 .cloud-word-3,.cloud-idea-4 .cloud-word-4{font-size:clamp(20px,2vw,30px)}
+.cloud-field:has(.cloud-idea:hover) .cloud-idea:not(:hover){opacity:.52}
+.cloud-idea:hover,.cloud-idea:focus-visible,.cloud-idea[aria-pressed="true"]{background:rgba(0,163,188,.11);border-color:rgba(149,220,229,.7)}
+.cloud-idea:hover .cloud-word,.cloud-idea:focus-visible .cloud-word,.cloud-idea[aria-pressed="true"] .cloud-word{text-shadow:0 0 18px rgba(255,255,255,.25)}
+.cloud-idea:focus-visible{outline:2px solid #ffb7bf;outline-offset:3px}
+.cloud-reveal{min-height:108px;text-align:center;margin-top:25px;padding:19px 12px 5px;border-top:1px solid rgba(164,201,210,.35)}
+.cloud-reveal-index{display:block;font:800 11px/1.4 'Manrope',sans-serif;color:#ffb7bf;letter-spacing:.12em}
+.cloud-reveal p{font:700 clamp(16px,1.6vw,22px)/1.4 'Manrope',sans-serif;color:#fff;letter-spacing:-.035em;margin:8px auto 0;max-width:540px}
+@media(min-width:761px) and (max-width:1100px){.cloud-idea{min-height:128px;padding:20px 9px}.cloud-field{gap:10px}.cloud-idea-1 .cloud-word{font-size:10px}.cloud-idea-1 .cloud-word-2,.cloud-idea-1 .cloud-word-4{font-size:16px}.cloud-idea-2 .cloud-word,.cloud-idea-3 .cloud-word,.cloud-idea-4 .cloud-word{font-size:13px}.cloud-idea-2 .cloud-word-2,.cloud-idea-3 .cloud-word-3,.cloud-idea-4 .cloud-word-4{font-size:19px}}
+@media(max-width:760px){.cloud-field{gap:10px}.cloud-idea{min-height:135px;padding:24px 10px 16px}.cloud-idea-1 .cloud-word{font-size:11px}.cloud-idea-1 .cloud-word-2,.cloud-idea-1 .cloud-word-4{font-size:16px}.cloud-idea-2 .cloud-word,.cloud-idea-3 .cloud-word,.cloud-idea-4 .cloud-word{font-size:13px}.cloud-idea-2 .cloud-word-2,.cloud-idea-3 .cloud-word-3,.cloud-idea-4 .cloud-word-4{font-size:18px}.cloud-reveal{min-height:100px}}
+@media(max-width:420px){.cloud-field{grid-template-columns:1fr 1fr;gap:8px}.cloud-idea{min-height:135px;padding:22px 5px 11px;gap:4px}.cloud-word{white-space:normal}.cloud-idea-1 .cloud-word{font-size:10px}.cloud-idea-1 .cloud-word-2,.cloud-idea-1 .cloud-word-4{font-size:14px}.cloud-idea-2 .cloud-word,.cloud-idea-3 .cloud-word,.cloud-idea-4 .cloud-word{font-size:11px}.cloud-idea-2 .cloud-word-2,.cloud-idea-3 .cloud-word-3,.cloud-idea-4 .cloud-word-4{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.cloud-idea,.cloud-word{transition:none}}
+</style>
+<script>
+ document.querySelectorAll('[data-thinking-cloud]').forEach(cloud=>{
+  const buttons=Array.from(cloud.querySelectorAll('[data-idea]'));
+  const sentences=[
+   'No tots els laboratoris tenen provetes, tubs d’assaig o matrassos Erlenmeyer.',
+   'Les ciències socials també són ciències.',
+   'Totes les ciències de l’educació són ciències socials.',
+   'Com seria un laboratori de pensament crític?'
+  ];
+  const label=cloud.querySelector('[data-cloud-sentence]');
+  const index=cloud.querySelector('[data-cloud-index]');
+  let selected=0;
+  const show=i=>{index.textContent=String(i+1).padStart(2,'0')+' / 04';label.textContent=sentences[i];buttons.forEach((button,n)=>button.setAttribute('aria-pressed',String(n===i)));};
+  buttons.forEach((button,i)=>{
+   button.addEventListener('mouseenter',()=>show(i));
+   button.addEventListener('focus',()=>show(i));
+   button.addEventListener('click',()=>{selected=i;show(i)});
+  });
+  cloud.querySelector('.cloud-field').addEventListener('mouseleave',()=>show(selected));
+ });
+</script>
