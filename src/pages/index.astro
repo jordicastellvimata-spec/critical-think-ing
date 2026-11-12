@@ -190,7 +190,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 
 <section class="lab-banner" id="laboratori">
     <div class="container lab-grid">
-      <div><div class="eyebrow">Conceptes · Preguntes · Activitats</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Qüestionar allò que donem per fet, escoltar mirades diverses, comprendre les desigualtats i actuar per transformar la realitat.</p><a class="btn" href="#activitats-laboratori">Explorar les quatre dimensions <span aria-hidden="true">↗</span></a></div>
+      <div><div class="eyebrow">Conceptes · Preguntes · Activitats</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Qüestionar allò que donem per fet, escoltar mirades diverses, comprendre les desigualtats i actuar per transformar la realitat.</p><a class="btn" href="#activitats-laboratori">Explorar les quatre dimensions <span aria-hidden="true">↗</span></a><a class="lab-direct-link" href="#multiperspectiva">Nova activitat: Una plaça, quatre mirades <span aria-hidden="true">↗</span></a></div>
       <div class="lab-art" aria-hidden="true"><div class="lab-orbit"></div><div class="lab-orbit two"></div><div class="lab-main">¿</div><span class="lab-caption">OBSERVAR / CONTRASTAR / ARGUMENTAR / ACTUAR</span></div>
     </div>
     <div class="container lab-prompts" id="activitats-laboratori" aria-label="Quatre dimensions de la literacitat crítica">
@@ -870,6 +870,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 
 
 <style>
+.lab-direct-link{display:inline-flex;align-items:center;gap:9px;margin:18px 0 0;color:#8be9f0;font:750 13px/1.5 'Manrope',sans-serif;text-decoration:underline;text-underline-offset:4px;transition:color .2s ease}
+.lab-direct-link:hover,.lab-direct-link:focus-visible{color:#fff}
 .ri-practice{margin-top:50px;border-top:1px solid var(--line-strong);padding-top:36px;scroll-margin-top:90px}
 .ri-practice-kicker{font-size:11px;font-weight:800;letter-spacing:.13em;color:var(--red-light)}
 .ri-practice>h3{font:700 clamp(25px,4vw,44px)/1.2 'Manrope',sans-serif;letter-spacing:-.045em;margin:12px 0}
@@ -883,7 +885,15 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
     const id = decodeURIComponent(window.location.hash.slice(1));
     const target = document.getElementById(id);
     const disclosure = target?.matches('details.lab-disclosure') ? target : target?.closest('details.lab-disclosure');
-    if (disclosure) disclosure.open = true;
+    if (disclosure) {
+      disclosure.open = true;
+      // Obre el desplegable abans de desplaçar-hi la pantalla: un enllaç
+      // directe també mostra el contingut en mòbils i navegadors amb memòria de scroll.
+      window.requestAnimationFrame(() => {
+        const destination = target.matches('details.lab-disclosure') ? target : disclosure;
+        destination.scrollIntoView({block:'start',behavior:'instant'});
+      });
+    }
   }
   openLabFromHash();
   window.addEventListener('hashchange', openLabFromHash);
