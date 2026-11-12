@@ -14,7 +14,7 @@ import QuestionarActivities from '../components/QuestionarActivities.astro';
 import RelatInvisible from '../components/RelatInvisible.astro';
 import MiradesEnDisputa from '../components/MiradesEnDisputa.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
-import AsteriskIcon from '../components/AsteriskIcon.astro';
+import Brain3DIcon from '../components/Brain3DIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
 import {profile, themes, publications, researchProjects, otherInitiatives, jornades2027} from '../data/site';
@@ -51,7 +51,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <p>Investigo com interpretem el món social i com l’educació pot ajudar a qüestionar discursos i formar una ciutadania crítica.</p>
       </div>
       <div class="topics-grid">
-        {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk"><AsteriskIcon /></span></div><h4>{t.name}</h4><p>{t.detail}</p><small>{t.english}</small></article>)}
+        {themes.map(t=><article class="topic-card"><div class="topic-top"><span>{t.number} / 04</span><span class="topic-asterisk"><Brain3DIcon monochrome /></span></div><h4>{t.name}</h4><p>{t.detail}</p><small>{t.english}</small></article>)}
       </div>
     </div>
   </section>
@@ -380,7 +380,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .topic-card:hover{transform:translateY(-4px);border-color:var(--line-strong)}
 .topic-card:nth-child(2){background:var(--cyan-pale)}.topic-card:nth-child(3){background:var(--rose)}.topic-card:nth-child(4){background:var(--offwhite)}
 .topic-top{display:flex;justify-content:space-between;align-items:center;color:var(--cyan);font-weight:800;font-size:11px;letter-spacing:.13em}
-.topic-asterisk{font-size:27px;color:var(--red)}
+.topic-asterisk{font-size:34px;color:var(--cyan);line-height:1}.topic-card:nth-child(1) .topic-asterisk{color:#006C85}.topic-card:nth-child(2) .topic-asterisk{color:#168A91}.topic-card:nth-child(3) .topic-asterisk{color:#C53243}.topic-card:nth-child(4) .topic-asterisk{color:#7B657F}
 .topic-card h4{font:650 var(--type-item)/1.23 'Manrope',sans-serif;letter-spacing:-.055em;margin:38px 0 13px}
 .topic-card p{font-size:13px;line-height:1.7;color:var(--muted);margin-bottom:19px}
 .topic-card small{font-size:10px;letter-spacing:.09em;font-weight:800;color:var(--cyan);margin-top:auto}
