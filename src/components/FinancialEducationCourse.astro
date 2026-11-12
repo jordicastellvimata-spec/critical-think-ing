@@ -1,8 +1,8 @@
 ---
-const { nested = false } = Astro.props;
+const { nested = false, compact = false } = Astro.props;
 const Heading = nested ? "h4" : "h3";
 ---
-<section class="financial-education" aria-labelledby="financial-education-title">
+<section class:list={['financial-education', {compact}]}  aria-labelledby="financial-education-title">
   <div class="financial-education-main">
     <figure class="financial-education-visual">
       <img src="https://www.fundacionico.es/documents/137403/644238/Portada%2Blibro.jpg/e570f0ed-ef88-3b60-88b6-53c0a00b6aa4?t=1759992074837" alt="Portada de la guia Educación financiera: un kit para el aula de primaria, publicada per la Fundació ICO" width="512" height="512" loading="lazy" decoding="async" />
@@ -46,4 +46,22 @@ const Heading = nested ? "h4" : "h3";
 .financial-education-award strong{color:var(--white);font:650 15px/1.4 'Manrope',sans-serif}
 @media(max-width:760px){.financial-education-visual{float:none;width:min(100%,260px);margin:0 0 20px}.financial-education{grid-template-columns:1fr;padding:20px;gap:20px}.financial-education-side{flex-direction:row;justify-content:space-between;gap:20px;align-items:center}.financial-education-award{border-top:0;border-left:1px solid rgba(255,255,255,.24);padding-top:0;padding-left:16px;max-width:190px}.financial-education-hours strong{font-size:32px}}
 @media(max-width:400px){.financial-education-side{flex-direction:column;align-items:flex-start}.financial-education-award{border-top:1px solid rgba(255,255,255,.24);border-left:0;padding:12px 0 0;max-width:none}}
+
+/* The condensed version shares a desktop row with the Coursera MOOC. */
+@media(min-width:1000px){
+  .financial-education.compact{display:flex;flex-direction:column;gap:0;min-width:0;margin:0;padding:23px 24px}
+  .financial-education.compact .financial-education-main{align-self:stretch}
+  .financial-education.compact .financial-education-visual{width:clamp(112px,27%,155px);margin:0 0 10px 17px}
+  .financial-education.compact .financial-education-visual figcaption{font-size:8px;line-height:1.4}
+  .financial-education.compact .financial-education-eyebrow{font-size:9px;line-height:1.4;margin-bottom:10px}
+  .financial-education.compact :is(h3,h4){font-size:clamp(20px,1.85vw,25px);line-height:1.22;margin-bottom:10px}
+  .financial-education.compact p{font-size:12px;line-height:1.53;margin:7px 0}
+  .financial-education.compact .financial-education-links{gap:8px 16px;margin:13px 0 17px}
+  .financial-education.compact .financial-education-links a{font-size:11px}
+  .financial-education.compact .financial-education-side{flex-direction:row;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding:15px 16px}
+  .financial-education.compact .financial-education-hours{flex:0 0 auto}
+  .financial-education.compact .financial-education-hours strong{font-size:30px}
+  .financial-education.compact .financial-education-award{border-top:0;border-left:1px solid rgba(255,255,255,.24);padding:0 0 0 15px;max-width:210px}
+  .financial-education.compact .financial-education-award strong{font-size:12px;line-height:1.35}
+}
 </style>
