@@ -12,6 +12,7 @@ import DiscoProject from '../components/DiscoProject.astro';
 import FinancialEducationCourse from '../components/FinancialEducationCourse.astro';
 import QuestionarActivities from '../components/QuestionarActivities.astro';
 import RelatInvisible from '../components/RelatInvisible.astro';
+import MiradesEnDisputa from '../components/MiradesEnDisputa.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
 import AsteriskIcon from '../components/AsteriskIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
@@ -213,8 +214,13 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <summary class="lab-prompt">
             <span class="lab-prompt-title">{d.title}</span>
             <span class="lab-prompt-description">{d.description}</span>
-            <span class="lab-prompt-action"><span>Descobreix el llibre recomanat</span><span class="lab-chevron" aria-hidden="true"></span></span>
+            <span class="lab-prompt-action"><span>Comença l’experiment</span><span class="lab-chevron" aria-hidden="true"></span></span>
           </summary>
+          <MiradesEnDisputa />
+          <section class="ri-practice multi-practice" id="per-seguir-pensament-critic" aria-labelledby="multi-practice-title">
+            <div class="ri-practice-kicker">Una lectura per anar més enllà de l'experiment</div>
+            <h3 id="multi-practice-title">Per seguir exercitant el pensament crític</h3>
+            <p>Un exemple inspirador per treballar a l'aula com dues comunitats expliquen una mateixa història, reconèixer les divergències i contrastar-les amb fonts i evidències.</p>
           <article class="multi-book-panel" aria-labelledby="multi-book-title">
             <div class="multi-book-visual">
               <div class="multi-book-cover">
@@ -247,6 +253,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
               </div>
             </div>
           </article>
+          </section>
         </details>
       ) : d.number === '03' ? (
         <details class="lab-disclosure" id="problemes-socials-rellevants">
