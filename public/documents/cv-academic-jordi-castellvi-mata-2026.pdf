@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R] /Count 5 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -13,106 +13,344 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 3 0 R /FB 4 0 R >> >> /Contents 6 0 R >>
 endobj
 6 0 obj
-<< /Length 4605 >>
+<< /Length 6015 >>
 stream
-0.05 0.19 0.25 rg BT /F2 23 Tf 1 0 0 1 46 795.00 Tm (JORDI CASTELLVÍ MATA) Tj ET
-0.14 0.47 0.56 rg BT /F1 10.5 Tf 1 0 0 1 46 772.00 Tm (Currículum acadèmic públic resumit  |  Novembre de 2026) Tj ET
-0.79 0.18 0.23 RG 2 w 46 754 m 549 754 l S
-0.11 0.42 0.53 rg BT /F2 10.6 Tf 1 0 0 1 46 725.00 Tm (Universitat Autònoma de Barcelona  |  GREDICS  |  Red14) Tj ET
-0.14 0.25 0.30 rg BT /F1 10 Tf 1 0 0 1 46 708.00 Tm (jordi.castellvi.mata@uab.cat  |  orcid.org/0000-0002-6487-5477) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 677.00 Tm (PERFIL I LÍNIES DE RECERCA) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 666 m 549 666 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 647.00 Tm (Professor Lector Serra Húnter de Didàctica de les Ciències Socials a la Universitat Autònoma de Barcelona des) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 633.20 Tm (de 2022. Coordinador de la Unitat de Didàctica de les Ciències Socials de la UAB des de gener de 2025.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 613.40 Tm (Membre de GREDICS i Red14. Recerca: relats hegemònics; discursos d'odi i contrarelats; polarització) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 599.60 Tm (sociopolítica i populismes; formació del pensament crític i de la ciutadania crítica.) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 570.80 Tm (FORMACIÓ ACADÈMICA) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 559.8000000000002 m 549 559.8000000000002 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 540.80 Tm (2019 - Doctor internacional en Educació \(excel·lent cum laude\), UAB. Premi Extraordinari de Doctorat \(2021\).) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 521.00 Tm (2018 - Graduat en Educació Primària, Universidad de Las Palmas de Gran Canaria.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 501.20 Tm (2014 - Màster universitari de Recerca en Educació, UAB. 2013 - Graduat en Història, Universitat de Barcelona.) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 472.40 Tm (EXPERIÈNCIA DOCENT I INVESTIGADORA) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 461.4000000000002 m 549 461.4000000000002 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 442.40 Tm (2022-actualitat - Professor Lector Serra Húnter \(UAB\); formació inicial de mestres, pràctiques i direcció de) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 428.60 Tm (treballs.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 408.80 Tm (2022-2023 - Professor col·laborador a la UOC i disseny de materials de ciències socials i ciutadania.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 389.00 Tm (2020-2022 - Professor a la Universidad Internacional de La Rioja \(UNIR\).) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 369.20 Tm (2018-2020 - Recerca predoctoral i postdoctoral a la UAB.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 349.40 Tm (2026 - Docència en anglès a la UAB Barcelona Summer School.) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 320.60 Tm (PROJECTES DE RECERCA) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 309.60000000000014 m 549 309.60000000000014 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 290.60 Tm (PID2024-160676OB-I00 \(2025-2029\). Competències de cultura democràtica en educació primària. Membre de) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 276.80 Tm (l'equip investigador; IP Antoni Santisteban, co-IP Neus González-Monfort.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 257.00 Tm (PID2019-107383RB-I00 \(2020-2023\). Educació per al futur i esperança en la democràcia. Membre de l'equip) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 243.20 Tm (investigador.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 223.40 Tm (EDU2016-80145-P \(2016-2019\). Interpretació de problemes i conflictes contemporanis a les ciències socials.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 209.60 Tm (Membre col·laborador de l'equip.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 189.80 Tm (Projecte EDCD-TEP del Consell d'Europa: cultura democràtica en la formació del professorat.) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 161.00 Tm (PUBLICACIONS CIENTÍFIQUES SELECCIONADES) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 150.00000000000006 m 549 150.00000000000006 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 131.00 Tm (Castellví, J., Casadellà, M., Massip Sabater, M. i Santisteban, A. \(2026\). Secondary school students facing and) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 117.20 Tm (confronting hate speech in digital media. Frontiers in Education, 11. DOI: 10.3389/feduc.2026.1802062) Tj ET
-0.35 0.46 0.51 rg BT /F1 8 Tf 1 0 0 1 46 38 Tm (critical-think.ing  ·  CV públic) Tj ET BT /F1 8 Tf 1 0 0 1 510 38 Tm (1 / 2) Tj ET
+0.075 0.180 0.235 rg BT /FB 18.50 Tf 1 0 0 1 49.00 784.89 Tm (JORDI CASTELLVÍ MATA) Tj ET
+0.000 0.400 0.490 rg BT /FB 8.80 Tf 1 0 0 1 49.00 766.89 Tm (CURRÍCULUM ACADÈMIC  /  VERSIÓ PÚBLICA) Tj ET
+0.340 0.410 0.450 rg BT /FB 8.50 Tf 1 0 0 1 464.28 766.89 Tm (NOVEMBRE 2026) Tj ET
+0.790 0.160 0.200 RG 2.30 w 49.00 753.89 m 547.28 753.89 l S
+0.000 0.400 0.490 rg BT /FB 10.30 Tf 1 0 0 1 49.00 727.89 Tm (Professor Lector \(Serra Húnter\)  ·  Universitat Autònoma de Barcelona) Tj ET
+0.340 0.410 0.450 rg BT /FR 9.40 Tf 1 0 0 1 49.00 710.89 Tm (jordi.castellvi.mata@uab.cat   ·   orcid.org/0000-0002-6487-5477) Tj ET
+0.340 0.410 0.450 rg BT /FR 9.40 Tf 1 0 0 1 49.00 694.89 Tm (critical-think.ing   ·   portalrecerca.uab.cat) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 662.89 Tm (PERFIL ACADÈMIC) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 652.89 m 547.28 652.89 l S
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 633.89 Tm (Professor Lector \(Serra Húnter\) de Didàctica de les Ciències Socials a la Universitat Autònoma de Barcelona) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 619.89 Tm (\(UAB\) des de l'octubre de 2022 i coordinador de la Unitat de Didàctica de les Ciències Socials des del gener de) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 605.89 Tm (2025.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 581.89 Tm (La meva recerca explora els discursos sobre el món social, les relacions entre educació i democràcia i la) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 567.89 Tm (formació del pensament crític i la ciutadania crítica, amb especial atenció a la formació inicial del professorat.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 536.89 Tm (FORMACIÓ ACADÈMICA) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 526.89 m 547.28 526.89 l S
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 507.89 Tm (2019) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 507.89 Tm (Doctor internacional en Educació. Universitat Autònoma de Barcelona \(UAB\).) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 494.04 Tm (Qualificació d'excel·lent cum laude; Premi Extraordinari de Doctorat concedit el 2021.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 472.19 Tm (2018) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 472.19 Tm (Graduat en Educació Primària. Universidad de Las Palmas de Gran Canaria \(ULPGC\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 450.34 Tm (2014) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 450.34 Tm (Màster universitari de Recerca en Educació. Universitat Autònoma de Barcelona) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 436.49 Tm (\(UAB\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 414.64 Tm (2013) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 414.64 Tm (Graduat en Història. Universitat de Barcelona \(UB\).) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 385.79 Tm (EXPERIÈNCIA DOCENT UNIVERSITÀRIA I PROFESSIONAL) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 375.79 m 547.28 375.79 l S
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 356.79 Tm (2022 - actualitat) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 356.79 Tm (Professor Lector Serra Húnter a temps complet a la UAB, en l'àrea de Didàctica de les) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 342.94 Tm (Ciències Socials. Docència en la formació inicial de mestres d'Educació Infantil i) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 329.09 Tm (Primària; tutoria de pràctiques, treballs de final de grau i de màster.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 307.24 Tm (2026) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 307.24 Tm (Professor de la UAB Barcelona Summer School: Resources for Teaching and Learning) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 293.39 Tm (Social Sciences in Primary Education \(13-30 de juliol\). Curs impartit en anglès \(20,20) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 279.54 Tm (hores acreditades\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 257.69 Tm (2022 - 2023) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 257.69 Tm (Professor col·laborador a la Universitat Oberta de Catalunya \(UOC\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 235.84 Tm (2021 - 2023) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 235.84 Tm (Disseny, selecció, assessorament i coordinació de recursos didàctics per a les) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 221.99 Tm (assignatures Ciències socials i ciutadania i Didàctica de les ciències socials de la) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 208.14 Tm (UOC; elaboració de materials i recursos d'avaluació per encàrrec.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 186.29 Tm (2020 - 2022) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 186.29 Tm (Professor a la Universidad Internacional de La Rioja \(UNIR\), en el programa PACE i en) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 172.44 Tm (el Departament de Pràctiques.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 150.59 Tm (2022) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 150.59 Tm (Docent a l'Escola d'Estiu de Rosa Sensat; participació en formació permanent del) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 136.74 Tm (professorat.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 114.89 Tm (2021 - 2023) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 114.89 Tm (Activitats docents i conferències convidades al grau d'Educació Infantil de la) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 101.04 Tm (Universidad de Málaga \(activitat de 2021 certificada\).) Tj ET
+0.78 0.84 0.87 RG 0.6 w 49 55 m 547.28 55 l S
+0.340 0.410 0.450 rg BT /FR 8.0 Tf 1 0 0 1 49 38 Tm (CV públic resumit · Novembre de 2026) Tj ET BT /FR 8 Tf 1 0 0 1 521.28 38 Tm (1 / 5) Tj ET
 endstream
 endobj
 7 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 3 0 R /FB 4 0 R >> >> /Contents 8 0 R >>
 endobj
 8 0 obj
-<< /Length 4610 >>
+<< /Length 6165 >>
 stream
-0.05 0.19 0.25 rg BT /F2 23 Tf 1 0 0 1 46 795.00 Tm (JORDI CASTELLVÍ MATA) Tj ET
-0.14 0.47 0.56 rg BT /F1 10.5 Tf 1 0 0 1 46 772.00 Tm (Currículum acadèmic públic resumit  |  Novembre de 2026) Tj ET
-0.79 0.18 0.23 RG 2 w 46 754 m 549 754 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 725.00 Tm (Andreu-Mediero, B., Castellví Mata, J. i Díez-Bedmar, M. del C. \(2026\). La didáctica de las ciencias sociales) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 711.20 Tm (ante los discursos hegemónicos. Aula Abierta, 55\(3\), 303-316. DOI: 10.17811/rifie.23745) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 691.40 Tm (Albella Gallego, C. i Castellví, J. \(2025\). La polarización en el aula de educación primaria. REIDICS, 16\(1\), 152-168.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 677.60 Tm (DOI: 10.17398/2531-0968.16.152) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 657.80 Tm (Gallart, C. i Castellví, J. \(2025\). Teachers' and students' perceptions of learning decision-making and) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 644.00 Tm (democratic participation in school. Critical Education, 16\(4\), 44-64. DOI: 10.14288/ce.v16i4.187077) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 624.20 Tm (Estellés, M., Oliveira, A. i Castellví, J. \(2024\). National curricula and citizenship education in populist times.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 610.40 Tm (Compare, 54\(6\), 1002-1020. DOI: 10.1080/03057925.2023.2170167) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 590.60 Tm (Castellví, J., Massip, M., González-Valencia, G. i Santisteban, A. \(2022\). Future teachers confronting) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 576.80 Tm (extremism and hate speech. Humanities and Social Sciences Communications, 9, 201. DOI:) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 563.00 Tm (10.1057/s41599-022-01222-4) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 543.20 Tm (Castellví, J., Escribano, C., Santos, R. i Marolla, J. \(2022\). Futures education: Curriculum and educational) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 529.40 Tm (practices in Australia, Spain, and Chile. Comunicar, 73, 45-55. DOI: 10.3916/C73-2022-04) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 509.60 Tm (Castellví, J., Díez-Bedmar, M. C. i Santisteban, A. \(2020\). Pre-Service Teachers' Critical Digital Literacy) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 495.80 Tm (Skills and Attitudes to Address Social Problems. Social Sciences, 9\(8\), 134. DOI: 10.3390/socsci9080134) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 467.00 Tm (LLIBRES, EDICIÓ CIENTÍFICA I TRANSFERÈNCIA) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 456.00000000000057 m 549 456.00000000000057 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 437.00 Tm (Ortega-Sánchez, D., Castellví Mata, J. i González-Monfort, N. \(eds.\) \(2024\). Enseñar el conflicto. Dykinson.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 423.20 Tm (DOI: 10.14679/2617.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 403.40 Tm (Director adjunt de la revista Enseñanza de las Ciencias Sociales des de 2024. Coeditor de monogràfics i de la) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 389.60 Tm (col·lecció Humanizing Pedagogies \(Discover Education, Springer Nature, 2026-2027\).) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 369.80 Tm (Codirector i docent del MOOC La formación del pensamiento crítico en la era digital \(UAB, Coursera\).) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 350.00 Tm (Autor de materials de ciències socials de la Generalitat de Catalunya \(2025\), participant en ARRELA·T \(2026\) i) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 336.20 Tm (en activitats de formació del professorat.) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 316.40 Tm (Coorganitzador de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials de la UAB.) Tj ET
-0.77 0.16 0.24 rg BT /F2 11 Tf 1 0 0 1 46 287.60 Tm (ACTIVITAT INTERNACIONAL I RECONEIXEMENTS) Tj ET
-0.75 0.83 0.85 RG 0.7 w 46 276.6000000000005 m 549 276.6000000000005 l S
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 257.60 Tm (Estada de recerca a la University of British Columbia, Canadà \(gener-abril de 2019\).) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 237.80 Tm (Acreditació de professor Agregat per AQU Catalunya \(2024\). Tram de recerca 2019-2024 avaluat favorablement) Tj ET
-0.14 0.25 0.30 rg BT /F1 9.7 Tf 1 0 0 1 54 224.00 Tm (per AQU, reconegut el 2025.) Tj ET
-0.35 0.46 0.51 rg BT /F1 8 Tf 1 0 0 1 46 38 Tm (critical-think.ing  ·  CV públic) Tj ET BT /F1 8 Tf 1 0 0 1 510 38 Tm (2 / 2) Tj ET
+0.075 0.180 0.235 rg BT /FB 18.50 Tf 1 0 0 1 49.00 784.89 Tm (JORDI CASTELLVÍ MATA) Tj ET
+0.000 0.400 0.490 rg BT /FB 8.80 Tf 1 0 0 1 49.00 766.89 Tm (CURRÍCULUM ACADÈMIC  /  VERSIÓ PÚBLICA) Tj ET
+0.340 0.410 0.450 rg BT /FB 8.50 Tf 1 0 0 1 464.28 766.89 Tm (NOVEMBRE 2026) Tj ET
+0.790 0.160 0.200 RG 2.30 w 49.00 753.89 m 547.28 753.89 l S
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 727.89 Tm (2019 - 2020) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 727.89 Tm (Investigador postdoctoral a la UAB \(desembre de 2019 - octubre de 2020\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 706.04 Tm (2018 - 2019) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 706.04 Tm (Investigador predoctoral amb contracte FPI del Ministeri, a la UAB \(juliol de 2018 -) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 692.19 Tm (desembre de 2019\).) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 670.34 Tm (2013 - 2015) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 670.34 Tm (Becari de suport al professorat de les universitats públiques catalanes \(AAD\), a la) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 656.49 Tm (UAB.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 634.64 Tm (2008 - 2019) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 634.64 Tm (Tutories i suport educatiu en educació primària, secundària, batxillerat i educació de) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 620.79 Tm (persones adultes.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 591.94 Tm (RESPONSABILITATS ACADÈMIQUES I SUPERVISIÓ) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 581.94 m 547.28 581.94 l S
+0.000 0.400 0.490 rg 50.00 560.44 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 562.94 Tm (Coordinador de la Unitat Departamental de Didàctica de les Ciències Socials de la UAB des del gener de) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 549.29 Tm (2025.) Tj ET
+0.000 0.400 0.490 rg 50.00 526.14 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 528.64 Tm (Direcció de tesis doctorals en curs: Diego Núñez Cuello i Carlos Alberto Camacho Rabanete.) Tj ET
+0.000 0.400 0.490 rg 50.00 505.49 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 507.99 Tm (Participació en tribunals doctorals, inclosa la presidència del tribunal de la tesi d'Andrés Felipe Soto) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 494.34 Tm (Yonhson \(UAB, octubre de 2026\), i col·laboració amb el doctorat de la Universidad Tecnológica de Pereira) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 480.69 Tm (\(Colòmbia\).) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 453.04 Tm (LÍNIES DE RECERCA) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 443.04 m 547.28 443.04 l S
+0.000 0.400 0.490 rg 50.00 421.54 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 424.04 Tm (Relats hegemònics: anàlisi de la construcció i la transmissió de discursos dominants en els estudis socials.) Tj ET
+0.000 0.400 0.490 rg 50.00 400.89 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 403.39 Tm (Discursos d'odi i contrarelats: respostes educatives davant els discursos discriminadors en entorns) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 389.74 Tm (digitals i escolars.) Tj ET
+0.000 0.400 0.490 rg 50.00 366.59 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 369.09 Tm (Polarització sociopolítica i populismes: diàleg democràtic, temes controvertits i ciutadania.) Tj ET
+0.000 0.400 0.490 rg 50.00 345.94 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 348.44 Tm (Formació del pensament crític i de la ciutadania crítica: literacitat crítica digital, participació i cultura) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 334.79 Tm (democràtica.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 307.14 Tm (PROJECTES DE RECERCA I XARXES) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 297.14 m 547.28 297.14 l S
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 278.14 Tm (2025 - 2029) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 278.14 Tm (PID2024-160676OB-I00. Competències de cultura democràtica en educació primària.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 264.29 Tm (Investigador de l'equip. IP: Antoni Santisteban; co-IP: Neus González-Monfort.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 242.44 Tm (2020 - 2023) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 242.44 Tm (PID2019-107383RB-I00. Educació per al futur i esperança en la democràcia.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 228.59 Tm (Investigador de l'equip; IP: Antoni Santisteban.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 206.74 Tm (2016 - 2019) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 206.74 Tm (EDU2016-80145-P. Ensenyar i aprendre a interpretar problemes i conflictes) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 192.89 Tm (contemporanis. Membre col·laborador de l'equip; IP: Antoni Santisteban.) Tj ET
+0.000 0.400 0.490 rg BT /FB 9.00 Tf 1 0 0 1 49.00 171.04 Tm (Altres) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 171.04 Tm (Participació en el projecte europeu EDCD-TEP \(Embedding a Democratic Culture) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 157.19 Tm (Dimension in Teacher Education Programmes\), finançat pel Consell d'Europa, i en un) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.55 Tf 1 0 0 1 152.00 143.34 Tm (projecte sobre educació financera amb finançament de FUNCAS.) Tj ET
+0.000 0.400 0.490 rg 50.00 118.99 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 121.49 Tm (Membre del Grup de Recerca en Didàctica de les Ciències Socials \(GREDICS, UAB\) i de Red14, Xarxa) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 107.84 Tm (d'Investigació en Ensenyament de les Ciències Socials \(des de 2023\).) Tj ET
+0.78 0.84 0.87 RG 0.6 w 49 55 m 547.28 55 l S
+0.340 0.410 0.450 rg BT /FR 8.0 Tf 1 0 0 1 49 38 Tm (CV públic resumit · Novembre de 2026) Tj ET BT /FR 8 Tf 1 0 0 1 521.28 38 Tm (2 / 5) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 3 0 R /FB 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 7207 >>
+stream
+0.075 0.180 0.235 rg BT /FB 18.50 Tf 1 0 0 1 49.00 784.89 Tm (JORDI CASTELLVÍ MATA) Tj ET
+0.000 0.400 0.490 rg BT /FB 8.80 Tf 1 0 0 1 49.00 766.89 Tm (CURRÍCULUM ACADÈMIC  /  VERSIÓ PÚBLICA) Tj ET
+0.340 0.410 0.450 rg BT /FB 8.50 Tf 1 0 0 1 464.28 766.89 Tm (NOVEMBRE 2026) Tj ET
+0.790 0.160 0.200 RG 2.30 w 49.00 753.89 m 547.28 753.89 l S
+0.000 0.400 0.490 rg 50.00 725.39 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 727.89 Tm (Estada de recerca a la University of British Columbia \(Canadà\), gener-abril de 2019, finançada pel) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 714.24 Tm (Ministeri de Ciència i Innovació.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 686.59 Tm (PUBLICACIONS CIENTÍFIQUES SELECCIONADES) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 676.59 m 547.28 676.59 l S
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 657.59 Tm (Selecció representativa d'articles revisats per parells i altres contribucions. El catàleg de publicacions i els) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.65 Tf 1 0 0 1 49.00 643.59 Tm (DOI estan disponibles a critical-think.ing/publicacions.) Tj ET
+0.000 0.400 0.490 rg 49.00 616.59 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 619.59 Tm (Chen, X., Santisteban-Fernández, A., González-Valencia, G. A., & Castellví Mata, J. \(2026\). Written rebuttals,) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 606.54 Tm (selective practice: A Toulmin-based dialogic intervention with Chinese university students. Social Sciences,) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 593.49 Tm (15\(11\), Article 764. DOI: 10.3390/socsci15110764) Tj ET
+0.000 0.400 0.490 rg 49.00 569.44 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 572.44 Tm (Castellví, J., Casadellà, M., Massip Sabater, M., & Santisteban, A. \(2026\) Secondary school students facing and) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 559.39 Tm (confronting hate speech in digital media. Frontiers in Education, 11, 1802062. DOI: 10.3389/feduc.2026.1802062) Tj ET
+0.000 0.400 0.490 rg 49.00 535.34 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 538.34 Tm (Andreu-Mediero, B., Castellví Mata, J., & Díez-Bedmar, M. del C. \(2026\). La didáctica de las ciencias sociales) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 525.29 Tm (ante los discursos hegemónicos. Análisis en educación primaria obligatoria desde el marco DigCompEdu. Aula) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 512.24 Tm (Abierta, 55\(3\), 303–316. DOI: 10.17811/rifie.23745) Tj ET
+0.000 0.400 0.490 rg 49.00 488.19 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 491.19 Tm (Castellví, J., & González-Sanz, M. \(2025\). Una mirada a l'aprenentatge de la participació i la transformació social) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 478.14 Tm (a l’escola des de la teoria de l'estructuració. Enseñanza de las Ciencias Sociales, 23\(1\), 47-61. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 465.09 Tm (10.1344/ECCSS2025.1.3) Tj ET
+0.000 0.400 0.490 rg 49.00 441.04 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 444.04 Tm (Albella Gallego, C., & Castellví, J. \(2025\). La polarización en el aula de educación primaria: análisis del diálogo) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 430.99 Tm (democrático sobre temas controvertidos polarizantes REIDICS, 16\(1\), 152-168. DOI: 10.17398/2531-0968.16.152) Tj ET
+0.000 0.400 0.490 rg 49.00 406.94 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 409.94 Tm (Gallart, C., & Castellví, J. \(2025\). Teachers’ and students’ perceptions of learning decision-making and) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 396.89 Tm (democratic participation in school: A case study in Catalonia. Critical Education, 16\(4\), 44–64. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 383.84 Tm (10.14288/ce.v16i4.187077) Tj ET
+0.000 0.400 0.490 rg 49.00 359.79 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 362.79 Tm (Estellés, M., Oliveira, A., & Castellví, J. \(2024\). National curricula and citizenship education in populist times.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 349.74 Tm (The cases of Brazil and Spain. Compare: A Journal of Comparative and International Education, 54\(6\), 1002–1020.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 336.69 Tm (DOI: 10.1080/03057925.2023.2170167) Tj ET
+0.000 0.400 0.490 rg 49.00 312.64 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 315.64 Tm (Castellví, J. \(2024\). Epistemological obstacles to social studies education. Trends in Higher Education, 3\(4\),) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 302.59 Tm (1072–1080. DOI: 10.3390/higheredu3040062) Tj ET
+0.000 0.400 0.490 rg 49.00 278.54 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 281.54 Tm (Castellví, J. \(2024\). Formar el pensament crític orientat a la justícia social per fer front al feixisme. Comunicació) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 268.49 Tm (Educativa, \(37\), 103–122. DOI: 10.17345/comeduc37.4013) Tj ET
+0.000 0.400 0.490 rg 49.00 244.44 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 247.44 Tm (Marolla-Gajardo, J., & Castellví, J. \(2023\). Transform hate speech in education from gender perspectives:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 234.39 Tm (Conceptions of Chilean teachers through a case study. Frontiers in Education, 8. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 221.34 Tm (10.3389/feduc.2023.1267690) Tj ET
+0.000 0.400 0.490 rg 49.00 197.29 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 200.29 Tm (Castellví, J., Massip, M., González-Valencia, G., & Santisteban, A. \(2022\). Future teachers confronting extremism) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 187.24 Tm (and hate speech. Humanities and Social Sciences Communications, 9, 201. DOI: 10.1057/s41599-022-01222-4) Tj ET
+0.000 0.400 0.490 rg 49.00 163.19 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 166.19 Tm (Castellví, J., Escribano, C., Santos, R., & Marolla, J. \(2022\). Futures education: Curriculum and educational) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 153.14 Tm (practices in Australia, Spain, and Chile. [Educación para el futuro: Currículo y prácticas educativas en Australia,) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 140.09 Tm (España y Chile]. Comunicar, 73, 45-55. DOI: 10.3916/C73-2022-04) Tj ET
+0.000 0.400 0.490 rg 49.00 116.04 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 119.04 Tm (Estellés, M., Castellví Mata, J., & Oliveira, A. \(2022\). Currículos nacionais e populismo: uma comparação entre) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 105.99 Tm (Brasil e a Espanha. Educação Unisinos, 26. DOI: 10.4013/edu.2022.262.31) Tj ET
+0.78 0.84 0.87 RG 0.6 w 49 55 m 547.28 55 l S
+0.340 0.410 0.450 rg BT /FR 8.0 Tf 1 0 0 1 49 38 Tm (CV públic resumit · Novembre de 2026) Tj ET BT /FR 8 Tf 1 0 0 1 521.28 38 Tm (3 / 5) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 3 0 R /FB 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 7231 >>
+stream
+0.075 0.180 0.235 rg BT /FB 18.50 Tf 1 0 0 1 49.00 784.89 Tm (JORDI CASTELLVÍ MATA) Tj ET
+0.000 0.400 0.490 rg BT /FB 8.80 Tf 1 0 0 1 49.00 766.89 Tm (CURRÍCULUM ACADÈMIC  /  VERSIÓ PÚBLICA) Tj ET
+0.340 0.410 0.450 rg BT /FB 8.50 Tf 1 0 0 1 464.28 766.89 Tm (NOVEMBRE 2026) Tj ET
+0.790 0.160 0.200 RG 2.30 w 49.00 753.89 m 547.28 753.89 l S
+0.000 0.400 0.490 rg 49.00 724.89 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 727.89 Tm (Marolla, J., Castellví, J., & Santos, R. \(2021\). Chilean Teacher Educators’ Conceptions on the Absence of) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 714.84 Tm (Women and Their History in Teacher Training Programmes. A Collective Case Study. Social Sciences, 10, 106. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 701.79 Tm (10.3390/socsci10030106) Tj ET
+0.000 0.400 0.490 rg 49.00 677.74 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 680.74 Tm (Castellví, J., Tosar, B., & Santisteban, A. \(2021\). Young people confronting the challenge of reading and) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 667.69 Tm (interpreting a digital world. Bellaterra Journal of Teaching & Learning Language & Literature, 14\(2\), e905. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 654.64 Tm (10.5565/rev/jtl3.905) Tj ET
+0.000 0.400 0.490 rg 49.00 630.59 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 633.59 Tm (Santisteban, A., Díez-Bedmar, M.C., & Castellví, J. \(2020\). La alfabetización crítica digital del futuro) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 620.54 Tm (profesorado en tiempos de Twitter. Culture & Education, 32\(2\), 1-28. DOI: 10.1080/11356405.2020.1741875) Tj ET
+0.000 0.400 0.490 rg 49.00 596.49 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 599.49 Tm (Estellés, M., & Castellví, J. \(2020\). The Educational Implications of Populism, Emotions and Digital Hate Speech:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 586.44 Tm (A Dialogue with Scholars from Canada, Chile, Spain, the UK, and the US. Sustainability, 12\(15\), 6034. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 573.39 Tm (10.3390/su12156034) Tj ET
+0.000 0.400 0.490 rg 49.00 549.34 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 552.34 Tm (Castellví, J., Díez-Bedmar, M.C., & Santisteban, A. \(2020\). Pre-Service Teachers' Critical Digital Literacy Skills) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 539.29 Tm (and Attitudes to Address Social Problems. Social Sciences, 9\(8\), 134; DOI: 10.3390/socsci9080134) Tj ET
+0.000 0.400 0.490 rg 49.00 515.24 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 518.24 Tm (Castellví Mata, J. \(2020\). Leer, interpretar y actuar en un mundo digital: literacidad crítica digital en educación) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 505.19 Tm (primaria. Enseñanza de las Ciencias Sociales, 19, 17–28. DOI: 10.1344/ECCSS2020.19.3) Tj ET
+0.000 0.400 0.490 rg 49.00 481.14 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 484.14 Tm (Castellví, J., Massip, M., & Pagès, J. \(2019\). Emociones y pensamiento crítico en la era digital: un estudio con) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 471.09 Tm (alumnado de formación inicial. REIDICS. Revista De Investigación En Didáctica De Las Ciencias Sociales, 5, 23-41.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 458.04 Tm (DOI: 10.17398/2531-0968.05.23) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 429.99 Tm (LLIBRES I CAPÍTOLS SELECCIONATS) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 419.99 m 547.28 419.99 l S
+0.000 0.400 0.490 rg 49.00 397.99 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 400.99 Tm (Ortega-Sánchez, D., Castellví Mata, J., & González-Monfort, N. \(Eds.\). \(2024\). Enseñar el conflicto:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 387.94 Tm (Perspectivas, significados y límites en la educación para una cultura democrática y la justicia social. Dykinson.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 374.89 Tm (ISBN: 978-84-1070-176-2 \(papel\), 978-84-1070-308-7 \(digital\). DOI: 10.14679/2617) Tj ET
+0.000 0.400 0.490 rg 49.00 350.84 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 353.84 Tm (Castellví, J., Andreu Mediero, B., Escribano Muñoz, C., Vidal Prades, E. D., Gil Carmona, F., & Díez Bedmar, M. C.) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 340.79 Tm (\(2025\). Discursos sociales en disputa en la escuela: implicaciones para la formación docente. En E. D. Vidal) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 327.74 Tm (Prades, J. M. Pons-Altés & N. González-Monfort \(Coords.\), La Didáctica de las Ciencias Sociales en la formación) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 314.69 Tm (de docentes de Infantil y Primaria: Experiencias e investigaciones \(pp. 226–237\). Editum. DOI:) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 301.64 Tm (10.6018/editum.3143) Tj ET
+0.000 0.400 0.490 rg 49.00 277.59 3.00 3.00 re f
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 280.59 Tm (Castellví Mata, J., González-Valencia, G. A., & Santisteban Fernández, A. \(2023\). Social Issues Are the) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 267.54 Tm (Syllabus: Worldwide Teacher Education in Changing Times. En F. D. Salajan, T. D. Jules, & C. Wolhuter \(Eds.\),) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 254.49 Tm (Teacher Education Intersecting Comparative and International Education: Revisiting Research, Policy and Practice) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.15 Tf 1 0 0 1 62.00 241.44 Tm (in Twin Scholarship Fields \(pp. 199–215\). Bloomsbury Academic. DOI: 10.5040/9781350339972.ch-12) Tj ET
+0.000 0.400 0.490 rg 50.00 217.89 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 220.39 Tm (Coautor de tres capítols del llibre ¿Cómo investigar en Didáctica de las Ciencias Sociales? \(Octaedro,) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 206.74 Tm (2023\), sobre recerca qualitativa, protocols ètics i redacció científica.) Tj ET
+0.000 0.400 0.490 rg 50.00 183.59 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 186.09 Tm (Tesi doctoral \(2019\): Literacitat crítica digital en els Estudis Socials. Estudis de cas en educació) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 172.44 Tm (primària. Disponible a: hdl.handle.net/10803/669394.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 144.79 Tm (TRANSFERÈNCIA, RECURSOS DOCENTS I INNOVACIÓ) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 134.79 m 547.28 134.79 l S
+0.000 0.400 0.490 rg 50.00 113.29 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 115.79 Tm (Codirector i docent del MOOC La formación del pensamiento crítico en la era digital \(Universitat Autònoma) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 102.14 Tm (de Barcelona, Coursera\).) Tj ET
+0.78 0.84 0.87 RG 0.6 w 49 55 m 547.28 55 l S
+0.340 0.410 0.450 rg BT /FR 8.0 Tf 1 0 0 1 49 38 Tm (CV públic resumit · Novembre de 2026) Tj ET BT /FR 8 Tf 1 0 0 1 521.28 38 Tm (4 / 5) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /FR 3 0 R /FB 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 5552 >>
+stream
+0.075 0.180 0.235 rg BT /FB 18.50 Tf 1 0 0 1 49.00 784.89 Tm (JORDI CASTELLVÍ MATA) Tj ET
+0.000 0.400 0.490 rg BT /FB 8.80 Tf 1 0 0 1 49.00 766.89 Tm (CURRÍCULUM ACADÈMIC  /  VERSIÓ PÚBLICA) Tj ET
+0.340 0.410 0.450 rg BT /FB 8.50 Tf 1 0 0 1 464.28 766.89 Tm (NOVEMBRE 2026) Tj ET
+0.790 0.160 0.200 RG 2.30 w 49.00 753.89 m 547.28 753.89 l S
+0.000 0.400 0.490 rg 50.00 725.39 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 727.89 Tm (Coautor dels recursos Llegir i escriure ciències socials a l'escola i Aprendre ciències socials a l'educació) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 714.24 Tm (secundària: llegir la paraula per llegir el món \(Generalitat de Catalunya, 2025\).) Tj ET
+0.000 0.400 0.490 rg 50.00 691.09 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 693.59 Tm (Coautor d'ARRELA·T: El joc per sostenir el territori \(2026\), joc educatiu sobre despoblament rural i) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 679.94 Tm (sostenibilitat territorial.) Tj ET
+0.000 0.400 0.490 rg 50.00 656.79 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 659.29 Tm (Autor de Medi social a educació infantil. Com aprenem sobre el medi social a l'escola? \(UAB, 2024\), i de) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 645.64 Tm (materials universitaris de la UOC \(2022\).) Tj ET
+0.000 0.400 0.490 rg 50.00 622.49 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 624.99 Tm (Col·laborador dels materials Coneixement del medi 3 i 4, Programa Experimenta \(Barcanova\), i de materials) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 611.34 Tm (educatius de la Fundació Jesuïtes Educació.) Tj ET
+0.000 0.400 0.490 rg 50.00 588.19 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 590.69 Tm (Participació en projectes d'innovació docent de la UAB: Social Lab, equipament del laboratori, recursos) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 577.04 Tm (didàctics i recerca i transferència als pràcticums \(2025-2026\).) Tj ET
+0.000 0.400 0.490 rg 50.00 553.89 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 556.39 Tm (Coorganització de les Jornades Internacionals de Recerca en Didàctica de les Ciències Socials de la UAB) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 542.74 Tm (des de 2017.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 515.09 Tm (EDICIÓ CIENTÍFICA I SERVEI ACADÈMIC) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 505.09 m 547.28 505.09 l S
+0.000 0.400 0.490 rg 50.00 483.59 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 486.09 Tm (Director adjunt de la revista Enseñanza de las Ciencias Sociales des de 2024 i coordinació de números) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 472.44 Tm (monogràfics \(2025-2026\).) Tj ET
+0.000 0.400 0.490 rg 50.00 449.29 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 451.79 Tm (Coeditor convidat de Civic Education in the Digital Age \(Social Sciences, MDPI, 2026\) i de Humanizing) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 438.14 Tm (Pedagogies: Critical Perspectives on Education, Democracy and Social Justice \(Discover Education,) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 424.49 Tm (Springer Nature, 2026-2027; en curs\).) Tj ET
+0.000 0.400 0.490 rg 50.00 401.34 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 403.84 Tm (Editor convidat del número Read the World to Write the Future: Critical Education to Address Contemporary) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 390.19 Tm (Issues \(Bellaterra Journal of Teaching & Learning Language & Literature, 2021\).) Tj ET
+0.000 0.400 0.490 rg 50.00 367.04 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 369.54 Tm (Revisor de revistes científiques d'educació i didàctica de les ciències socials, incloses Teaching and) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 355.89 Tm (Teacher Education, Educational Review, Humanities and Social Sciences Communications i Educar.) Tj ET
+0.790 0.160 0.200 rg BT /FB 10.80 Tf 1 0 0 1 49.00 328.24 Tm (ACREDITACIONS, MÈRITS I IDIOMES) Tj ET
+0.760 0.820 0.840 RG 0.70 w 49.00 318.24 m 547.28 318.24 l S
+0.000 0.400 0.490 rg 50.00 296.74 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 299.24 Tm (Premi Extraordinari de Doctorat en Educació \(UAB, 2021\). Acreditacions de professor Lector i Agregat per) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 285.59 Tm (AQU Catalunya, i acreditacions d'Ajudant Doctor, Contractat Doctor i professor d'Universitat Privada per) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 271.94 Tm (ANECA.) Tj ET
+0.000 0.400 0.490 rg 50.00 248.79 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 251.29 Tm (Tram de recerca 2019-2024 avaluat favorablement per AQU Catalunya el 2025. Avaluacions favorables de) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 237.64 Tm (mèrits docents UAB.) Tj ET
+0.000 0.400 0.490 rg 50.00 214.49 3.50 3.50 re f
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 216.99 Tm (Català i castellà: llengües natives. Anglès: C1 acreditat. Francès: B2 acreditat. Acreditació per impartir) Tj ET
+0.075 0.180 0.235 rg BT /FR 9.50 Tf 1 0 0 1 64.00 203.34 Tm (docència universitària en anglès.) Tj ET
+0.78 0.84 0.87 RG 0.6 w 49 55 m 547.28 55 l S
+0.340 0.410 0.450 rg BT /FR 8.0 Tf 1 0 0 1 49 38 Tm (CV públic resumit · Novembre de 2026) Tj ET BT /FR 8 Tf 1 0 0 1 521.28 38 Tm (5 / 5) Tj ET
 endstream
 endobj
 xref
-0 9
+0 15
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
-0000000127 00000 n 
-0000000224 00000 n 
-0000000326 00000 n 
-0000000462 00000 n 
-0000005118 00000 n 
-0000005254 00000 n 
+0000000147 00000 n 
+0000000244 00000 n 
+0000000346 00000 n 
+0000000488 00000 n 
+0000006554 00000 n 
+0000006696 00000 n 
+0000012912 00000 n 
+0000013055 00000 n 
+0000020314 00000 n 
+0000020458 00000 n 
+0000027741 00000 n 
+0000027885 00000 n 
 trailer
-<< /Size 9 /Root 1 0 R >>
+<< /Size 15 /Root 1 0 R >>
 startxref
-9915
+33489
 %%EOF
