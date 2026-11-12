@@ -159,7 +159,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <h3 class="subsection-title">Formació inicial</h3>
         <TeachingVideoGallery embedded={true} />
         <h3 class="subsection-title subsection-offset">Formació permanent</h3>
-        <div class="practice-grid">
+        <div class="continuing-courses-grid">
           <a class="practice-card practice-mooc" href={otherInitiatives[1].url} target="_blank" rel="noopener noreferrer">
             <span class="mini">FORMACIÓ OBERTA · COURSERA</span>
             <div class="practice-brand" aria-label="Coursera"><img src="/images/coursera-symbol.svg" alt="" width="43" height="43" loading="lazy" decoding="async" /><span class="practice-brand-wordmark" aria-hidden="true">coursera</span></div>
@@ -169,9 +169,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
               <strong>Explorar el curs ↗</strong>
             </div>
           </a>
-          
+          <FinancialEducationCourse nested={true} compact={true} />
         </div>
-        <FinancialEducationCourse nested={true} />
         <TeacherResources />
     </div>
   </section>
@@ -739,6 +738,18 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .research-networks .research-network-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:900px){.research-networks .research-network-grid{grid-template-columns:minmax(0,1fr)}.red14-feature{padding:28px 23px}}
 @media(prefers-reduced-motion:reduce){.publication-disclosure-icon,.publication-disclosure-trigger{transition:none}}
+
+/* Two equally prominent continuing-education courses on larger screens. */
+.continuing-courses-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+@media(min-width:1000px){
+  .continuing-courses-grid .practice-card{min-height:0;grid-template-rows:auto 100px minmax(0,1fr);padding:26px 28px}
+  .continuing-courses-grid .practice-brand{min-height:95px}
+  .continuing-courses-grid .practice-brand-wordmark{font-size:clamp(35px,3.5vw,46px)}
+  .continuing-courses-grid .practice-card h4{font-size:clamp(21px,2vw,27px);line-height:1.22;margin-bottom:11px}
+  .continuing-courses-grid .practice-card p{font-size:13px;line-height:1.6;margin:0 0 16px}
+  .continuing-courses-grid .practice-card-copy>strong{margin-top:auto}
+}
+@media(max-width:999px){.continuing-courses-grid{grid-template-columns:minmax(0,1fr);gap:0}}
 </style>
 
 <script is:inline>
