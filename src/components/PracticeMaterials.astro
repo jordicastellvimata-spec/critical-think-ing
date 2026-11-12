@@ -53,8 +53,10 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
     <p class="materials-note">Els enllaços d’Amazon cerquen cada ISBN; no pressuposen que el llibre hi estigui disponible.</p>
   </section>
 
-  <ArrelaProject />
-  <CromaProject />
+  <div class="classroom-projects-grid" role="group" aria-label="Projectes educatius Arrela·t i Croma 2.0">
+    <ArrelaProject />
+    <CromaProject />
+  </div>
   </div>
 
   <section class="material-group jesuites-group" aria-labelledby="jesuites-heading">
@@ -168,6 +170,11 @@ const firstJesuites = Math.floor((jesuitesProjects.length - 1) / 2);
   .flow-item,.flow-item.is-active,.flow-item.is-before,.flow-item.is-after,.flow-item.is-far{transform:none;opacity:1;filter:none;transition:none}
   .coverflow-track{scroll-behavior:auto}
   .coverflow-controls button{transition:none}
+}
+
+/* Two project profiles on one row on desktop only. */
+@media(min-width:1000px){
+  .classroom-projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch;margin-top:38px}
 }
 </style>
 
