@@ -45,18 +45,20 @@
 @media(max-width:640px){.arrela-compact{grid-template-columns:110px minmax(0,1fr);gap:15px;margin-top:32px;padding-top:22px}.arrela-content h3{font-size:23px}.arrela-content>p{font-size:12px;line-height:1.6}.arrela-team{font-size:10px}.arrela-logos{gap:10px}.arrela-logos a{max-width:135px;height:38px}.arrela-logos img{max-height:36px}}
 @media(max-width:420px){.arrela-compact{grid-template-columns:1fr}.arrela-photo{width:min(210px,68vw);height:auto;aspect-ratio:5/6;justify-self:center;margin-inline:auto}.arrela-photo img{object-position:center 35%}.arrela-logos a{max-width:155px}}
 
-/* Balanced project card when shown alongside CROMA on wide screens. */
+/* Desktop: full-width image stage with a softly filled backdrop so that the
+   entire portrait photograph remains legible, centered, and visually prominent. */
 @media(min-width:1000px){
-  :global(.classroom-projects-grid) .arrela-compact{display:flex;flex-direction:column;gap:0;min-width:0;min-height:0;margin:0;padding:0;border:1px solid var(--line);background:var(--white)}
-  :global(.classroom-projects-grid) .arrela-photo{width:100%;height:189px;aspect-ratio:auto;border:0;border-radius:0;display:flex;align-items:center;justify-content:center}
-  :global(.classroom-projects-grid) .arrela-photo img{width:100%;height:100%;object-fit:contain;object-position:center}
-  :global(.classroom-projects-grid) .arrela-content{display:flex;flex-direction:column;flex:1;min-width:0;padding:21px 24px 22px}
-  :global(.classroom-projects-grid) .arrela-content h3{font-size:clamp(21px,2vw,27px);line-height:1.17;margin:8px 0 7px}
-  :global(.classroom-projects-grid) .arrela-content>p{font-size:12px;line-height:1.55;margin:9px 0}
-  :global(.classroom-projects-grid) .arrela-team{margin-top:10px;font-size:11px;line-height:1.5}
-  :global(.classroom-projects-grid) .arrela-support{margin-top:auto;padding-top:12px}
-  :global(.classroom-projects-grid) .arrela-logos{gap:12px;margin-top:8px}
-  :global(.classroom-projects-grid) .arrela-logos a{max-width:145px;height:40px}
-  :global(.classroom-projects-grid) .arrela-logos img{max-height:38px}
+  .arrela-compact{display:flex;flex-direction:column;gap:0;min-width:0;min-height:0;margin:0;padding:0;border:1px solid var(--line);background:var(--white)}
+  .arrela-photo{position:relative;isolation:isolate;width:100%;height:276px;aspect-ratio:auto;min-height:0;overflow:hidden;border:0;border-radius:0;display:grid;place-items:center;background:#e4eff2}
+  .arrela-photo::before{content:'';position:absolute;inset:-20px;background:url('/images/arrela-t-joc-real.jpg') center 45%/cover no-repeat;filter:blur(18px) saturate(.75);opacity:.38;transform:scale(1.06);z-index:-1}
+  .arrela-photo img{position:relative;display:block;width:auto;max-width:100%;height:100%;object-fit:contain;object-position:center;box-shadow:0 0 20px rgba(25,47,56,.17)}
+  .arrela-content{display:flex;flex-direction:column;flex:1;min-width:0;padding:21px 24px 22px}
+  .arrela-content h3{font-size:clamp(21px,2vw,27px);line-height:1.17;margin:8px 0 7px}
+  .arrela-content>p{font-size:12px;line-height:1.55;margin:9px 0}
+  .arrela-team{margin-top:10px;font-size:11px;line-height:1.5}
+  .arrela-support{margin-top:auto;padding-top:12px}
+  .arrela-logos{gap:12px;margin-top:8px}
+  .arrela-logos a{max-width:145px;height:40px}
+  .arrela-logos img{max-height:38px}
 }
 </style>
