@@ -235,10 +235,10 @@ for(const file of pages){
 }
 // Regression checks: all four localizations must include correctly translated lab resources.
 const labTexts = {
-  ca: ['Explora les set activitats','Descobreix el llibre recomanat','Explora el llibre de GREDICS','Un recurs meravellós per treballar la multiperspectiva','Llegir el llibre complet (PDF)'],
-  es: ['Explora las siete actividades','Descubre el libro recomendado','Explora el libro de GREDICS','Un recurso maravilloso para trabajar la multiperspectiva','Leer el libro completo (PDF)'],
-  en: ['Explore the seven activities','Explore the recommended book',"Explore GREDICS's book",'A wonderful resource for teaching multiple perspectives','Read the full book (PDF)'],
-  fr: ['Découvrir les sept activités','Découvrir le livre recommandé','Découvrir le livre de GREDICS','Une ressource remarquable pour travailler la multiperspectivité','Lire le livre intégral (PDF)']
+  ca: ['Explora les set activitats','Una plaça, quatre mirades.','Per seguir exercitant el pensament crític','Explora el llibre de GREDICS','Un recurs meravellós per treballar la multiperspectiva','Llegir el llibre complet (PDF)'],
+  es: ['Explora las siete actividades','Una plaza, cuatro miradas.','Para seguir ejercitando el pensamiento crítico','Explora el libro de GREDICS','Un recurso maravilloso para trabajar la multiperspectiva','Leer el libro completo (PDF)'],
+  en: ['Explore the seven activities','One square, four perspectives.','To keep practising critical thinking',"Explore GREDICS's book",'A wonderful resource for teaching multiple perspectives','Read the full book (PDF)'],
+  fr: ['Découvrir les sept activités','Une place, quatre regards.','Pour continuer à exercer l’esprit critique','Découvrir le livre de GREDICS','Une ressource remarquable pour travailler la multiperspectivité','Lire le livre intégral (PDF)']
 };
 for(const locale of locales) {
   const doc=allDocuments.get(localizedRoute('',locale));

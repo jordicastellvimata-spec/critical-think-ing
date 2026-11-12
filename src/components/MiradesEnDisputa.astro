@@ -1,0 +1,283 @@
+---
+/**
+ * Experiment 02: multiperspectiva.
+ * Cas completament fictici, amb dades inventades exclusivament per a la simulació.
+ * Sense recollida de dades, puntuacions ni diagnòstics de l'usuari.
+ * Els missatges de la interacció provenen del DOM, traduït pel catàleg editorial.
+ */
+---
+<section class="mp-experiment" data-mirades aria-labelledby="mp-title">
+  <div class="mp-topline"><span>EXPERIMENT 02 / 08</span><span>DIMENSIÓ 02 · MULTIPERSPECTIVA</span></div>
+  <header class="mp-intro">
+    <span class="mp-overline">CRITICAL THINKING LAB / EXPERIMENT INTERACTIU</span>
+    <h3 id="mp-title">Una plaça, <em>quatre mirades.</em></h3>
+    <p>Una mateixa decisió pot afectar persones diferents de maneres diferents. Seràs capaç de revisar la primera versió que escoltes?</p>
+    <span class="mp-duration">5 minuts · Escolta, contrasta i reescriu</span>
+  </header>
+
+  <section class="mp-stage" data-mp-stage="opening" aria-labelledby="mp-open-title">
+    <div class="mp-step"><span>01 / LA PRIMERA VERSIÓ</span><span>Què ens diu el relat oficial?</span></div>
+    <div class="mp-opening-grid">
+      <figure class="mp-art">
+        <div class="mp-art-head"><span>VALLCLARA</span><span>PLÀNOL ESQUEMÀTIC</span></div>
+        <div class="mp-plaza" aria-hidden="true">
+          <span class="mp-building mp-building-a"><i></i><i></i><i></i></span>
+          <span class="mp-building mp-building-b"><i></i><i></i><i></i></span>
+          <span class="mp-building mp-building-c"><i></i><i></i><i></i></span>
+          <span class="mp-path mp-path-a"></span><span class="mp-path mp-path-b"></span>
+          <span class="mp-tree mp-tree-a"></span><span class="mp-tree mp-tree-b"></span>
+          <span class="mp-tree mp-tree-c"></span><span class="mp-tree mp-tree-d"></span>
+          <span class="mp-bench mp-bench-a"></span><span class="mp-bench mp-bench-b"></span>
+          <span class="mp-bench mp-bench-c"></span><span class="mp-bench mp-bench-d"></span>
+          <span class="mp-bench mp-bench-e"></span><span class="mp-bench mp-bench-f"></span>
+          <span class="mp-pin mp-pin-a">1</span><span class="mp-pin mp-pin-b">2</span>
+          <span class="mp-pin mp-pin-c">3</span><span class="mp-pin mp-pin-d">4</span>
+          <div class="mp-map-label"><strong>06</strong><small>BANCS RETIRATS</small></div>
+        </div>
+        <figcaption>Representació gràfica inventada per a l'activitat. No correspon a cap plaça real.</figcaption>
+      </figure>
+      <div class="mp-official">
+        <span class="mp-paper-eyebrow">COMUNICAT MUNICIPAL · CAS FICTICI</span>
+        <h4 id="mp-open-title">L'Ajuntament retira sis bancs de la plaça per millorar la convivència</h4>
+        <p>El consistori de Vallclara anuncia que ha retirat sis bancs després de rebre 18 avisos per soroll durant els darrers sis mesos. La mesura es presenta com una actuació per afavorir el descans veïnal.</p>
+        <div class="mp-note"><strong>El que sabem:</strong> s'han retirat sis bancs i s'han registrat 18 avisos. No sabem encara qui els ha presentat, quins usos tenia la plaça ni quines alternatives s'han estudiat.</div>
+        <div class="mp-first">
+          <h5>Quina és la teva primera impressió?</h5>
+          <p>Tria una lectura provisional. No és un examen: després podràs canviar de parer.</p>
+          <div class="mp-first-options" role="group" aria-label="Primera interpretació del comunicat">
+            <button type="button" class="mp-choice" data-mp-initial aria-pressed="false"><span>A</span><strong>És una mesura necessària per al descans.</strong></button>
+            <button type="button" class="mp-choice" data-mp-initial aria-pressed="false"><span>B</span><strong>És una manera d'expulsar persones de la plaça.</strong></button>
+            <button type="button" class="mp-choice" data-mp-initial aria-pressed="false"><span>C</span><strong>Necessito més informació per valorar-la.</strong></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mp-actions"><button type="button" data-mp-next="voices" disabled>Escoltar les quatre veus <span aria-hidden="true">→</span></button></div>
+  </section>
+
+  <section class="mp-stage" data-mp-stage="voices" aria-labelledby="mp-voices-title" hidden>
+    <div class="mp-step"><span>02 / ESCOLTA</span><span>Qui viu la plaça i com?</span></div>
+    <div class="mp-section-head"><h4 id="mp-voices-title">Quatre persones. <em>Quatre experiències.</em></h4><p>Obre totes les targetes. No busquis qui té raó d'entrada: identifica què viu cada persona, què reclama i què hauríem de comprovar.</p></div>
+    <div class="mp-voices" aria-label="Testimonis ficticis">
+      <article class="mp-voice" data-mp-voice="1">
+        <button type="button" class="mp-voice-button" data-mp-voice-button aria-expanded="false" aria-controls="mp-voice-one"><span class="mp-voice-avatar">01</span><span><small>LAIA · 16 ANYS</small><strong>Hi vaig per trobar-me amb els amics.</strong><span class="mp-voice-tag">Jove usuària</span></span><span class="mp-voice-plus" aria-hidden="true">+</span></button>
+        <div class="mp-voice-body" id="mp-voice-one" hidden><blockquote>«No tothom pot quedar en un bar i consumir. Ara hem perdut un lloc on estar sense pagar».</blockquote><p><b>Què posa sobre la taula?</b> El dret de les persones joves a l'espai públic. La seva experiència no demostra, per si sola, que el soroll no existeixi.</p></div>
+      </article>
+      <article class="mp-voice" data-mp-voice="2">
+        <button type="button" class="mp-voice-button" data-mp-voice-button aria-expanded="false" aria-controls="mp-voice-two"><span class="mp-voice-avatar">02</span><span><small>ORIOL · 44 ANYS</small><strong>Visc davant de la plaça.</strong><span class="mp-voice-tag">Veí de l'entorn</span></span><span class="mp-voice-plus" aria-hidden="true">+</span></button>
+        <div class="mp-voice-body" id="mp-voice-two" hidden><blockquote>«Algunes nits no podem dormir. No vull fer fora ningú; necessitem poder descansar».</blockquote><p><b>Què posa sobre la taula?</b> El dret al descans i l'existència d'un possible conflicte. Cal distingir els episodis de soroll dels usos habituals de la plaça.</p></div>
+      </article>
+      <article class="mp-voice" data-mp-voice="3">
+        <button type="button" class="mp-voice-button" data-mp-voice-button aria-expanded="false" aria-controls="mp-voice-three"><span class="mp-voice-avatar">03</span><span><small>NÚRIA · 72 ANYS</small><strong>Hi descansava quan anava a comprar.</strong><span class="mp-voice-tag">Veïna gran</span></span><span class="mp-voice-plus" aria-hidden="true">+</span></button>
+        <div class="mp-voice-body" id="mp-voice-three" hidden><blockquote>«Sense bancs, el camí se'm fa massa llarg. Per mi no eren només un lloc per seure».</blockquote><p><b>Què posa sobre la taula?</b> L'accessibilitat i la desigualtat d'impactes: una mateixa decisió pot limitar més la mobilitat d'algunes persones.</p></div>
+      </article>
+      <article class="mp-voice" data-mp-voice="4">
+        <button type="button" class="mp-voice-button" data-mp-voice-button aria-expanded="false" aria-controls="mp-voice-four"><span class="mp-voice-avatar">04</span><span><small>SAMIRA · 39 ANYS</small><strong>Tinc una botiga al costat.</strong><span class="mp-voice-tag">Comerciant</span></span><span class="mp-voice-plus" aria-hidden="true">+</span></button>
+        <div class="mp-voice-body" id="mp-voice-four" hidden><blockquote>«Necessitem tranquil·litat, però la gent que s'atura a la plaça també dona vida al barri».</blockquote><p><b>Què posa sobre la taula?</b> Interessos que poden coexistir: activitat econòmica, trobada veïnal i descans. No és una posició automàticament favorable o contrària.</p></div>
+      </article>
+    </div>
+    <div class="mp-meter"><span id="mp-progress-label">VEUS ESCOLTADES</span><strong data-mp-visited aria-live="polite">0 / 4</strong><progress data-mp-progress aria-labelledby="mp-progress-label" max="4" value="0">0 / 4</progress></div>
+    <div class="mp-actions"><button type="button" class="mp-back" data-mp-back="opening">Tornar al comunicat</button><button type="button" data-mp-next="evidence" disabled>Contrastar les evidències <span aria-hidden="true">→</span></button></div>
+  </section>
+
+  <section class="mp-stage" data-mp-stage="evidence" aria-labelledby="mp-evidence-title" hidden>
+    <div class="mp-step"><span>03 / CONTRASTA</span><span>Les veus no substitueixen les proves</span></div>
+    <div class="mp-section-head"><h4 id="mp-evidence-title">Escoltar no vol dir <em>creure-ho tot.</em></h4><p>Les experiències ens ajuden a formular preguntes. Ara cal distingir els fets documentats, les interpretacions i les absències.</p></div>
+    <div class="mp-evidence">
+      <article><span>DOCUMENT 01 · REGISTRE MUNICIPAL FICTICI</span><strong>18 avisos</strong><p>Registrats durant sis mesos. No s'especifica quantes persones els han presentat ni a quines hores.</p></article>
+      <article><span>DOCUMENT 02 · INFORMACIÓ NO DISPONIBLE</span><strong>Sense estudi d'usos</strong><p>No disposem d'un recompte de persones usuàries ni d'una avaluació dels efectes de retirar els bancs.</p></article>
+      <article><span>DOCUMENT 03 · PARTICIPACIÓ</span><strong>Consulta no acreditada</strong><p>El comunicat no indica si s'han escoltat les persones joves, grans o amb dificultats de mobilitat.</p></article>
+    </div>
+    <div class="mp-questions">
+      <section class="mp-question" data-mp-question="proof" aria-labelledby="mp-proof-title">
+        <span class="mp-question-number">01 / EVIDÈNCIES</span>
+        <h5 id="mp-proof-title">Quina conclusió podem defensar amb la informació disponible?</h5>
+        <div class="mp-answers" role="group" aria-label="Conclusions a partir de les evidències">
+          <button type="button" data-mp-answer="no" aria-pressed="false"><span>A</span><strong>Els 18 avisos demostren que la majoria del barri volia retirar els bancs.</strong><small data-mp-explain hidden>Els avisos mostren que hi ha hagut queixes, però no constitueixen una enquesta representativa ni identifiquen la majoria del barri.</small></button>
+          <button type="button" data-mp-answer="no" aria-pressed="false"><span>B</span><strong>Les queixes no importen perquè la plaça és de tothom.</strong><small data-mp-explain hidden>El dret a utilitzar l'espai públic no elimina el dret al descans. Les queixes mereixen ser examinades i contextualitzades.</small></button>
+          <button type="button" data-mp-answer="yes" aria-pressed="false"><span>C</span><strong>Hi ha indicis de conflicte, però falten dades sobre els usos, els impactes i les alternatives.</strong><small data-mp-explain hidden>És la conclusió més defensable. Reconeix les queixes sense convertir-les en una prova suficient per justificar una única solució.</small></button>
+        </div>
+        <p class="mp-answer-response" data-mp-response aria-live="polite" hidden></p>
+      </section>
+      <section class="mp-question" data-mp-question="absence" aria-labelledby="mp-absence-title">
+        <span class="mp-question-number">02 / VEUS ABSENTS</span>
+        <h5 id="mp-absence-title">Quina perspectiva convindria incorporar abans de decidir?</h5>
+        <div class="mp-answers" role="group" aria-label="Perspectives pendents d'escoltar">
+          <button type="button" data-mp-answer="no" aria-pressed="false"><span>A</span><strong>Només la de l'Ajuntament, perquè és qui ha pres la decisió.</strong><small data-mp-explain hidden>Ja coneixem la versió institucional. Per comprendre els impactes cal escoltar també persones que no apareixen al comunicat.</small></button>
+          <button type="button" data-mp-answer="yes" aria-pressed="false"><span>B</span><strong>Persones amb mobilitat reduïda i altres usuàries que no han estat consultades.</strong><small data-mp-explain hidden>Exacte. No totes les persones afectades tenen la mateixa facilitat per fer sentir la seva veu ni per adaptar-se a la retirada dels bancs.</small></button>
+          <button type="button" data-mp-answer="no" aria-pressed="false"><span>C</span><strong>Només els comerços, perquè representen el conjunt del barri.</strong><small data-mp-explain hidden>Els comerços tenen interessos legítims, però cap col·lectiu pot representar automàticament totes les persones que utilitzen la plaça.</small></button>
+        </div>
+        <p class="mp-answer-response" data-mp-response aria-live="polite" hidden></p>
+      </section>
+    </div>
+    <div class="mp-actions"><button type="button" class="mp-back" data-mp-back="voices">Tornar a les veus</button><button type="button" data-mp-next="rewrite" disabled>Reescriure el titular <span aria-hidden="true">→</span></button></div>
+  </section>
+
+  <section class="mp-stage" data-mp-stage="rewrite" aria-labelledby="mp-rewrite-title" hidden>
+    <div class="mp-step"><span>04 / REESCRIU</span><span>Construir un relat més rigorós</span></div>
+    <div class="mp-section-head"><h4 id="mp-rewrite-title">Canvia el titular. <em>Canvia la mirada.</em></h4><p>Tria un titular o escriu-ne un de propi. Pensa en el que sabem, el que no sabem i les persones afectades.</p></div>
+    <div class="mp-rewrite-grid">
+      <div>
+        <div class="mp-headlines" role="group" aria-label="Titulars alternatius">
+          <button type="button" data-mp-headline aria-pressed="false"><span>01 · INSTITUCIONAL</span><strong>L'Ajuntament millora la convivència retirant bancs de la plaça</strong><small data-mp-why hidden>És el punt de vista oficial, però pressuposa que la convivència ha millorat sense aportar evidències sobre els resultats.</small></button>
+          <button type="button" data-mp-headline aria-pressed="false"><span>02 · ACUSATORI</span><strong>L'Ajuntament expulsa els joves d'una plaça per afavorir els veïns</strong><small data-mp-why hidden>Fa visibles les possibles conseqüències per als joves, però atribueix intencions i resultats que no podem demostrar.</small></button>
+          <button type="button" data-mp-headline aria-pressed="false"><span>03 · OBERT A LES VEUS</span><strong>La retirada de sis bancs obre un debat sobre el descans i el dret a la plaça</strong><small data-mp-why hidden>Distingeix el fet comprovat de les preguntes obertes. Reconeix el conflicte sense imposar una interpretació com a veritat provada.</small></button>
+        </div>
+        <label class="mp-custom-label" for="mp-own-headline">O escriu el teu propi titular</label>
+        <textarea id="mp-own-headline" data-mp-own rows="2" maxlength="160" placeholder="Un titular que inclogui veus i evidències..."></textarea>
+        <p class="mp-field-note">El teu text es queda en aquest dispositiu: no es desa ni s'avalua automàticament.</p>
+        <span data-mp-own-why hidden>Un titular propi pot obrir preguntes importants. Revisa que no presenti com a provat allò que encara desconeixem.</span>
+      </div>
+      <aside class="mp-preview" aria-live="polite">
+        <span>LA TEVA NOVA PORTADA</span>
+        <div class="mp-preview-sheet"><small>VALLCLARA · ACTUALITAT</small><h5 data-mp-preview-title>Escull o escriu un titular per veure'l aquí.</h5><p data-mp-preview-why></p></div>
+        <p>Quines persones hi apareixen? Qui continua sense veu? Quines dades caldria investigar?</p>
+      </aside>
+    </div>
+    <div class="mp-actions"><button type="button" class="mp-back" data-mp-back="evidence">Tornar a les evidències</button><button type="button" data-mp-next="closing" disabled>Descobrir què has canviat <span aria-hidden="true">→</span></button></div>
+  </section>
+
+  <section class="mp-stage mp-closing" data-mp-stage="closing" aria-labelledby="mp-closing-title" hidden>
+    <div class="mp-step"><span>05 / REFLEXIONA</span><span>Una lliçó de multiperspectiva</span></div>
+    <span class="mp-outcome-tag">NO ES TRACTA DE COMPTAR OPINIONS</span>
+    <h4 id="mp-closing-title">Una plaça no té <em>una sola història.</em></h4>
+    <div class="mp-compare">
+      <div><span>LA TEVA PRIMERA LECTURA</span><p data-mp-first-result></p></div>
+      <div><span>EL TEU NOU TITULAR</span><p data-mp-final-result></p></div>
+    </div>
+    <div class="mp-conclusion">
+      <p><strong>La multiperspectiva no consisteix a considerar que totes les versions són igualment certes.</strong> Consisteix a identificar qui parla, des d'on ho fa, quins interessos i experiències hi intervenen, quines veus no s'han escoltat i què ens permeten afirmar les evidències.</p>
+      <p>En aquest cas fictici, el descans, la convivència, l'accessibilitat i el dret de trobada són qüestions legítimes. Per decidir amb criteri caldria estudiar els usos reals de la plaça, escoltar les persones afectades i explorar alternatives abans de donar la solució per tancada.</p>
+    </div>
+    <p class="mp-method">Aquest és un escenari inventat per practicar la interpretació de perspectives socials. Les xifres i els testimonis són ficticis; no és una notícia real ni una prova validada de pensament crític.</p>
+    <div class="mp-actions"><button type="button" class="mp-back" data-mp-restart>Repetir l'experiment</button><a class="mp-finish" href="#per-seguir-pensament-critic">Continuar exercitant el pensament crític <span aria-hidden="true">↓</span></a></div>
+  </section>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-mirades]').forEach((root) => {
+    const stages = [...root.querySelectorAll<HTMLElement>('[data-mp-stage]')];
+    const buttons = [...root.querySelectorAll<HTMLButtonElement>('[data-mp-next]')];
+    const initials = [...root.querySelectorAll<HTMLButtonElement>('[data-mp-initial]')];
+    const voiceButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-mp-voice-button]')];
+    const questions = [...root.querySelectorAll<HTMLElement>('[data-mp-question]')];
+    const headlines = [...root.querySelectorAll<HTMLButtonElement>('[data-mp-headline]')];
+    const own = root.querySelector<HTMLTextAreaElement>('[data-mp-own]')!;
+    const previewTitle = root.querySelector<HTMLElement>('[data-mp-preview-title]')!;
+    const previewWhy = root.querySelector<HTMLElement>('[data-mp-preview-why]')!;
+    const emptyPreview = previewTitle.textContent || '';
+    const visited = new Set<string>();
+    const solved = new Set<string>();
+    let first = '';
+    let last = '';
+
+    const setNext = (name: string, enabled: boolean) => {
+      const control = buttons.find((button) => button.dataset.mpNext === name);
+      if (control) control.disabled = !enabled;
+    };
+    const show = (name: string) => {
+      stages.forEach((stage) => { stage.hidden = stage.dataset.mpStage !== name; });
+      const stage = stages.find((item) => item.dataset.mpStage === name);
+      if (stage) {
+        stage.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        const heading = stage.querySelector<HTMLElement>('h4, h3');
+        if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
+      }
+    };
+    initials.forEach((button) => button.addEventListener('click', () => {
+      initials.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      first = button.querySelector('strong')?.textContent || '';
+      setNext('voices', true);
+    }));
+    voiceButtons.forEach((button) => button.addEventListener('click', () => {
+      const parent = button.closest<HTMLElement>('[data-mp-voice]')!;
+      const panel = parent.querySelector<HTMLElement>('.mp-voice-body')!;
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+      visited.add(parent.dataset.mpVoice!);
+      parent.dataset.visited = 'true';
+      root.querySelector<HTMLElement>('[data-mp-visited]')!.textContent = visited.size + ' / 4';
+      root.querySelector<HTMLProgressElement>('[data-mp-progress]')!.value = visited.size;
+      setNext('evidence', visited.size === 4);
+    }));
+    questions.forEach((question) => {
+      const options = [...question.querySelectorAll<HTMLButtonElement>('[data-mp-answer]')];
+      options.forEach((button) => button.addEventListener('click', () => {
+        options.forEach((option) => option.setAttribute('aria-pressed', String(option === button)));
+        const correct = button.dataset.mpAnswer === 'yes';
+        const response = question.querySelector<HTMLElement>('[data-mp-response]')!;
+        response.textContent = button.querySelector('[data-mp-explain]')?.textContent || '';
+        response.dataset.correct = String(correct);
+        response.hidden = false;
+        if (correct) solved.add(question.dataset.mpQuestion!);
+        setNext('rewrite', solved.size === 2);
+      }));
+    });
+    headlines.forEach((button) => button.addEventListener('click', () => {
+      headlines.forEach((option) => option.setAttribute('aria-pressed', String(option === button)));
+      own.value = '';
+      last = button.querySelector('strong')?.textContent || '';
+      previewTitle.textContent = last;
+      previewWhy.textContent = button.querySelector('[data-mp-why]')?.textContent || '';
+      setNext('closing', true);
+    }));
+    own.addEventListener('input', () => {
+      headlines.forEach((option) => option.setAttribute('aria-pressed', 'false'));
+      last = own.value.trim();
+      previewTitle.textContent = last || emptyPreview;
+      previewWhy.textContent = last ? root.querySelector<HTMLElement>('[data-mp-own-why]')?.textContent || '' : '';
+      setNext('closing', !!last);
+    });
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      if (button.disabled) return;
+      if (button.dataset.mpNext === 'closing') {
+        root.querySelector<HTMLElement>('[data-mp-first-result]')!.textContent = first;
+        root.querySelector<HTMLElement>('[data-mp-final-result]')!.textContent = last;
+      }
+      show(button.dataset.mpNext!);
+    }));
+    root.querySelectorAll<HTMLButtonElement>('[data-mp-back]').forEach((button) => button.addEventListener('click', () => show(button.dataset.mpBack!)));
+    root.querySelector<HTMLButtonElement>('[data-mp-restart]')!.addEventListener('click', () => {
+      initials.forEach((button) => button.setAttribute('aria-pressed', 'false'));
+      voiceButtons.forEach((button) => {
+        button.setAttribute('aria-expanded', 'false');
+        button.closest('[data-mp-voice]')!.querySelector<HTMLElement>('.mp-voice-body')!.hidden = true;
+        delete (button.closest<HTMLElement>('[data-mp-voice]')!).dataset.visited;
+      });
+      questions.forEach((question) => {
+        question.querySelectorAll<HTMLButtonElement>('[data-mp-answer]').forEach((button) => button.setAttribute('aria-pressed', 'false'));
+        question.querySelector<HTMLElement>('[data-mp-response]')!.hidden = true;
+      });
+      headlines.forEach((button) => button.setAttribute('aria-pressed', 'false'));
+      own.value = ''; previewTitle.textContent = emptyPreview; previewWhy.textContent = '';
+      visited.clear(); solved.clear(); first = ''; last = '';
+      root.querySelector<HTMLElement>('[data-mp-visited]')!.textContent = '0 / 4';
+      root.querySelector<HTMLProgressElement>('[data-mp-progress]')!.value = 0;
+      ['voices','evidence','rewrite','closing'].forEach((name) => setNext(name, false));
+      show('opening');
+    });
+  });
+</script>
+
+<style>
+  .mp-experiment{--mp-deep:#111e30;--mp-slate:#1b2b40;--mp-ink:#f5fbfd;--mp-muted:#aec1cf;--mp-cyan:#91e9f3;--mp-coral:#ffad99;margin:22px 0 12px;padding:clamp(20px,4vw,44px);border-radius:20px;color:var(--mp-ink);background:radial-gradient(circle at 95% 0%,rgba(60,177,195,.19),transparent 40%),var(--mp-deep);font-family:'Manrope',sans-serif}
+  .mp-experiment :is(h3,h4,h5,p,blockquote,figure){margin-top:0}.mp-experiment button,.mp-experiment textarea{font:inherit}.mp-experiment :focus-visible{outline:3px solid var(--mp-coral);outline-offset:3px}.mp-experiment [hidden]{display:none!important}
+  .mp-topline,.mp-step{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:10px;line-height:1.5;letter-spacing:.115em;font-weight:800}
+  .mp-topline{color:var(--mp-muted);padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.2)}
+  .mp-intro{padding:clamp(26px,5vw,48px) 0 36px;max-width:850px}.mp-overline,.mp-duration{display:block;color:var(--mp-cyan);letter-spacing:.11em;font-size:11px;font-weight:800}.mp-intro h3{font:800 clamp(34px,5.6vw,68px)/1.08 'Manrope',sans-serif;letter-spacing:-.065em;margin:18px 0 16px}.mp-intro h3 em,.mp-section-head h4 em,.mp-closing h4 em{font-style:normal;color:var(--mp-cyan)}.mp-intro p{color:#d4e2ea;line-height:1.7;font-size:clamp(15px,1.8vw,19px);margin:0 0 18px}.mp-duration{color:var(--mp-muted);letter-spacing:0;font-size:12px}
+  .mp-step{color:var(--mp-cyan);padding:17px 0;border-block:1px solid rgba(255,255,255,.19);margin:0 0 28px}.mp-stage{scroll-margin-top:100px}
+  .mp-opening-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(18px,3vw,35px);align-items:stretch}
+  .mp-art{border:1px solid #41566b;border-radius:12px;overflow:hidden;background:#203449;display:flex;flex-direction:column}.mp-art-head{display:flex;justify-content:space-between;padding:16px 18px;color:#cae5ec;font-size:10px;font-weight:800;letter-spacing:.12em}.mp-plaza{min-height:335px;position:relative;overflow:hidden;flex:1;background:repeating-linear-gradient(0deg,transparent 0 32px,rgba(227,245,249,.09) 33px),repeating-linear-gradient(90deg,#314c60 0 32px,#355468 33px)}.mp-art figcaption{font-size:11px;line-height:1.5;padding:12px 18px;color:#bed4df}.mp-building{position:absolute;background:#14283b;border:3px solid #94a7b4;display:flex;gap:8px;padding:13px;z-index:1}.mp-building i{background:#c6d4da;width:13px;height:16px;display:block}.mp-building-a{top:8%;left:-4%;width:38%;height:21%}.mp-building-b{top:-3%;right:7%;width:29%;height:23%}.mp-building-c{bottom:2%;right:-5%;width:42%;height:22%}.mp-path{position:absolute;background:rgba(236,225,196,.3);transform:rotate(-25deg);z-index:0}.mp-path-a{width:130%;height:35px;top:44%;left:-16%}.mp-path-b{width:36px;height:125%;left:50%;top:-10%;transform:rotate(-25deg)}.mp-tree{position:absolute;width:33px;height:33px;border-radius:50%;border:6px solid #4c907f;background:#77bf93;box-shadow:0 0 0 7px rgba(50,91,81,.26);z-index:2}.mp-tree-a{top:28%;left:12%}.mp-tree-b{top:17%;left:70%}.mp-tree-c{bottom:15%;left:18%}.mp-tree-d{bottom:22%;right:22%}.mp-bench{position:absolute;width:38px;height:12px;background:#f7b29e;border:2px solid #ffded1;border-radius:2px;transform:rotate(-25deg);z-index:2}.mp-bench:after{content:'×';position:absolute;inset:-9px 0;text-align:center;color:#6d2630;font-size:25px;font-weight:900;line-height:22px}.mp-bench-a{top:35%;left:29%}.mp-bench-b{top:41%;left:44%}.mp-bench-c{top:48%;left:59%}.mp-bench-d{top:60%;left:30%}.mp-bench-e{top:66%;left:46%}.mp-bench-f{top:63%;left:69%}.mp-pin{position:absolute;display:grid;place-items:center;width:31px;height:31px;z-index:3;background:#90ebee;color:#142334;border:2px solid #142334;border-radius:50%;font-weight:900;font-size:12px}.mp-pin-a{top:24%;left:45%}.mp-pin-b{top:43%;right:13%}.mp-pin-c{bottom:16%;left:11%}.mp-pin-d{bottom:24%;left:65%}.mp-map-label{position:absolute;top:11%;right:9%;z-index:4;background:#10283d;border:1px solid #b0cad4;border-radius:8px;padding:12px;box-shadow:0 9px 28px #0d2030}.mp-map-label strong{display:block;font-size:31px;letter-spacing:-.05em}.mp-map-label small{font-size:9px;font-weight:800;color:var(--mp-cyan)}
+  .mp-official{border-radius:13px;background:#f6f5ef;color:#1e3141;padding:clamp(20px,3vw,30px)}.mp-paper-eyebrow{font-size:10px;color:#426778;letter-spacing:.1em;font-weight:900}.mp-official h4{font:800 clamp(23px,2.7vw,34px)/1.22 'Manrope',sans-serif;letter-spacing:-.04em;margin:15px 0}.mp-official>p{font-size:14px;line-height:1.7;color:#384e5e}.mp-note{margin:18px 0 25px;padding:14px 16px;background:#e1ebec;border-left:4px solid #1f9aaf;font-size:13px;line-height:1.6}.mp-first{border-top:1px solid #ced7d7;padding-top:18px}.mp-first h5{font-size:17px;font-weight:850;margin:0 0 6px}.mp-first>p{color:#526678;font-size:12px;line-height:1.6}.mp-first-options{display:grid;gap:9px;margin-top:15px}.mp-choice{display:flex;text-align:left;gap:12px;align-items:center;width:100%;background:#fff;border:1px solid #becfd2;color:#1c3441;border-radius:8px;padding:11px 12px;cursor:pointer}.mp-choice span{display:grid;place-items:center;background:#e5f2f4;border-radius:6px;min-width:27px;height:27px;font-size:11px;font-weight:800}.mp-choice strong{font-size:12px;font-weight:750;line-height:1.5}.mp-choice:hover,.mp-choice[aria-pressed=true]{border-color:#138da3;background:#e4f5f5}.mp-choice[aria-pressed=true]{box-shadow:inset 4px 0 #158ca2}
+  .mp-actions{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:14px;margin-top:25px}.mp-actions button,.mp-finish{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:1px solid #8ce6ef;border-radius:7px;background:#83e1e9;color:#123144;padding:14px 20px;font-size:13px;font-weight:850;text-decoration:none;cursor:pointer;line-height:1.4}.mp-actions button:hover:not(:disabled),.mp-finish:hover{background:white}.mp-actions button:disabled{opacity:.45;cursor:not-allowed}.mp-actions .mp-back{margin-right:auto;background:transparent;color:#d3e8ee;border-color:#607e8c}.mp-actions .mp-back:hover{color:#142a3b}
+  .mp-section-head{max-width:780px;margin-bottom:23px}.mp-section-head h4,.mp-closing h4{font:800 clamp(28px,4vw,46px)/1.14 'Manrope',sans-serif;letter-spacing:-.055em;margin:0 0 13px}.mp-section-head p{color:#c4d8e3;line-height:1.7;font-size:14px}
+  .mp-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.mp-voice{background:#21354a;border:1px solid #486174;border-radius:12px;overflow:hidden}.mp-voice[data-visited=true]{border-color:#76d1da}.mp-voice-button{display:flex;align-items:start;text-align:left;gap:17px;width:100%;border:0;padding:23px;background:transparent;color:var(--mp-ink);cursor:pointer}.mp-voice-avatar{display:grid;place-items:center;flex:none;width:48px;height:48px;border-radius:50%;background:#4d8794;color:#fff;font-weight:900}.mp-voice:nth-child(2) .mp-voice-avatar{background:#975e62}.mp-voice:nth-child(3) .mp-voice-avatar{background:#6e7595}.mp-voice:nth-child(4) .mp-voice-avatar{background:#6a947c}.mp-voice-button>span:nth-child(2){min-width:0;flex:1}.mp-voice-button small{display:block;font-size:10px;color:#95dce4;font-weight:850;letter-spacing:.09em}.mp-voice-button strong{display:block;margin:9px 0 11px;font-size:16px;line-height:1.45;letter-spacing:-.02em}.mp-voice-tag{display:inline-block;padding:5px 8px;border:1px solid #6d8b9b;border-radius:30px;font-size:10px;color:#c9dae1}.mp-voice-plus{font-size:26px;line-height:1;transition:transform .2s}.mp-voice-button[aria-expanded=true] .mp-voice-plus{transform:rotate(45deg)}.mp-voice-button:hover{background:#293e52}.mp-voice-body{padding:0 23px 20px}.mp-voice-body blockquote{margin:0 0 12px;color:#fff;font-weight:750;font-size:17px;line-height:1.6}.mp-voice-body p{border-top:1px solid #516b7c;margin:15px 0 0;padding-top:13px;color:#c3d7e1;font-size:12px;line-height:1.7}.mp-voice-body b{color:#96e2ea}
+  .mp-meter{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:26px;color:#bcd2dc;font-size:11px;letter-spacing:.08em;font-weight:800}.mp-meter strong{color:#94e4ef}.mp-meter progress{grid-column:1/-1;width:100%;height:9px;accent-color:#7edce7;border-radius:10px;overflow:hidden}.mp-meter progress::-webkit-progress-bar{background:#385369}.mp-meter progress::-webkit-progress-value{background:#7edce7}
+  .mp-evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.mp-evidence article{padding:18px;background:#e8f0ef;border:1px solid #afcbd0;color:#173043;border-radius:9px}.mp-evidence article span{display:block;color:#466979;font-size:9px;font-weight:850;line-height:1.5;letter-spacing:.08em;min-height:28px}.mp-evidence strong{display:block;margin:12px 0;font-size:23px;letter-spacing:-.04em}.mp-evidence p{font-size:12px;line-height:1.65;color:#425969;margin:0}.mp-questions{display:grid;gap:19px;margin-top:25px}.mp-question{background:#1b3045;border:1px solid #486276;border-radius:12px;padding:clamp(16px,3vw,25px)}.mp-question-number{display:block;font-size:10px;font-weight:850;letter-spacing:.1em;color:var(--mp-cyan)}.mp-question h5{font-size:19px;line-height:1.4;margin:12px 0 19px}.mp-answers{display:grid;gap:10px}.mp-answers button{display:flex;align-items:start;text-align:left;gap:14px;border:1px solid #557183;border-radius:8px;background:#233b52;color:#fff;padding:15px;cursor:pointer}.mp-answers button>span{display:grid;place-items:center;flex:none;background:#35596f;color:#a4e9f1;border-radius:5px;width:28px;height:28px;font-size:12px;font-weight:850}.mp-answers button strong{font-size:13px;line-height:1.55;font-weight:650}.mp-answers button:hover,.mp-answers button[aria-pressed=true]{border-color:#90e6e9;background:#315063}.mp-answer-response{border-left:3px solid #f4ac93;background:#423540;border-radius:0 8px 8px 0;padding:15px;margin:14px 0 0;color:#f4e9e8;font-size:13px;line-height:1.65}.mp-answer-response[data-correct=true]{border-color:#8ce6c6;background:#22443f}
+  .mp-rewrite-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.mp-headlines{display:grid;gap:10px}.mp-headlines button{display:block;text-align:left;width:100%;cursor:pointer;background:#21394e;color:#fff;border:1px solid #527083;border-radius:10px;padding:17px 19px}.mp-headlines button span{display:block;font-size:10px;color:#97e2ed;letter-spacing:.09em;font-weight:850;margin-bottom:8px}.mp-headlines button strong{display:block;font-size:16px;line-height:1.5}.mp-headlines button:hover,.mp-headlines button[aria-pressed=true]{border-color:#a9eff1;background:#305166}.mp-headlines button[aria-pressed=true]{box-shadow:inset 4px 0 #a3e5ed}.mp-custom-label{display:block;margin:22px 0 8px;font-weight:800;font-size:13px}.mp-experiment textarea{resize:vertical;display:block;width:100%;padding:15px;color:#173044;background:#fff;border:2px solid transparent;border-radius:8px;line-height:1.6}.mp-experiment textarea:focus{border-color:#81dce9}.mp-field-note{font-size:11px;color:#bad0d9;margin:8px 0 0;line-height:1.6}.mp-preview{background:#2a4a5e;border:1px solid #527b8e;border-radius:12px;padding:20px;align-self:start;position:sticky;top:110px}.mp-preview>span{font-size:10px;font-weight:850;color:#9be7ef;letter-spacing:.1em}.mp-preview-sheet{background:#faf8f0;color:#173044;padding:clamp(19px,3vw,31px);margin:16px 0;min-height:230px;box-shadow:0 13px 23px #1b2a3b}.mp-preview-sheet small{display:block;font-size:10px;letter-spacing:.15em;font-weight:850;color:#526b7d;border-bottom:3px solid #173044;padding-bottom:13px}.mp-preview-sheet h5{font:850 clamp(21px,2.5vw,33px)/1.2 'Manrope',sans-serif;letter-spacing:-.05em;margin:18px 0}.mp-preview-sheet p{color:#537184;line-height:1.65;font-size:12px}.mp-preview>p{font-size:12px;color:#d8e7ec;line-height:1.7}
+  .mp-outcome-tag{display:inline-block;font-size:10px;letter-spacing:.1em;font-weight:850;color:#9be9e9;margin:7px 0 17px}.mp-closing h4{max-width:800px}.mp-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:23px 0}.mp-compare>div{padding:20px;background:#253b50;border-left:4px solid #739caa;border-radius:7px}.mp-compare>div:last-child{border-color:#8be0e8}.mp-compare span{display:block;font-size:10px;letter-spacing:.1em;color:#a4dfe8;font-weight:850}.mp-compare p{font-size:17px;font-weight:750;line-height:1.45;margin:11px 0 0}.mp-conclusion{max-width:850px}.mp-conclusion p{font-size:16px;line-height:1.8;color:#d4e4ea}.mp-conclusion strong{color:#9cecf0}.mp-method{font-size:12px;line-height:1.65;color:#bfd1da;border-top:1px solid #547080;padding-top:18px;margin:25px 0}
+  @media(max-width:960px){.mp-opening-grid,.mp-rewrite-grid{grid-template-columns:1fr}.mp-plaza{height:300px;min-height:300px}.mp-preview{position:static}.mp-evidence{grid-template-columns:1fr}.mp-evidence article span{min-height:0}.mp-evidence strong{margin:8px 0}.mp-voices{grid-template-columns:1fr}}
+  @media(max-width:550px){.mp-experiment{padding:18px;border-radius:12px}.mp-intro{padding:26px 0}.mp-art-head{font-size:9px}.mp-plaza{min-height:255px;height:255px}.mp-map-label{top:12%;right:7%}.mp-voice-button{padding:16px;gap:12px}.mp-voice-avatar{width:40px;height:40px}.mp-voice-button strong{font-size:14px}.mp-voice-body{padding:0 17px 16px}.mp-compare{grid-template-columns:1fr}.mp-actions>*{width:100%}.mp-actions .mp-back{margin-right:0}.mp-step{font-size:9px}}
+  @media(prefers-reduced-motion:reduce){.mp-voice-plus{transition:none}}
+</style>
