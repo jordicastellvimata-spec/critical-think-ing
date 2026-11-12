@@ -1,6 +1,6 @@
 ---
 import { profile } from '../data/site';
-import AsteriskIcon from '../components/AsteriskIcon.astro';
+import Brain3DIcon from '../components/Brain3DIcon.astro';
 const {title='Jordi Castellví Mata', seoTitle = `${title} | critical-think.ing`, description='Pensament crític, educació democràtica i didàctica de les ciències socials.', active=''} = Astro.props;
 
 const identityId = 'https://critical-think.ing/#person';
@@ -70,7 +70,7 @@ const nav = [
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="site-header">
     <header class="container header-content">
-      <a class="wordmark" href={url('')} aria-label="Inici de critical-think.ing"><span class="mark"><AsteriskIcon /></span><span>critical<span class="wordmark-accent">-</span>think<span class="wordmark-accent">.</span>ing</span></a>
+      <a class="wordmark" href={url('')} aria-label="Inici de critical-think.ing"><span class="mark"><Brain3DIcon /></span><span>critical<span class="wordmark-accent">-</span>think<span class="wordmark-accent">.</span>ing</span></a>
       <nav class="desktop-nav" aria-label="Navegació principal">{nav.map(item=><a href={url(item.path)} aria-current={active===item.key?'page':undefined}>{item.label}</a>)}</nav>
       <a class="desktop-contact" href={url('#contacte')}>Contacte <span aria-hidden="true">↗</span></a>
       <div class="language-picker">
@@ -159,7 +159,7 @@ button{font:inherit}
 .site-header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
 .header-content{min-height:92px;display:flex;align-items:center;gap:32px}
 .wordmark{display:flex;align-items:center;gap:11px;font:800 20px/1 'Manrope',Arial,sans-serif;letter-spacing:-.075em;white-space:nowrap}
-.mark{width:35px;height:35px;border-radius:50%;background:var(--cyan);color:var(--white);display:grid;place-items:center;font:600 24px/1 'DM Sans',sans-serif}
+.mark{width:40px;height:40px;border-radius:50%;background:var(--paper);color:var(--cyan);display:grid;place-items:center;font:600 38px/1 sans-serif}
 .wordmark-accent{color:var(--red)}
 .desktop-nav{display:flex;align-items:center;gap:13px;margin-left:auto}
 .desktop-nav a{font-size:12px;font-weight:700;padding:10px 0;border-bottom:2px solid transparent;white-space:nowrap}
@@ -237,7 +237,7 @@ h1,h2,h3,h4,p{margin-top:0}
   .mobile-nav a{padding:10px;font-size:14px}
   .footer-columns{grid-template-columns:1fr 1fr}
 }
-@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px;gap:11px}.language-picker summary{min-height:35px;min-width:46px;padding:7px 8px}.wordmark{font-size:17px}.mark{width:30px;height:30px;font-size:20px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:var(--type-hero)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
+@media(max-width:760px){.container{width:min(100% - 40px,1360px)}.header-content{min-height:75px;gap:11px}.language-picker summary{min-height:35px;min-width:46px;padding:7px 8px}.wordmark{font-size:17px}.mark{width:33px;height:33px;font-size:31px}.desktop-nav{display:none}.mobile-nav{display:block;margin-left:auto;position:relative}.mobile-nav summary{cursor:pointer;list-style:none;color:var(--cyan);font-size:13px;font-weight:800}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{margin-left:7px}.mobile-nav nav{position:absolute;right:0;top:36px;min-width:220px;background:var(--white);box-shadow:0 16px 30px rgba(15,55,73,.14);border:1px solid var(--line);padding:15px;display:flex;flex-direction:column}.mobile-nav a{padding:10px;font-size:14px}.display{font-size:var(--type-hero)}.section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:20px}.footer-columns{grid-template-columns:1fr;gap:35px}.paper{grid-template-columns:55px 1fr 18px;gap:10px}.page-hero{padding:71px 0 60px}}
 
 @media(max-width:360px){.wordmark .mark{display:none}.wordmark{font-size:16px}.header-content{gap:8px}}
 /* Aparició progressiva en desplaçar-se: manté el contingut llegible sense JavaScript. */
