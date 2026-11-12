@@ -14,6 +14,7 @@ import QuestionarActivities from '../components/QuestionarActivities.astro';
 import RelatInvisible from '../components/RelatInvisible.astro';
 import MiradesEnDisputa from '../components/MiradesEnDisputa.astro';
 import CriticalReadingCards from '../components/CriticalReadingCards.astro';
+import ThinkingCloud from '../components/ThinkingCloud.astro';
 import Brain3DIcon from '../components/Brain3DIcon.astro';
 import HeroSocialLinks from '../components/HeroSocialLinks.astro';
 import { criticalLiteracyDimensions, criticalLiteracyCitation } from '../data/criticalLiteracyDimensions';
@@ -190,8 +191,8 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 
 <section class="lab-banner" id="laboratori">
     <div class="container lab-grid">
-      <div><div class="eyebrow">Conceptes · Preguntes · Activitats</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Qüestionar allò que donem per fet, escoltar mirades diverses, comprendre les desigualtats i actuar per transformar la realitat.</p><a class="btn" href="#activitats-laboratori">Explorar les quatre dimensions <span aria-hidden="true">↗</span></a><a class="lab-direct-link" href="#multiperspectiva">Nova activitat: Una plaça, quatre mirades <span aria-hidden="true">↗</span></a></div>
-      <div class="lab-art" aria-hidden="true"><div class="lab-orbit"></div><div class="lab-orbit two"></div><div class="lab-main">¿</div><span class="lab-caption">OBSERVAR / CONTRASTAR / ARGUMENTAR / ACTUAR</span></div>
+      <div><div class="eyebrow">Conceptes · Preguntes · Activitats</div><h2>Laboratori de<br/><em>Pensament Crític.</em></h2><p>Qüestionar allò que donem per fet, escoltar mirades diverses, comprendre les desigualtats i actuar per transformar la realitat.</p><a class="btn" href="#activitats-laboratori">Explorar les quatre dimensions <span aria-hidden="true">↗</span></a></div>
+      <div class="lab-art lab-word-cloud"><ThinkingCloud /></div>
     </div>
     <div class="container lab-prompts" id="activitats-laboratori" aria-label="Quatre dimensions de la literacitat crítica">
       {criticalLiteracyDimensions.map(d => d.number === '01' ? (
@@ -427,6 +428,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-orbit.two{height:240px;width:390px;border-color:var(--red-light);transform:rotate(35deg)}
 .lab-main{font:800 235px/1 'Manrope',sans-serif;color:var(--red-light);transform:rotate(17deg);position:relative;z-index:1}
 .lab-caption{position:absolute;bottom:0;left:0;color:var(--on-dark);font-size:10px;letter-spacing:.12em;font-weight:700}
+.lab-art.lab-word-cloud{height:auto;min-height:410px;display:block;overflow:visible}
 .about-section{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:1fr .75fr;gap:12%;align-items:center}
 .about-section h2{margin:20px 0}
