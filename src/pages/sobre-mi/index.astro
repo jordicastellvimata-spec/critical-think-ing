@@ -17,6 +17,10 @@ const profileLinks = [
   <section class="section"><div class="container about-grid">
     <article><div class="eyebrow">La meva trajectòria</div><h2 class="section-title">Investigar, aprendre<br/>i compartir.</h2><p class="body">Soc professor de la Universitat Autònoma de Barcelona, on participo en la formació inicial del professorat i en recerques sobre ciutadania, pensament crític i educació democràtica. Soc doctor en Educació per la UAB (2019), amb menció internacional, i vaig rebre el Premi Extraordinari de Doctorat.</p><p class="body">La meva recerca s’ha centrat especialment en la literacitat crítica digital, els discursos d’odi, els problemes socials rellevants i la participació democràtica. M’interessa fer dialogar el coneixement científic amb les preguntes que l’alumnat porta a classe i amb l’actualitat que entra a les aules.</p><p class="body">Participo en la formació inicial i contínua de mestres d’educació infantil, primària i secundària.</p><div class="about-actions"><a class="btn ghost" href={profile.uab} target="_blank" rel="noopener noreferrer">Perfil personal a la UAB ↗</a><a class="btn ghost cv-button" href={to("documents/cv-academic-jordi-castellvi-mata-2026.pdf")} download>Descarrega el CV resumit (PDF) ↓</a></div></article>
     
+  <figure class="about-training-photo">
+      <img src={to('images/formacio-sants-montjuic.webp')} alt="Formació de professorat en una aula, amb assistents asseguts en semicercle" width="1050" height="700" loading="lazy" decoding="async" />
+      <figcaption>Imatge publicada per Serveis Educatius de Sants-Montjuïc</figcaption>
+    </figure>
   </div></section>
   <section class="section section-alt">
     <div class="container">
@@ -60,7 +64,7 @@ const profileLinks = [
 </Base>
 <style>
 .about-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}.about-actions .btn{margin-top:14px}.about-actions .cv-button{color:var(--cyan)}.thesis-personal-archive{padding-top:16px;padding-bottom:65px}
-.page-hero h1 span{color:var(--red)}.about-grid{display:block}.about-grid>article{max-width:880px}.about-grid h2{margin:20px 0 30px}.body{font-size:17px;line-height:1.82;color:var(--muted);margin-bottom:24px}.about-grid .btn{margin-top:14px}.links{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.page-hero h1 span{color:var(--red)}.about-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.82fr);gap:clamp(34px,5vw,82px);align-items:start}.about-grid>article{min-width:0}.about-training-photo{margin:30px 0 0;min-width:0}.about-training-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 52%;border-radius:2px}.about-training-photo figcaption{text-align:right;font-size:10.5px;line-height:1.5;color:var(--muted);margin-top:12px}.about-grid h2{margin:20px 0 30px}.body{font-size:17px;line-height:1.82;color:var(--muted);margin-bottom:24px}.about-grid .btn{margin-top:14px}.links{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
 .links .profile-entry{display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0;min-height:92px;padding:17px 10px 17px 0;border-bottom:1px solid var(--line);color:var(--cyan);text-decoration:none;transition:color .2s ease}
 .profile-entry-main{display:flex;align-items:center;gap:15px;min-width:0}
 .profile-entry-icon{display:grid;place-items:center;width:43px;height:43px;flex:0 0 43px;border-radius:10px;background:var(--cyan-pale);color:var(--cyan)}
@@ -71,5 +75,6 @@ const profileLinks = [
 .links .profile-entry-arrow{font-size:16px;color:var(--red);flex-shrink:0;transition:transform .2s ease}
 .links .profile-entry:hover .profile-entry-arrow{transform:translate(3px,-3px)}
 .links .profile-entry:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+@media(max-width:950px){.about-grid{grid-template-columns:1fr}.about-training-photo{margin:4px 0 30px;max-width:740px}}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr}.links{grid-template-columns:1fr}.links .profile-entry{min-height:82px;padding:15px 0}}
 </style>
