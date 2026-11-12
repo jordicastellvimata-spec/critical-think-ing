@@ -1,0 +1,208 @@
+---
+import { publications, themes } from '../data/site';
+import { publicationDetails } from '../data/publicationDetails';
+
+const topicIds = ['hegemonic', 'hate', 'polarization', 'critical'];
+const topics = themes.map((theme, index) => ({ id: topicIds[index], label: theme.name }));
+const details = publicationDetails as Record<string, { topics: readonly string[]; apa: string; volume?: string; issue?: string; pages?: string; articleNumber?: string }>;
+const items = publications.map((p, index) => {
+  const doi = p.url.replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '');
+  const detail = details[doi] || { topics: ['altres'], apa: '' };
+  return { ...p, doi, detail, index };
+});
+const years = [...new Set(publications.map(p => p.year))].sort((a,b) => Number(b)-Number(a));
+const extra = items.some(p => p.detail.topics.includes('altres'));
+const citationData = JSON.stringify(items.map(p => ({
+  year: p.year, authors: p.authors, title: p.title, venue: p.venue,
+  doi: p.doi, apa: p.detail.apa, volume: 'volume' in p.detail ? p.detail.volume : '',
+  issue: 'issue' in p.detail ? p.detail.issue : '',
+  pages: 'pages' in p.detail ? p.detail.pages : '',
+  articleNumber: 'articleNumber' in p.detail ? p.detail.articleNumber : ''
+}))).replace(/</g, '\\u003c');
+---
+<section class="publication-explorer" data-publication-explorer aria-label="Catàleg interactiu de publicacions">
+  <div class="publication-controls">
+    <label class="search-box">
+      <span data-pub-i18n="searchLabel">Cerca una publicació</span>
+      <input data-pub-search type="search" placeholder="Títol, autoria o revista…" autocomplete="off" />
+    </label>
+    <label>
+      <span data-pub-i18n="yearLabel">Any</span>
+      <select data-pub-year>
+        <option value="" data-pub-i18n="allYears">Tots els anys</option>
+        {years.map(y => <option value={y}>{y}</option>)}
+      </select>
+    </label>
+    <label>
+      <span data-pub-i18n="topicLabel">Línia de recerca</span>
+      <select data-pub-topic>
+        <option value="" data-pub-i18n="allTopics">Totes les línies</option>
+        {topics.map(t => <option value={t.id}>{t.label}</option>)}
+        {extra && <option value="altres" data-pub-i18n="other">Altres</option>}
+      </select>
+    </label>
+    <button type="button" class="reset-button" data-pub-reset data-pub-i18n="reset">Neteja els filtres</button>
+  </div>
+
+  <div class="publication-results">
+    <p data-pub-count aria-live="polite">{items.length} articles</p>
+    <p class="publication-hint" data-pub-i18n="tagHint">Les publicacions poden pertànyer a més d'una línia de recerca.</p>
+  </div>
+
+  <div class="publication-entries">
+    {items.map(p => (
+      <article class="publication-entry" data-pub-card data-year={p.year} data-topics={p.detail.topics.join(',')} data-index={p.index}>
+        <div class="entry-aside">
+          <span class="entry-year">{p.year}</span>
+          <span class="entry-type" data-pub-i18n="articleType">ARTICLE</span>
+        </div>
+        <div class="entry-body">
+          <div class="entry-venue">{p.venue} · {p.indexing.join(' · ')}</div>
+          <h3><a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}<span class="sr-only"> (DOI)</span></a></h3>
+          <p class="entry-authors">{p.authors}</p>
+          <div class="entry-topics">
+            {p.detail.topics.map(id => <span class="entry-topic">{topics.find(t => t.id === id)?.label || 'Altres'}</span>)}
+          </div>
+          <div class="entry-actions">
+            <a class="doi-link" href={p.url} target="_blank" rel="noopener noreferrer" aria-label={'DOI: '+p.doi}>DOI: {p.doi} ↗</a>
+            <span class="entry-actions-divider" aria-hidden="true"></span>
+            <button type="button" data-pub-export="apa" data-index={p.index} data-pub-i18n="copyApa">Copia APA 7</button>
+            <button type="button" data-pub-export="bibtex" data-index={p.index}>BibTeX ↓</button>
+            <button type="button" data-pub-export="ris" data-index={p.index}>RIS ↓</button>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+  <p class="publication-empty" hidden data-pub-empty data-pub-i18n="empty">No hi ha publicacions que coincideixin amb els filtres.</p>
+  <p class="publication-feedback" data-pub-feedback role="status" aria-live="polite"></p>
+  <script type="application/json" data-publications-json set:html={citationData}></script>
+</section>
+
+<script is:inline>
+(() => {
+  const root = document.querySelector('[data-publication-explorer]');
+  if (!root) return;
+  const lang = ['ca','es','en','fr'].includes(document.documentElement.lang) ? document.documentElement.lang : 'ca';
+  const t = {
+    ca: {searchLabel:'Cerca una publicació',placeholder:'Títol, autoria o revista…',yearLabel:'Any',allYears:'Tots els anys',topicLabel:'Línia de recerca',allTopics:'Totes les línies',other:'Altres',reset:'Neteja els filtres',tagHint:"Les publicacions poden pertànyer a més d'una línia de recerca.",articleType:'ARTICLE',copyApa:'Copia APA 7',empty:'No hi ha publicacions que coincideixin amb els filtres.',articles:'articles',copied:'Citació APA copiada.',failed:'No s’ha pogut copiar la citació.',download:'Referència descarregada.'},
+    es: {searchLabel:'Buscar una publicación',placeholder:'Título, autoría o revista…',yearLabel:'Año',allYears:'Todos los años',topicLabel:'Línea de investigación',allTopics:'Todas las líneas',other:'Otros',reset:'Limpiar filtros',tagHint:'Las publicaciones pueden pertenecer a más de una línea de investigación.',articleType:'ARTÍCULO',copyApa:'Copiar APA 7',empty:'No hay publicaciones que coincidan con los filtros.',articles:'artículos',copied:'Cita APA copiada.',failed:'No se ha podido copiar la cita.',download:'Referencia descargada.'},
+    en: {searchLabel:'Search publications',placeholder:'Title, author or journal…',yearLabel:'Year',allYears:'All years',topicLabel:'Research area',allTopics:'All research areas',other:'Other',reset:'Clear filters',tagHint:'A publication may belong to more than one research area.',articleType:'ARTICLE',copyApa:'Copy APA 7',empty:'No publications match your filters.',articles:'articles',copied:'APA citation copied.',failed:'Could not copy citation.',download:'Reference downloaded.'},
+    fr: {searchLabel:'Rechercher une publication',placeholder:'Titre, auteur ou revue…',yearLabel:'Année',allYears:'Toutes les années',topicLabel:'Axe de recherche',allTopics:'Tous les axes',other:'Autres',reset:'Effacer les filtres',tagHint:'Une publication peut appartenir à plusieurs axes de recherche.',articleType:'ARTICLE',copyApa:'Copier APA 7',empty:'Aucune publication ne correspond aux filtres.',articles:'articles',copied:'Référence APA copiée.',failed:'Impossible de copier la référence.',download:'Référence téléchargée.'}
+  }[lang];
+  const labels = {
+    hegemonic: {ca:'Relats hegemònics',es:'Relatos hegemónicos',en:'Hegemonic narratives',fr:'Récits hégémoniques'},
+    hate: {ca:'Discursos d’odi i contrarelats',es:'Discursos de odio y contrarrelatos',en:'Hate speech and counter-narratives',fr:'Discours de haine et contre-récits'},
+    polarization: {ca:'Polarització sociopolítica i populismes',es:'Polarización sociopolítica y populismos',en:'Sociopolitical polarization and populism',fr:'Polarisation sociopolitique et populismes'},
+    critical: {ca:'Formació del pensament crític i de la ciutadania crítica',es:'Formación del pensamiento crítico y la ciudadanía crítica',en:'Critical thinking and critical citizenship education',fr:'Formation de la pensée critique et de la citoyenneté critique'}
+  };
+  for (const el of root.querySelectorAll('[data-pub-i18n]')) {
+    const key = el.getAttribute('data-pub-i18n');
+    if (t[key]) el.textContent = t[key];
+  }
+  root.querySelector('[data-pub-search]').placeholder = t.placeholder;
+  for (const opt of root.querySelectorAll('[data-pub-topic] option')) {
+    const key = opt.value;
+    if (labels[key]) opt.textContent = labels[key][lang];
+  }
+  for (const card of root.querySelectorAll('[data-pub-card]')) {
+    const topics = card.dataset.topics.split(',');
+    card.querySelectorAll('.entry-topic').forEach((tag,i) => {
+      if (labels[topics[i]]) tag.textContent = labels[topics[i]][lang];
+      else if (topics[i] === 'altres') tag.textContent = t.other;
+    });
+  }
+  const search = root.querySelector('[data-pub-search]');
+  const year = root.querySelector('[data-pub-year]');
+  const topic = root.querySelector('[data-pub-topic]');
+  const cards = [...root.querySelectorAll('[data-pub-card]')];
+  const count = root.querySelector('[data-pub-count]');
+  const empty = root.querySelector('[data-pub-empty]');
+  const feedback = root.querySelector('[data-pub-feedback]');
+  const data = JSON.parse(root.querySelector('[data-publications-json]').textContent);
+  const normalize = s => String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  function update() {
+    const query = normalize(search.value.trim());
+    let shown = 0;
+    cards.forEach(card => {
+      const item = data[Number(card.dataset.index)];
+      const haystack = normalize(item.title+' '+item.authors+' '+item.venue);
+      const visible = (!year.value || item.year === year.value) &&
+        (!topic.value || card.dataset.topics.split(',').includes(topic.value)) &&
+        (!query || haystack.includes(query));
+      card.hidden = !visible;
+      if (visible) shown++;
+    });
+    count.textContent = shown+' '+t.articles;
+    empty.hidden = shown > 0;
+  }
+  search.addEventListener('input',update);
+  year.addEventListener('change',update);
+  topic.addEventListener('change',update);
+  root.querySelector('[data-pub-reset]').addEventListener('click', () => {search.value='';year.value='';topic.value='';update();search.focus();});
+  const escapeBib = s => String(s||'').replace(/[{}]/g,'').replace(/\\/g,'');
+  const authorsOf = s => String(s||'').replace(/\s+i\s+/g,', ').replace(/\.\s*,\s*(?=[A-ZÀ-Ý][^,]*,)/gu,'.|||').split('|||').map(x=>x.trim()).filter(Boolean);
+  const strip = s => String(s||'').replace(/\s+/g,' ').trim();
+  function makeBibTeX(p) {
+    const authors = authorsOf(p.authors);
+    const key = 'Castellvi'+p.year+p.doi.replace(/[^a-zA-Z0-9]/g,'').slice(-8);
+    const fields = {author:authors.join(' and '),title:p.title,journal:p.venue,year:p.year,volume:p.volume,number:p.issue,pages:p.pages,doi:p.doi,url:'https://doi.org/'+p.doi};
+    return '@article{'+key+',\n'+Object.entries(fields).filter(([,v])=>v).map(([k,v])=>'  '+k+' = {'+escapeBib(v)+'}').join(',\n')+'\n}\n';
+  }
+  function makeRIS(p) {
+    const lines=['TY  - JOUR','TI  - '+strip(p.title),...authorsOf(p.authors).map(a=>'AU  - '+a),'JO  - '+strip(p.venue),'PY  - '+p.year];
+    if (p.volume) lines.push('VL  - '+p.volume);
+    if (p.issue) lines.push('IS  - '+p.issue);
+    if (p.pages) {const ps=p.pages.split(/[–-]/); lines.push('SP  - '+ps[0]); if (ps[1]) lines.push('EP  - '+ps[1]);}
+    if (p.articleNumber) lines.push('C7  - '+p.articleNumber);
+    lines.push('DO  - '+p.doi,'UR  - https://doi.org/'+p.doi,'ER  - ');
+    return lines.join('\r\n')+'\r\n';
+  }
+  function saveFile(content,filename,type) {
+    const url=URL.createObjectURL(new Blob([content],{type:type+';charset=utf-8'}));
+    const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  root.addEventListener('click',async event => {
+    const button=event.target.closest('[data-pub-export]');
+    if (!button) return;
+    const p=data[Number(button.dataset.index)];
+    const format=button.dataset.pubExport;
+    if (format==='apa') {
+      if (!p.apa) {feedback.textContent=t.failed;return;}
+      try {await navigator.clipboard.writeText(p.apa);feedback.textContent=t.copied;}
+      catch {feedback.textContent=t.failed;}
+      return;
+    }
+    const stem='castellvi-'+p.year+'-'+p.doi.replace(/[^a-zA-Z0-9]/g,'-').slice(-32);
+    if (format==='bibtex') saveFile(makeBibTeX(p),stem+'.bib','application/x-bibtex');
+    if (format==='ris') saveFile(makeRIS(p),stem+'.ris','application/x-research-info-systems');
+    feedback.textContent=t.download;
+  });
+  update();
+})();
+</script>
+<style>
+.publication-explorer{min-width:0;margin-top:23px}
+.publication-controls{background:var(--cyan-pale);padding:22px;display:grid;grid-template-columns:minmax(230px,2fr) minmax(130px,.8fr) minmax(220px,1.5fr) auto;align-items:end;gap:14px}
+.publication-controls label{display:flex;flex-direction:column;min-width:0;gap:7px;font-size:11px;font-weight:800;color:var(--navy)}
+.publication-controls input,.publication-controls select{height:44px;min-width:0;width:100%;border:1px solid var(--line);background:#fff;padding:0 13px;font:500 13px/1.4 'DM Sans',sans-serif;color:var(--ink);border-radius:0}
+.publication-controls :is(input,select,button):focus-visible,.entry-actions a:focus-visible,.entry-actions button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.reset-button{border:1px solid var(--cyan);background:transparent;color:var(--cyan);height:44px;padding:0 16px;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.reset-button:hover{background:var(--cyan);color:#fff}
+.publication-results{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:20px 1px 14px}
+.publication-results p{font-size:12px;color:var(--muted);margin:0}.publication-results [data-pub-count]{font-size:13px;font-weight:800;color:var(--cyan)}
+.publication-entry{display:grid;grid-template-columns:95px minmax(0,1fr);gap:28px;padding:28px 0 30px;border-bottom:1px solid var(--line)}
+.publication-entry[hidden],.publication-empty[hidden]{display:none!important}
+.entry-aside{display:flex;flex-direction:column;gap:9px}.entry-year{font:750 25px/1 'Manrope',sans-serif;color:var(--red)}.entry-type{font-size:10px;color:var(--muted);font-weight:750;letter-spacing:.07em}
+.entry-body{min-width:0}.entry-venue{font-size:11px;text-transform:uppercase;letter-spacing:.045em;color:var(--cyan);font-weight:800;line-height:1.5}
+.entry-body h3{font:650 clamp(17px,2vw,22px)/1.25 'Manrope',sans-serif;letter-spacing:-.045em;margin:9px 0 8px;overflow-wrap:anywhere}
+.entry-body h3 a{color:var(--ink);text-decoration:none}.entry-body h3 a:hover{color:var(--cyan)}.entry-authors{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 15px}
+.entry-topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.entry-topic{background:var(--cyan-pale);font-size:10.5px;line-height:1.5;color:var(--cyan);font-weight:700;padding:5px 9px}
+.entry-actions{display:flex;align-items:center;gap:11px 18px;flex-wrap:wrap}.entry-actions a,.entry-actions button{font:750 11px/1.5 'DM Sans',sans-serif;color:var(--cyan);text-decoration:none}
+.entry-actions a:hover,.entry-actions button:hover{color:var(--red)}.entry-actions button{border:0;padding:0;background:none;cursor:pointer}.entry-actions .doi-link{overflow-wrap:anywhere}.entry-actions-divider{height:12px;width:1px;background:var(--line)}
+.publication-empty{padding:30px 0;font-size:14px;color:var(--muted)}.publication-feedback{font-size:12px;color:var(--cyan);min-height:18px;margin-top:14px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1020px){.publication-controls{grid-template-columns:1fr 1fr}.publication-controls .search-box{grid-column:1/-1}}
+@media(max-width:650px){.publication-controls{grid-template-columns:1fr;padding:16px}.publication-controls .search-box{grid-column:auto}.publication-entry{grid-template-columns:1fr;gap:8px;padding:25px 0}.entry-aside{flex-direction:row;align-items:center}.entry-year{font-size:20px}.entry-actions-divider{display:none}.entry-actions{gap:10px 16px}.publication-results{align-items:start}}
+</style>
