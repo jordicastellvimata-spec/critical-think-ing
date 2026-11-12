@@ -428,7 +428,9 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .lab-orbit.two{height:240px;width:390px;border-color:var(--red-light);transform:rotate(35deg)}
 .lab-main{font:800 235px/1 'Manrope',sans-serif;color:var(--red-light);transform:rotate(17deg);position:relative;z-index:1}
 .lab-caption{position:absolute;bottom:0;left:0;color:var(--on-dark);font-size:10px;letter-spacing:.12em;font-weight:700}
-.lab-art.lab-word-cloud{height:auto;min-height:410px;display:block;overflow:visible}
+.lab-art.lab-word-cloud{height:auto;min-height:0;display:block;overflow:visible;padding:6px 0 16px}
+.lab-banner .lab-grid{align-items:center}
+@media(max-width:760px){.lab-banner .lab-grid{row-gap:34px}.lab-art.lab-word-cloud{height:auto;min-height:0;padding:0 0 26px}.lab-banner .lab-prompts{margin-top:16px}}
 .about-section{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:1fr .75fr;gap:12%;align-items:center}
 .about-section h2{margin:20px 0}
