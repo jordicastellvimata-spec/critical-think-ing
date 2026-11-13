@@ -19,7 +19,7 @@ const items=order.map(([group,part],i)=>({group,part,i,text:phrases[group].piece
 <div class="thinking-cloud" data-thinking-cloud aria-label="Núvol interactiu de quatre frases sobre les ciències socials i els laboratoris">
  <p class="cloud-instruction">Descobreix quatre idees: passa per les paraules o toca-les</p>
  <div class="cloud-field" role="group" aria-label="Toca qualsevol paraula per il·luminar la seva frase">
-   {items.map(item=><button type="button" class={`cloud-word cloud-word-${item.i%5} cloud-group-${item.group}`} data-group={item.group} aria-label={`${item.text}. Frase ${item.group+1}: ${phrases[item.group].text}`} aria-pressed="false">{item.text}</button>)}
+   {items.map(item=><button type="button" class={`cloud-word cloud-word-${item.i%5} cloud-group-${item.group}`} data-group={item.group} data-part={item.part} aria-label={`${item.text}. Frase ${item.group+1}: ${phrases[item.group].text}`} aria-pressed="false">{item.text}</button>)}
  </div>
  <span class="sr-only" aria-live="polite" data-cloud-announcement></span>
 </div>
@@ -50,12 +50,65 @@ document.querySelectorAll('[data-thinking-cloud]').forEach(cloud=>{
  const field=cloud.querySelector('.cloud-field');
  const words=Array.from(cloud.querySelectorAll('[data-group]'));
  const announcement=cloud.querySelector('[data-cloud-announcement]');
- const phrases=[
+ const locale=document.documentElement.lang;
+ const translations={
+  es:{
+   instruction:'Descubre cuatro ideas: pasa el cursor por las palabras o tócalas',
+   cloudLabel:'Nube interactiva de cuatro frases sobre las ciencias sociales y los laboratorios',
+   fieldLabel:'Toca cualquier palabra para iluminar su frase',
+   phraseLabel:'Frase',
+   phrases:[
+    {text:'No todos los laboratorios tienen probetas, tubos de ensayo o matraces Erlenmeyer.',pieces:['No todos los','laboratorios','tienen','probetas,','tubos de ensayo','o matraces','Erlenmeyer.']},
+    {text:'Las ciencias sociales también son ciencias.',pieces:['Las','ciencias','sociales','también','son','ciencias.']},
+    {text:'Todas las ciencias de la educación son ciencias sociales.',pieces:['Todas las','ciencias de','la educación','son','ciencias','sociales.']},
+    {text:'¿Cómo sería un laboratorio de pensamiento crítico?',pieces:['¿Cómo sería','un laboratorio','de pensamiento','crítico?']}
+   ]
+  },
+  en:{
+   instruction:'Discover four ideas: hover over the words or tap them',
+   cloudLabel:'Interactive word cloud with four statements about social sciences and laboratories',
+   fieldLabel:'Tap any word to highlight its statement',
+   phraseLabel:'Statement',
+   phrases:[
+    {text:'Not all laboratories have test tubes, pipettes or Erlenmeyer flasks.',pieces:['Not all','laboratories','have','test tubes,','pipettes','or flasks','Erlenmeyer.']},
+    {text:'Social sciences are sciences too.',pieces:['Social','sciences','are','sciences','too.','']},
+    {text:'All educational sciences are social sciences.',pieces:['All','educational','sciences','are','social','sciences.']},
+    {text:'What might a critical thinking laboratory look like?',pieces:['What might','a laboratory','for critical thinking','look like?']}
+   ]
+  },
+  fr:{
+   instruction:'Découvrez quatre idées : survolez les mots ou touchez-les',
+   cloudLabel:'Nuage de mots interactif présentant quatre phrases sur les sciences sociales et les laboratoires',
+   fieldLabel:'Touchez un mot pour faire ressortir sa phrase',
+   phraseLabel:'Phrase',
+   phrases:[
+    {text:'Tous les laboratoires ne disposent pas d’éprouvettes, de tubes à essai ou de fioles Erlenmeyer.',pieces:['Tous les','laboratoires','ne disposent pas','d’éprouvettes,','de tubes à essai','ou de fioles','Erlenmeyer.']},
+    {text:'Les sciences sociales sont aussi des sciences.',pieces:['Les','sciences','sociales','sont aussi','des','sciences.']},
+    {text:'Toutes les sciences de l’éducation sont des sciences sociales.',pieces:['Toutes les','sciences de','l’éducation','sont des','sciences','sociales.']},
+    {text:'À quoi ressemblerait un laboratoire de pensée critique ?',pieces:['À quoi ressemblerait','un laboratoire','de pensée','critique ?']}
+   ]
+  }
+ };
+ const translated=translations[locale];
+ const catalanPhrases=[
   'No tots els laboratoris tenen provetes, tubs d’assaig o matrassos Erlenmeyer.',
   'Les ciències socials també són ciències.',
   'Totes les ciències de l’educació són ciències socials.',
   'Com seria un laboratori de pensament crític?'
  ];
+ const phrases=translated?translated.phrases.map(p=>p.text):catalanPhrases;
+ if(translated){
+  cloud.setAttribute('aria-label',translated.cloudLabel);
+  field.setAttribute('aria-label',translated.fieldLabel);
+  cloud.querySelector('.cloud-instruction').textContent=translated.instruction;
+  words.forEach(word=>{
+   const group=Number(word.dataset.group);
+   const part=Number(word.dataset.part);
+   const piece=translated.phrases[group].pieces[part];
+   word.textContent=piece;
+   word.setAttribute('aria-label',piece+'. '+translated.phraseLabel+' '+(group+1)+': '+phrases[group]);
+  });
+ }
  let selected=null;
  const show=(group,announce=false)=>{
   field.classList.toggle('is-active',group!==null);
