@@ -523,6 +523,21 @@ HATE SPEECH & COUNTER-NARRATIVES|||DISCURSOS DE ODIO Y CONTRARRELATOS|||HATE SPE
 POLARIZATION & POPULISM|||POLARIZACIÓN Y POPULISMOS|||POLARIZATION & POPULISM|||POLARISATION ET POPULISMES
 CRITICAL THINKING & CITIZENSHIP|||PENSAMIENTO CRÍTICO Y CIUDADANÍA|||CRITICAL THINKING & CITIZENSHIP|||PENSÉE CRITIQUE ET CITOYENNETÉ
 `),
+  ...block(String.raw`
+Altres experiències de formació i col·laboració|||Otras experiencias de formación y colaboración|||Other teaching and training collaborations|||Autres expériences de formation et de collaboration
+Universitat Rovira i Virgili|||Universitat Rovira i Virgili|||Rovira i Virgili University|||Universitat Rovira i Virgili
+Universitat de Màlaga|||Universidad de Málaga|||University of Málaga|||Université de Malaga
+Universitat de Jaén|||Universidad de Jaén|||University of Jaén|||Université de Jaén
+Serveis Territorials del Vallès Occidental|||Servicios Territoriales del Vallès Occidental|||Vallès Occidental Territorial Education Services|||Services territoriaux du Vallès Occidental
+Servei Educatiu Sants-Montjuïc|||Servicio Educativo Sants-Montjuïc|||Sants-Montjuïc Education Service|||Service éducatif de Sants-Montjuïc
+Rosa Sensat|||Rosa Sensat|||Rosa Sensat|||Rosa Sensat
+Literacitat crítica: formar el pensament crític a l’escola qüestionant allò comú|||Literacidad crítica: formar el pensamiento crítico en la escuela cuestionando lo habitual|||Critical literacy: developing critical thinking at school by questioning the familiar|||Littératie critique : développer la pensée critique à l’école en questionnant les évidences
+Literacidad Crítica. Formar el pensamiento crítico en Educación Infantil|||Literacidad Crítica. Formar el pensamiento crítico en Educación Infantil|||Critical literacy: developing critical thinking in early childhood education|||Littératie critique : développer la pensée critique à l’école maternelle
+Ponència en un programa intensiu combinat (BIP)|||Ponencia en un programa intensivo combinado (BIP)|||Guest talk in a Blended Intensive Programme (BIP)|||Conférence dans un programme intensif hybride (BIP)
+Formar el Pensament Crític en la Societat Digital|||Formar el pensamiento crítico en la sociedad digital|||Developing Critical Thinking in the Digital Society|||Former à la pensée critique dans la société numérique
+Interculturalitat, discursos d’odi i DCCSS|||Interculturalidad, discursos de odio y didáctica de las ciencias sociales|||Interculturality, hate speech and social sciences education|||Interculturalité, discours de haine et didactique des sciences sociales
+Disseny de la 57a Escola d’Estiu|||Diseño de la 57.ª Escuela de Verano|||Design of the 57th Summer School|||Conception de la 57e École d’été
+`),
 ];
 
 export const exactOriginals = [
