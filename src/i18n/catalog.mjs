@@ -14,6 +14,7 @@ export const catalog = [
   ...relatInvisibleTranslations,
   ...miradesTranslations,
   ...block(String.raw`
+Descobreix quatre idees: passa per les paraules o toca-les|||Descubre cuatro ideas: pasa el cursor por las palabras o tócalas|||Discover four ideas: hover over the words or tap them|||Découvrez quatre idées : survolez les mots ou touchez-les
 Descarrega el CV resumit (PDF) ↓|||Descargar CV resumido (PDF) ↓|||Download short academic CV (PDF) ↓|||Télécharger le CV académique résumé (PDF) ↓
 Publicacions sobre pensament crític i educació | Jordi Castellví Mata|||Publicaciones sobre pensamiento crítico y educación | Jordi Castellví Mata|||Publications on Critical Thinking and Education | Jordi Castellví Mata|||Publications sur la pensée critique et l’éducation | Jordi Castellví Mata
 Jordi Castellví Mata | Perfil acadèmic|||Jordi Castellví Mata | Perfil académico|||Jordi Castellví Mata | Academic Profile|||Jordi Castellví Mata | Profil académique
