@@ -33,8 +33,18 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     label: 'Humanities & Social Sciences Communications',
     variant: 'purple'
   },
-  'Aula Abierta': { label: 'Aula Abierta', variant: 'orange' },
-  'Critical Education': { label: 'Critical Education', variant: 'blue' },
+  'Aula Abierta': {
+    image: 'https://dialnet.unirioja.es/recursos/imagen?entidad=REVISTA&revista=177&tipo_contenido=65',
+    label: 'Aula Abierta',
+    note: 'Portada representativa de la revista Aula Abierta, volum 55, número 1 (2026)',
+    variant: 'orange'
+  },
+  'Critical Education': {
+    image: 'https://www.erudit.org/en/journals/criticaled/2025-v16-n1-criticaled09900/coverpage-hd.jpg',
+    label: 'Critical Education',
+    note: 'Portada representativa de la revista Critical Education, volum 16, número 1 (2025)',
+    variant: 'blue'
+  },
   'Trends in Higher Education': { label: 'Trends in Higher Education', variant: 'blue' },
   'Bellaterra Journal of Teaching & Learning Language & Literature': { label: 'Bellaterra Journal', variant: 'gold' },
   'Culture & Education': {
@@ -49,6 +59,11 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     note: 'Portada representativa de la revista Sustainability (2023)',
     variant: 'green'
   },
-  'REIDICS. Revista de Investigación en Didáctica de las Ciencias Sociales': { label: 'REIDICS', variant: 'red' },
+  'REIDICS. Revista de Investigación en Didáctica de las Ciencias Sociales': {
+    image: 'https://revista-reidics.unex.es/public/journals/17/cover_issue_170_es_ES.jpg',
+    label: 'REIDICS',
+    note: 'Portada representativa de la revista REIDICS, número 12 (2023)',
+    variant: 'red'
+  },
   'Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia': { label: 'Panta Rei', variant: 'orange' }
 };
