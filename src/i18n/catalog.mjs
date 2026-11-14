@@ -533,10 +533,12 @@ Servei Educatiu Sants-Montjuïc|||Servicio Educativo Sants-Montjuïc|||Sants-Mon
 Rosa Sensat|||Rosa Sensat|||Rosa Sensat|||Rosa Sensat
 Literacitat crítica: formar el pensament crític a l’escola qüestionant allò comú|||Literacidad crítica: formar el pensamiento crítico en la escuela cuestionando lo habitual|||Critical literacy: developing critical thinking at school by questioning the familiar|||Littératie critique : développer la pensée critique à l’école en questionnant les évidences
 Literacidad Crítica. Formar el pensamiento crítico en Educación Infantil|||Literacidad Crítica. Formar el pensamiento crítico en Educación Infantil|||Critical literacy: developing critical thinking in early childhood education|||Littératie critique : développer la pensée critique à l’école maternelle
-Ponència en un programa intensiu combinat (BIP)|||Ponencia en un programa intensivo combinado (BIP)|||Guest talk in a Blended Intensive Programme (BIP)|||Conférence dans un programme intensif hybride (BIP)
+Critical digital literacy: ideology, disinformation and multiperspective|||Critical digital literacy: ideology, disinformation and multiperspective|||Critical digital literacy: ideology, disinformation and multiperspective|||Critical digital literacy: ideology, disinformation and multiperspective
+Conferència al programa «New Technologies and Human Rights»|||Conferencia en el programa «New Technologies and Human Rights»|||Guest lecture in the “New Technologies and Human Rights” programme|||Conférence dans le programme « New Technologies and Human Rights »
 Formar el Pensament Crític en la Societat Digital|||Formar el pensamiento crítico en la sociedad digital|||Developing Critical Thinking in the Digital Society|||Former à la pensée critique dans la société numérique
 Interculturalitat, discursos d’odi i DCCSS|||Interculturalidad, discursos de odio y didáctica de las ciencias sociales|||Interculturality, hate speech and social sciences education|||Interculturalité, discours de haine et didactique des sciences sociales
-Disseny de la 57a Escola d’Estiu|||Diseño de la 57.ª Escuela de Verano|||Design of the 57th Summer School|||Conception de la 57e École d’été
+Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers|||Trabajo globalizado en torno a los problemas sociales relevantes y la humanización de los saberes|||Integrated learning around socially relevant issues and the humanisation of knowledge|||Approche globale autour des questions sociales vives et de l’humanisation des savoirs
+Curs codissenyat i impartit amb Mariona Massip a la 57a Escola d’Estiu|||Curso codiseñado e impartido con Mariona Massip en la 57.ª Escuela de Verano|||Course co-designed and taught with Mariona Massip at the 57th Summer School|||Formation conçue et animée avec Mariona Massip lors de la 57e École d’été
 `),
 ];
 
