@@ -184,7 +184,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
               {institution:'Serveis Territorials del Vallès Occidental',year:'2025–2026',title:'Formar el Pensament Crític en la Societat Digital',icon:'M4 4h16v12H4zM2 20h20M8 10l3 3 5-6'},
               {institution:'Servei Educatiu Sants-Montjuïc',year:'2025',title:'Interculturalitat, discursos d’odi i DCCSS',icon:'M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a8.5 8.5 0 1 1 16.1-4zM8 10h8M8 14h5'},
               {institution:'Rosa Sensat',year:'2022',title:'Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers',detail:'Curs codissenyat i impartit a la 57a Escola d’Estiu',icon:'M4 5h7v14H4zM13 5h7v14h-7zM7 9h1M16 9h1M7 13h1M16 13h1'},
-              {institution:'AUPDCS',title:'La formació del pensament crític des de l’ensenyament de les ciències socials',detail:'Més enllà del desenvolupament d’habilitats cognitives',icon:'M4 4h16v12H4zM8 8h8M8 12h5M8 20h8M12 16v4'},
               {institution:'AUPDCS',year:'2025',title:'Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos',detail:'Webinar sobre intel·ligència artificial aplicada a la recerca',icon:'M12 3v3M6 6l2 2M3 12h3M6 18l2-2M12 21v-3M18 18l-2-2M21 12h-3M18 6l-2 2M9 9h6v6H9z'}
             ].map(item=><article class="training-experience">
               <span class="training-experience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d={item.icon} /></svg></span>
@@ -193,19 +192,21 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </div>
         </div>
         <style>
-          .training-experiences{margin-top:clamp(2.6rem,5vw,4.5rem);padding-top:2rem;border-top:1px solid var(--border,rgba(110,130,145,.24))}
-          .training-experiences>.subsection-title{margin-bottom:1.5rem}
-          .training-experiences-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-          .training-experience{display:flex;flex-direction:column;gap:14px;padding:22px 20px;min-width:0;border:1px solid rgba(105,133,145,.2);border-radius:14px;background:var(--surface,#fff)}
-          .training-experience-icon{display:flex;width:44px;height:44px;align-items:center;justify-content:center;border-radius:12px;background:rgba(22,171,192,.09);color:#098da8}
-          .training-experience-body{display:flex;flex-direction:column;gap:7px}
-          .training-experience-meta{display:flex;gap:7px 10px;align-items:baseline;justify-content:space-between;font-size:.76rem;line-height:1.4;color:var(--muted,#5e7078)}
+          .training-experiences{margin-top:clamp(2rem,4vw,3.4rem);padding-top:1.6rem;border-top:1px solid var(--border,rgba(110,130,145,.24))}
+          .training-experiences>.subsection-title{margin-bottom:1.1rem}
+          .training-experiences-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
+          .training-experience{display:flex;flex-direction:column;gap:9px;padding:14px 12px;min-width:0;border:1px solid rgba(105,133,145,.2);border-radius:10px;background:var(--surface,#fff)}
+          .training-experience-icon{display:flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:9px;background:rgba(22,171,192,.09);color:#098da8;flex-shrink:0}
+          .training-experience-icon svg{width:20px;height:20px}
+          .training-experience-body{display:flex;flex-direction:column;gap:5px;min-width:0}
+          .training-experience-meta{display:flex;gap:3px 8px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;font-size:.66rem;line-height:1.35;color:var(--muted,#5e7078)}
           .training-experience-meta span:first-child{font-weight:650}
           .training-experience-meta span:last-child{white-space:nowrap}
-          .training-experience h4{font-size:clamp(.91rem,1.1vw,1.03rem);line-height:1.42;font-weight:550;margin:0;color:var(--ink,#17252c);overflow-wrap:break-word}
-          .training-experience-detail{font-size:.83rem;line-height:1.55;color:var(--muted,#5e7078);margin:2px 0 0;overflow-wrap:break-word}
-          @media(max-width:900px){.training-experiences-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-          @media(max-width:580px){.training-experiences-grid{grid-template-columns:1fr;gap:10px}.training-experience{flex-direction:row;padding:16px;gap:14px}.training-experience-icon{flex-shrink:0;width:42px;height:42px}.training-experience-meta{flex-wrap:wrap}.training-experiences{margin-top:2.5rem}}
+          .training-experience h4{font-size:clamp(.79rem,.91vw,.89rem);line-height:1.35;font-weight:550;margin:0;color:var(--ink,#17252c);overflow-wrap:break-word;hyphens:auto}
+          .training-experience-detail{font-size:.72rem;line-height:1.4;color:var(--muted,#5e7078);margin:0;overflow-wrap:break-word}
+          @media(max-width:1080px){.training-experiences-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+          @media(max-width:760px){.training-experiences-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+          @media(max-width:500px){.training-experiences-grid{grid-template-columns:1fr;gap:9px}.training-experience{flex-direction:row;padding:13px;gap:11px}.training-experience-icon{width:32px;height:32px}.training-experiences{margin-top:2.3rem}}
         </style>
     </div>
   </section>
