@@ -180,13 +180,13 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             {[
               {institution:'Universitat Rovira i Virgili',year:'2024',title:'Literacitat crítica: formar el pensament crític a l’escola qüestionant allò comú',icon:'M4 19.5V4.5a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2m0-17a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2z'},
               {institution:'Universitat de Màlaga',year:'2021–2023',title:'Literacidad Crítica. Formar el pensamiento crítico en Educación Infantil',icon:'M12 3 2 8l10 5 10-5-10-5Zm-7 7v5c4 3 10 3 14 0v-5M22 8v6'},
-              {institution:'Universitat de Jaén',year:'2024',title:'Ponència en un programa intensiu combinat (BIP)',icon:'M3 3h18v14H3zM8 21h8M12 17v4M7 12l3-3 2 2 4-4'},
+              {institution:'Universitat de Jaén',year:'2024',title:'Critical digital literacy: ideology, disinformation and multiperspective',detail:'Conferència al programa «New Technologies and Human Rights»',icon:'M3 3h18v14H3zM8 21h8M12 17v4M7 12l3-3 2 2 4-4'},
               {institution:'Serveis Territorials del Vallès Occidental',year:'2025–2026',title:'Formar el Pensament Crític en la Societat Digital',icon:'M4 4h16v12H4zM2 20h20M8 10l3 3 5-6'},
               {institution:'Servei Educatiu Sants-Montjuïc',year:'2025',title:'Interculturalitat, discursos d’odi i DCCSS',icon:'M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a8.5 8.5 0 1 1 16.1-4zM8 10h8M8 14h5'},
-              {institution:'Rosa Sensat',year:'2022',title:'Disseny de la 57a Escola d’Estiu',icon:'M4 5h7v14H4zM13 5h7v14h-7zM7 9h1M16 9h1M7 13h1M16 13h1'}
+              {institution:'Rosa Sensat',year:'2022',title:'Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers',detail:'Curs codissenyat i impartit amb Mariona Massip a la 57a Escola d’Estiu',icon:'M4 5h7v14H4zM13 5h7v14h-7zM7 9h1M16 9h1M7 13h1M16 13h1'}
             ].map(item=><article class="training-experience">
               <span class="training-experience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d={item.icon} /></svg></span>
-              <div class="training-experience-body"><div class="training-experience-meta"><span>{item.institution}</span><span>{item.year}</span></div><h4>{item.title}</h4></div>
+              <div class="training-experience-body"><div class="training-experience-meta"><span>{item.institution}</span><span>{item.year}</span></div><h4>{item.title}</h4>{item.detail && <p class="training-experience-detail">{item.detail}</p>}</div>
             </article>)}
           </div>
         </div>
@@ -201,6 +201,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           .training-experience-meta span:first-child{font-weight:650}
           .training-experience-meta span:last-child{white-space:nowrap}
           .training-experience h4{font-size:clamp(.91rem,1.1vw,1.03rem);line-height:1.42;font-weight:550;margin:0;color:var(--ink,#17252c);overflow-wrap:break-word}
+          .training-experience-detail{font-size:.83rem;line-height:1.55;color:var(--muted,#5e7078);margin:2px 0 0;overflow-wrap:break-word}
           @media(max-width:900px){.training-experiences-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
           @media(max-width:580px){.training-experiences-grid{grid-template-columns:1fr;gap:10px}.training-experience{flex-direction:row;padding:16px;gap:14px}.training-experience-icon{flex-shrink:0;width:42px;height:42px}.training-experience-meta{flex-wrap:wrap}.training-experiences{margin-top:2.5rem}}
         </style>
