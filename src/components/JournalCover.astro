@@ -9,18 +9,29 @@ const visual = journalVisuals[venue] ?? { label: venue, variant: 'blue' };
     <span class="cover-name">{visual.label}</span>
     <span class="cover-rule"></span>
   </div>
+  {visual.fallback && <img
+    class="cover-fallback-image"
+    src={visual.fallback}
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+    decoding="async"
+    width="330"
+    height="465"
+  />}
   {visual.image && <img
+    class="cover-source-image"
     src={visual.image}
     alt={visual.note ?? 'Imatge de la revista ' + venue}
     loading="lazy"
     decoding="async"
     referrerpolicy="no-referrer-when-downgrade"
-    onerror="this.style.display='none'"
+    onerror="this.remove()"
   />}
 </div>
 <style>
 .journal-cover{width:73px;height:96px;position:relative;overflow:hidden;display:block;background:#194f70;color:#fff;flex-shrink:0;border:1px solid rgba(17,53,69,.12);box-shadow:0 3px 9px rgba(14,46,61,.10)}
-.journal-cover img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:top center}
+.journal-cover img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:top center}.cover-fallback-image{z-index:1}.cover-source-image{z-index:2}
 .cover-type{height:100%;padding:10px 7px;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
 .cover-overline{font:700 6px/1.2 'DM Sans',sans-serif;letter-spacing:.08em;opacity:.78}
 .cover-name{font:750 12px/1.12 'Manrope',sans-serif;letter-spacing:-.045em;overflow-wrap:anywhere}
