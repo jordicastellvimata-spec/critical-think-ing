@@ -82,7 +82,7 @@ export const journalVisuals: Record<string, { image?: string; fallback?: string;
     fallback: '/images/journal-fallback-reidics.svg',
     image: 'https://didactica-ciencias-sociales.org/wp-content/uploads/2025/04/6802c720464d7-777x1024.jpeg',
     label: 'REIDICS',
-    note: 'Portada del número 16 de REIDICS (2025), en què es va publicar l’article',
+    note: 'Portada representativa de REIDICS, número 16 (2025)',
     variant: 'red'
   },
   'Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia': {
