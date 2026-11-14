@@ -174,8 +174,26 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           <FinancialEducationCourse nested={true} compact={true} />
         </div>
         <TeacherResources />
+
+    </div>
+  </section>
+
+<section class="section classroom-section" id="aules">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Materials curriculars i projectes educatius</div>
+          <h2 class="section-title">Transferència a les <span class="section-cyan">aules.</span></h2>
+        </div>
+      </div>
+      <PracticeMaterials />
+    </div>
+  </section>
+
+<section class="section misc-experiences-section" aria-labelledby="more-experiences-heading">
+  <div class="container">
         <div class="training-experiences">
-          <h3 class="subsection-title">Altres experiències de formació i col·laboració</h3>
+          <h2 class="subsection-title" id="more-experiences-heading">Altres experiències de formació i col·laboració</h2>
           <div class="training-experiences-grid">
             {[
               {institution:'Universitat Rovira i Virgili',year:'2024',title:'Literacitat crítica: formar el pensament crític a l’escola qüestionant allò comú',icon:'M4 19.5V4.5a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2m0-17a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2z'},
@@ -192,7 +210,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           </div>
         </div>
         <style>
-          .training-experiences{margin-top:clamp(2rem,4vw,3.4rem);padding-top:1.6rem;border-top:1px solid var(--border,rgba(110,130,145,.24))}
+          .training-experiences{margin-top:0;padding-top:1.35rem;border-top:1px solid var(--border,rgba(110,130,145,.24))}
           .training-experiences>.subsection-title{margin-bottom:1.1rem}
           .training-experiences-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
           .training-experience{display:flex;flex-direction:column;gap:9px;padding:14px 12px;min-width:0;border:1px solid rgba(105,133,145,.2);border-radius:10px;background:var(--surface,#fff)}
@@ -206,22 +224,12 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           .training-experience-detail{font-size:.72rem;line-height:1.4;color:var(--muted,#5e7078);margin:0;overflow-wrap:break-word}
           @media(max-width:1080px){.training-experiences-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
           @media(max-width:760px){.training-experiences-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-          @media(max-width:500px){.training-experiences-grid{grid-template-columns:1fr;gap:9px}.training-experience{flex-direction:row;padding:13px;gap:11px}.training-experience-icon{width:32px;height:32px}.training-experiences{margin-top:2.3rem}}
+          @media(max-width:500px){.training-experiences-grid{grid-template-columns:1fr;gap:9px}.training-experience{flex-direction:row;padding:13px;gap:11px}.training-experience-icon{width:32px;height:32px}.training-experiences{margin-top:0}}
+          .section.misc-experiences-section{padding:18px 0 52px;background:var(--white)}
+          @media(max-width:760px){.section.misc-experiences-section{padding:10px 0 44px}}
         </style>
-    </div>
-  </section>
-
-<section class="section classroom-section" id="aules">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Materials curriculars i projectes educatius</div>
-          <h2 class="section-title">Transferència a les <span class="section-cyan">aules.</span></h2>
-        </div>
-      </div>
-      <PracticeMaterials />
-    </div>
-  </section>
+  </div>
+</section>
 
 <section class="lab-banner" id="laboratori">
     <div class="container lab-grid">
