@@ -183,10 +183,12 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
               {institution:'Universitat de Jaén',year:'2024',title:'Critical digital literacy: ideology, disinformation and multiperspective',detail:'Conferència al programa «New Technologies and Human Rights»',icon:'M3 3h18v14H3zM8 21h8M12 17v4M7 12l3-3 2 2 4-4'},
               {institution:'Serveis Territorials del Vallès Occidental',year:'2025–2026',title:'Formar el Pensament Crític en la Societat Digital',icon:'M4 4h16v12H4zM2 20h20M8 10l3 3 5-6'},
               {institution:'Servei Educatiu Sants-Montjuïc',year:'2025',title:'Interculturalitat, discursos d’odi i DCCSS',icon:'M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a8.5 8.5 0 1 1 16.1-4zM8 10h8M8 14h5'},
-              {institution:'Rosa Sensat',year:'2022',title:'Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers',detail:'Curs codissenyat i impartit amb Mariona Massip a la 57a Escola d’Estiu',icon:'M4 5h7v14H4zM13 5h7v14h-7zM7 9h1M16 9h1M7 13h1M16 13h1'}
+              {institution:'Rosa Sensat',year:'2022',title:'Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers',detail:'Curs codissenyat i impartit a la 57a Escola d’Estiu',icon:'M4 5h7v14H4zM13 5h7v14h-7zM7 9h1M16 9h1M7 13h1M16 13h1'},
+              {institution:'AUPDCS',title:'La formació del pensament crític des de l’ensenyament de les ciències socials',detail:'Més enllà del desenvolupament d’habilitats cognitives',icon:'M4 4h16v12H4zM8 8h8M8 12h5M8 20h8M12 16v4'},
+              {institution:'AUPDCS',year:'2025',title:'Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos',detail:'Webinar sobre intel·ligència artificial aplicada a la recerca',icon:'M12 3v3M6 6l2 2M3 12h3M6 18l2-2M12 21v-3M18 18l-2-2M21 12h-3M18 6l-2 2M9 9h6v6H9z'}
             ].map(item=><article class="training-experience">
               <span class="training-experience-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d={item.icon} /></svg></span>
-              <div class="training-experience-body"><div class="training-experience-meta"><span>{item.institution}</span><span>{item.year}</span></div><h4>{item.title}</h4>{item.detail && <p class="training-experience-detail">{item.detail}</p>}</div>
+              <div class="training-experience-body"><div class="training-experience-meta"><span>{item.institution}</span>{item.year && <span>{item.year}</span>}</div><h4>{item.title}</h4>{item.detail && <p class="training-experience-detail">{item.detail}</p>}</div>
             </article>)}
           </div>
         </div>
