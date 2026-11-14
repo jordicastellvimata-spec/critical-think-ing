@@ -18,9 +18,9 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     variant: 'white'
   },
   'Compare: A Journal of Comparative and International Education': {
-    image: 'https://www.tandfonline.com/doi/cover-img/10.1080/ccom20.v054.i01',
+    image: 'https://www.tandfonline.com/doi/cover-img/10.1080/ccom20.v054.i06',
     label: 'COMPARE',
-    note: 'Portada representativa de la revista Compare (2024)',
+    note: 'Portada de Compare, volum 54, número 6 (2024), on es va publicar l’article',
     variant: 'gold'
   },
   'Comunicar': {
@@ -30,7 +30,9 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     variant: 'green'
   },
   'Humanities and Social Sciences Communications': {
+    image: 'https://pbs.twimg.com/media/Gdz8uBLXAAEq6Sg.png',
     label: 'Humanities & Social Sciences Communications',
+    note: 'Identitat visual oficial de la revista Humanities & Social Sciences Communications',
     variant: 'purple'
   },
   'Aula Abierta': {
@@ -45,12 +47,22 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     note: 'Portada representativa de la revista Critical Education, volum 16, número 1 (2025)',
     variant: 'blue'
   },
-  'Trends in Higher Education': { label: 'Trends in Higher Education', variant: 'blue' },
-  'Bellaterra Journal of Teaching & Learning Language & Literature': { label: 'Bellaterra Journal', variant: 'gold' },
+  'Trends in Higher Education': {
+    image: 'https://www.mdpi.com/files/uploaded/covers/higheredu/big_cover-higheredu-v3-i4.png',
+    label: 'Trends in Higher Education',
+    note: 'Imatge de coberta del volum 3, número 4 (2024) de Trends in Higher Education',
+    variant: 'blue'
+  },
+  'Bellaterra Journal of Teaching & Learning Language & Literature': {
+    image: 'https://revistes.uab.cat/jtl3/public/journals/5/cover_issue_117_en_US.jpg',
+    label: 'Bellaterra Journal',
+    note: 'Coberta representativa de Bellaterra Journal of Teaching & Learning Language & Literature',
+    variant: 'gold'
+  },
   'Culture & Education': {
-    image: 'https://www.tandfonline.com/doi/cover-img/10.1080/rcye20.v033.i02',
+    image: 'https://www.tandfonline.com/doi/cover-img/10.1080/rcye20.v032.i02',
     label: 'CULTURE & EDUCATION',
-    note: 'Portada representativa de la revista Culture & Education (2021)',
+    note: 'Portada de Culture & Education, volum 32, número 2 (2020), on es va publicar l’article',
     variant: 'red'
   },
   'Sustainability': {
@@ -65,5 +77,10 @@ export const journalVisuals: Record<string, { image?: string; label: string; not
     note: 'Portada representativa de la revista REIDICS, número 12 (2023)',
     variant: 'red'
   },
-  'Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia': { label: 'Panta Rei', variant: 'orange' }
+  'Panta Rei. Revista Digital de Ciencia y Didáctica de la Historia': {
+    image: 'https://revistas.um.es/public/journals/741/cover_issue_19261_es_ES.jpg',
+    label: 'Panta Rei',
+    note: 'Portada de Panta Rei, volum 14, número 2 (2020), on es va publicar l’article',
+    variant: 'orange'
+  }
 };
