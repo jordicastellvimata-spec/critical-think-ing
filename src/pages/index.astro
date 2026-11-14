@@ -208,6 +208,32 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
               <div class="training-experience-body"><div class="training-experience-meta"><span>{item.institution}</span>{item.year && <span>{item.year}</span>}</div><h4>{item.title}</h4>{item.detail && <p class="training-experience-detail">{item.detail}</p>}</div>
             </article>)}
           </div>
+          <details class="training-podcast" id="rosa-sensat-podcast">
+            <summary class="training-podcast-summary">
+              <span class="training-podcast-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l15-9L5 3z" /></svg></span>
+              <span class="training-podcast-copy">
+                <span class="training-podcast-meta">PÒDCAST · ROSA SENSAT · 2022</span>
+                <span class="training-podcast-title">L’aula com a projecte, les metodologies globalitzades</span>
+                <span class="training-podcast-people">Episodi 3 · Fernando Hernández, Xavi Geis, Mariona Massip i Jordi Castellví</span>
+              </span>
+              <span class="training-podcast-cta">Escolta l’episodi <span aria-hidden="true">⌄</span></span>
+            </summary>
+            <div class="training-podcast-player">
+              <iframe
+                src="https://open.spotify.com/embed/episode/3HizQi754Rkb6mJhu1ZZT1"
+                title="Reproductor de l’episodi 3 del pòdcast de Rosa Sensat"
+                width="100%"
+                height="152"
+                loading="lazy"
+                style="border:0;border-radius:9px"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+              <div class="training-podcast-links">
+                <a href="https://www.rosasensat.org/ca/el-podcast-de-la-57a-escola-destiu-laula-com-a-projecte-metodologies-globalitzades" target="_blank" rel="noopener noreferrer">Fitxa de l’episodi a Rosa Sensat ↗</a>
+                <a href="https://open.spotify.com/episode/3HizQi754Rkb6mJhu1ZZT1" target="_blank" rel="noopener noreferrer">Obrir a Spotify ↗</a>
+              </div>
+            </div>
+          </details>
         </div>
         <style>
           .training-experiences{margin-top:0;padding-top:1.35rem;border-top:1px solid var(--border,rgba(110,130,145,.24))}
@@ -222,6 +248,24 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
           .training-experience-meta span:last-child{white-space:nowrap}
           .training-experience h4{font-size:clamp(.79rem,.91vw,.89rem);line-height:1.35;font-weight:550;margin:0;color:var(--ink,#17252c);overflow-wrap:break-word;hyphens:auto}
           .training-experience-detail{font-size:.72rem;line-height:1.4;color:var(--muted,#5e7078);margin:0;overflow-wrap:break-word}
+          .training-podcast{margin-top:14px;border:1px solid rgba(105,133,145,.24);border-radius:10px;background:var(--white);overflow:hidden}
+          .training-podcast-summary{display:flex;align-items:center;gap:13px;padding:12px 15px;cursor:pointer;list-style:none}
+          .training-podcast-summary::-webkit-details-marker{display:none}
+          .training-podcast-summary:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px}
+          .training-podcast-icon{width:32px;height:32px;flex:0 0 32px;display:grid;place-items:center;border-radius:50%;background:var(--cyan-pale);color:var(--cyan)}
+          .training-podcast-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}
+          .training-podcast-meta{font:750 9px/1.4 'DM Sans',sans-serif;letter-spacing:.07em;color:var(--red)}
+          .training-podcast-title{font:650 13px/1.35 'Manrope',sans-serif;color:var(--ink)}
+          .training-podcast-people{font:400 11px/1.45 'DM Sans',sans-serif;color:var(--muted)}
+          .training-podcast-cta{font:750 11px/1.35 'DM Sans',sans-serif;white-space:nowrap;color:var(--cyan)}
+          .training-podcast-cta span{display:inline-block;font-size:17px;vertical-align:middle;transition:transform .2s}
+          .training-podcast[open] .training-podcast-cta span{transform:rotate(180deg)}
+          .training-podcast-player{border-top:1px solid var(--line);padding:13px 15px 15px;display:grid;gap:10px}
+          .training-podcast-player iframe{display:block;max-width:720px}
+          .training-podcast-links{display:flex;flex-wrap:wrap;gap:7px 20px}
+          .training-podcast-links a{font:700 11px/1.5 'DM Sans',sans-serif;text-decoration:none;color:var(--cyan)}
+          .training-podcast-links a:hover{color:var(--red)}
+          @media(max-width:500px){.training-podcast-summary{flex-wrap:wrap;gap:8px 10px;padding:12px}.training-podcast-copy{flex-basis:calc(100% - 44px)}.training-podcast-cta{margin-left:42px}.training-podcast-player{padding:12px}}
           @media(max-width:1080px){.training-experiences-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
           @media(max-width:760px){.training-experiences-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
           @media(max-width:500px){.training-experiences-grid{grid-template-columns:1fr;gap:9px}.training-experience{flex-direction:row;padding:13px;gap:11px}.training-experience-icon{width:32px;height:32px}.training-experiences{margin-top:0}}

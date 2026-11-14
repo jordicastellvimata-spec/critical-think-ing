@@ -544,6 +544,12 @@ La formació del pensament crític des de l’ensenyament de les ciències socia
 Més enllà del desenvolupament d’habilitats cognitives|||Más allá del desarrollo de habilidades cognitivas|||Beyond the development of cognitive skills|||Au-delà du développement des compétences cognitives
 Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos|||Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos|||Artificial intelligence: an ally in social sciences education research? Some practical examples|||L’intelligence artificielle : une alliée de la recherche en didactique des sciences sociales ? Quelques exemples pratiques
 Webinar sobre intel·ligència artificial aplicada a la recerca|||Webinario sobre inteligencia artificial aplicada a la investigación|||Webinar on artificial intelligence in research|||Webinaire sur l’intelligence artificielle appliquée à la recherche
+PÒDCAST · ROSA SENSAT · 2022|||PÓDCAST · ROSA SENSAT · 2022|||PODCAST · ROSA SENSAT · 2022|||PODCAST · ROSA SENSAT · 2022
+L’aula com a projecte, les metodologies globalitzades|||L’aula com a projecte, les metodologies globalitzades|||L’aula com a projecte, les metodologies globalitzades|||L’aula com a projecte, les metodologies globalitzades
+Episodi 3 · Fernando Hernández, Xavi Geis, Mariona Massip i Jordi Castellví|||Episodio 3 · Fernando Hernández, Xavi Geis, Mariona Massip y Jordi Castellví|||Episode 3 · Fernando Hernández, Xavi Geis, Mariona Massip and Jordi Castellví|||Épisode 3 · Fernando Hernández, Xavi Geis, Mariona Massip et Jordi Castellví
+Escolta l’episodi|||Escuchar el episodio|||Listen to the episode|||Écouter l’épisode
+Fitxa de l’episodi a Rosa Sensat ↗|||Ficha del episodio en Rosa Sensat ↗|||Episode page at Rosa Sensat ↗|||Page de l’épisode chez Rosa Sensat ↗
+Obrir a Spotify ↗|||Abrir en Spotify ↗|||Open on Spotify ↗|||Ouvrir sur Spotify ↗
 `),
 ];
 
