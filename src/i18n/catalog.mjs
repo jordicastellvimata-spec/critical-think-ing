@@ -538,7 +538,12 @@ Conferència al programa «New Technologies and Human Rights»|||Conferencia en 
 Formar el Pensament Crític en la Societat Digital|||Formar el pensamiento crítico en la sociedad digital|||Developing Critical Thinking in the Digital Society|||Former à la pensée critique dans la société numérique
 Interculturalitat, discursos d’odi i DCCSS|||Interculturalidad, discursos de odio y didáctica de las ciencias sociales|||Interculturality, hate speech and social sciences education|||Interculturalité, discours de haine et didactique des sciences sociales
 Treball globalitzat en torn als problemes socials rellevants i a la humanització dels sabers|||Trabajo globalizado en torno a los problemas sociales relevantes y la humanización de los saberes|||Integrated learning around socially relevant issues and the humanisation of knowledge|||Approche globale autour des questions sociales vives et de l’humanisation des savoirs
-Curs codissenyat i impartit amb Mariona Massip a la 57a Escola d’Estiu|||Curso codiseñado e impartido con Mariona Massip en la 57.ª Escuela de Verano|||Course co-designed and taught with Mariona Massip at the 57th Summer School|||Formation conçue et animée avec Mariona Massip lors de la 57e École d’été
+Curs codissenyat i impartit a la 57a Escola d’Estiu|||Curso codiseñado e impartido en la 57.ª Escuela de Verano|||Course co-designed and taught at the 57th Summer School|||Formation conçue et animée lors de la 57e École d’été
+AUPDCS|||AUPDCS|||AUPDCS|||AUPDCS
+La formació del pensament crític des de l’ensenyament de les ciències socials|||La formación del pensamiento crítico desde la enseñanza de las ciencias sociales|||Developing critical thinking through social sciences education|||La formation à la pensée critique par l’enseignement des sciences sociales
+Més enllà del desenvolupament d’habilitats cognitives|||Más allá del desarrollo de habilidades cognitivas|||Beyond the development of cognitive skills|||Au-delà du développement des compétences cognitives
+Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos|||Inteligencia artificial ¿aliada? en la investigación en Didáctica de las Ciencias Sociales. Algunos ejemplos prácticos|||Artificial intelligence: an ally in social sciences education research? Some practical examples|||L’intelligence artificielle : une alliée de la recherche en didactique des sciences sociales ? Quelques exemples pratiques
+Webinar sobre intel·ligència artificial aplicada a la recerca|||Webinario sobre inteligencia artificial aplicada a la investigación|||Webinar on artificial intelligence in research|||Webinaire sur l’intelligence artificielle appliquée à la recherche
 `),
 ];
 
