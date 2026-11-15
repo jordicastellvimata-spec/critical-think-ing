@@ -1,0 +1,23 @@
+# Generated build files
+dist/
+.astro/
+node_modules/
+coverage/
+.cache/
+*.log
+
+# Local secrets and credentials (never commit these)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
