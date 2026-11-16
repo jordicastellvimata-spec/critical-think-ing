@@ -401,7 +401,7 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
             <p class="lead">Treballo a la UAB, on faig classes de didàctica de les ciències socials i participo en projectes de recerca educativa. Bona part de la meva feina gira al voltant de la formació de mestres i de com connectar l'escola amb els debats del nostre temps.</p>
           </div>
         </div>
-        <p class="section-deeper-wrap about-mobile-deeper"><a class="section-deeper-link" href={to("sobre-mi/")}>Coneix la meva trajectòria acadèmica ↗</a></p>
+        <p class="section-deeper-wrap about-journey-link"><a class="section-deeper-link" href={to("sobre-mi/")}>Coneix la meva trajectòria acadèmica ↗</a></p>
       </div>
       <div class="about-panel">
         <h3 class="panel-title">Formació acadèmica</h3>
@@ -412,7 +412,6 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
         <a class="panel-link" href={profile.uab} target="_blank" rel="noopener noreferrer">Visitar el meu perfil acadèmic a la UAB ↗</a>
       </div>
     </div>
-    <div class="container about-desktop-deeper"><p class="section-deeper-wrap"><a class="section-deeper-link" href={to("sobre-mi/")}>Coneix la meva trajectòria acadèmica ↗</a></p></div>
     <div class="container thesis-personal"><ThesisSpotlight /></div>
   </section>
 
@@ -439,8 +438,9 @@ const to=(s='')=>root+'/'+s.replace(/^\//,'');
 .section-deeper-link{display:inline-flex;padding:10px 0;color:var(--cyan);font-size:14px;font-weight:800;text-decoration:underline;text-underline-offset:5px}
 .section-deeper-link:hover{color:var(--red)}
 .section-deeper-link:focus-visible{outline:2px solid var(--red);outline-offset:4px}
-.about-mobile-deeper{display:none}
-@media(max-width:760px){.about-mobile-deeper{display:block;margin-top:22px}.about-desktop-deeper{display:none}}
+.about-journey-link{margin-top:23px}
+.about-journey-link .section-deeper-link{display:inline-flex;align-items:center;max-width:100%;padding:13px 17px;border:1px solid var(--cyan);background:var(--white);line-height:1.5;overflow-wrap:anywhere;transition:background .2s,color .2s}
+.about-journey-link .section-deeper-link:hover{background:var(--cyan-pale)}
 .research-network-grid{grid-template-columns:minmax(0,1fr)}
 .project-grid{grid-template-columns:minmax(0,1fr)}
 .practice-grid{grid-template-columns:minmax(0,1fr)}
