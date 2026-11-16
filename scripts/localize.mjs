@@ -253,6 +253,20 @@ for(const locale of locales) {
     if(normalized.includes('Relevant social issues')||normalized.includes('Question the commonplace'))
       errors.push('en → hi ha títols antics al laboratori');
   }
+  // A shared, visible call-to-action must link to the detailed academic biography in each locale.
+  const journeyLinks=[];
+  walk(doc,node=>{
+    if(node.tagName==='a' && (attr(node.parentNode,'class')||'').split(/\\s+/).includes('about-journey-link')) journeyLinks.push(node);
+  });
+  if(journeyLinks.length!==1) errors.push(locale+' → academic biography CTA must appear once');
+  else {
+    const expected=localizedRoute('sobre-mi/',locale);
+    if(attr(journeyLinks[0],'href')!==expected) errors.push(locale+' → academic biography CTA links to '+attr(journeyLinks[0],'href')+' instead of '+expected);
+    const labels={ca:'Coneix la meva trajectòria acadèmica',es:'Conoce mi trayectoria académica',en:'Explore my academic background',fr:'Découvrir mon parcours académique'};
+    let label='';
+    walk(journeyLinks[0],node=>{if(node.nodeName==='#text')label+=' '+node.value;});
+    if(!norm(label).includes(labels[locale])) errors.push(locale+' → academic biography CTA untranslated');
+  }
   const videoIds=new Set();
   walk(doc,node=>{const videoId=attr(node,'data-video-id');if(videoId)videoIds.add(videoId)});
   for(const expected of [...(locale==='ca'?spanishVideoIds.keys():spanishVideoIds.values()),'osDMuTI0UKs']) {
