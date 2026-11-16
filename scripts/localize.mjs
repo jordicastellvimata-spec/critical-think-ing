@@ -256,7 +256,7 @@ for(const locale of locales) {
   // A shared, visible call-to-action must link to the detailed academic biography in each locale.
   const journeyLinks=[];
   walk(doc,node=>{
-    if(node.tagName==='a' && (attr(node.parentNode,'class')||'').split(/\\s+/).includes('about-journey-link')) journeyLinks.push(node);
+    if(node.tagName==='a' && (attr(node.parentNode,'class')||'').split(/\s+/).includes('about-journey-link')) journeyLinks.push(node);
   });
   if(journeyLinks.length!==1) errors.push(locale+' → academic biography CTA must appear once');
   else {
