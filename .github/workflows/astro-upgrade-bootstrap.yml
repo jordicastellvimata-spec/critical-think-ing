@@ -1,0 +1,37 @@
+name: Upgrade Astro and validate (temporary)
+
+on:
+  push:
+    branches: [security-hardening-2026-11-16]
+    paths:
+      - .github/workflows/astro-upgrade-bootstrap.yml
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: security-hardening-2026-11-16
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Upgrade Astro to a patched release
+        run: npm install --save-exact astro@7.4.12 --no-audit --no-fund
+      - name: Verify the complete site still builds and SEO checks pass
+        run: npm run build
+      - name: Verify no remaining high or critical npm vulnerabilities
+        run: npm audit --omit=dev --audit-level=high
+      - name: Commit verified dependency upgrade
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git diff --cached --quiet || git commit -m "Upgrade Astro to patched v7 after passing build and audit"
+          git push origin HEAD:security-hardening-2026-11-16
